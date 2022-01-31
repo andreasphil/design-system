@@ -1,0 +1,71 @@
+:root {
+  // Spacing
+  --rem-base: clamp(16px, 0.1923vw + 15.2308px, 18px);
+  --block-spacing-y: 1.5rem;
+  --body-padding: 1rem;
+  --line-height: 1.5;
+
+  // Typography
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-h6: var(--font-size-base);
+  --font-size-h5: 1.125rem;
+  --font-size-h4: 1.25rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h1: 2.5rem;
+
+  // Borders
+  --border-radius-sm: 0.25rem;
+  --border-radius: 0.375rem;
+  --border-width: 1px;
+
+  // Transitions
+  --transition-duration: 0.3s;
+  --transition-timing-function: ease;
+
+  // Color palette
+  --c-white: hsla(0, 0%, 100%);
+  --c-black: hsla(0, 0%, 0%);
+  --c-rose: hsla(350, 89%, 60%);
+  --c-blue: hsla(217, 91%, 60%);
+  --c-red: hsla(0, 84%, 60%);
+  --c-green: hsla(142, 71%, 45%);
+  --c-amber: hsla(43, 96%, 56%);
+  --c-gray: hsla(0, 0%, 96%);
+  --c-dark-gray: hsl(0, 0%, 60%);
+
+  // Contextual colors
+  --c-bg: var(--c-white);
+  --c-on-bg: var(--c-black);
+  --c-surface: var(--c-white);
+  --c-on-surface: var(--c-black);
+  --c-surface-variant: var(--c-gray);
+  --c-on-surface-variant: var(--c-black);
+  --c-outline: var(--c-dark-gray);
+
+  --c-primary: var(--c-rose);
+  --c-on-primary: var(--c-white);
+  --c-on-primary-container: var(--c-primary);
+  --c-primary-container: hsla(350, 89%, 60%, var(--auto-bg-opacity));
+
+  --c-secondary: var(--c-dark-gray);
+  --c-on-secondary: var(--c-black);
+  --c-on-secondary-container: var(--c-black);
+  --c-secondary-container: var(--c-gray);
+
+  --c-tertiary: var(--c-dark-gray);
+  --c-on-tertiary: var(--c-black);
+  --c-on-tertiary-container: var(--c-black);
+  --c-tertiary-container: var(--c-gray);
+
+  --c-code: var(--c-blue);
+  --c-del: var(--c-red);
+  --c-ins: var(--c-green);
+  --c-mark: var(--c-amber);
+  --c-mark: var(--c-amber);
+
+  // Everything else
+  --auto-bg-opacity: 0.15;
+  --disabled-opacity: 0.6;
+}

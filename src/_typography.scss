@@ -1,0 +1,185 @@
+/* -------------------------------------------------- *
+ * Block typography elements                          *
+ * -------------------------------------------------- */
+
+@use "./lib";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin: max(var(--block-spacing-y), 1em) 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+p,
+pre,
+ol,
+ul,
+dl,
+blockquote,
+figure,
+hr {
+  margin: var(--block-spacing-y) 0;
+}
+
+ol,
+ul {
+  padding: 0 0 0 1.25rem;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+li {
+  &::marker {
+    color: var(--secondary-fg);
+  }
+
+  & + & {
+    margin-top: 0.25rem;
+  }
+}
+
+pre {
+  background: var(--c-surface-variant);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+hr {
+  border: none;
+  border-top: var(--border-width) solid var(--c-outline);
+  height: 0;
+}
+
+blockquote {
+  background: var(--c-secondary-container);
+  border-left: 0.25rem solid var(--c-secondary);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  color: var(--c-on-secondary-container);
+  padding: 0.5rem 1rem;
+
+  figure > & {
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+
+    + figcaption {
+      background: var(--c-secondary-container);
+      border-radius: 0 0 var(--border-radius) 0;
+      border-left: 0.25rem solid var(--c-secondary);
+      color: var(--c-secondary);
+      font-size: var(--font-size-small);
+      margin-bottom: var(--block-spacing-y);
+      padding: 0 1rem 0.5rem;
+    }
+  }
+}
+
+/* -------------------------------------------------- *
+ * Inline                                             *
+ * -------------------------------------------------- */
+
+abbr,
+u,
+a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+abbr {
+  cursor: help;
+  text-decoration-style: dashed;
+}
+
+code,
+mark,
+ins,
+del {
+  @include lib.autoBg(0, -0.125rem);
+  background: none;
+  padding: 0 0.25rem;
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+}
+
+code {
+  color: var(--c-code);
+}
+
+mark {
+  color: var(--c-mark);
+}
+
+ins {
+  color: var(--c-ins);
+}
+
+del {
+  color: var(--c-del);
+}
+
+kbd {
+  background: var(--kbd-bg, var(--c-on-bg));
+  border-radius: var(--border-radius-sm);
+  color: var(--kbd-on-bg, var(--c-bg));
+  padding: 0.125rem 0.25rem;
+}
+
+small {
+  font-size: var(--font-size-small);
+}
+
+sup,
+sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.02rem;
+  margin: 0 2px;
+  position: relative;
+}
+
+sub {
+  bottom: -0.125rem;
+  vertical-align: bottom;
+}
+
+sup {
+  top: -0.125rem;
+  vertical-align: top;
+}
+
+/* -------------------------------------------------- *
+ * Links                                              *
+ * -------------------------------------------------- */
+
+a,
+a:visited {
+  color: var(--c-primary);
+}

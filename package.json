@@ -1,0 +1,19 @@
+{
+  "name": "base.css",
+  "version": "0.1.0",
+  "description": "Minimalist CSS framework",
+  "main": "dist/index.css",
+  "repository": "https://github.com/andreasphil/base.css",
+  "author": "Andreas Philippi",
+  "license": "MIT",
+  "scripts": {
+    "start": "sass --watch src/index.scss dist/index.css",
+    "build": "sass src/index.scss dist/index.css"
+  },
+  "devDependencies": {
+    "sass": "^1.49.0"
+  },
+  "dependencies": {
+    "sanitize.css": "^13.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+/* -------------------------------------------------- *
+ * Resets                                             *
+ * -------------------------------------------------- */
+
+@import url("https://unpkg.com/sanitize.css@13.0.0/sanitize.css");
+@import url("https://unpkg.com/sanitize.css@13.0.0/assets.css");
+@import url("https://unpkg.com/sanitize.css@13.0.0/forms.css");
+@import url("https://unpkg.com/sanitize.css@13.0.0/typography.css");
+
+/* -------------------------------------------------- *
+ * Scaffolding                                        *
+ * -------------------------------------------------- */
+
+:root {
+  font-size: var(--rem-base);
+}
+
+body {
+  background: var(--c-bg);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  padding: var(--body-padding, 0);
+  color: var(--c-on-bg);
+}

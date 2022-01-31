@@ -1,0 +1,71 @@
+/* -------------------------------------------------- *
+ * Buttons                                            *
+ * -------------------------------------------------- */
+
+@use "./lib";
+
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  @include lib.autoBg(
+    $insetX: calc(var(--border-width) * -1),
+    $hoverOnly: true
+  );
+
+  @include lib.outline(var(--button-focus, var(--c-primary-container)));
+  @include lib.transition(box-shadow);
+
+  background: var(--button-bg, var(--c-primary));
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--button-border, transparent);
+  color: var(--button-on-bg, var(--c-on-primary));
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.75rem;
+
+  &:disabled {
+    opacity: var(--disabled-opacity);
+    cursor: not-allowed;
+  }
+
+  &[aria-busy="true"] {
+    cursor: progress;
+  }
+
+  &.outline,
+  &.ghost {
+    --button-on-bg: var(--c-primary);
+    background: transparent;
+  }
+
+  &.outline {
+    --button-border: currentColor;
+  }
+
+  &.secondary {
+    --button-bg: var(--c-secondary);
+    --button-focus: var(--c-secondary-container);
+
+    &.outline,
+    &.ghost {
+      --button-on-bg: var(--c-secondary);
+    }
+  }
+
+  svg {
+    color: currentColor;
+    height: 1em;
+    width: 1em;
+  }
+}
+
+button {
+  display: block;
+  width: 100%;
+}
+
+[role="button"] {
+  display: inline-block;
+}
