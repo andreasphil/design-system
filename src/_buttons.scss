@@ -26,6 +26,7 @@ input[type="reset"] {
   padding: 0.75rem;
 
   &:disabled {
+    --auto-bg-opacity: 0;
     opacity: var(--disabled-opacity);
     cursor: not-allowed;
   }
@@ -42,16 +43,6 @@ input[type="reset"] {
 
   &.outline {
     --button-border: currentColor;
-  }
-
-  &.secondary {
-    --button-bg: var(--c-secondary);
-    --button-focus: var(--c-secondary-container);
-
-    &.outline,
-    &.ghost {
-      --button-on-bg: var(--c-secondary);
-    }
   }
 
   svg {

@@ -25,47 +25,26 @@
   --transition-timing-function: ease;
 
   // Color palette
-  --c-white: hsla(0, 0%, 100%);
-  --c-black: hsla(0, 0%, 0%);
-  --c-rose: hsla(350, 89%, 60%);
-  --c-blue: hsla(217, 91%, 60%);
-  --c-red: hsla(0, 84%, 60%);
-  --c-green: hsla(142, 71%, 45%);
-  --c-amber: hsla(43, 96%, 56%);
-  --c-gray: hsla(0, 0%, 96%);
-  --c-dark-gray: hsl(0, 0%, 60%);
+  --tint: 155;
+  --c-bg: hsl(var(--tint), 40%, 4%);
+  --c-fg: hsl(var(--tint), 10%, 96%);
+  --c-fg-variant: hsl(var(--tint), 10%, 44%);
+  --c-surface-bg: hsl(var(--tint), 20%, 7%);
+  --c-surface-fg: var(--c-fg);
+  --c-surface-variant-bg: hsl(var(--tint), 20%, 9%);
+  --c-surface-variant-fg: var(--c-surface-fg);
+  --c-border: hsl(var(--tint), 12%, 18%);
 
-  // Contextual colors
-  --c-bg: var(--c-white);
-  --c-on-bg: var(--c-black);
-  --c-surface: var(--c-white);
-  --c-on-surface: var(--c-black);
-  --c-surface-variant: var(--c-gray);
-  --c-on-surface-variant: var(--c-black);
-  --c-outline: var(--c-dark-gray);
+  --c-primary: hsl(var(--tint), 80%, 44%);
+  --c-on-primary: var(--c-fg);
+  --c-primary-container: hsla(var(--tint), 80%, 44%, 25%);
 
-  --c-primary: var(--c-rose);
-  --c-on-primary: var(--c-white);
-  --c-on-primary-container: var(--c-primary);
-  --c-primary-container: hsla(350, 89%, 60%, var(--auto-bg-opacity));
-
-  --c-secondary: var(--c-dark-gray);
-  --c-on-secondary: var(--c-black);
-  --c-on-secondary-container: var(--c-black);
-  --c-secondary-container: var(--c-gray);
-
-  --c-tertiary: var(--c-dark-gray);
-  --c-on-tertiary: var(--c-black);
-  --c-on-tertiary-container: var(--c-black);
-  --c-tertiary-container: var(--c-gray);
-
-  --c-code: var(--c-blue);
-  --c-del: var(--c-red);
-  --c-ins: var(--c-green);
-  --c-mark: var(--c-amber);
-  --c-mark: var(--c-amber);
+  --c-code: var(--c-primary);
+  --c-del: hsl(8, 80%, 55%);
+  --c-ins: hsl(130, 75%, 45%);
+  --c-mark: hsl(45, 80%, 55%);
 
   // Everything else
   --auto-bg-opacity: 0.15;
-  --disabled-opacity: 0.6;
+  --disabled-opacity: 0.4;
 }

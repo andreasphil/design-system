@@ -6,6 +6,7 @@
 
 // TODO: Disabled styles
 // TODO: Readonly styles
+
 textarea,
 input:not([type="checkbox"]),
 input:not([type="file"]),
@@ -18,21 +19,19 @@ input:not([type="range"]) {
   appearance: none;
   background: var(--input-bg, var(--c-bg));
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--input-border, var(--c-outline));
-  color: var(--input-on-bg, var(--c-on-bg));
+  border: var(--border-width) solid var(--input-border, var(--c-border));
+  color: var(--input-on-bg, var(--c-fg));
   padding: 0.75rem;
   width: 100%;
+  caret-color: var(--input-border);
 
-  &:hover {
-    --input-border: var(--c-on-bg);
-  }
-
+  &:hover,
   &:focus {
     --input-border: var(--c-primary);
   }
 
   &::placeholder {
-    color: var(--input-placeholder, var(--c-tertiary));
+    color: var(--input-placeholder, var(--c-fg-variant));
   }
 
   // Add some spacing between text and input when used in labels

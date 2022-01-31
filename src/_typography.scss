@@ -60,7 +60,7 @@ ul li {
 
 li {
   &::marker {
-    color: var(--secondary-fg);
+    color: var(--c-fg-variant);
   }
 
   & + & {
@@ -69,33 +69,27 @@ li {
 }
 
 pre {
-  background: var(--c-surface-variant);
+  background: var(--c-surface-variant-bg);
   border-radius: var(--border-radius);
   padding: 1rem;
 }
 
 hr {
   border: none;
-  border-top: var(--border-width) solid var(--c-outline);
+  border-top: var(--border-width) solid var(--c-border);
   height: 0;
 }
 
 blockquote {
-  background: var(--c-secondary-container);
-  border-left: 0.25rem solid var(--c-secondary);
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  color: var(--c-on-secondary-container);
+  border-left: 0.25rem solid var(--c-border);
   padding: 0.5rem 1rem;
 
   figure > & {
-    border-bottom-right-radius: 0;
     margin-bottom: 0;
 
     + figcaption {
-      background: var(--c-secondary-container);
-      border-radius: 0 0 var(--border-radius) 0;
-      border-left: 0.25rem solid var(--c-secondary);
-      color: var(--c-secondary);
+      border-left: 0.25rem solid var(--c-border);
+      color: var(--c-fg-variant);
       font-size: var(--font-size-small);
       margin-bottom: var(--block-spacing-y);
       padding: 0 1rem 0.5rem;
@@ -147,7 +141,7 @@ del {
 }
 
 kbd {
-  background: var(--kbd-bg, var(--c-on-bg));
+  background: var(--kbd-bg, var(--c-fg));
   border-radius: var(--border-radius-sm);
   color: var(--kbd-on-bg, var(--c-bg));
   padding: 0.125rem 0.25rem;
@@ -182,4 +176,9 @@ sup {
 a,
 a:visited {
   color: var(--c-primary);
+}
+
+::selection {
+  background-color: var(--c-primary);
+  color: var(--c-on-primary);
 }
