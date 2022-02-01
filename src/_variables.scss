@@ -1,50 +1,38 @@
 :root {
+  /* -------------------------------------------------- *
+   * Shared                                             *
+   * -------------------------------------------------- */
+
   // Spacing
   --rem-base: clamp(16px, 0.1923vw + 15.2308px, 18px);
   --block-spacing-y: 1.5rem;
   --body-padding: 1rem;
   --line-height: 1.5;
 
-  // Typography
-  --font-size-small: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-h6: var(--font-size-base);
-  --font-size-h5: 1.125rem;
-  --font-size-h4: 1.25rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h1: 2.5rem;
-
   // Borders
   --border-radius-sm: 0.25rem;
   --border-radius: 0.375rem;
   --border-width: 1px;
 
-  // Transitions
-  --transition-duration: 0.3s;
+  // Transitions and other effects
+  --transition-duration: 0.4s;
   --transition-timing-function: ease;
-
-  // Color palette
-  --tint: 155;
-  --c-bg: hsl(var(--tint), 40%, 4%);
-  --c-fg: hsl(var(--tint), 10%, 96%);
-  --c-fg-variant: hsl(var(--tint), 10%, 44%);
-  --c-surface-bg: hsl(var(--tint), 20%, 7%);
-  --c-surface-fg: var(--c-fg);
-  --c-surface-variant-bg: hsl(var(--tint), 20%, 9%);
-  --c-surface-variant-fg: var(--c-surface-fg);
-  --c-border: hsl(var(--tint), 12%, 18%);
-
-  --c-primary: hsl(var(--tint), 80%, 44%);
-  --c-on-primary: var(--c-fg);
-  --c-primary-container: hsla(var(--tint), 80%, 44%, 25%);
-
-  --c-code: var(--c-primary);
-  --c-del: hsl(8, 80%, 55%);
-  --c-ins: hsl(130, 75%, 45%);
-  --c-mark: hsl(45, 80%, 55%);
-
-  // Everything else
   --auto-bg-opacity: 0.15;
   --disabled-opacity: 0.4;
+
+  /* -------------------------------------------------- *
+   * Element-specific but might be useful in other      *
+   * places as well (for other element specific         *
+   * variables check the respective scss files)         *
+   * -------------------------------------------------- */
+
+  // Typography
+  --small-font-size: 0.875rem;
+  --base-font-size: 1rem;
+  --h6-font-size: var(--base-font-size);
+  --h5-font-size: 1.125rem;
+  --h4-font-size: 1.25rem;
+  --h3-font-size: 1.5rem;
+  --h2-font-size: 2rem;
+  --h1-font-size: 2.5rem;
 }

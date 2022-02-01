@@ -20,7 +20,7 @@ input[type="reset"] {
   background: var(--button-bg, var(--c-primary));
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--button-border, transparent);
-  color: var(--button-on-bg, var(--c-on-primary));
+  color: var(--button-fg, var(--c-on-primary));
   cursor: pointer;
   font-weight: 500;
   padding: 0.75rem;
@@ -37,7 +37,7 @@ input[type="reset"] {
 
   &.outline,
   &.ghost {
-    --button-on-bg: var(--c-primary);
+    --button-fg: var(--c-primary);
     background: transparent;
   }
 

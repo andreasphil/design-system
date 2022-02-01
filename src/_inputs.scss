@@ -4,9 +4,6 @@
 
 @use "./lib";
 
-// TODO: Disabled styles
-// TODO: Readonly styles
-
 textarea,
 input:not([type="checkbox"]),
 input:not([type="file"]),
@@ -20,7 +17,7 @@ input:not([type="range"]) {
   background: var(--input-bg, var(--c-bg));
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--input-border, var(--c-border));
-  color: var(--input-on-bg, var(--c-fg));
+  color: var(--input-fg, var(--c-fg));
   padding: 0.75rem;
   width: 100%;
   caret-color: var(--input-border);
@@ -47,7 +44,7 @@ input[type="time"] {
   // Make date inputs the same height as others by manually setting the control
   // height (fix for Safari)
   height: calc(
-    (var(--line-height) * var(--font-size-base)) + 1.5rem + var(--border-width) *
+    (var(--line-height) * var(--base-font-size)) + 1.5rem + var(--border-width) *
       2
   );
 }

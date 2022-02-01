@@ -10,62 +10,40 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2;
-  margin: max(var(--block-spacing-y), 1em) 0;
+  line-height: var(--h-line-height, 1.2);
+  margin: max(var(--block-spacing-y), 0.8em) 0;
 }
 
 h1 {
-  font-size: var(--font-size-h1);
+  font-size: var(--h1-font-size);
 }
 
 h2 {
-  font-size: var(--font-size-h2);
+  font-size: var(--h2-font-size);
 }
 
 h3 {
-  font-size: var(--font-size-h3);
+  font-size: var(--h3-font-size);
 }
 
 h4 {
-  font-size: var(--font-size-h4);
+  font-size: var(--h4-font-size);
 }
 
 h5 {
-  font-size: var(--font-size-h5);
+  font-size: var(--h5-font-size);
 }
 
 h6 {
-  font-size: var(--font-size-h6);
+  font-size: var(--h6-font-size);
 }
 
 p,
 pre,
-ol,
-ul,
-dl,
 blockquote,
 figure,
 hr {
   margin: var(--block-spacing-y) 0;
-}
-
-ol,
-ul {
-  padding: 0 0 0 1.25rem;
-}
-
-ul li {
-  list-style-type: square;
-}
-
-li {
-  &::marker {
-    color: var(--c-fg-variant);
-  }
-
-  & + & {
-    margin-top: 0.25rem;
-  }
 }
 
 pre {
@@ -76,7 +54,7 @@ pre {
 
 hr {
   border: none;
-  border-top: var(--border-width) solid var(--c-border);
+  border-top: var(--hr-border-width, var(--border-width)) solid var(--c-border);
   height: 0;
 }
 
@@ -90,10 +68,41 @@ blockquote {
     + figcaption {
       border-left: 0.25rem solid var(--c-border);
       color: var(--c-fg-variant);
-      font-size: var(--font-size-small);
+      font-size: var(--small-font-size);
       margin-bottom: var(--block-spacing-y);
       padding: 0 1rem 0.5rem;
     }
+  }
+}
+
+/* -------------------------------------------------- *
+ * Lists                                              *
+ * -------------------------------------------------- */
+
+ol,
+ul,
+dl {
+  margin: var(--block-spacing-y) 0;
+}
+
+ol,
+ul {
+  padding: 0 0 0 1.25rem;
+}
+
+ul {
+  li {
+    list-style-type: square;
+  }
+}
+
+li {
+  &::marker {
+    color: var(--c-fg-variant);
+  }
+
+  & + & {
+    margin-top: 0.25rem;
   }
 }
 
@@ -143,12 +152,12 @@ del {
 kbd {
   background: var(--kbd-bg, var(--c-fg));
   border-radius: var(--border-radius-sm);
-  color: var(--kbd-on-bg, var(--c-bg));
+  color: var(--kbd-fg, var(--c-bg));
   padding: 0.125rem 0.25rem;
 }
 
 small {
-  font-size: var(--font-size-small);
+  font-size: var(--small-font-size);
 }
 
 sup,
@@ -176,9 +185,4 @@ sup {
 a,
 a:visited {
   color: var(--c-primary);
-}
-
-::selection {
-  background-color: var(--c-primary);
-  color: var(--c-on-primary);
 }
