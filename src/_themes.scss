@@ -1,3 +1,42 @@
 /* -------------------------------------------------- *
  * Dark mode & theming                                *
  * -------------------------------------------------- */
+
+:root {
+  --tint: 155;
+
+  --color-scheme: light;
+  --c-bg: hsl(0, 10%, 98%);
+  --c-fg: hsl(var(--tint), 40%, 4%);
+  --c-fg-variant: hsl(var(--tint), 10%, 58%);
+  --c-surface-bg: hsl(var(--tint), 12%, 97%);
+  --c-surface-fg: var(--c-fg);
+  --c-surface-variant-bg: hsl(var(--tint), 12%, 95%);
+  --c-surface-variant-fg: var(--c-surface-fg);
+  --c-border: hsl(var(--tint), 12%, 84%);
+  --c-primary: hsl(var(--tint), 80%, 44%);
+  --c-on-primary: var(--c-bg);
+  --c-primary-container: hsla(var(--tint), 80%, 44%, 20%);
+
+  --c-code: var(--c-primary);
+  --c-del: hsl(8, 72%, 52%);
+  --c-ins: hsl(130, 60%, 50%);
+  --c-mark: hsl(48, 90%, 54%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-scheme: dark;
+    --c-bg: hsl(var(--tint), 40%, 4%);
+    --c-fg: hsl(var(--tint), 10%, 96%);
+    --c-fg-variant: hsl(var(--tint), 10%, 44%);
+    --c-surface-bg: hsl(var(--tint), 12%, 7%);
+    --c-surface-fg: var(--c-fg);
+    --c-surface-variant-bg: hsl(var(--tint), 12%, 9%);
+    --c-surface-variant-fg: var(--c-surface-fg);
+    --c-border: hsl(var(--tint), 12%, 18%);
+    --c-primary: hsl(var(--tint), 80%, 44%);
+    --c-on-primary: var(--c-fg);
+    --c-primary-container: hsla(var(--tint), 80%, 44%, 25%);
+  }
+}
