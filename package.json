@@ -1,9 +1,9 @@
 {
-  "name": "base.css",
+  "name": "fine",
   "version": "0.1.0",
-  "description": "Minimalist CSS framework",
+  "description": "Small, opinionated CSS framework to make sites look alright with minimal effort",
   "main": "dist/index.css",
-  "repository": "https://github.com/andreasphil/base.css",
+  "repository": "https://github.com/andreasphil/fine",
   "author": "Andreas Philippi",
   "license": "MIT",
   "scripts": {
