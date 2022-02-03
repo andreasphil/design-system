@@ -1,6 +1,6 @@
 {
   "name": "fine",
-  "version": "0.1.0",
+  "version": "0.0.1-0",
   "description": "Small, opinionated CSS framework to make sites look alright with minimal effort",
   "main": "dist/index.css",
   "repository": "https://github.com/andreasphil/fine",
