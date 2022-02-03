@@ -1,21 +1,29 @@
+@use "./deps";
 @use "./variables";
-@use "./lib";
-@use "./base";
 
-@use "./article";
-@use "./buttons";
-@use "./checkbox";
-@use "./detail";
-@use "./dialog";
-@use "./file";
-@use "./icons";
-@use "./inputs";
-@use "./loading";
-@use "./menu";
-@use "./nav";
-@use "./progress";
-@use "./radio";
-@use "./range";
-@use "./select";
-@use "./themes";
-@use "./typography";
+// Basic page setup & layouts
+@use "./layout/article";
+@use "./layout/scaffold";
+@use "./layout/themes";
+@use "./layout/typography";
+
+// Inputs & other form elements
+@use "./forms/checkbox";
+@use "./forms/file";
+@use "./forms/inputs";
+@use "./forms/radio";
+@use "./forms/range";
+@use "./forms/select";
+
+// UI components other than inputs
+@use "./components/buttons";
+@use "./components/detail";
+@use "./components/dialog";
+@use "./components/menu";
+@use "./components/nav";
+@use "./components/progress";
+
+// Additional utilities and components that go beyond simple styling of
+// standard elements
+@use "./extra/icons";
+@use "./extra/loading";

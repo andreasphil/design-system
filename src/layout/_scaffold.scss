@@ -1,0 +1,21 @@
+/* -------------------------------------------------- *
+ * Basic document stuff                               *
+ * -------------------------------------------------- */
+
+:root {
+  color-scheme: var(--color-scheme);
+  font-size: var(--rem-base);
+}
+
+body {
+  background: var(--c-bg);
+  font-size: var(--base-font-size);
+  line-height: var(--line-height);
+  padding: var(--body-padding, 0);
+  color: var(--c-fg);
+}
+
+::selection {
+  background-color: var(--selection-bg, --c-primary);
+  color: var(--selection-fg, --c-on-primary);
+}
