@@ -25,5 +25,6 @@
 
 // Additional utilities and components that go beyond simple styling of
 // standard elements
+@use "./extra/container";
 @use "./extra/icons";
 @use "./extra/loading";
