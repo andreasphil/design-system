@@ -5,10 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
-  <div style="max-width: 768px; margin: auto">
-    <h1>style.css</h1>
+<body class="with-fixed-nav">
+  <header>
+    <nav class="fixed">
+      <h1>Fine</h1>
+      <ul>
+        <li><a href="#">First</a></li>
+        <li><a href="#" class="active">Second</a></li>
+        <li><a href="#">Third</a></li>
+        <li><a href="#">Fourth</a></li>
+        <li><a href="#">Fifth</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <div class="container with-fixed-nav">
     <section>
       <h2>Typography</h2>
 
@@ -205,6 +216,27 @@ function hello(name) {
           quaerat ratione. Eligendi.
         </p>
       </details>
+    </section>
+
+    <section>
+      <h2>Navigations</h2>
+      <nav class="horizontal">
+        <h1>Title</h1>
+        <ul>
+          <li><a href="#" class="active">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </nav>
+      <hr />
+      <nav>
+        <h1>Title</h1>
+        <ul>
+          <li><a href="#" class="active">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </nav>
     </section>
   </div>
 </body>

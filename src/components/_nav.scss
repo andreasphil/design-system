@@ -2,4 +2,98 @@
  * Navbars and -menus                                 *
  * -------------------------------------------------- */
 
-// TODO: Implement
+@use "../lib";
+
+nav {
+  --block-spacing-y: 0;
+  --h-font-size: var(--base-font-size);
+  gap: 1rem;
+
+  &,
+  & > ul,
+  & > div {
+    display: flex;
+    padding: 0;
+  }
+
+  & > ul,
+  & > div {
+    gap: 0.25rem;
+  }
+
+  // Navs inside headers or with the .horizontal modifier are navbars
+  // by default
+  header > &:not(.vertical),
+  &.horizontal {
+    height: 4.5rem;
+    overflow: auto;
+
+    &,
+    & > ul,
+    & > div {
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+
+    & > ul,
+    & > div {
+      flex: none;
+    }
+  }
+
+  // Navs outside headers or with the .vertical modifier flow vertially
+  // by default
+  :not(header) > &:not(.horizontal),
+  &.vertical {
+    &,
+    & > ul,
+    & > div {
+      flex-direction: column;
+    }
+
+    & > ul li {
+      margin: 0 -0.5rem;
+    }
+  }
+
+  &.fixed {
+    background-color: var(--c-bg);
+    left: 0;
+    padding: 0 var(--nav-padding, var(--body-padding-x));
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: var(--nav-z-index, 10);
+  }
+
+  // Remove list styles for link lists
+  ul li {
+    list-style-type: none;
+    margin-top: 0;
+  }
+
+  // Links within navs have more of a button like look to them
+  a {
+    border-radius: var(--border-radius);
+    padding: 0.375rem 0.5rem;
+    text-decoration: none;
+
+    &.active {
+      @include lib.autoBg;
+      --link-hover-color: var(--link-color, var(--c-primary));
+    }
+
+    &:only-child {
+      display: block;
+    }
+  }
+}
+
+body.with-fixed-nav {
+  padding-top: calc(var(--body-padding-y) + 4rem);
+}
+
+:not(body).with-fixed-nav {
+  padding-top: 4rem;
+}
