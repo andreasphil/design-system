@@ -9,7 +9,7 @@
   "scripts": {
     "start": "sass --watch src/index.scss dist/index.css",
     "build": "sass src/index.scss dist/index.css; esbuild dist/index.css --outfile=dist/index.min.css --bundle --minify",
-    "preversion": "yarn build; git add ./dist/"
+    "preversion": "yarn build; git add --force dist/index.min.css"
   },
   "devDependencies": {
     "esbuild": "^0.14.18",
