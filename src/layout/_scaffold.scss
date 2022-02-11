@@ -12,13 +12,13 @@
 body {
   @include lib.transition(#{color, background-color});
   background: var(--c-bg);
-  font-size: var(--base-font-size);
+  font-size: var(--font-size);
   line-height: var(--line-height);
   padding: var(--body-padding-y, 0) var(--body-padding-x, 0);
   color: var(--c-fg);
 }
 
 ::selection {
-  background-color: var(--selection-bg, --c-primary);
-  color: var(--selection-fg, --c-on-primary);
+  background-color: var(--selection-bg, var(--c-primary));
+  color: var(--selection-fg, var(--c-on-primary));
 }

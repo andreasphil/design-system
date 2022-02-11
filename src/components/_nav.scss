@@ -7,7 +7,7 @@
 nav {
   @include lib.transition(#{color, background-color, border-color, box-shadow});
   --block-spacing-y: 0;
-  --h-font-size: var(--base-font-size);
+  color: var(--nav-fg, currentColor);
   gap: 1rem;
 
   &,
@@ -59,9 +59,9 @@ nav {
   }
 
   &.fixed {
-    background-color: var(--c-bg);
+    background-color: var(--nav-bg, var(--c-bg));
     left: 0;
-    padding: 0 var(--nav-padding, var(--body-padding-x));
+    padding: 0 var(--body-padding-x);
     position: fixed;
     right: 0;
     top: 0;

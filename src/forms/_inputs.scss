@@ -16,19 +16,19 @@ input:not([type="range"]) {
   appearance: none;
   background: var(--input-bg, var(--c-bg));
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--input-border, var(--c-border));
+  border: var(--border-width) solid var(--input-border-color, var(--c-border));
+  caret-color: var(--input-border-color, initial);
   color: var(--input-fg, var(--c-fg));
   padding: 0.75rem;
   width: 100%;
-  caret-color: var(--input-border);
 
   &:hover,
   &:focus {
-    --input-border: var(--c-primary);
+    --input-border-color: var(--c-primary);
   }
 
   &::placeholder {
-    color: var(--input-placeholder, var(--c-fg-variant));
+    color: var(--input-placeholder-color, var(--c-fg-variant));
   }
 
   // Add some spacing between text and input when used in labels
@@ -40,13 +40,13 @@ input:not([type="range"]) {
 input[type="date"],
 input[type="datetime-local"],
 input[type="time"] {
-  cursor: pointer;
   // Make date inputs the same height as others by manually setting the control
   // height (fix for Safari)
-  height: calc(
-    (var(--line-height) * var(--base-font-size)) + 1.5rem + var(--border-width) *
-      2
-  );
+  $text-height: calc(var(--line-height) * var(--font-size));
+  $padding: 0.75rem * 2;
+  $border-size: calc(var(--border-width) * 2);
+
+  height: calc(#{$text-height} + #{$padding} + #{$border-size});
 }
 
 textarea {

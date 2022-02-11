@@ -10,32 +10,33 @@ h3,
 h4,
 h5,
 h6 {
+  font-size: var(--h-font-size);
   line-height: var(--h-line-height, 1.2);
-  margin: max(var(--block-spacing-y), 0.8em) 0;
+  margin: max(var(--block-spacing-y), 1em) 0;
 }
 
 h1 {
-  font-size: var(--h-font-size, var(--h1-font-size));
+  --h-font-size: var(--h1-font-size);
 }
 
 h2 {
-  font-size: var(--h-font-size, var(--h2-font-size));
+  --h-font-size: var(--h2-font-size);
 }
 
 h3 {
-  font-size: var(--h-font-size, var(--h3-font-size));
+  --h-font-size: var(--h3-font-size);
 }
 
 h4 {
-  font-size: var(--h-font-size, var(--h4-font-size));
+  --h-font-size: var(--h4-font-size);
 }
 
 h5 {
-  font-size: var(--h-font-size, var(--h5-font-size));
+  --h-font-size: var(--h5-font-size);
 }
 
 h6 {
-  font-size: var(--h-font-size, var(--h6-font-size));
+  --h-font-size: var(--h6-font-size);
 }
 
 p,
@@ -49,6 +50,7 @@ hr {
 pre {
   @include lib.transition(#{color, background-color});
   background: var(--c-surface-variant-bg);
+  color: var(--c-surface-variant-fg);
   border-radius: var(--border-radius);
   padding: 1rem;
 }
@@ -56,7 +58,7 @@ pre {
 hr {
   @include lib.transition(#{border-color});
   border: none;
-  border-top: var(--hr-border-width, var(--border-width)) solid var(--c-border);
+  border-top: var(--border-width) solid var(--c-border);
   height: 0;
 }
 
