@@ -15,8 +15,7 @@ input[type="reset"] {
   );
 
   @include lib.outline(var(--button-focus, var(--c-primary-container)));
-  @include lib.transition(box-shadow);
-
+  @include lib.transition(#{color, background-color, border-color, box-shadow});
   background: var(--button-bg, var(--c-primary));
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--button-border, transparent);

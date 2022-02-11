@@ -47,18 +47,21 @@ hr {
 }
 
 pre {
+  @include lib.transition(#{color, background-color});
   background: var(--c-surface-variant-bg);
   border-radius: var(--border-radius);
   padding: 1rem;
 }
 
 hr {
+  @include lib.transition(#{border-color});
   border: none;
   border-top: var(--hr-border-width, var(--border-width)) solid var(--c-border);
   height: 0;
 }
 
 blockquote {
+  @include lib.transition(#{color, border-color});
   border-left: 0.25rem solid var(--c-border);
   padding: 0.5rem 1rem;
 
@@ -66,6 +69,7 @@ blockquote {
     margin-bottom: 0;
 
     + figcaption {
+      @include lib.transition(#{color, border-color});
       border-left: 0.25rem solid var(--c-border);
       color: var(--c-fg-variant);
       font-size: var(--small-font-size);
@@ -98,6 +102,7 @@ ul {
 
 li {
   &::marker {
+    @include lib.transition(#{color});
     color: var(--c-fg-variant);
   }
 
@@ -126,6 +131,7 @@ code,
 mark,
 ins,
 del {
+  @include lib.transition(#{color});
   @include lib.autoBg(0, -0.125rem);
   background: none;
   padding: 0 0.25rem;
@@ -150,6 +156,7 @@ del {
 }
 
 kbd {
+  @include lib.transition(#{color, background-color});
   background: var(--kbd-bg, var(--c-fg));
   border-radius: var(--border-radius-sm);
   color: var(--kbd-fg, var(--c-bg));
@@ -184,7 +191,7 @@ sup {
 
 a,
 a:visited {
-  @include lib.transition(#{text-decoration-color, color, background-color});
+  @include lib.transition(#{color, border-color, text-decoration-color});
   text-decoration-color: var(--link-decoration-color, currentColor);
   color: var(--link-color, var(--c-primary));
 

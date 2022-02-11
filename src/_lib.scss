@@ -16,6 +16,7 @@
   position: relative;
 
   &::after {
+    @include transition(#{color, background-color, opacity});
     background: currentColor;
     border-radius: inherit;
     bottom: $insetY;
@@ -28,7 +29,6 @@
     top: $insetY;
 
     @if $hoverOnly {
-      @include transition(#{background-color, opacity});
       opacity: 0;
     } @else {
       opacity: var(--auto-bg-opacity);
@@ -45,6 +45,6 @@
 @mixin outline($color) {
   outline: none;
   &:focus {
-    box-shadow: 0 0 0 3px $color;
+    box-shadow: 0 0 0 4px $color;
   }
 }

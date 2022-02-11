@@ -10,8 +10,8 @@ input:not([type="file"]),
 input:not([type="image"]),
 input:not([type="radio"]),
 input:not([type="range"]) {
-  @include lib.transition(#{border-color, background-color, color, box-shadow});
   @include lib.outline(var(--input-focus, var(--c-primary-container)));
+  @include lib.transition(#{color, background-color, border-color, box-shadow});
   -webkit-appearance: none;
   appearance: none;
   background: var(--input-bg, var(--c-bg));

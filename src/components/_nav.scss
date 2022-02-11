@@ -5,6 +5,7 @@
 @use "../lib";
 
 nav {
+  @include lib.transition(#{color, background-color, border-color, box-shadow});
   --block-spacing-y: 0;
   --h-font-size: var(--base-font-size);
   gap: 1rem;
