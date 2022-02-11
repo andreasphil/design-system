@@ -5,7 +5,7 @@
 
   // Spacing
   --rem-base: clamp(16px, 0.1923vw + 15.2308px, 18px);
-  --block-spacing-y: 1.5rem;
+  --block-spacing-y: 2rem;
   --body-padding-x: 1rem;
   --body-padding-y: var(--body-padding-x);
   --line-height: 1.5;
@@ -13,6 +13,7 @@
   // Borders
   --border-radius-sm: 0.25rem;
   --border-radius: 0.375rem;
+  --border-radius-lg: 0.75rem;
   --border-width: 1px;
 
   // Transitions and other effects
@@ -20,6 +21,9 @@
   --transition-timing-function: ease;
   --auto-bg-opacity: 0.15;
   --disabled-opacity: 0.4;
+  --shadow-elevation-low: 0 0 0.25rem 0 var(--c-shadow);
+  --shadow-elevation-medium: 0 0 1rem -0.3rem var(--c-shadow);
+  --shadow-elevation-high: 0 0.5rem 2rem -0.5rem var(--c-shadow);
 
   /* -------------------------------------------------- *
    * Element-specific but might be useful in other      *

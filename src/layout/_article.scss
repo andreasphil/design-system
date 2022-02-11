@@ -3,4 +3,21 @@
  * from the other content)                            *
  * -------------------------------------------------- */
 
-// TODO: Implement
+@use "../lib";
+
+article {
+  $article-padding-y: var(--article-padding-y, var(--block-spacing-y));
+  $article-padding-x: var(--article-padding-x, #{$article-padding-y});
+  $article-negative-margin: calc(#{$article-padding-x} * -1);
+
+  @include lib.transition(#{color, background-color, border-color, box-shadow});
+  background: var(--article-bg, var(--c-surface-bg));
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-elevation-high);
+  color: var(--article-fg, var(--c-surface-fg));
+  margin-bottom: var(--article-margin-y, var(--block-spacing-y));
+  margin-left: var(--article-margin-x, #{$article-negative-margin});
+  margin-right: var(--article-margin-x, #{$article-negative-margin});
+  margin-top: var(--article-margin-y, var(--block-spacing-y));
+  padding: $article-padding-y $article-padding-x;
+}
