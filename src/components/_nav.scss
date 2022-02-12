@@ -14,6 +14,7 @@ nav {
   & > ul,
   & > div {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
   }
 
@@ -26,20 +27,18 @@ nav {
   // by default
   header > &:not(.vertical),
   &.horizontal {
-    height: 4.5rem;
-    overflow: auto;
+    justify-content: space-between;
 
     &,
     & > ul,
     & > div {
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: nowrap;
     }
 
-    & > ul,
-    & > div {
-      flex: none;
+    & > ul {
+      // Offset link padding
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
     }
   }
 
@@ -54,12 +53,14 @@ nav {
     }
 
     & > ul li {
+      // Offset link padding
       margin: 0 -0.5rem;
     }
   }
 
   &.fixed {
     background-color: var(--nav-bg, var(--c-bg));
+    height: 4.5rem;
     left: 0;
     padding: 0 var(--body-padding-x);
     position: fixed;
