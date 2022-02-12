@@ -6,8 +6,8 @@
   // Spacing
   --rem-base: clamp(16px, 0.1923vw + 15.2308px, 18px);
   --block-spacing-y: 2rem;
-  --body-padding-x: 1rem;
-  --body-padding-y: var(--body-padding-x);
+  --body-padding-y: 1rem;
+  --body-padding-x: var(--body-padding-y);
   --line-height: 1.5;
 
   // Borders
