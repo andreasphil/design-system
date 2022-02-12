@@ -8,24 +8,13 @@
 @use "./layout/typography";
 
 // Inputs & other form elements
-@use "./forms/checkbox";
-@use "./forms/file";
 @use "./forms/inputs";
-@use "./forms/radio";
-@use "./forms/range";
-@use "./forms/select";
 
 // UI components other than inputs
 @use "./components/buttons";
-@use "./components/detail";
-@use "./components/dialog";
-@use "./components/menu";
 @use "./components/nav";
-@use "./components/progress";
 
 // Additional utilities and components that go beyond simple styling of
 // standard elements
 @use "./extra/container";
-@use "./extra/icons";
-@use "./extra/loading";
 @use "./extra/utils";
