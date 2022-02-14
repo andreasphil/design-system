@@ -1,6 +1,6 @@
 {
   "name": "finecss",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "Small, opinionated CSS framework to make sites look alright with minimal effort",
   "main": "dist/index.css",
   "repository": "https://github.com/andreasphil/fine",
