@@ -4,12 +4,9 @@
 
 @use "../lib";
 
-textarea,
-input:not([type="checkbox"]),
-input:not([type="file"]),
-input:not([type="image"]),
-input:not([type="radio"]),
-input:not([type="range"]) {
+:where(textarea),
+:where(input:not([type="checkbox"], [type="radio"])),
+:where(input:not([type="file"], [type="range"], [type="image"])) {
   @include lib.outline(var(--input-focus, var(--c-primary-container)));
   @include lib.transition(#{color, background-color, border-color, box-shadow});
   -webkit-appearance: none;
@@ -22,8 +19,7 @@ input:not([type="range"]) {
   padding: var(--input-padding-y, 0.75rem) var(--input-padding-x, 0.75rem);
   width: 100%;
 
-  &:hover,
-  &:focus {
+  &:where(:hover, :focus) {
     --input-border-color: var(--c-primary);
   }
 
@@ -32,25 +28,20 @@ input:not([type="range"]) {
   }
 
   // Add some spacing between text and input when used in labels
-  label > & {
+  :where(label) > & {
     margin-top: 0.25rem;
   }
 }
 
-input[type="date"],
-input[type="datetime-local"],
-input[type="time"] {
+:where(input):where([type="date"], [type="time"], [type="datetime-local"]) {
   // Make date inputs the same height as others by manually setting the control
   // height (fix for Safari)
   $text-height: calc(var(--line-height) * var(--font-size));
   $padding: 0.75rem * 2;
   $border-size: calc(var(--border-width) * 2);
-
   height: calc(#{$text-height} + #{$padding} + #{$border-size});
 }
 
-textarea {
-  &.no-resize {
-    resize: none;
-  }
+:where(textarea[f-no-resize]) {
+  resize: none;
 }

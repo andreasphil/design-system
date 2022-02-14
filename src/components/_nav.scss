@@ -5,8 +5,8 @@
 @use "../lib";
 
 :where(nav) {
-  @include lib.transition(#{color, background-color, border-color, box-shadow});
   --block-spacing-y: 0;
+  @include lib.transition(#{color, background-color, border-color, box-shadow});
   color: var(--nav-fg, currentColor);
   display: flex;
   flex-wrap: wrap;
@@ -37,8 +37,8 @@
 }
 
 :where(nav a[f-active]) {
-  @include lib.autoBg;
   --link-hover-color: var(--link-color, var(--c-primary));
+  @include lib.autoBg;
 }
 
 :where(nav a:only-child) {
