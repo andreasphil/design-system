@@ -2,10 +2,13 @@
   "name": "finecss",
   "version": "0.0.1-alpha.4",
   "description": "Small, opinionated CSS framework to make sites look alright with minimal effort",
-  "main": "dist/index.css",
-  "repository": "https://github.com/andreasphil/fine",
   "author": "Andreas Philippi",
   "license": "MIT",
+  "style": "dist/index.min.css",
+  "repository": "https://github.com/andreasphil/fine",
+  "files": [
+    "src/**/*.scss"
+  ],
   "scripts": {
     "start": "sass --no-source-map --watch src/index.scss dist/index.css",
     "build": "sass --no-source-map src/index.scss dist/index.css; esbuild dist/index.css --outfile=dist/index.min.css --bundle --minify",
