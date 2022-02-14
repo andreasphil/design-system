@@ -12,6 +12,7 @@ A small, opinionated CSS framework to make sites look alright with minimal effor
 - 🌈 Automatic color system that reduces time spent fiddling with color palettes
 - 🌗 Includes light and dark modes based on user preferences
 - 🪗 Fully responsive
+- 💨 Optimized to pair well with [Windi CSS](https://github.com/windicss/windicss)
 
 ## Usage
 
