@@ -1,5 +1,5 @@
 {
-  "name": "fine",
+  "name": "finecss",
   "version": "0.0.1-alpha.3",
   "description": "Small, opinionated CSS framework to make sites look alright with minimal effort",
   "main": "dist/index.css",
