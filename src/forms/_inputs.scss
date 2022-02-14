@@ -19,7 +19,7 @@ input:not([type="range"]) {
   border: var(--border-width) solid var(--input-border-color, var(--c-border));
   caret-color: var(--input-border-color, initial);
   color: var(--input-fg, var(--c-fg));
-  padding: 0.75rem;
+  padding: var(--input-padding-y, 0.75rem) var(--input-padding-x, 0.75rem);
   width: 100%;
 
   &:hover,

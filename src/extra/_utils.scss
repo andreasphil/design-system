@@ -4,53 +4,20 @@
 
 @use "../lib";
 
-.trim {
+[f-trim~="top"],
+[f-trim="both"] {
   > *:first-child {
     margin-top: 0;
   }
+}
 
+[f-trim~="bottom"],
+[f-trim="both"] {
   > *:last-child {
     margin-bottom: 0;
   }
 }
 
-/* -------------------------------------------------- *
- * Flexbox-related                                    *
- * -------------------------------------------------- */
-
-.flex {
-  display: flex;
-
-  &.row {
-    flex-direction: row;
-  }
-  &.column {
-    flex-direction: column;
-  }
-
-  &.align-center {
-    align-items: center;
-  }
-
-  &.justify-between {
-    justify-content: space-between;
-  }
-  &.justify-center {
-    justify-content: center;
-  }
-}
-
-/* -------------------------------------------------- *
- * Text-related                                       *
- * -------------------------------------------------- */
-
-.text {
-  &-c-primary {
-    @include lib.transition(color);
-    color: var(--c-primary);
-  }
-  &-c-variant {
-    @include lib.transition(color);
-    color: var(--c-fg-variant);
-  }
+:where([f-transition]) {
+  @include lib.transition(all);
 }

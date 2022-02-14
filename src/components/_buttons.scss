@@ -4,11 +4,8 @@
 
 @use "../lib";
 
-button,
-[role="button"],
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
+:where(button, [role="button"]),
+:where(input):where([type="button"], [type="submit"], [type="reset"]) {
   @include lib.autoBg(
     $insetX: calc(var(--border-width) * -1),
     $hoverOnly: true
@@ -22,39 +19,35 @@ input[type="reset"] {
   color: var(--button-fg, var(--c-on-primary));
   cursor: pointer;
   font-weight: 500;
-  padding: 0.75rem;
+  padding: var(--button-padding-y, 0.75rem) var(--button-padding-x, 1rem);
 
-  &:disabled {
-    opacity: var(--disabled-opacity);
+  &:where(:disabled) {
     cursor: not-allowed;
+    opacity: var(--disabled-opacity);
   }
 
-  &[aria-busy="true"] {
-    cursor: progress;
-  }
-
-  &.outline,
-  &.ghost {
+  &:where([f-outline], [f-ghost]) {
     --button-fg: var(--c-primary);
     --button-bg: transparent;
   }
 
-  &.outline {
+  &:where([f-outline]) {
     --button-border-color: currentColor;
   }
 
-  svg {
+  :where(svg) {
     color: currentColor;
-    height: 1em;
-    width: 1em;
+    display: block;
+    height: 1.2em;
+    width: auto;
   }
 }
 
-button {
+:where(button) {
   display: block;
   width: 100%;
 }
 
-[role="button"] {
+:where([role="button"]) {
   display: inline-block;
 }

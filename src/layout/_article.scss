@@ -5,11 +5,11 @@
 
 @use "../lib";
 
-article {
+:where(article) {
   @include lib.transition(#{color, background-color, border-color, box-shadow});
   background: var(--article-bg, var(--c-surface-bg));
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-elevation-high);
+  border-radius: var(--large-border-radius);
+  box-shadow: var(--high-shadow-elevation);
   color: var(--article-fg, var(--c-surface-fg));
   margin: var(--block-spacing-y) 0;
   padding: var(--block-spacing-y) 2rem;

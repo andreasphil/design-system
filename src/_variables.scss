@@ -1,4 +1,4 @@
-:root {
+:where(:root) {
   /* -------------------------------------------------- *
    * Shared                                             *
    * -------------------------------------------------- */
@@ -7,13 +7,13 @@
   --rem-base: clamp(16px, 0.1923vw + 15.2308px, 18px);
   --block-spacing-y: 2rem;
   --body-padding-y: 1rem;
-  --body-padding-x: var(--body-padding-y);
+  --body-padding-x: 1rem;
   --line-height: 1.5;
 
   // Borders
-  --border-radius-sm: 0.25rem;
+  --small-border-radius: 0.25rem;
   --border-radius: 0.375rem;
-  --border-radius-lg: 0.75rem;
+  --large-border-radius: 0.75rem;
   --border-width: 1px;
 
   // Transitions and other effects
@@ -21,9 +21,9 @@
   --transition-timing-function: ease;
   --auto-bg-opacity: 0.15;
   --disabled-opacity: 0.4;
-  --shadow-elevation-low: 0 0 0.25rem 0 var(--c-shadow);
-  --shadow-elevation-medium: 0 0.25rem 1rem -0.25rem var(--c-shadow);
-  --shadow-elevation-high: 0 0.5rem 2rem -0.5rem var(--c-shadow);
+  --low-shadow-elevation: 0 0 0.25rem 0 var(--c-shadow);
+  --medium-shadow-elevation: 0 0.25rem 1rem -0.25rem var(--c-shadow);
+  --high-shadow-elevation: 0 0.5rem 2rem -0.5rem var(--c-shadow);
 
   /* -------------------------------------------------- *
    * Element-specific but might be useful in other      *

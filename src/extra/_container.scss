@@ -2,7 +2,7 @@
  * Simple responsive container                        *
  * -------------------------------------------------- */
 
-.container {
+:where([f-container]) {
   margin: 0 auto;
   max-width: var(--container-max-width, 768px);
   padding: var(--container-padding-y, 0) var(--container-padding-x, 0);
