@@ -25,6 +25,13 @@
   --c-mark: hsl(48 90% 54%);
 }
 
+// Backdrop doesn't inherit from root, so we'll need to declare variables
+// separately
+:where(::backdrop, dialog + .backdrop) {
+  --tint: 155;
+  --c-bg: hsl(var(--tint) 10% 99% / 0.8);
+}
+
 @media (prefers-color-scheme: dark) {
   :where(:root) {
     --color-scheme: dark;
@@ -40,5 +47,9 @@
     --c-on-primary: var(--c-fg);
     --c-primary-container: hsl(var(--tint) 80% 44% / 0.25);
     --c-shadow: hsl(var(--tint) 20% 4%);
+  }
+
+  :where(::backdrop, dialog + .backdrop) {
+    --c-bg: hsl(var(--tint) 40% 4% / 0.8);
   }
 }
