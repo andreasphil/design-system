@@ -4,6 +4,8 @@
 
 @use "../lib";
 
+$nav-height: var(--nav-height, 5rem);
+
 :where(nav) {
   --block-spacing-y: 0;
   @include lib.transition(#{color, background-color, border-color, box-shadow});
@@ -15,7 +17,7 @@
 
   &:where([f-fixed]) {
     background-color: var(--nav-bg, var(--c-bg));
-    height: 4.5rem;
+    height: $nav-height;
     left: 0;
     padding: 0 var(--body-padding-x);
     position: fixed;
@@ -97,9 +99,9 @@
  * -------------------------------------------------- */
 
 :where(body[f-fixed-nav]) {
-  padding-top: calc(var(--body-padding-y) + 4rem);
+  padding-top: calc(var(--body-padding-y) + #{$nav-height});
 }
 
 :where(:not(body)):where([f-fixed-nav]) {
-  padding-top: 4rem;
+  padding-top: $nav-height;
 }

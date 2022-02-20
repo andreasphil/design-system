@@ -6,7 +6,7 @@
   --tint: 155;
 
   --color-scheme: light;
-  --c-bg: hsl(0 10% 99%);
+  --c-bg: hsl(var(--tint) 10% 99%);
   --c-fg: hsl(var(--tint) 40% 4%);
   --c-fg-variant: hsl(var(--tint) 10% 58%);
   --c-surface-bg: hsl(0 0% 100%);
@@ -46,7 +46,7 @@
     --c-primary: hsl(var(--tint) 80% 44%);
     --c-on-primary: var(--c-fg);
     --c-primary-container: hsl(var(--tint) 80% 44% / 0.25);
-    --c-shadow: hsl(var(--tint) 20% 4%);
+    --c-shadow: hsl(var(--tint) 20% 3%);
   }
 
   :where(::backdrop, dialog + .backdrop) {

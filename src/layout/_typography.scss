@@ -8,7 +8,7 @@
   font-size: var(--h-font-size);
   line-height: var(--h-line-height, 1.2);
   margin: max(var(--block-spacing-y), 1em) 0;
-  text-transform: var(--h-text-transform, capitalize);
+  text-transform: var(--h-text-transform, initial);
 }
 :where(h1) {
   --h-font-size: var(--h1-font-size);

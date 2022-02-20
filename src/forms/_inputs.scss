@@ -25,6 +25,7 @@
 
   &::placeholder {
     color: var(--input-placeholder-color, var(--c-fg-variant));
+    opacity: 1;
   }
 
   // Add some spacing between text and input when used in labels
