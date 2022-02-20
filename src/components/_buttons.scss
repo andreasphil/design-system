@@ -34,13 +34,6 @@
   &:where([f-outline]) {
     --button-border-color: currentColor;
   }
-
-  :where(svg) {
-    color: currentColor;
-    display: block;
-    height: 1.2em;
-    width: auto;
-  }
 }
 
 :where(button) {

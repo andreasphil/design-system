@@ -1,0 +1,18 @@
+/* -------------------------------------------------- *
+ * SVGs                                               *
+ * -------------------------------------------------- */
+
+// Util to make using (especially positioning) SVGs more convenient. This
+// covers most of what I use SVGs for, namely icons in various controls,
+// but may not be wanted in all cases. Use the [f-normalize-svg="false"]
+// attribute on some container to not apply the rules to any of the SVGs
+// in that container. You can also add it to the documents body to opt out
+// of SVG "normalization" for the entire page.
+
+:where(:not([f-normalize-svg="false"]) svg),
+:where(button svg) {
+  color: currentColor;
+  display: block;
+  height: var(--svg-height, 1.2em);
+  width: auto;
+}
