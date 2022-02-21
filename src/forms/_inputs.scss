@@ -7,7 +7,7 @@
 :where(textarea),
 :where(input:not([type="checkbox"], [type="radio"])),
 :where(input:not([type="file"], [type="range"], [type="image"])) {
-  @include lib.outline(var(--input-focus, var(--c-primary-container)));
+  @include lib.outline(var(--input-focus-color, var(--c-primary-container)));
   @include lib.transition(#{color, background-color, border-color, box-shadow});
   -webkit-appearance: none;
   appearance: none;
