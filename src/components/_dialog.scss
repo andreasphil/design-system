@@ -24,16 +24,17 @@
   margin: auto;
   max-width: var(--dialog-max-width, fit-content);
   padding: var(--dialog-padding-y, 1rem) var(--dialog-padding-x, 1rem);
+  position: fixed;
   width: 100%;
 
   &::backdrop {
-    background: var(--c-bg);
+    background: var(--c-backdrop-bg);
   }
 }
 
 :where(dialog + .backdrop) {
   @include lib.transition(background-color);
-  background: var(--c-bg);
+  background: var(--c-backdrop-bg);
   bottom: 0;
   left: 0;
   position: fixed;
