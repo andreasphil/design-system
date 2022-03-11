@@ -4,6 +4,6 @@
 
 :where([f-container]) {
   margin: 0 auto;
-  max-width: var(--container-max-width, 768px);
+  max-width: var(--container-max-width, 50rem);
   padding: var(--container-padding-y, 0) var(--container-padding-x, 0);
 }
