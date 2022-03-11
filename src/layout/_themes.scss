@@ -8,17 +8,18 @@
   --color-scheme: light;
   --c-bg: hsl(var(--tint) 10% 99%);
   --c-backdrop-bg: hsl(var(--tint) 10% 99% / 0.8);
-  --c-fg: hsl(var(--tint) 40% 4%);
-  --c-fg-variant: hsl(var(--tint) 10% 58%);
+  --c-fg: hsl(var(--tint) 12% 6%);
+  --c-fg-variant: hsl(var(--tint) 12% 55%);
   --c-surface-bg: hsl(0 0% 100%);
   --c-surface-fg: var(--c-fg);
-  --c-surface-variant-bg: hsl(var(--tint) 11% 95%);
+  --c-surface-variant-bg: hsl(var(--tint) 12% 96%);
   --c-surface-variant-fg: var(--c-surface-fg);
-  --c-border: hsl(var(--tint) 12% 84%);
+  --c-border: hsl(var(--tint) 14% 84%);
+  --c-shadow: hsl(var(--tint) 14% 88%);
+
   --c-primary: hsl(var(--tint) 80% 44%);
-  --c-on-primary: var(--c-bg);
-  --c-primary-container: hsl(var(--tint) 80% 44% / 0.2);
-  --c-shadow: hsl(var(--tint) 20% 88%);
+  --c-on-primary: hsl(0 0% 100%);
+  --c-primary-container: hsl(var(--tint) 80% 44% / 0.25);
 
   --c-code: var(--c-primary);
   --c-del: hsl(8 72% 52%);
@@ -36,19 +37,16 @@
 @media (prefers-color-scheme: dark) {
   :where(:root) {
     --color-scheme: dark;
-    --c-bg: hsl(var(--tint) 40% 4%);
-    --c-backdrop-bg: hsl(var(--tint) 40% 4% / 0.8);
-    --c-fg: hsl(var(--tint) 10% 96%);
-    --c-fg-variant: hsl(var(--tint) 10% 44%);
-    --c-surface-bg: hsl(var(--tint) 12% 7%);
+    --c-bg: hsl(var(--tint) 10% 5%);
+    --c-backdrop-bg: hsl(var(--tint) 10% 5% / 0.8);
+    --c-fg: hsl(0 0% 100%);
+    --c-fg-variant: hsl(var(--tint) 12% 45%);
+    --c-surface-bg: hsl(var(--tint) 12% 6%);
     --c-surface-fg: var(--c-fg);
-    --c-surface-variant-bg: hsl(var(--tint) 11% 9%);
+    --c-surface-variant-bg: hsl(var(--tint) 12% 7%);
     --c-surface-variant-fg: var(--c-surface-fg);
-    --c-border: hsl(var(--tint) 12% 18%);
-    --c-primary: hsl(var(--tint) 80% 44%);
-    --c-on-primary: var(--c-fg);
-    --c-primary-container: hsl(var(--tint) 80% 44% / 0.25);
-    --c-shadow: hsl(var(--tint) 20% 3%);
+    --c-border: hsl(var(--tint) 14% 18%);
+    --c-shadow: hsl(var(--tint) 10% 4%);
   }
 
   ::backdrop {
