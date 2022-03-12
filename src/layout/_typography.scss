@@ -107,16 +107,16 @@
   border-radius: var(--small-border-radius);
 }
 :where(code) {
-  color: var(--c-code);
+  color: var(--c-code, var(--c-primary));
 }
 :where(mark) {
-  color: var(--c-mark);
+  color: var(--c-mark, orange);
 }
 :where(ins) {
-  color: var(--c-ins);
+  color: var(--c-ins, limegreen);
 }
 :where(del) {
-  color: var(--c-del);
+  color: var(--c-del, orangered);
 }
 
 :where(kbd) {

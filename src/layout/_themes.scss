@@ -9,10 +9,10 @@
   --c-bg: hsl(var(--tint) 10% 99%);
   --c-backdrop-bg: hsl(var(--tint) 10% 99% / 0.8);
   --c-fg: hsl(var(--tint) 12% 6%);
-  --c-fg-variant: hsl(var(--tint) 12% 55%);
+  --c-fg-variant: hsl(var(--tint) 8% 55%);
   --c-surface-bg: hsl(0 0% 100%);
   --c-surface-fg: var(--c-fg);
-  --c-surface-variant-bg: hsl(var(--tint) 12% 96%);
+  --c-surface-variant-bg: hsl(var(--tint) 11% 96%);
   --c-surface-variant-fg: var(--c-surface-fg);
   --c-border: hsl(var(--tint) 14% 84%);
   --c-shadow: hsl(var(--tint) 14% 88%);
@@ -20,11 +20,6 @@
   --c-primary: hsl(var(--tint) 80% 44%);
   --c-on-primary: hsl(0 0% 100%);
   --c-primary-container: hsl(var(--tint) 80% 44% / 0.25);
-
-  --c-code: var(--c-primary);
-  --c-del: hsl(8 72% 52%);
-  --c-ins: hsl(130 60% 50%);
-  --c-mark: hsl(48 90% 54%);
 }
 
 // Backdrop doesn't inherit from root, so we'll need to declare variables
@@ -40,16 +35,16 @@
     --c-bg: hsl(var(--tint) 10% 5%);
     --c-backdrop-bg: hsl(var(--tint) 10% 5% / 0.8);
     --c-fg: hsl(0 0% 100%);
-    --c-fg-variant: hsl(var(--tint) 12% 45%);
-    --c-surface-bg: hsl(var(--tint) 12% 6%);
+    --c-fg-variant: hsl(var(--tint) 8% 55%);
+    --c-surface-bg: hsl(var(--tint) 12% 8%);
     --c-surface-fg: var(--c-fg);
-    --c-surface-variant-bg: hsl(var(--tint) 12% 7%);
+    --c-surface-variant-bg: hsl(var(--tint) 14% 11%);
     --c-surface-variant-fg: var(--c-surface-fg);
     --c-border: hsl(var(--tint) 14% 18%);
     --c-shadow: hsl(var(--tint) 10% 4%);
   }
 
   ::backdrop {
-    --c-backdrop-bg: hsl(var(--tint) 40% 4% / 0.8);
+    --c-backdrop-bg: hsl(var(--tint) 10% 5% / 0.8);
   }
 }
