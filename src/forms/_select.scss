@@ -1,0 +1,31 @@
+/* -------------------------------------------------- *
+ * Select boxes                                       *
+ * -------------------------------------------------- */
+
+@use "../lib";
+
+:where(select) {
+  @include lib.outline(var(--select-focus-color, var(--c-primary-container)));
+  @include lib.transition(#{color, background-color, border-color, box-shadow});
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--icon-chevron-down) no-repeat right 0.5em center / 1em;
+  background-color: var(--select-bg, var(--c-bg));
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--select-border-color, var(--c-border));
+  color: var(--select-fg, inherit);
+  font: inherit;
+  letter-spacing: inherit; /* 2 */
+  padding: var(--select-padding-y, 0.75rem) var(--select-padding-x, 0.75rem);
+  padding-right: calc(var(--select-padding-y, 0.75rem) + 1em);
+  width: 100%;
+
+  &:where(:hover, :focus) {
+    --select-border-color: var(--c-primary);
+  }
+
+  // Add some spacing between text and input when used in labels
+  :where(label) > & {
+    margin-top: 0.25rem;
+  }
+}
