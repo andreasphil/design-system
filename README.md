@@ -1,6 +1,10 @@
-# Fine
+<h1 align="center">
+  Fine 🐥
+</h1>
 
-A small, opinionated CSS framework to make sites look alright with minimal effort.
+<p align="center">
+  <strong>Small, opinionated CSS framework to make sites look alright with minimal effort</strong>
+</p>
 
 > ⚠️ Work in progress. Things are most certainly incomplete and/or broken, and will definitely change.
 
@@ -21,18 +25,25 @@ A small, opinionated CSS framework to make sites look alright with minimal effor
 ## Development
 
 ```sh
-yarn install    # Download dependencies
-yarn start      # Compile stylesheets
+npm install       # Download dependencies
+npm start         # Compile stylesheets
 ```
 
-Once stylesheet compilation is running, open `index.html` in your browser to see a preview page. You don't need a dev server. But if you want one, `npx servor` is a good choice.
+Once stylesheet compilation is running, open `index.html` in your browser to see a preview page. You don't need a dev server. But if you want one, `npx serve` is a good choice.
 
 ## Building
 
 ```sh
-yarn build      # Creates bundled + minified output in dist
+npm build:icons   # Re-builds the icon SCSS file (should run automatically on start and build)
+npm build         # Creates bundled + minified output in dist
 ```
 
 ## Ressources
 
 > ✅ TODO
+
+## Credits
+
+Apart from the open source packages listed in package.json, Fine uses icons from [Lucide](https://lucide.dev/).
+
+Thanks 🙏
