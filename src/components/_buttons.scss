@@ -18,7 +18,9 @@
   border: var(--border-width) solid var(--button-border-color, transparent);
   color: var(--button-fg, var(--c-on-primary));
   cursor: pointer;
+  font: inherit;
   font-weight: var(--button-font-weight, 500);
+  letter-spacing: inherit;
   padding: var(--button-padding-y, 0.75rem) var(--button-padding-x, 1rem);
 
   &:where(:disabled) {
