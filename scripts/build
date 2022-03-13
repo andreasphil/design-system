@@ -1,0 +1,14 @@
+#! /bin/bash
+
+set -e
+
+echo "Building icons ..."
+npm run build:icons
+
+echo "Building styles ..."
+sass --no-source-map src/index.scss dist/index.css
+
+echo "Bundling ..."
+esbuild dist/index.css --outfile=dist/index.min.css --bundle --minify
+
+echo "✅ Done"
