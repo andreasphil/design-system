@@ -12,5 +12,5 @@
   box-shadow: var(--high-shadow-elevation);
   color: var(--article-fg, var(--c-surface-fg));
   margin: var(--block-spacing-y) 0;
-  padding: var(--block-spacing-y) 2rem;
+  padding: var(--article-padding-y, 2rem) var(--article-padding-x, 2rem);
 }
