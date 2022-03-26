@@ -21,7 +21,7 @@
   border: none;
   box-shadow: var(--high-shadow-elevation);
   color: var(--c-surface-fg);
-  margin: auto;
+  margin: 0 auto;
   max-width: var(--dialog-max-width, fit-content);
   padding: var(--dialog-padding-y, 1rem) var(--dialog-padding-x, 1rem);
   position: fixed;
