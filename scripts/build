@@ -2,13 +2,20 @@
 
 set -e
 
-echo "Building icons ..."
+echo "------------------------------"
+echo " 👀 Building icons ..."
+echo "------------------------------"
 npm run build:icons
 
-echo "Building styles ..."
-sass --no-source-map src/index.scss dist/index.css
+echo "------------------------------"
+echo " 🌈 Building styles ..."
+echo "------------------------------"
+npm run build:styles
 
-echo "Bundling ..."
+echo "------------------------------"
+echo " 📦 Bundling ..."
+echo "------------------------------"
 esbuild dist/index.css --outfile=dist/index.min.css --bundle --minify
 
-echo "✅ Done"
+echo ""
+echo "> ✅ Done!"
