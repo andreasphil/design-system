@@ -5,13 +5,11 @@ import { resolve } from "path";
 const scss = ([light, dark]) => `
 /* This file is generated with \`node scripts/icons.js\` */
 :where(:root) {
-  ${light.trim()}
+${light.trim()}
 }
-@media (prefers-color-scheme: dark) {
-  :where(:root) {
-    ${dark.trim()}
-  }
-}`;
+@media (prefers-color-scheme: dark) { :where(:root) {
+${dark.trim()}
+}}`;
 
 /** Convert an SVG string into a data URI */
 const dataUri = (source) =>
