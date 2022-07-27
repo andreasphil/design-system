@@ -1,0 +1,47 @@
+/* -------------------------------------------------- *
+ * Checkboxes                                         *
+ * -------------------------------------------------- */
+
+@use "../lib";
+
+:where(input[type="checkbox"]) {
+  -webkit-appearance: none;
+  appearance: none;
+  font: inherit;
+  outline: none;
+  vertical-align: bottom;
+
+  &::before {
+    @include lib.transition(#{background-color, border-color, box-shadow});
+    background-color: var(--checkbox-bg, var(--c-bg));
+    background: var(--icon-check) no-repeat center center / 0em;
+    border-color: var(--checkbox-border-color, var(--c-fg-variant));
+    border-radius: var(--small-border-radius);
+    border-style: solid;
+    border-width: var(--border-width);
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    height: 1.5em;
+    margin-right: 0.75rem;
+    width: 1.5em;
+  }
+
+  &:where(:hover, :focus)::before {
+    --checkbox-border-color: var(--c-primary);
+  }
+
+  &:where(:focus)::before {
+    box-shadow: 0 0 0 4px
+      var(--checkbox-focus-color, var(--c-primary-container));
+  }
+
+  &:where(:checked)::before {
+    background-size: 1em;
+  }
+
+  &:where(:disabled)::before {
+    cursor: not-allowed;
+    opacity: var(--disabled-opacity);
+  }
+}
