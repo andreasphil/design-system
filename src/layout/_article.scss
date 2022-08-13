@@ -8,10 +8,10 @@
 :where(article) {
   @include lib.transition(#{color, background-color, border-color, box-shadow});
 
-  background: var(--article-bg, var(--c-surface-bg));
-  border-radius: var(--large-border-radius);
-  box-shadow: var(--high-shadow-elevation);
-  color: var(--article-fg, var(--c-surface-fg));
+  background: var(--c-surface-bg);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-elevation-high);
+  color: var(--c-surface-fg);
   margin: var(--block-spacing-y) 0;
   padding: var(--article-padding-y, 2rem) var(--article-padding-x, 2rem);
 }

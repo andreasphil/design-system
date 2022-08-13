@@ -18,9 +18,9 @@
   @include lib.transition(#{color, background-color, box-shadow});
 
   background: var(--c-surface-bg);
-  border-radius: var(--large-border-radius);
+  border-radius: var(--border-radius-large);
   border: none;
-  box-shadow: var(--high-shadow-elevation);
+  box-shadow: var(--shadow-elevation-high);
   color: var(--c-surface-fg);
   margin: 0 auto;
   max-width: var(--dialog-max-width, fit-content);

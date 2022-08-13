@@ -18,7 +18,7 @@ $nav-height: var(--nav-height, 5rem);
   padding: 0;
 
   &:where([f-fixed]) {
-    background-color: var(--nav-bg, var(--c-bg));
+    background-color: var(--c-surface-bg);
     height: $nav-height;
     left: 0;
     padding: 0 var(--body-padding-x);

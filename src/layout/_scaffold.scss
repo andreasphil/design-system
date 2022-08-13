@@ -20,6 +20,6 @@
 }
 
 ::selection {
-  background-color: var(--selection-bg, var(--c-primary));
-  color: var(--selection-fg, var(--c-on-primary));
+  background-color: var(--c-primary-container);
+  color: var(--c-fg);
 }

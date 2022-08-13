@@ -11,9 +11,9 @@
   --line-height: 1.5;
 
   // Borders
-  --small-border-radius: 0.25rem;
+  --border-radius-small: 0.25rem;
   --border-radius: 0.375rem;
-  --large-border-radius: 0.75rem;
+  --border-radius-large: 0.75rem;
   --border-width: 1px;
 
   // Transitions and other effects
@@ -21,9 +21,9 @@
   --transition-timing-function: ease;
   --auto-bg-opacity: 0.15;
   --disabled-opacity: 0.4;
-  --low-shadow-elevation: 0 0 0.25rem 0 var(--c-shadow);
-  --medium-shadow-elevation: 0 0.25rem 1rem -0.25rem var(--c-shadow);
-  --high-shadow-elevation: 0 0.5rem 2rem -0.5rem var(--c-shadow);
+  --shadow-elevation-low: 0 0 0.25rem 0 var(--c-shadow);
+  --shadow-elevation-medium: 0 0.25rem 1rem -0.25rem var(--c-shadow);
+  --shadow-elevation-high: 0 0.5rem 2rem -0.5rem var(--c-shadow);
 
   /* -------------------------------------------------- *
    * Element-specific but might be useful in other      *
@@ -32,12 +32,12 @@
    * -------------------------------------------------- */
 
   // Typography
-  --small-font-size: 0.875rem;
+  --font-size-small: 0.875rem;
   --font-size: 1rem;
-  --h6-font-size: var(--font-size);
-  --h5-font-size: 1.125rem;
-  --h4-font-size: 1.25rem;
-  --h3-font-size: 1.5rem;
-  --h2-font-size: 2rem;
-  --h1-font-size: 2.5rem;
+  --font-size-h6: var(--font-size);
+  --font-size-h5: 1.125rem;
+  --font-size-h4: 1.25rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h1: 2.5rem;
 }

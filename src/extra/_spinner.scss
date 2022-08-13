@@ -20,7 +20,7 @@
     content: "";
     display: inline-block;
     height: var(--spinner-size, 1.5rem);
-    opacity: var(--spinner-opacity, 1);
+    opacity: 1;
     vertical-align: middle;
     width: var(--spinner-size, 1.5rem);
   }

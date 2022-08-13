@@ -11,7 +11,7 @@
     $hoverOnly: true
   );
 
-  @include lib.outline(var(--button-focus, var(--c-primary-container)));
+  @include lib.outline(var(--button-focus-color, var(--c-primary-container)));
   @include lib.transition(#{color, background-color, border-color, box-shadow});
 
   background: var(--button-bg, var(--c-primary));
