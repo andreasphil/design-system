@@ -37,7 +37,6 @@ import "finecss/dist/index.min.css";
 The following CSS custom properties can be customized:
 
 <!-- VARIABLES -->
-
 ```
 --article-padding-x
 --article-padding-y
@@ -141,7 +140,6 @@ The following CSS custom properties can be customized:
 --transition-duration
 --transition-timing-function
 ```
-
 <!-- END VARIABLES -->
 
 ## Development
