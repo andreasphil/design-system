@@ -29,12 +29,12 @@
     opacity: var(--disabled-opacity);
   }
 
-  &:where([f-outline], [f-ghost]) {
+  &:where([data-fine-button="outline"], [data-fine-button="ghost"]) {
     --button-fg: var(--c-primary);
     --button-bg: transparent;
   }
 
-  &:where([f-outline]) {
+  &:where([data-fine-button="outline"]) {
     --button-border-color: currentColor;
   }
 }

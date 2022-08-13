@@ -4,26 +4,26 @@
 
 @use "../lib";
 
-[f-trim~="top"],
-[f-trim="both"] {
+[data-fine-trim~="top"],
+[data-fine-trim="both"] {
   > *:first-child {
     margin-top: 0;
   }
 }
 
-[f-trim~="bottom"],
-[f-trim="both"] {
+[data-fine-trim~="bottom"],
+[data-fine-trim="both"] {
   > *:last-child {
     margin-bottom: 0;
   }
 }
 
-:where([f-transition]) {
+:where([data-fine-transition]) {
   @include lib.transition(all);
 }
 
 // See https://www.a11yproject.com/posts/how-to-hide-content/
-:where([f-visually-hidden]:not(:focus):not(:active)) {
+:where([data-fine-hidden]:not(:focus):not(:active)) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;

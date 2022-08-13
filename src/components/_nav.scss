@@ -11,13 +11,12 @@ $nav-height: var(--nav-height, 5rem);
 
   @include lib.transition(#{color, background-color, border-color, box-shadow});
 
-  color: var(--nav-fg, currentColor);
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
 
-  &:where([f-fixed]) {
+  &:where([data-fine-nav~="fixed"]) {
     background-color: var(--c-surface-bg);
     height: $nav-height;
     left: 0;
@@ -40,7 +39,7 @@ $nav-height: var(--nav-height, 5rem);
   text-decoration: none;
 }
 
-:where(nav a[f-active]) {
+:where(nav a[data-fine-link="active"]) {
   --link-hover-color: var(--link-color, var(--c-primary));
 
   @include lib.autoBg;
@@ -69,8 +68,8 @@ $nav-height: var(--nav-height, 5rem);
 
 // Navs inside headers or with the .horizontal modifier are navbars
 // by default
-:where(header > nav:not([f-vertical])),
-:where(nav[f-horizontal]) {
+:where(header > nav:not([data-fine-nav~="vertical"])),
+:where(nav[data-fine-nav~="horizontal"]) {
   justify-content: space-between;
   align-items: center;
 
@@ -84,8 +83,8 @@ $nav-height: var(--nav-height, 5rem);
 
 // Navs outside headers or with the .vertical modifier flow vertially
 // by default
-:where(:not(header) > nav:not([f-horizontal])),
-:where(nav[f-vertical]) {
+:where(:not(header) > nav:not([data-fine-nav~="horizontal"])),
+:where(nav[data-fine-nav~="vertical"]) {
   flex-direction: column;
 
   > :where(ul) {
@@ -102,10 +101,10 @@ $nav-height: var(--nav-height, 5rem);
  * navbars                                            *
  * -------------------------------------------------- */
 
-:where(body[f-fixed-nav]) {
+:where(body[data-fine-nav="fixed"]) {
   padding-top: calc(var(--body-padding-y) + #{$nav-height});
 }
 
-:where(:not(body)):where([f-fixed-nav]) {
+:where(:not(body)):where([data-fine-nav="fixed"]) {
   padding-top: $nav-height;
 }

@@ -45,6 +45,6 @@
   height: calc(#{$text-height} + #{$padding} + #{$border-size});
 }
 
-:where(textarea[f-no-resize]) {
+:where(textarea[data-fine-textarea="no-resize"]) {
   resize: none;
 }
