@@ -3,281 +3,200 @@
   <link rel="stylesheet" href="./dist/index.css" />
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --body-padding-y: 6rem;
+    }
+
+    @media (min-width: 1024px) {
+      article {
+        margin-left: -2rem;
+        margin-right: -2rem;
+      }
+    }
+
+    dialog {
+      margin-top: 100px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+  </style>
+
+  <script>
+    function showDemoDialog() {
+      const dialog = document.getElementById("demo-dialog");
+      dialog.showModal();
+    }
+
+    function closeDemoDialog() {
+      const dialog = document.getElementById("demo-dialog");
+      dialog.close();
+    }
+  </script>
 </head>
 
-<style>
-  :root {
-    --body-padding-y: 8rem;
-    --body-padding-x: 1rem;
-  }
-</style>
-
-<body f-fixed-nav>
-  <header>
-    <nav f-fixed>
-      <strong>Fine</strong>
-      <ul>
-        <li><a href="#">First</a></li>
-        <li><a href="#" f-active>Second</a></li>
-        <li><a href="#">Third</a></li>
-        <li><a href="#">Fourth</a></li>
-        <li><a href="#">Fifth</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div f-container>
-    <section>
-      <h2>Typography</h2>
-
-      <h1>Headline 1</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus
-        velit et optio, aspernatur consequuntur odit excepturi, in laudantium
-        sapiente quasi recusandae harum, saepe tempora delectus itaque rerum
-        temporibus impedit deserunt.
-      </p>
-      <h2>Headline 2</h2>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus
-        velit et optio, aspernatur consequuntur odit excepturi, in laudantium
-        sapiente quasi recusandae harum, saepe tempora delectus itaque rerum
-        temporibus impedit deserunt.
-      </p>
-      <h3>Headline 3</h3>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus
-        velit et optio, aspernatur consequuntur odit excepturi, in laudantium
-        sapiente quasi recusandae harum, saepe tempora delectus itaque rerum
-        temporibus impedit deserunt.
-      </p>
-      <h4>Headline 4</h4>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus
-        velit et optio, aspernatur consequuntur odit excepturi, in laudantium
-        sapiente quasi recusandae harum, saepe tempora delectus itaque rerum
-        temporibus impedit deserunt.
-      </p>
-      <h5>Headline 5</h5>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus
-        velit et optio, aspernatur consequuntur odit excepturi, in laudantium
-        sapiente quasi recusandae harum, saepe tempora delectus itaque rerum
-        temporibus impedit deserunt.
-      </p>
-      <h6>Headline 6</h6>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus
-        velit et optio, aspernatur consequuntur odit excepturi, in laudantium
-        sapiente quasi recusandae harum, saepe tempora delectus itaque rerum
-        temporibus impedit deserunt.
-      </p>
-
-      <pre>
-function hello(name) {
-  console.log(`Hello ${name ? name : 'World'}`);
-}</pre
-      >
-
-      <hr />
-
-      <blockquote>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odio
-        sunt omnis. Nostrum quasi facilis quam ratione deserunt, tenetur
-        assumenda.
-      </blockquote>
-
-      <figure>
-        <blockquote>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-          voluptatibus et magnam molestias, ullam neque harum quod suscipit ea
-          ad!
-        </blockquote>
-        <figcaption>Who said this</figcaption>
-      </figure>
-
-      <hr />
-
-      <ul>
-        <li>Unordered list</li>
-        <li>Unordered list</li>
-        <li>Unordered list</li>
-      </ul>
-      <ol>
-        <li>Ordered list</li>
-        <li>Ordered list</li>
-        <li>Ordered list</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Inline</h2>
-
-      <div
-        style="
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1rem;
-          margin-bottom: 1rem;
-        "
-      >
-        <div><a href="#">Anchor</a></div>
-      </div>
-
-      <div
-        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem"
-      >
-        <div><strong>Bold</strong></div>
-        <div><em>Italic</em></div>
-        <div><u>Underlined</u></div>
-        <div><s>Strikethrough</s></div>
-        <div>Text<sub>sub</sub>, Text<sup>sup</sup></div>
-        <div><small>Small</small></div>
-        <div><code>code();</code></div>
-        <div><kbd>Keyboard</kbd></div>
-        <div><mark>Marked</mark>, <del>Deleted</del>, <ins>Inserted</ins></div>
-        <div><abbr title="An abbreviation">Abbreviation</abbr></div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Forms</h2>
-      <div style="display: flex; gap: 1rem">
-        <button>Primary button</button>
-        <button f-outline>Primary outlined</button>
-        <button f-ghost>Primary ghost</button>
-      </div>
-      <div style="display: flex; gap: 1rem; margin-top: 1rem">
-        <button disabled>Disabled button</button>
-        <button aria-busy="true"></button>
-      </div>
-
-      <div
-        style="
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1rem;
-          margin-top: 1rem;
-        "
-      >
-        <input type="date" placeholder="Date" />
-        <input type="datetime-local" placeholder="Datetime-Local" />
-        <input type="email" placeholder="Email" />
-        <input type="month" placeholder="Month" />
-        <input type="number" placeholder="Number" />
-        <input type="password" placeholder="Password" />
-        <input type="search" placeholder="Search" />
-        <input type="tel" placeholder="Tel" />
-        <input type="text" placeholder="Text" />
-        <input type="time" placeholder="Time" />
-        <input type="url" placeholder="Url" />
-        <input type="week" placeholder="Week" />
-      </div>
-
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          margin-top: 1rem;
-        "
-      >
-        <label>
-          Label for input
-          <input type="text" placeholder="Placeholder" />
-        </label>
-
-        <label>
-          A textarea
-          <textarea class="no-resize"></textarea>
-        </label>
-
-        <label>
-          A select
-          <select>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </label>
-
-        <label> <input type="checkbox" checked />A checkbox </label>
-      </div>
-    </section>
-
-    <section>
-      <h2>Components</h2>
-      <h3>Detail/Summary</h3>
-      <details>
-        <summary>First item</summary>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quas
-          facere, error dignissimos laborum id! Impedit repudiandae sint eum
-          iusto eveniet, exercitationem maxime dolore. Temporibus totam quam
-          quaerat ratione. Eligendi.
-        </p>
-      </details>
-      <details>
-        <summary>Second item</summary>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quas
-          facere, error dignissimos laborum id! Impedit repudiandae sint eum
-          iusto eveniet, exercitationem maxime dolore. Temporibus totam quam
-          quaerat ratione. Eligendi.
-        </p>
-      </details>
-      <details>
-        <summary>Third item</summary>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quas
-          facere, error dignissimos laborum id! Impedit repudiandae sint eum
-          iusto eveniet, exercitationem maxime dolore. Temporibus totam quam
-          quaerat ratione. Eligendi.
-        </p>
-      </details>
-
-      <h3>Navigations</h3>
-      <h4>Horizontal</h4>
-      <nav f-horizontal>
-        <strong>Title</strong>
-        <ul>
-          <li><a href="#" f-active>Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-      </nav>
-
-      <h4>Vertical</h4>
+<body>
+  <div data-fine-container>
+    <header>
       <nav>
-        <strong>Title</strong>
+        <strong>Fine Elements Demo</strong>
         <ul>
-          <li><a href="#" f-active>Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#layout">Layout</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#extras">Extras</a></li>
         </ul>
       </nav>
+    </header>
 
-      <h3>Article</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quidem
-        repellat, perferendis natus facere eveniet aperiam vel nesciunt quos,
-        temporibus voluptatum animi. Repellat facere impedit atque? Delectus
-        iure perferendis quasi.
-      </p>
-      <article f-trim="both">
-        <h2>Headline</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-          praesentium quae aperiam aliquam quis explicabo aliquid. Earum error
-          quibusdam voluptas.
+    <main>
+      <section id="layout">
+        <h2>Layout</h2>
+
+        <h3>Inline elements</h3>
+        <article class="grid">
+          <div><a href="#">Anchor</a></div>
+          <div><strong>Bold</strong></div>
+          <div><em>Italic</em></div>
+          <div><u>Underlined</u></div>
+          <div><s>Strikethrough</s></div>
+          <div>Text<sub>sub</sub>, Text<sup>sup</sup></div>
+          <div><small>Small</small></div>
+          <div><code>code();</code></div>
+          <div><kbd>Keyboard</kbd></div>
+          <div>
+            <mark>Marked</mark>, <del>Deleted</del>, <ins>Inserted</ins>
+          </div>
+          <div><abbr title="An abbreviation">Abbreviation</abbr></div>
+        </article>
+
+        <h3>Block elements</h3>
+        <article data-fine-trim="both">
+          <h1>Headline level 1</h1>
+          <h2>Headline level 2</h2>
+          <h3>Headline level 3</h3>
+          <h4>Headline level 4</h4>
+          <h5>Headline level 5</h5>
+          <h6>Headline level 6</h6>
+          <p>
+            This is a paragraph. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Doloremque aliquid molestias laudantium corrupti
+            ullam ad nulla totam! Provident nobis quam molestiae velit id
+            doloribus, repellat quo?
+          </p>
+          <hr />
+          <pre>function hello(name) { /* ... */ }</pre>
+          <blockquote>This is a blockquote.</blockquote>
+          <figure>
+            <blockquote>This is a blockquote with a caption.</blockquote>
+            <figcaption>Caption</figcaption>
+          </figure>
+          <ul>
+            <li>Unordered list</li>
+            <li>Unordered list</li>
+            <li>Unordered list</li>
+          </ul>
+          <ol>
+            <li>Ordered list</li>
+            <li>Ordered list</li>
+            <li>Ordered list</li>
+          </ol>
+        </article>
+
+        <h3>Articles</h3>
+        <article>
+          Articles like this one are containers with a card-like appearance.
+        </article>
+      </section>
+
+      <section id="components">
+        <h2>Components</h2>
+
+        <h3>Buttons</h3>
+        <article class="grid">
+          <button>Primary button</button>
+          <button data-fine-button="outline">Primary outlined</button>
+          <button data-fine-button="ghost">Primary ghost</button>
+          <button disabled>Disabled button</button>
+          <button aria-busy="true"></button>
+          <button data-fine-button="outline" style="color: orangered">
+            Different color
+          </button>
+        </article>
+
+        <h3>Form controls</h3>
+        <article>
+          <div style="display: flex; flex-direction: column; gap: 1rem">
+            <label>
+              Label for input
+              <input type="text" placeholder="Placeholder" />
+            </label>
+            <label>
+              A textarea
+              <textarea class="no-resize"></textarea>
+            </label>
+            <label>
+              A select
+              <select>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </label>
+            <label> <input type="checkbox" checked />A checkbox </label>
+          </div>
+        </article>
+
+        <h3>Dialog</h3>
+        <article>
+          <dialog id="demo-dialog">
+            <button onclick="closeDemoDialog()" data-fine-button="outline">
+              Close dialog
+            </button>
+          </dialog>
+          <button onclick="showDemoDialog()">Show dialog</button>
+        </article>
+
+        <h3>Navigation</h3>
+        <article data-fine-trim="both">
+          <h4>Horizontal</h4>
+          <nav data-fine-nav="horizontal">
+            <strong>Title</strong>
+            <ul>
+              <li><a href="#" data-fine-link="active">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </nav>
+
+          <h4>Vertical</h4>
+          <nav data-fine-nav="vertical">
+            <strong>Title</strong>
+            <ul>
+              <li><a href="#" data-fine-link="active">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </nav>
+        </article>
+      </section>
+
+      <section id="extras">
+        <h2>Extras</h2>
+
+        <h3>Container</h3>
+        <p data-fine-container>
+          Add the <code>data-fine-container</code> attribute to a block element
+          in order to horizontally center it and apply a max width.
         </p>
-        <h2>Headline</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-          praesentium quae aperiam aliquam quis explicabo aliquid. Earum error
-          quibusdam voluptas.
-        </p>
-      </article>
-    </section>
+
+        <h3>Spinner</h3>
+        <article aria-busy="true"></article>
+      </section>
+    </main>
   </div>
 </body>
