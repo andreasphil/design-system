@@ -8,7 +8,9 @@ $nav-height: var(--nav-height, 5rem);
 
 :where(nav) {
   --block-spacing-y: 0;
+
   @include lib.transition(#{color, background-color, border-color, box-shadow});
+
   color: var(--nav-fg, currentColor);
   display: flex;
   flex-wrap: wrap;
@@ -40,6 +42,7 @@ $nav-height: var(--nav-height, 5rem);
 
 :where(nav a[f-active]) {
   --link-hover-color: var(--link-color, var(--c-primary));
+
   @include lib.autoBg;
 }
 
@@ -87,6 +90,7 @@ $nav-height: var(--nav-height, 5rem);
 
   > :where(ul) {
     flex-direction: column;
+
     // Offset link padding
     margin-left: -0.5rem;
     margin-right: -0.5rem;

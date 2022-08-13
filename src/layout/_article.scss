@@ -7,6 +7,7 @@
 
 :where(article) {
   @include lib.transition(#{color, background-color, border-color, box-shadow});
+
   background: var(--article-bg, var(--c-surface-bg));
   border-radius: var(--large-border-radius);
   box-shadow: var(--high-shadow-elevation);

@@ -8,6 +8,7 @@
 :where(input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [type="image"])) {
   @include lib.outline(var(--input-focus-color, var(--c-primary-container)));
   @include lib.transition(#{color, background-color, border-color, box-shadow});
+
   -webkit-appearance: none;
   appearance: none;
   background: var(--input-bg, var(--c-bg));

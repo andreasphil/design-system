@@ -13,6 +13,7 @@
 
   &::before {
     @include lib.transition(#{background-color, border-color, box-shadow});
+
     background-color: var(--checkbox-bg, var(--c-bg));
     background: var(--icon-check) no-repeat center center / 0em;
     border-color: var(--checkbox-border-color, var(--c-fg-variant));

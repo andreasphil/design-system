@@ -17,6 +17,7 @@
 
   &::after {
     @include transition(#{color, background-color, opacity});
+
     background: currentColor;
     border-radius: inherit;
     bottom: $insetY;
