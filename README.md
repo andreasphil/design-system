@@ -20,7 +20,117 @@
 
 ## Usage
 
-> ✅ TODO
+## Customization
+
+The following CSS custom properties can be customized:
+
+<!-- VARIABLES -->
+
+```
+--article-padding-x
+--article-padding-y
+
+--auto-bg-opacity
+
+--block-spacing-y
+
+--body-padding-x
+--body-padding-y
+
+--border-radius
+--border-radius-large
+--border-radius-small
+--border-width
+
+--button-bg
+--button-border-color
+--button-fg
+--button-focus-color
+--button-font-weight
+--button-padding-x
+--button-padding-y
+
+--c-backdrop-bg
+--c-bg
+--c-border
+--c-code
+--c-del
+--c-fg
+--c-fg-variant
+--c-ins
+--c-mark
+--c-on-primary
+--c-primary
+--c-primary-container
+--c-shadow
+--c-surface-bg
+--c-surface-fg
+--c-surface-variant-bg
+--c-surface-variant-fg
+
+--color-scheme
+
+--container-max-width
+--container-padding-x
+--container-padding-y
+
+--dialog-max-width
+--dialog-padding-x
+--dialog-padding-y
+
+--disabled-opacity
+
+--font-size
+--font-size-h1
+--font-size-h2
+--font-size-h3
+--font-size-h4
+--font-size-h5
+--font-size-h6
+--font-size-small
+
+--icon-check
+--icon-chevron-down
+
+--input-bg
+--input-border-color
+--input-fg
+--input-focus-color
+--input-padding-x
+--input-padding-y
+--input-placeholder-color
+
+--line-height
+--line-height-h
+
+--link-color
+--link-decoration-color
+--link-hover-color
+--link-hover-decoration-color
+
+--nav-height
+--nav-z-index
+
+--rem-base
+
+--shadow-elevation-high
+--shadow-elevation-low
+--shadow-elevation-medium
+
+--spinner-duration
+--spinner-fg
+--spinner-size
+--spinner-width
+
+--svg-height
+
+--tint
+
+--transition-duration
+--transition-timing-function
+```
+
+<!-- END VARIABLES -->
 
 ## Development
 
