@@ -15,9 +15,10 @@
     "prestart": "npm run build:icons",
     "start": "sass --no-source-map --watch src/index.scss dist/index.css",
     "build": "scripts/build",
+    "build:customizations": "node scripts/generateCustomizationList.js",
     "build:icons": "node scripts/icons.js",
     "build:styles": "sass --no-source-map src/index.scss dist/index.css",
-    "preversion": "npm run build; git add --force dist/index.min.css"
+    "preversion": "npm run build; git add --force dist/index.min.css README.md"
   },
   "devDependencies": {
     "esbuild": "^0.14.18",
