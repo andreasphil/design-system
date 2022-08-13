@@ -16,9 +16,21 @@
 - 🌈 Automatic color system that reduces time spent fiddling with color palettes
 - 🌗 Includes light and dark modes based on user preferences
 - 🪗 Fully responsive
-- 💨 Optimized to pair well with [Windi CSS](https://github.com/windicss/windicss)
+- 💨 Plays well with [Windi CSS](https://github.com/windicss/windicss)
 
 ## Usage
+
+Fine is not currently on npm, but you can install it from this repository:
+
+```
+npm install github:andreasphil/fine#<tag>
+```
+
+Then import it in your project:
+
+```js
+import "finecss/dist/index.min.css";
+```
 
 ## Customization
 
@@ -148,12 +160,10 @@ npm build:icons   # Re-builds the icon SCSS file (should run automatically on st
 npm build         # Creates bundled + minified output in dist
 ```
 
-## Ressources
-
-> ✅ TODO
-
 ## Credits
 
 Apart from the open source packages listed in package.json, Fine uses icons from [Lucide](https://lucide.dev/).
+
+Fine was inspired by [Pico.css](https://picocss.com).
 
 Thanks 🙏
