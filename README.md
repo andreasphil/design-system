@@ -160,7 +160,7 @@ npm build         # Creates bundled + minified output in dist
 
 ## Credits
 
-Apart from the open source packages listed in package.json, Fine uses icons from [Lucide](https://lucide.dev/).
+Apart from the open source packages listed in [package.json](package.json), Fine uses icons from [Lucide](https://lucide.dev/).
 
 Fine was inspired by [Pico.css](https://picocss.com).
 
