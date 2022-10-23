@@ -2,49 +2,65 @@
  * Dark mode & theming                                *
  * -------------------------------------------------- */
 
+@function tinted($s, $l, $a: false) {
+  @if not $a {
+    $a: 1;
+  }
+
+  @return hsl(
+    var(--theme-tint) calc($s * var(--theme-saturate))
+      calc($l * var(--theme-lighten)) / $a
+  );
+}
+
 :where(:root) {
-  --tint: 155;
+  --theme-tint: 155;
+  --theme-saturate: 1;
+  --theme-lighten: 1;
 
   --color-scheme: light;
-  --c-bg: hsl(var(--tint) 10% 99%);
-  --c-backdrop-bg: hsl(var(--tint) 10% 99% / 0.8);
-  --c-fg: hsl(var(--tint) 12% 6%);
-  --c-fg-variant: hsl(var(--tint) 8% 55%);
-  --c-surface-bg: hsl(0 0% 100%);
+  --c-bg: #{tinted(10%, 99%)};
+  --c-backdrop-bg: #{tinted(10%, 99%, 0.8)};
+  --c-fg: #{tinted(12%, 6%)};
+  --c-fg-variant: #{tinted(8%, 55%)};
+  --c-surface-bg: #{tinted(0%, 100%)};
   --c-surface-fg: var(--c-fg);
-  --c-surface-variant-bg: hsl(var(--tint) 11% 96%);
+  --c-surface-variant-bg: #{tinted(11%, 96%)};
   --c-surface-variant-fg: var(--c-surface-fg);
-  --c-border: hsl(var(--tint) 14% 84%);
-  --c-shadow: hsl(var(--tint) 14% 88%);
+  --c-border: #{tinted(14%, 84%)};
+  --c-shadow: #{tinted(14%, 88%)};
 
-  --c-primary: hsl(var(--tint) 80% 44%);
-  --c-on-primary: hsl(0 0% 100%);
-  --c-primary-container: hsl(var(--tint) 80% 44% / 0.25);
+  --c-primary: #{tinted(80%, 44%)};
+  --c-on-primary: #{tinted(0%, 100%)};
+  --c-primary-container: #{tinted(80%, 44%, var(--auto-bg-opacity))};
 }
 
 // Backdrop doesn't inherit from root, so we'll need to declare variables
 // separately
 ::backdrop {
-  --tint: 155;
-  --c-backdrop-bg: hsl(var(--tint) 10% 99% / 0.8);
+  --theme-tint: 155;
+  --theme-saturate: 1;
+  --theme-lighten: 1;
+
+  --c-backdrop-bg: #{tinted(10%, 99%, 0.8)};
 }
 
 @media (prefers-color-scheme: dark) {
   :where(:root) {
     --color-scheme: dark;
-    --c-bg: hsl(var(--tint) 10% 5%);
-    --c-backdrop-bg: hsl(var(--tint) 10% 5% / 0.8);
-    --c-fg: hsl(0 0% 100%);
-    --c-fg-variant: hsl(var(--tint) 8% 55%);
-    --c-surface-bg: hsl(var(--tint) 12% 8%);
+    --c-bg: #{tinted(10%, 5%)};
+    --c-backdrop-bg: #{tinted(10%, 5%, 0.8)};
+    --c-fg: #{tinted(0%, 100%)};
+    --c-fg-variant: #{tinted(8%, 55%)};
+    --c-surface-bg: #{tinted(12%, 8%)};
     --c-surface-fg: var(--c-fg);
-    --c-surface-variant-bg: hsl(var(--tint) 14% 11%);
+    --c-surface-variant-bg: #{tinted(14%, 11%)};
     --c-surface-variant-fg: var(--c-surface-fg);
-    --c-border: hsl(var(--tint) 14% 18%);
-    --c-shadow: hsl(var(--tint) 10% 4%);
+    --c-border: #{tinted(14%, 18%)};
+    --c-shadow: #{tinted(10%, 4%)};
   }
 
   ::backdrop {
-    --c-backdrop-bg: hsl(var(--tint) 10% 5% / 0.8);
+    --c-backdrop-bg: #{tinted(10%, 5%, 0.8)};
   }
 }
