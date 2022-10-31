@@ -4,7 +4,7 @@
 
 @use "../lib";
 
-:where(select) {
+select {
   @include lib.outline(var(--input-focus-color, var(--c-primary-container)));
   @include lib.transition(#{color, background-color, border-color, box-shadow});
 
@@ -21,12 +21,12 @@
   padding-right: calc(var(--input-padding-y, 0.75rem) + 1em);
   width: 100%;
 
-  &:where(:hover, :focus) {
+  &:is(:hover, :focus) {
     --input-border-color: var(--c-primary);
   }
 
   // Add some spacing between text and input when used in labels
-  :where(label) > & {
+  label > & {
     margin-top: 0.25rem;
   }
 }

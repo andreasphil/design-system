@@ -4,40 +4,49 @@
 
 @use "../lib";
 
-:where(h1, h2, h3, h4, h5, h6) {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: var(--line-height-h, 1.2);
   margin: max(var(--block-spacing-y), 1em) 0;
 }
 
-:where(h1) {
+h1 {
   font-size: var(--font-size-h1);
 }
 
-:where(h2) {
+h2 {
   font-size: var(--font-size-h2);
 }
 
-:where(h3) {
+h3 {
   font-size: var(--font-size-h3);
 }
 
-:where(h4) {
+h4 {
   font-size: var(--font-size-h4);
 }
 
-:where(h5) {
+h5 {
   font-size: var(--font-size-h5);
 }
 
-:where(h6) {
+h6 {
   font-size: var(--font-size-h6);
 }
 
-:where(p, pre, hr, blockquote, figure) {
+p,
+pre,
+hr,
+blockquote,
+figure {
   margin: var(--block-spacing-y) 0;
 }
 
-:where(pre) {
+pre {
   @include lib.transition(#{color, background-color});
 
   background: var(--c-surface-variant-bg);
@@ -46,7 +55,7 @@
   padding: 1rem;
 }
 
-:where(hr) {
+hr {
   @include lib.transition(#{border-color});
 
   border: none;
@@ -54,18 +63,18 @@
   height: 0;
 }
 
-:where(blockquote) {
+blockquote {
   @include lib.transition(#{color, border-color});
 
   border-left: 0.25rem solid var(--c-border);
   padding: 0.5rem 1rem;
 }
 
-:where(figure > blockquote) {
+figure > blockquote {
   margin-bottom: 0;
 }
 
-:where(figure > blockquote + figcaption) {
+figure > blockquote + figcaption {
   @include lib.transition(#{color, border-color});
 
   border-left: 0.25rem solid var(--c-border);
@@ -79,25 +88,28 @@
  * Lists                                              *
  * -------------------------------------------------- */
 
-:where(ol, ul, dl) {
+ol,
+ul,
+dl {
   margin: var(--block-spacing-y) 0;
 }
 
-:where(ol, ul) {
+ol,
+ul {
   padding: 0 0 0 1.25rem;
 }
 
-:where(ul li) {
+ul li {
   list-style-type: square;
 }
 
-:where(li)::marker {
+li::marker {
   @include lib.transition(#{color});
 
   color: var(--c-fg-variant);
 }
 
-:where(li + li) {
+li + li {
   margin-top: 0.25rem;
 }
 
@@ -105,16 +117,21 @@
  * Inline                                             *
  * -------------------------------------------------- */
 
-:where(a, u, abbr) {
+a,
+u,
+abbr {
   text-decoration: underline;
   text-underline-offset: 0.25em;
 }
-:where(abbr) {
+abbr {
   cursor: help;
   text-decoration-style: dashed;
 }
 
-:where(code, mark, ins, del) {
+code,
+mark,
+ins,
+del {
   @include lib.transition(#{color});
   @include lib.autoBg(0, -0.125rem);
 
@@ -124,23 +141,23 @@
   border-radius: var(--border-radius-small);
 }
 
-:where(code) {
+code {
   color: var(--c-code, var(--c-primary));
 }
 
-:where(mark) {
+mark {
   color: var(--c-mark, orange);
 }
 
-:where(ins) {
+ins {
   color: var(--c-ins, limegreen);
 }
 
-:where(del) {
+del {
   color: var(--c-del, orangered);
 }
 
-:where(kbd) {
+kbd {
   @include lib.transition(#{color, background-color});
 
   background: var(--c-fg);
@@ -149,23 +166,24 @@
   padding: 0.125rem 0.25rem;
 }
 
-:where(small) {
+small {
   font-size: var(--font-size-small);
 }
 
-:where(sup, sub) {
+sup,
+sub {
   font-size: 0.75rem;
   letter-spacing: 0.02rem;
   margin: 0 2px;
   position: relative;
 }
 
-:where(sub) {
+sub {
   bottom: -0.125rem;
   vertical-align: bottom;
 }
 
-:where(sup) {
+sup {
   top: -0.125rem;
   vertical-align: top;
 }
@@ -174,15 +192,15 @@
  * Links                                              *
  * -------------------------------------------------- */
 
-:where(a),
-:where(a:visited) {
+a,
+a:visited {
   @include lib.transition(#{color, border-color, text-decoration-color});
 
   text-decoration-color: var(--link-decoration-color, currentColor);
   color: var(--link-color, var(--c-primary));
 }
 
-:where(a:hover) {
+a:hover {
   color: var(--link-hover-color, var(--c-fg));
   text-decoration-color: var(--link-hover-decoration-color, currentColor);
 }

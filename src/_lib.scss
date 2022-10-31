@@ -37,7 +37,7 @@
   }
 
   @if $hoverOnly {
-    &:where(:hover)::after {
+    &:hover::after {
       opacity: var(--auto-bg-opacity);
     }
   }
@@ -45,7 +45,7 @@
 
 @mixin outline($color) {
   outline: none;
-  &:where(:focus) {
+  &:focus {
     box-shadow: 0 0 0 4px $color;
   }
 }

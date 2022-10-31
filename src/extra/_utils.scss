@@ -18,12 +18,12 @@
   }
 }
 
-:where([data-fine-transition]) {
+[data-fine-transition] {
   @include lib.transition(all);
 }
 
 // See https://www.a11yproject.com/posts/how-to-hide-content/
-:where([data-fine-hidden]:not(:focus):not(:active)) {
+[data-fine-hidden]:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;

@@ -9,8 +9,8 @@
 // in that container. You can also add it to the documents body to opt out
 // of SVG "normalization" for the entire page.
 
-:where(:not([data-fine-svg="false"]) svg),
-:where(button svg) {
+:not([data-fine-svg="false"]) svg,
+button svg {
   color: currentColor;
   display: block;
   height: var(--svg-height, 1.2em);

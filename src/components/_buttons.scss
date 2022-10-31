@@ -4,8 +4,9 @@
 
 @use "../lib";
 
-:where(button, [role="button"]),
-:where(input):where([type="button"], [type="submit"], [type="reset"]) {
+button,
+[role="button"],
+input:is([type="button"], [type="submit"], [type="reset"]) {
   @include lib.autoBg(
     $insetX: calc(var(--border-width) * -1),
     $hoverOnly: true
@@ -24,30 +25,30 @@
   letter-spacing: inherit;
   padding: var(--button-padding-y, 0.75rem) var(--button-padding-x, 1rem);
 
-  &:where(:disabled) {
+  &:disabled {
     cursor: not-allowed;
     opacity: var(--disabled-opacity);
   }
 
-  &:where([data-fine-button="outline"], [data-fine-button="ghost"]) {
+  &:is([data-fine-button="outline"], [data-fine-button="ghost"]) {
     --button-fg: var(--c-primary);
     --button-bg: transparent;
   }
 
-  &:where([data-fine-button="outline"]) {
+  &[data-fine-button="outline"] {
     --button-border-color: currentColor;
   }
 }
 
-:where(button) {
+button {
   display: block;
   width: 100%;
 }
 
-:where([role="button"]) {
+[role="button"] {
   display: inline-block;
 }
 
-:where(a[role="button"]) {
+a[role="button"] {
   text-decoration: none;
 }

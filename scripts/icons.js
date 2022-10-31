@@ -4,10 +4,10 @@ import { resolve } from "path";
 /** Template for the output SCSS */
 const scss = ([light, dark]) => `
 /* This file is generated with \`node scripts/icons.js\` */
-:where(:root) {
+:root {
 ${light.trim()}
 }
-@media (prefers-color-scheme: dark) { :where(:root) {
+@media (prefers-color-scheme: dark) { :root {
 ${dark.trim()}
 }}`;
 

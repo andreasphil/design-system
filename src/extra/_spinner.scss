@@ -2,10 +2,10 @@
  * Spinner                                            *
  * -------------------------------------------------- */
 
-:where([aria-busy="true"]) {
+[aria-busy="true"] {
   cursor: progress;
 
-  &:where(:not(:empty)) {
+  &:not(:empty) {
     text-align: center;
   }
 

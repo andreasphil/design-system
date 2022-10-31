@@ -13,7 +13,7 @@
   );
 }
 
-:where(:root) {
+:root {
   --theme-tint: 155;
   --theme-saturate: 1;
   --theme-lighten: 1;
@@ -46,7 +46,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :where(:root) {
+  :root {
     --color-scheme: dark;
     --c-bg: #{tinted(10%, 5%)};
     --c-backdrop-bg: #{tinted(10%, 5%, 0.8)};

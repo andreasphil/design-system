@@ -16,7 +16,6 @@
 - 🌈 Automatic color system that reduces time spent fiddling with color palettes
 - 🌗 Includes light and dark modes based on user preferences
 - 🪗 Fully responsive
-- 💨 Plays well with [Windi CSS](https://github.com/windicss/windicss)
 
 ## Usage
 
@@ -29,7 +28,15 @@ npm install github:andreasphil/fine#<tag>
 Then import it in your project:
 
 ```js
+// JavaScript
 import "finecss/dist/index.min.css";
+```
+
+or
+
+```css
+/* CSS */
+@import "finecss/dist/index.min.css" layer(fine);
 ```
 
 ## Customization
@@ -135,7 +142,9 @@ The following CSS custom properties can be customized:
 
 --svg-height
 
---tint
+--theme-lighten
+--theme-saturate
+--theme-tint
 
 --transition-duration
 --transition-timing-function

@@ -4,12 +4,12 @@
 
 @use "../lib";
 
-:where(:root) {
+:root {
   color-scheme: var(--color-scheme);
   font-size: var(--rem-base);
 }
 
-:where(body) {
+body {
   @include lib.transition(#{color, background-color});
 
   background: var(--c-bg);

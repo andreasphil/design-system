@@ -14,7 +14,7 @@
 
 @use "../lib";
 
-:where(dialog) {
+dialog {
   @include lib.transition(#{color, background-color, box-shadow});
 
   background: var(--c-surface-bg);
@@ -33,7 +33,7 @@
   }
 }
 
-:where(dialog + .backdrop) {
+dialog + .backdrop {
   @include lib.transition(background-color);
 
   background: var(--c-backdrop-bg);

@@ -4,7 +4,7 @@
 
 @use "../lib";
 
-:where(input[type="checkbox"]) {
+input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
   font: inherit;
@@ -28,20 +28,19 @@
     width: 1.5em;
   }
 
-  &:where(:hover, :focus)::before {
+  &:is(:hover, :focus)::before {
     --input-border-color: var(--c-primary);
   }
 
-  &:where(:focus)::before {
-    box-shadow: 0 0 0 4px
-      var(--input-focus-color, var(--c-primary-container));
+  &:focus::before {
+    box-shadow: 0 0 0 4px var(--input-focus-color, var(--c-primary-container));
   }
 
-  &:where(:checked)::before {
+  &:checked::before {
     background-size: 1em;
   }
 
-  &:where(:disabled)::before {
+  &:disabled::before {
     cursor: not-allowed;
     opacity: var(--disabled-opacity);
   }

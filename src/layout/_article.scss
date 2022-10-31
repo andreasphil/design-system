@@ -5,7 +5,7 @@
 
 @use "../lib";
 
-:where(article) {
+article {
   @include lib.transition(#{color, background-color, border-color, box-shadow});
 
   background: var(--c-surface-bg);
