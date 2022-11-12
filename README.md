@@ -45,9 +45,6 @@ The following CSS custom properties can be customized:
 
 <!-- VARIABLES -->
 ```
---article-padding-x
---article-padding-y
-
 --auto-bg-opacity
 
 --block-spacing-y
@@ -60,13 +57,7 @@ The following CSS custom properties can be customized:
 --border-radius-small
 --border-width
 
---button-bg
---button-border-color
---button-fg
---button-focus-color
---button-font-weight
---button-padding-x
---button-padding-y
+--button-color
 
 --c-backdrop-bg
 --c-bg
@@ -78,8 +69,10 @@ The following CSS custom properties can be customized:
 --c-ins
 --c-mark
 --c-on-primary
+--c-outline
 --c-primary
---c-primary-container
+--c-primary-surface-bg
+--c-primary-surface-fg
 --c-shadow
 --c-surface-bg
 --c-surface-fg
@@ -91,10 +84,6 @@ The following CSS custom properties can be customized:
 --container-max-width
 --container-padding-x
 --container-padding-y
-
---dialog-max-width
---dialog-padding-x
---dialog-padding-y
 
 --disabled-opacity
 
@@ -110,35 +99,18 @@ The following CSS custom properties can be customized:
 --icon-check
 --icon-chevron-down
 
---input-bg
---input-border-color
---input-fg
---input-focus-color
---input-padding-x
---input-padding-y
---input-placeholder-color
-
 --line-height
---line-height-h
-
---link-color
---link-decoration-color
---link-hover-color
---link-hover-decoration-color
 
 --nav-height
 --nav-z-index
+
+--outline
 
 --rem-base
 
 --shadow-elevation-high
 --shadow-elevation-low
 --shadow-elevation-medium
-
---spinner-duration
---spinner-fg
---spinner-size
---spinner-width
 
 --svg-height
 
