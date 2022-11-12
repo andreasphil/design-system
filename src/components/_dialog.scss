@@ -2,44 +2,20 @@
  * Dialogs                                            *
  * -------------------------------------------------- */
 
-// Note that the native HTML dialog element is not yet widely supported except
-// in the most recent versions of evergreen browsers - and even there support
-// for parts like ::backdrop may be spotty. You can polyfill dialogs thanks to
-// the `dialog-polyfill` package developed by Google. The resets included in
-// sanitize.css along with the styles below should be enough to replace the
-// CSS that comes with the dialog-polyfill, so you don't need to include that.
-//
-// For some limitations of the polyfill see:
-// https://github.com/GoogleChrome/dialog-polyfill#limitations
-
-@use "../lib";
-
 dialog {
-  @include lib.transition(#{color, background-color, box-shadow});
-
   background: var(--c-surface-bg);
   border-radius: var(--border-radius-large);
   border: none;
   box-shadow: var(--shadow-elevation-high);
   color: var(--c-surface-fg);
   margin: 0 auto;
-  max-width: var(--dialog-max-width, fit-content);
-  padding: var(--dialog-padding-y, 1rem) var(--dialog-padding-x, 1rem);
+  max-width: fit-content;
+  padding: 1rem 1rem;
   position: fixed;
+  transition-property: color, background-color, box-shadow;
   width: 100%;
 
   &::backdrop {
     background: var(--c-backdrop-bg);
   }
-}
-
-dialog + .backdrop {
-  @include lib.transition(background-color);
-
-  background: var(--c-backdrop-bg);
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
 }

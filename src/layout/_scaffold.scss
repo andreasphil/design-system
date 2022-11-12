@@ -2,24 +2,26 @@
  * Basic document stuff                               *
  * -------------------------------------------------- */
 
-@use "../lib";
-
 :root {
   color-scheme: var(--color-scheme);
   font-size: var(--rem-base);
 }
 
 body {
-  @include lib.transition(#{color, background-color});
-
   background: var(--c-bg);
   color: var(--c-fg);
   font-size: var(--font-size);
   line-height: var(--line-height);
   padding: var(--body-padding-y, 0) var(--body-padding-x, 0);
+  transition-property: color, background-color;
 }
 
 ::selection {
-  background-color: var(--c-primary-container);
+  background-color: var(--c-primary-surface-bg);
   color: var(--c-fg);
+}
+
+* {
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }

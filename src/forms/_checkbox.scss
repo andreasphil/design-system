@@ -2,8 +2,6 @@
  * Checkboxes                                         *
  * -------------------------------------------------- */
 
-@use "../lib";
-
 input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
@@ -12,28 +10,26 @@ input[type="checkbox"] {
   vertical-align: bottom;
 
   &::before {
-    @include lib.transition(#{background-color, border-color, box-shadow});
-
-    background-color: var(--input-bg, var(--c-bg));
+    background-color: var(--c-bg);
     background: var(--icon-check) no-repeat center center / 0em;
-    border-color: var(--input-border-color, var(--c-fg-variant));
+    border-color: var(--c-border);
     border-radius: var(--border-radius-small);
     border-style: solid;
     border-width: var(--border-width);
     content: "";
-    cursor: pointer;
     display: inline-block;
     height: 1.5em;
-    margin-right: 0.75rem;
+    margin-right: 0.5rem;
+    transition-property: background-color, border-color, box-shadow;
     width: 1.5em;
   }
 
   &:is(:hover, :focus)::before {
-    --input-border-color: var(--c-primary);
+    border-color: var(--c-primary);
   }
 
   &:focus::before {
-    box-shadow: 0 0 0 4px var(--input-focus-color, var(--c-primary-container));
+    box-shadow: 0 0 0 4px var(--c-outline, var(--c-primary-surface-bg));
   }
 
   &:checked::before {
@@ -41,7 +37,6 @@ input[type="checkbox"] {
   }
 
   &:disabled::before {
-    cursor: not-allowed;
     opacity: var(--disabled-opacity);
   }
 }

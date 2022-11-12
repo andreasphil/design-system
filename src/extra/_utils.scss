@@ -2,28 +2,26 @@
  * Various utilities                                  *
  * -------------------------------------------------- */
 
-@use "../lib";
-
-[data-fine-trim~="top"],
-[data-fine-trim="both"] {
+[data-trim~="top"],
+[data-trim="both"] {
   > *:first-child {
     margin-top: 0;
   }
 }
 
-[data-fine-trim~="bottom"],
-[data-fine-trim="both"] {
+[data-trim~="bottom"],
+[data-trim="both"] {
   > *:last-child {
     margin-bottom: 0;
   }
 }
 
-[data-fine-transition] {
-  @include lib.transition(all);
+[data-transition="true"] {
+  transition-property: all;
 }
 
 // See https://www.a11yproject.com/posts/how-to-hide-content/
-[data-fine-hidden]:not(:focus):not(:active) {
+[data-hidden]:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;

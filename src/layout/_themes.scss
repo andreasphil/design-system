@@ -18,7 +18,16 @@
   --theme-saturate: 1;
   --theme-lighten: 1;
 
+  --c-primary: #{tinted(80%, 44%)};
+  --c-on-primary: #{tinted(0%, 100%)};
+  --c-primary-surface-fg: var(--c-primary);
+  --c-primary-surface-bg: #{tinted(80%, 44%, var(--auto-bg-opacity))};
+
+  --outline: 0 0 0 4px var(--c-outline, var(--c-primary-surface-bg));
+
   --color-scheme: light;
+  --c-border: #{tinted(14%, 84%)};
+  --c-shadow: #{tinted(14%, 88%)};
   --c-bg: #{tinted(10%, 99%)};
   --c-backdrop-bg: #{tinted(10%, 99%, 0.8)};
   --c-fg: #{tinted(12%, 6%)};
@@ -27,12 +36,6 @@
   --c-surface-fg: var(--c-fg);
   --c-surface-variant-bg: #{tinted(11%, 96%)};
   --c-surface-variant-fg: var(--c-surface-fg);
-  --c-border: #{tinted(14%, 84%)};
-  --c-shadow: #{tinted(14%, 88%)};
-
-  --c-primary: #{tinted(80%, 44%)};
-  --c-on-primary: #{tinted(0%, 100%)};
-  --c-primary-container: #{tinted(80%, 44%, var(--auto-bg-opacity))};
 }
 
 // Backdrop doesn't inherit from root, so we'll need to declare variables
@@ -48,6 +51,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-scheme: dark;
+    --c-border: #{tinted(14%, 18%)};
+    --c-shadow: #{tinted(10%, 4%)};
     --c-bg: #{tinted(10%, 5%)};
     --c-backdrop-bg: #{tinted(10%, 5%, 0.8)};
     --c-fg: #{tinted(0%, 100%)};
@@ -56,8 +61,6 @@
     --c-surface-fg: var(--c-fg);
     --c-surface-variant-bg: #{tinted(14%, 11%)};
     --c-surface-variant-fg: var(--c-surface-fg);
-    --c-border: #{tinted(14%, 18%)};
-    --c-shadow: #{tinted(10%, 4%)};
   }
 
   ::backdrop {

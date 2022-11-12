@@ -10,19 +10,19 @@
   }
 
   &::before {
-    animation-duration: var(--spinner-duration, 1s);
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-name: spin;
     animation-timing-function: linear;
     border-radius: 100%;
-    border: var(--spinner-width, 3px) solid var(--spinner-fg, currentColor);
+    border: 0.2em solid currentColor;
     border-top-color: transparent;
     content: "";
     display: inline-block;
-    height: var(--spinner-size, 1.5rem);
+    height: 1.2em;
     opacity: 1;
     vertical-align: middle;
-    width: var(--spinner-size, 1.5rem);
+    width: 1.2em;
   }
 }
 

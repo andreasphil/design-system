@@ -2,21 +2,16 @@
  * Navbars and -menus                                 *
  * -------------------------------------------------- */
 
-@use "../lib";
-
 $nav-height: var(--nav-height, 5rem);
 
 nav {
-  --block-spacing-y: 0;
-
-  @include lib.transition(#{color, background-color, border-color, box-shadow});
-
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
+  transition-property: color, background-color, border-color, box-shadow;
 
-  &[data-fine-nav~="fixed"] {
+  &[data-nav~="fixed"] {
     background-color: var(--c-surface-bg);
     height: $nav-height;
     left: 0;
@@ -39,13 +34,12 @@ nav a {
   text-decoration: none;
 }
 
-nav a[data-fine-link="active"] {
-  --link-hover-color: var(--link-color, var(--c-primary));
-
-  @include lib.autoBg;
+nav a[data-active="true"] {
+  background: var(--c-primary-surface-bg);
+  color: var(--c-primary-surface-fg);
 }
 
-nav a:only-child {
+nav li a:only-child {
   display: block;
 }
 
@@ -57,6 +51,7 @@ nav > ul {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
+  margin: 0;
   padding: 0;
 
   // Remove list styles for link lists
@@ -68,14 +63,13 @@ nav > ul {
 
 // Navs inside headers or with the .horizontal modifier are navbars
 // by default
-header > nav:not([data-fine-nav~="vertical"]),
-nav[data-fine-nav~="horizontal"] {
+nav[data-variant~="horizontal"],
+header > nav:not([data-variant~="vertical"]) {
   justify-content: space-between;
   align-items: center;
 
   > ul {
     align-items: center;
-    // Offset link padding
     margin-left: -0.5rem;
     margin-right: -0.5rem;
   }
@@ -83,14 +77,12 @@ nav[data-fine-nav~="horizontal"] {
 
 // Navs outside headers or with the .vertical modifier flow vertially
 // by default
-:not(header) > nav:not([data-fine-nav~="horizontal"]),
-nav[data-fine-nav~="vertical"] {
+nav[data-variant~="vertical"],
+:not(header) > nav:not([data-variant~="horizontal"]) {
   flex-direction: column;
 
   > ul {
     flex-direction: column;
-
-    // Offset link padding
     margin-left: -0.5rem;
     margin-right: -0.5rem;
   }
@@ -101,10 +93,10 @@ nav[data-fine-nav~="vertical"] {
  * navbars                                            *
  * -------------------------------------------------- */
 
-body[data-fine-nav="fixed"] {
+body[data-nav="fixed"] {
   padding-top: calc(var(--body-padding-y) + #{$nav-height});
 }
 
-:not(body) [data-fine-nav="fixed"] {
+:not(body) [data-nav="fixed"] {
   padding-top: $nav-height;
 }

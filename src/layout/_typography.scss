@@ -2,15 +2,13 @@
  * Block typography elements                          *
  * -------------------------------------------------- */
 
-@use "../lib";
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  line-height: var(--line-height-h, 1.2);
+  line-height: 1.2;
   margin: max(var(--block-spacing-y), 1em) 0;
 }
 
@@ -47,27 +45,24 @@ figure {
 }
 
 pre {
-  @include lib.transition(#{color, background-color});
-
   background: var(--c-surface-variant-bg);
-  color: var(--c-surface-variant-fg);
   border-radius: var(--border-radius);
+  color: var(--c-surface-variant-fg);
   padding: 1rem;
+  transition-property: color, background-color;
 }
 
 hr {
-  @include lib.transition(#{border-color});
-
-  border: none;
   border-top: var(--border-width) solid var(--c-border);
+  border: none;
   height: 0;
+  transition-property: border-color;
 }
 
 blockquote {
-  @include lib.transition(#{color, border-color});
-
   border-left: 0.25rem solid var(--c-border);
   padding: 0.5rem 1rem;
+  transition-property: color, border-color;
 }
 
 figure > blockquote {
@@ -75,13 +70,12 @@ figure > blockquote {
 }
 
 figure > blockquote + figcaption {
-  @include lib.transition(#{color, border-color});
-
   border-left: 0.25rem solid var(--c-border);
   color: var(--c-fg-variant);
   font-size: var(--font-size-small);
   margin-bottom: var(--block-spacing-y);
   padding: 0 1rem 0.5rem;
+  transition-property: color, border-color;
 }
 
 /* -------------------------------------------------- *
@@ -104,9 +98,8 @@ ul li {
 }
 
 li::marker {
-  @include lib.transition(#{color});
-
   color: var(--c-fg-variant);
+  transition-property: color;
 }
 
 li + li {
@@ -123,6 +116,7 @@ abbr {
   text-decoration: underline;
   text-underline-offset: 0.25em;
 }
+
 abbr {
   cursor: help;
   text-decoration-style: dashed;
@@ -132,13 +126,26 @@ code,
 mark,
 ins,
 del {
-  @include lib.transition(#{color});
-  @include lib.autoBg(0, -0.125rem);
-
   background: none;
-  padding: 0 0.25rem;
-  text-decoration: none;
   border-radius: var(--border-radius-small);
+  padding: 0 0.25rem;
+  position: relative;
+  text-decoration: none;
+  transition-property: color;
+
+  &::after {
+    background: currentColor;
+    border-radius: inherit;
+    bottom: -0.125rem;
+    color: inherit;
+    content: "";
+    left: -0.125rem;
+    opacity: var(--auto-bg-opacity);
+    pointer-events: none;
+    position: absolute;
+    right: -0.125rem;
+    top: -0.125rem;
+  }
 }
 
 code {
@@ -158,12 +165,11 @@ del {
 }
 
 kbd {
-  @include lib.transition(#{color, background-color});
-
   background: var(--c-fg);
   border-radius: var(--border-radius-small);
   color: var(--c-bg);
   padding: 0.125rem 0.25rem;
+  transition-property: color, background-color;
 }
 
 small {
@@ -194,13 +200,12 @@ sup {
 
 a,
 a:visited {
-  @include lib.transition(#{color, border-color, text-decoration-color});
-
-  text-decoration-color: var(--link-decoration-color, currentColor);
-  color: var(--link-color, var(--c-primary));
+  color: var(--c-primary);
+  text-decoration-color: currentColor;
+  transition-property: color, border-color, text-decoration-color;
 }
 
 a:hover {
-  color: var(--link-hover-color, var(--c-fg));
-  text-decoration-color: var(--link-hover-decoration-color, currentColor);
+  color: var(--c-fg);
+  text-decoration-color: currentColor;
 }

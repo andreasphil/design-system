@@ -2,31 +2,32 @@
  * Text(-ish) inputs                                  *
  * -------------------------------------------------- */
 
-@use "../lib";
-
 textarea,
 input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [type="image"]) {
-  @include lib.outline(var(--input-focus-color, var(--c-primary-container)));
-  @include lib.transition(#{color, background-color, border-color, box-shadow});
-
   -webkit-appearance: none;
   appearance: none;
-  background: var(--input-bg, var(--c-bg));
+  background: var(--c-bg);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--input-border-color, var(--c-border));
-  caret-color: var(--input-border-color, initial);
-  color: var(--input-fg, inherit);
+  border: var(--border-width) solid var(--c-border);
+  caret-color: var(--c-primary, initial);
+  color: inherit;
   font: inherit;
   letter-spacing: inherit;
-  padding: var(--input-padding-y, 0.75rem) var(--input-padding-x, 0.75rem);
+  outline: none;
+  padding: 0.75rem 0.75rem;
+  transition-property: color, background-color, border-color, box-shadow;
   width: 100%;
 
   &:is(:hover, :focus) {
-    --input-border-color: var(--c-primary);
+    border-color: var(--c-primary);
+  }
+
+  &:focus {
+    box-shadow: var(--outline);
   }
 
   &::placeholder {
-    color: var(--input-placeholder-color, var(--c-fg-variant));
+    color: var(--c-fg-variant);
     opacity: 1;
   }
 
@@ -45,6 +46,6 @@ input:is([type="date"], [type="time"], [type="datetime-local"]) {
   height: calc(#{$text-height} + #{$padding} + #{$border-size});
 }
 
-textarea[data-fine-textarea="no-resize"] {
+textarea[data-resize="false"] {
   resize: none;
 }

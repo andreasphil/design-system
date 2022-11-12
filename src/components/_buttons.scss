@@ -2,41 +2,59 @@
  * Buttons                                            *
  * -------------------------------------------------- */
 
-@use "../lib";
-
 button,
 [role="button"],
 input:is([type="button"], [type="submit"], [type="reset"]) {
-  @include lib.autoBg(
-    $insetX: calc(var(--border-width) * -1),
-    $hoverOnly: true
-  );
-
-  @include lib.outline(var(--button-focus-color, var(--c-primary-container)));
-  @include lib.transition(#{color, background-color, border-color, box-shadow});
-
-  background: var(--button-bg, var(--c-primary));
+  background: var(--button-color, var(--c-primary));
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--button-border-color, transparent);
-  color: var(--button-fg, var(--c-on-primary));
-  cursor: pointer;
+  border: var(--border-width) solid transparent;
+  color: var(--c-on-primary);
   font: inherit;
-  font-weight: var(--button-font-weight, 500);
+  font-weight: 500;
   letter-spacing: inherit;
-  padding: var(--button-padding-y, 0.75rem) var(--button-padding-x, 1rem);
+  outline: none;
+  padding: 0.75rem 1rem;
+  position: relative;
+  transition-property: color, background-color, border-color, box-shadow;
+
+  &::after {
+    background: currentColor;
+    border-radius: inherit;
+    bottom: calc(var(--border-width) * -1);
+    color: inherit;
+    content: "";
+    left: calc(var(--border-width) * -1);
+    pointer-events: none;
+    position: absolute;
+    right: calc(var(--border-width) * -1);
+    top: calc(var(--border-width) * -1);
+    transition-duration: inherit;
+    transition-property: color, background-color, opacity;
+    transition-timing-function: inherit;
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: var(--auto-bg-opacity);
+  }
+
+  &:focus {
+    box-shadow: var(--outline);
+  }
 
   &:disabled {
-    cursor: not-allowed;
     opacity: var(--disabled-opacity);
   }
 
-  &:is([data-fine-button="outline"], [data-fine-button="ghost"]) {
-    --button-fg: var(--c-primary);
-    --button-bg: transparent;
+  &[data-variant="outline"] {
+    background: transparent;
+    border-color: currentColor;
+    color: var(--button-color, var(--c-primary));
   }
 
-  &[data-fine-button="outline"] {
-    --button-border-color: currentColor;
+  &[data-variant="ghost"] {
+    background: transparent;
+    color: var(--button-color, var(--c-primary));
   }
 }
 

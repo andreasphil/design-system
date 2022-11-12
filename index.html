@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    :root {
-      --body-padding-y: 6rem;
-    }
+    @import url("./dist/index.css") layer(fine);
 
     @media (min-width: 1024px) {
       article {
@@ -41,7 +39,7 @@
 </head>
 
 <body>
-  <div data-fine-container>
+  <div data-container>
     <header>
       <nav>
         <strong>Fine Elements Demo</strong>
@@ -75,7 +73,7 @@
         </article>
 
         <h3>Block elements</h3>
-        <article data-fine-trim="both">
+        <article data-trim="both">
           <h1>Headline level 1</h1>
           <h2>Headline level 2</h2>
           <h3>Headline level 3</h3>
@@ -119,11 +117,11 @@
         <h3>Buttons</h3>
         <article class="grid">
           <button>Primary button</button>
-          <button data-fine-button="outline">Primary outlined</button>
-          <button data-fine-button="ghost">Primary ghost</button>
+          <button data-variant="outline">Primary outlined</button>
+          <button data-variant="ghost">Primary ghost</button>
           <button disabled>Disabled button</button>
           <button aria-busy="true"></button>
-          <button data-fine-button="outline" style="color: orangered">
+          <button data-variant="outline" style="--button-color: orangered">
             Different color
           </button>
         </article>
@@ -154,7 +152,7 @@
         <h3>Dialog</h3>
         <article>
           <dialog id="demo-dialog">
-            <button onclick="closeDemoDialog()" data-fine-button="outline">
+            <button onclick="closeDemoDialog()" data-variant="outline">
               Close dialog
             </button>
           </dialog>
@@ -162,22 +160,22 @@
         </article>
 
         <h3>Navigation</h3>
-        <article data-fine-trim="both">
+        <article data-trim="both">
           <h4>Horizontal</h4>
-          <nav data-fine-nav="horizontal">
+          <nav data-variant="horizontal">
             <strong>Title</strong>
             <ul>
-              <li><a href="#" data-fine-link="active">Link</a></li>
+              <li><a href="#" data-active="true">Link</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
             </ul>
           </nav>
 
           <h4>Vertical</h4>
-          <nav data-fine-nav="vertical">
+          <nav data-variant="vertical">
             <strong>Title</strong>
             <ul>
-              <li><a href="#" data-fine-link="active">Link</a></li>
+              <li><a href="#" data-active="true">Link</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
             </ul>
@@ -189,9 +187,9 @@
         <h2>Extras</h2>
 
         <h3>Container</h3>
-        <p data-fine-container>
-          Add the <code>data-fine-container</code> attribute to a block element
-          in order to horizontally center it and apply a max width.
+        <p data-container>
+          Add the <code>data-container</code> attribute to a block element in
+          order to horizontally center it and apply a max width.
         </p>
 
         <h3>Spinner</h3>
