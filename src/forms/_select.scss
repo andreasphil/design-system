@@ -15,6 +15,7 @@ select {
   outline: none;
   padding: 0.75rem 0.75rem;
   padding-right: calc(0.75rem + 1em);
+  transition: var(--transition);
   transition-property: color, background-color, border-color, box-shadow;
   width: 100%;
 

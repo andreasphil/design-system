@@ -19,7 +19,7 @@
   // Transitions and other effects
   --transition-duration: 0.25s;
   --transition-timing-function: ease;
-  --auto-bg-opacity: 0.2;
+  --transition: var(--transition-duration) var(--transition-timing-function);
   --disabled-opacity: 0.4;
   --shadow-elevation-low: 0 0 0.25rem 0 var(--c-shadow);
   --shadow-elevation-medium: 0 0.25rem 1rem -0.25rem var(--c-shadow);

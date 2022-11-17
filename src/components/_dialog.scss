@@ -12,6 +12,7 @@ dialog {
   max-width: fit-content;
   padding: 1rem 1rem;
   position: fixed;
+  transition: var(--transition);
   transition-property: color, background-color, box-shadow;
   width: 100%;
 

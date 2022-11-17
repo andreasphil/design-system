@@ -86,19 +86,21 @@ pre {
   border-radius: var(--border-radius);
   color: var(--c-surface-variant-fg);
   padding: 1rem;
+  transition: var(--transition);
   transition-property: color, background-color;
 }
 
 hr {
   border-top: var(--border-width) solid var(--c-border);
-  border: none;
   height: 0;
+  transition: var(--transition);
   transition-property: border-color;
 }
 
 blockquote {
   border-left: 0.25rem solid var(--c-border);
   padding: 0.5rem 1rem;
+  transition: var(--transition);
   transition-property: color, border-color;
 }
 
@@ -112,6 +114,7 @@ figure > blockquote + figcaption {
   font-size: var(--font-size-small);
   margin-bottom: var(--block-spacing-y);
   padding: 0 1rem 0.5rem;
+  transition: var(--transition);
   transition-property: color, border-color;
 }
 
@@ -136,6 +139,7 @@ ul li {
 
 li::marker {
   color: var(--c-fg-variant);
+  transition: var(--transition);
   transition-property: color;
 }
 
@@ -168,6 +172,7 @@ del {
   padding: 0 0.25rem;
   position: relative;
   text-decoration: none;
+  transition: var(--transition);
   transition-property: color;
 
   &::after {
@@ -206,6 +211,7 @@ kbd {
   border-radius: var(--border-radius-small);
   color: var(--c-bg);
   padding: 0.125rem 0.25rem;
+  transition: var(--transition);
   transition-property: color, background-color;
 }
 
@@ -239,6 +245,7 @@ a,
 a:visited {
   color: var(--c-primary);
   text-decoration-color: currentColor;
+  transition: var(--transition);
   transition-property: color, border-color, text-decoration-color;
 }
 

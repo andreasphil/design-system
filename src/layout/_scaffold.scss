@@ -13,15 +13,10 @@ body {
   font-size: var(--font-size);
   line-height: var(--line-height);
   padding: var(--body-padding-y, 0) var(--body-padding-x, 0);
+  transition: var(--transition);
   transition-property: color, background-color;
 }
 
 ::selection {
-  background-color: var(--c-primary-surface-bg);
-  color: var(--c-fg);
-}
-
-* {
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  background-color: var(--c-surface-primary-bg);
 }
