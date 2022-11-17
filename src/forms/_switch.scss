@@ -1,0 +1,58 @@
+/* -------------------------------------------------- *
+ * Switches                                           *
+ * -------------------------------------------------- */
+
+$height: 1.5em;
+$padding: 0.125em;
+$knobSize: calc($height - $padding * 2 - var(--border-width) * 2);
+
+input[type="checkbox"][role="switch"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--c-bg);
+  border-radius: $height;
+  border: var(--border-width) var(--c-border) solid;
+  font: inherit;
+  height: $height;
+  margin-right: 0.5rem;
+  outline: none;
+  padding: $padding;
+  transition: var(--transition);
+  transition-property: background-color, border-color, box-shadow;
+  vertical-align: bottom;
+  width: 2.5em;
+
+  &::before {
+    background: var(--c-border);
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: $knobSize;
+    transition: inherit;
+    transition-property: background-color, margin;
+    width: $knobSize;
+  }
+
+  &:hover {
+    border-color: var(--c-primary);
+  }
+
+  &:focus {
+    border-color: var(--c-primary);
+    box-shadow: var(--outline);
+  }
+
+  &:checked {
+    background: var(--c-primary);
+    border-color: var(--c-primary);
+  }
+
+  &:checked::before {
+    background: var(--c-on-primary);
+    margin-left: calc(100% - $knobSize);
+  }
+
+  &:disabled {
+    opacity: var(--disabled-opacity);
+  }
+}
