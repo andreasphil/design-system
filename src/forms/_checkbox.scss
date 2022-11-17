@@ -2,41 +2,39 @@
  * Checkboxes                                         *
  * -------------------------------------------------- */
 
-input[type="checkbox"] {
+input[type="checkbox"]:not([role="switch"]) {
   -webkit-appearance: none;
   appearance: none;
   font: inherit;
   outline: none;
+  background: var(--c-bg) no-repeat center center / 1em;
+  border: var(--border-width) var(--c-border) solid;
+  border-radius: var(--border-radius-small);
+  height: 1.5em;
+  margin-right: 0.5rem;
+  transition: var(--transition);
+  transition-property: background-color, border-color, box-shadow;
   vertical-align: bottom;
+  width: 1.5em;
 
-  &::before {
-    background-color: var(--c-bg);
-    background: var(--icon-check) no-repeat center center / 0em;
-    border-color: var(--c-border);
-    border-radius: var(--border-radius-small);
-    border-style: solid;
-    border-width: var(--border-width);
-    content: "";
-    display: inline-block;
-    height: 1.5em;
-    margin-right: 0.5rem;
-    transition-property: background-color, border-color, box-shadow;
-    width: 1.5em;
-  }
-
-  &:is(:hover, :focus)::before {
+  &:hover {
     border-color: var(--c-primary);
   }
 
-  &:focus::before {
-    box-shadow: 0 0 0 4px var(--c-outline, var(--c-primary-surface-bg));
+  &:focus {
+    border-color: var(--c-primary);
+    box-shadow: var(--outline);
   }
 
-  &:checked::before {
-    background-size: 1em;
+  &:checked {
+    background-image: var(--icon-check);
   }
 
-  &:disabled::before {
+  &:indeterminate {
+    background-image: var(--icon-minus);
+  }
+
+  &:disabled {
     opacity: var(--disabled-opacity);
   }
 }
