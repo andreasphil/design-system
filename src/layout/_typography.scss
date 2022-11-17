@@ -182,7 +182,7 @@ del {
     color: inherit;
     content: "";
     left: -0.125rem;
-    opacity: var(--auto-bg-opacity);
+    opacity: 0.15;
     pointer-events: none;
     position: absolute;
     right: -0.125rem;
@@ -191,7 +191,7 @@ del {
 }
 
 code {
-  color: var(--c-code, var(--c-primary));
+  color: var(--c-fg-variant);
 }
 
 mark {

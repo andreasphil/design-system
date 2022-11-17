@@ -36,8 +36,8 @@ nav a {
 }
 
 nav a[data-active="true"] {
-  background: var(--c-primary-surface-bg);
-  color: var(--c-primary-surface-fg);
+  background: var(--c-surface-primary-bg);
+  color: var(--c-primary);
 }
 
 nav li a:only-child {

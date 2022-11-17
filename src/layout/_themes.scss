@@ -2,68 +2,90 @@
  * Dark mode & theming                                *
  * -------------------------------------------------- */
 
-@function tinted($s, $l, $a: false) {
+@function tinted($s, $l) {
+  $s: calc($s * var(--theme-saturate));
+  $l: calc($l * var(--theme-lighten));
+
+  @return var(--theme-tint) $s $l;
+}
+
+@function tintedHsl($s, $l, $a: false) {
   @if not $a {
     $a: 1;
   }
 
-  @return hsl(
-    var(--theme-tint) calc($s * var(--theme-saturate))
-      calc($l * var(--theme-lighten)) / $a
-  );
+  @return hsl(#{tinted($s, $l)} / $a);
 }
 
-:root {
+@mixin themeBase() {
   --theme-tint: 155;
   --theme-saturate: 1;
   --theme-lighten: 1;
+  --theme-primary: #{tinted(80%, 44%)};
 
-  --c-primary: #{tinted(80%, 44%)};
-  --c-on-primary: #{tinted(0%, 100%)};
-  --c-primary-surface-fg: var(--c-primary);
-  --c-primary-surface-bg: #{tinted(80%, 44%, var(--auto-bg-opacity))};
+  --c-primary: hsl(var(--theme-primary));
+  --c-on-primary: #{tintedHsl(0%, 100%)};
+  --c-surface-primary-bg: hsl(var(--theme-primary) / 0.2);
+}
 
-  --outline: 0 0 0 4px var(--c-outline, var(--c-primary-surface-bg));
-
+@mixin lightTheme() {
   --color-scheme: light;
-  --c-border: #{tinted(14%, 84%)};
-  --c-shadow: #{tinted(14%, 88%)};
-  --c-bg: #{tinted(10%, 99%)};
-  --c-backdrop-bg: #{tinted(10%, 99%, 0.8)};
-  --c-fg: #{tinted(12%, 6%)};
-  --c-fg-variant: #{tinted(8%, 55%)};
-  --c-surface-bg: #{tinted(0%, 100%)};
+  --c-border: #{tintedHsl(14%, 84%)};
+  --c-outline: var(--c-surface-primary-bg);
+  --c-shadow: #{tintedHsl(14%, 88%)};
+  --c-bg: #{tintedHsl(10%, 99%)};
+  --c-backdrop-bg: #{tintedHsl(10%, 99%, 0.8)};
+  --c-fg: #{tintedHsl(12%, 6%)};
+  --c-fg-variant: #{tintedHsl(8%, 55%)};
+  --c-surface-bg: #{tintedHsl(0%, 100%)};
   --c-surface-fg: var(--c-fg);
-  --c-surface-variant-bg: #{tinted(11%, 96%)};
+  --c-surface-variant-bg: #{tintedHsl(11%, 96%)};
   --c-surface-variant-fg: var(--c-surface-fg);
 }
 
-// Backdrop doesn't inherit from root, so we'll need to declare variables
-// separately
-::backdrop {
-  --theme-tint: 155;
-  --theme-saturate: 1;
-  --theme-lighten: 1;
+@mixin darkTheme {
+  --color-scheme: dark;
+  --c-border: #{tintedHsl(14%, 18%)};
+  --c-shadow: #{tintedHsl(10%, 4%)};
+  --c-bg: #{tintedHsl(10%, 5%)};
+  --c-backdrop-bg: #{tintedHsl(10%, 5%, 0.8)};
+  --c-fg: #{tintedHsl(0%, 100%)};
+  --c-fg-variant: #{tintedHsl(8%, 55%)};
+  --c-surface-bg: #{tintedHsl(12%, 8%)};
+  --c-surface-fg: var(--c-fg);
+  --c-surface-variant-bg: #{tintedHsl(14%, 11%)};
+  --c-surface-variant-fg: var(--c-surface-fg);
+}
 
-  --c-backdrop-bg: #{tinted(10%, 99%, 0.8)};
+:root {
+  @include themeBase;
+}
+
+:root,
+[data-theme="light"] {
+  @include lightTheme;
+}
+
+[data-theme="dark"] {
+  @include darkTheme;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --color-scheme: dark;
-    --c-border: #{tinted(14%, 18%)};
-    --c-shadow: #{tinted(10%, 4%)};
-    --c-bg: #{tinted(10%, 5%)};
-    --c-backdrop-bg: #{tinted(10%, 5%, 0.8)};
-    --c-fg: #{tinted(0%, 100%)};
-    --c-fg-variant: #{tinted(8%, 55%)};
-    --c-surface-bg: #{tinted(12%, 8%)};
-    --c-surface-fg: var(--c-fg);
-    --c-surface-variant-bg: #{tinted(14%, 11%)};
-    --c-surface-variant-fg: var(--c-surface-fg);
+  :root:not([data-theme="light"]) {
+    @include darkTheme;
   }
+}
 
+// Backdrop doesn't inherit from root, so we'll need to declare variables
+// separately. Unfortunately this doesn't play very nicely with forced theming
+// via [data-theme], but I can't think of a good solution ...
+::backdrop {
+  @include themeBase;
+  @include lightTheme;
+}
+
+@media (prefers-color-scheme: dark) {
   ::backdrop {
-    --c-backdrop-bg: #{tinted(10%, 5%, 0.8)};
+    @include darkTheme;
   }
 }
