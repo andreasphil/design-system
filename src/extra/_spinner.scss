@@ -7,6 +7,10 @@
 
   &:not(:empty) {
     text-align: center;
+
+    &::before {
+      margin-right: 0.5rem;
+    }
   }
 
   &::before {
@@ -21,7 +25,7 @@
     display: inline-block;
     height: 1.2em;
     opacity: 1;
-    vertical-align: middle;
+    vertical-align: -0.2em;
     width: 1.2em;
   }
 }
