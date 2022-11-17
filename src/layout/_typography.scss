@@ -91,6 +91,7 @@ pre {
 }
 
 hr {
+  border: none;
   border-top: var(--border-width) solid var(--c-border);
   height: 0;
   transition: var(--transition);
