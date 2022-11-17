@@ -22,9 +22,8 @@
   },
   "devDependencies": {
     "esbuild": "^0.14.18",
+    "sanitize.css": "^13.0.0",
     "sass": "^1.49.0"
   },
-  "dependencies": {
-    "sanitize.css": "^13.0.0"
-  }
+  "dependencies": {}
 }
