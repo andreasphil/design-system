@@ -5,8 +5,8 @@
 select {
   -webkit-appearance: none;
   appearance: none;
-  background: var(--icon-chevron-down) no-repeat right 0.5em center / 1em;
-  background-color: var(--c-bg);
+  background: var(--c-bg) var(--icon-chevron) right 0.5em center / 1.2em;
+  background-repeat: no-repeat;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--c-border);
   color: inherit;
@@ -29,6 +29,12 @@ select {
 
   // Add some spacing between text and input when used in labels
   label > & {
+    margin-top: 0.25rem;
+  }
+
+  // Style <small> as hint text if added below the input
+  & + small {
+    color: var(--c-fg-variant);
     margin-top: 0.25rem;
   }
 }

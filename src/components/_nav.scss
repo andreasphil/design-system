@@ -13,7 +13,7 @@ nav {
   transition-property: color, background-color, border-color, box-shadow;
 
   &[data-variant~="fixed"] {
-    background-color: var(--c-surface-bg);
+    background: var(--c-surface-bg);
     box-shadow: var(--shadow-elevation-low);
     height: $nav-height;
     left: 0;
