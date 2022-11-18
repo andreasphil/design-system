@@ -1,11 +1,11 @@
 @use "./deps";
-@use "./variables";
 
 // Basic page setup & layouts
 @use "./base/scaffold";
 @use "./base/svg";
 @use "./base/themes";
 @use "./base/typography";
+@use "./base/variables";
 
 // Inputs & other form elements
 @use "./forms/checkbox";
