@@ -2,11 +2,10 @@
 @use "./variables";
 
 // Basic page setup & layouts
-@use "./layout/article";
-@use "./layout/scaffold";
-@use "./layout/svg";
-@use "./layout/themes";
-@use "./layout/typography";
+@use "./base/scaffold";
+@use "./base/svg";
+@use "./base/themes";
+@use "./base/typography";
 
 // Inputs & other form elements
 @use "./forms/checkbox";
@@ -17,6 +16,7 @@
 @use "./forms/switch";
 
 // UI components other than inputs
+@use "./components/article";
 @use "./components/buttons";
 @use "./components/dialog";
 @use "./components/nav";
