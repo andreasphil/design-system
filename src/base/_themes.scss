@@ -2,6 +2,8 @@
  * Dark mode & theming                                *
  * -------------------------------------------------- */
 
+@use "../icons/icons";
+
 @function tinted($s, $l) {
   $s: calc($s * var(--theme-saturate));
   $l: calc($l * var(--theme-lighten));
@@ -64,15 +66,18 @@
 :root,
 [data-theme="light"] {
   @include lightTheme;
+  @include icons.lightIcons;
 }
 
 [data-theme="dark"] {
   @include darkTheme;
+  @include icons.darkIcons;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     @include darkTheme;
+    @include icons.darkIcons;
   }
 }
 
