@@ -14,10 +14,10 @@
   "scripts": {
     "prestart": "npm run build:icons",
     "start": "sass --no-source-map --watch src/index.scss dist/index.css",
-    "build": "scripts/build",
-    "build:customizations": "node scripts/generateCustomizationList.js",
+    "build": "npm run build:icons; npm run build:styles; npm run build:bundle",
     "build:icons": "node scripts/icons.js",
     "build:styles": "sass --no-source-map src/index.scss dist/index.css",
+    "build:bundle": "esbuild dist/index.css --outfile=dist/index.min.css --minify",
     "preversion": "npm run build; git add --force dist/index.min.css README.md"
   },
   "devDependencies": {
