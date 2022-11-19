@@ -58,7 +58,8 @@ hgroup {
     margin-top: 0.5rem;
   }
 
-  :first-child:is(h1, h2, h3, h4, h5, h6) {
+  :first-child:is(h1, h2, h3, h4, h5, h6),
+  :is(h1, h2, h3, h4, h5, h6):not(:last-child) {
     margin-bottom: 1rem;
   }
 
@@ -73,7 +74,7 @@ hgroup {
  * Block typography elements                          *
  * -------------------------------------------------- */
 
-p,
+ p,
 pre,
 hr,
 blockquote,
@@ -85,6 +86,7 @@ pre {
   background: var(--c-surface-variant-bg);
   border-radius: var(--border-radius);
   color: var(--c-surface-variant-fg);
+  font-size: 0.9em;
   padding: 1rem;
   transition: var(--transition);
   transition-property: color, background-color;
@@ -164,7 +166,6 @@ abbr {
   text-decoration-style: dashed;
 }
 
-code,
 mark,
 ins,
 del {
@@ -192,7 +193,13 @@ del {
 }
 
 code {
+  background: var(--c-surface-variant-bg);
+  border-radius: var(--border-radius-small);
   color: var(--c-fg-variant);
+  font-size: 0.9em;
+  padding: 0.125rem 0.125rem;
+  transition-property: color;
+  transition: var(--transition);
 }
 
 mark {
