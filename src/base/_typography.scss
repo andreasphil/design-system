@@ -92,14 +92,14 @@ pre {
 
 hr {
   border: none;
-  border-top: var(--border-width) solid var(--c-border);
+  border-top: var(--border-width) solid var(--c-border-variant);
   height: 0;
   transition: var(--transition);
   transition-property: border-color;
 }
 
 blockquote {
-  border-left: 0.25rem solid var(--c-border);
+  border-left: 0.25rem solid var(--c-border-variant);
   padding: 0.5rem 1rem;
   transition: var(--transition);
   transition-property: color, border-color;
@@ -110,7 +110,7 @@ figure > blockquote {
 }
 
 figure > blockquote + figcaption {
-  border-left: 0.25rem solid var(--c-border);
+  border-left: 0.25rem solid var(--c-border-variant);
   color: var(--c-fg-variant);
   font-size: var(--font-size-small);
   margin-bottom: var(--block-spacing-y);

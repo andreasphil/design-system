@@ -33,6 +33,7 @@
 @mixin lightTheme() {
   --color-scheme: light;
   --c-border: #{tintedHsl(14%, 84%)};
+  --c-border-variant: #{tintedHsl(14%, 94%)};
   --c-outline: var(--c-surface-primary-bg);
   --c-shadow: #{tintedHsl(14%, 88%)};
   --c-bg: #{tintedHsl(10%, 99%)};
@@ -48,6 +49,7 @@
 @mixin darkTheme {
   --color-scheme: dark;
   --c-border: #{tintedHsl(14%, 18%)};
+  --c-border-variant: #{tintedHsl(14%, 12%)};
   --c-shadow: #{tintedHsl(10%, 4%)};
   --c-bg: #{tintedHsl(10%, 5%)};
   --c-backdrop-bg: #{tintedHsl(10%, 5%, 0.8)};
