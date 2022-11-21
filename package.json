@@ -14,16 +14,21 @@
   "scripts": {
     "prestart": "npm run build:icons",
     "start": "sass --no-source-map --watch src/index.scss dist/index.css",
+    "docs": "wmr",
     "build": "npm run build:icons; npm run build:styles; npm run build:bundle",
     "build:icons": "node scripts/icons.js",
     "build:styles": "sass --no-source-map src/index.scss dist/index.css",
     "build:bundle": "esbuild dist/index.css --outfile=dist/index.min.css --minify",
+    "build:docs": "wmr build --prerender",
     "preversion": "npm run build; git add --force dist/index.min.css README.md"
   },
   "devDependencies": {
     "esbuild": "^0.14.18",
+    "preact-iso": "^2.3.1",
+    "preact": "^10.11.3",
     "sanitize.css": "^13.0.0",
-    "sass": "^1.49.0"
+    "sass": "^1.49.0",
+    "wmr": "^3.8.0"
   },
   "dependencies": {}
 }

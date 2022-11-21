@@ -12,9 +12,7 @@
 - 😎 Small set of utilities for additional states and convenience
 - 🐛 Tiny footprint with no runtime dependencies or build step required
 - 🧼 Built on top of [sanitize.css](https://github.com/csstools/sanitize.css) for sane, robust defaults
-- ⚙️ Flexible customization via CSS custom properties
 - 🌈 Automatic color system that reduces time spent fiddling with color palettes
-- 🌗 Includes light and dark modes based on user preferences
 - 🪗 Fully responsive
 
 ## Usage
@@ -44,15 +42,16 @@ or
 ```sh
 npm install       # Download dependencies
 npm start         # Compile stylesheets
+npm docs          # Run playground/documentation
 ```
-
-Once stylesheet compilation is running, open `index.html` in your browser to see a preview page. You don't need a dev server. But if you want one, `npx serve` is a good choice.
 
 ## Building
 
 ```sh
-npm build:icons   # Re-builds the icon SCSS file (should run automatically on start and build)
 npm build         # Creates bundled + minified output in dist
+npm build:icons   # Re-builds the icon SCSS file (should run automatically on start and build)
+npm build:styles  # Re-builds the stylesheet
+npm build:docs    # generates the documentation page
 ```
 
 ## Credits
