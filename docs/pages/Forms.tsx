@@ -198,10 +198,7 @@ export default function Forms() {
   --input-icon: url(...); /* URL of the input icon */
 }`}</pre>
       <SpecialInputsExample />
-      <p>
-        Textareas work almost the same as inputs. You can disable resizing via
-        the <code>[data-resize="false"]</code> attribute.
-      </p>
+      <p>Textareas work almost the same as inputs.</p>
       <TextareaExample />
 
       {/* Select -------------------- */}

@@ -6,3 +6,10 @@ export const pages = [
   { href: "/extra", title: "Extra" },
   { href: "/customization", title: "Customization" },
 ] as const;
+
+export const META = {
+  title: "Fine",
+  authorName: "Andreas Philippi",
+  authorWebsite: "https://andreasphil.com",
+  repository: "https://github.com/andreasphil/fine",
+} as const;

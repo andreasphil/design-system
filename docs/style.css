@@ -1,27 +1,12 @@
 :root {
-  --body-padding-x: 2rem;
-  --body-padding-y: 2rem;
+  /* Calculated with https://clamping.andreasphil.com */
+  --body-padding-x: clamp(1rem, 1.495vw + 0.75rem, 2rem);
+  --body-padding-y: clamp(2rem, 8.972vw - 0.125rem, 5rem);
 }
 
-.sidebar-layout {
-  max-width: 1440px;
-  margin: auto;
-  min-height: calc(100vh - var(--body-padding-y) * 2);
-  display: flex;
-  gap: 2rem;
-  padding-bottom: 5rem;
-}
-
-.sidebar-layout__sidebar {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 16rem;
-  padding: 2.5rem 2rem 2rem;
-}
-
-.sidebar-layout__content {
-  flex: 1 1 auto;
-  padding: 2rem;
+.footer {
+  padding: var(--body-padding-y) 0 0;
+  text-align: center;
 }
 
 .preview {

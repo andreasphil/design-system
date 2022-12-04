@@ -161,25 +161,6 @@ export default function Components() {
     >
       {/* Button -------------------- */}
       <h2 id="button">Button</h2>
-      <p>
-        Use <code>button</code>, <code>input[type="button"]</code>,{" "}
-        <code>input[type="submit"]</code>, <code>input[type="reset"]</code>, or{" "}
-        <code>[role="button"]</code> to create a button. Most buttons will be
-        formatted as block elements. To create an inline button, use{" "}
-        <code>[role="button"]</code> on an appropriate element.
-      </p>
-      <p>
-        Buttons come in different variants. The default is a filled button in
-        the primary color. There are also variants for outlined buttons and
-        buttons without any border or fill. Buttons expose a{" "}
-        <code>--button-color</code> custom property that can be used to quickly
-        change the appearance of the button without having to define hover
-        states or overriding button rules.
-      </p>
-      <p>
-        To display a <a href="/extra#spinner">spinner</a>, combine the button
-        with <code>[aria-busy="true"]</code>.
-      </p>
       <ButtonExample />
 
       {/* Dialog -------------------- */}
@@ -203,19 +184,6 @@ export default function Components() {
         navigation.
       </p>
       <HorizontalNavigationExample />
-      <p>
-        You can also apply the <code>[data-variant="fixed"]</code>
-        modifier to the <code>nav</code> in order to give it a fixed position at
-        the top of the page. If you do that, also use{" "}
-        <code>[data-nav="fixed"]</code> on the elements containing the rest of
-        your page in order to give them a top padding that matches the height of
-        the navigation.
-      </p>
-      <p>
-        Use <code>[data-variant="vertical"]</code> or{" "}
-        <code>[data-variant="horizontal"]</code> to force a direction in any
-        context.
-      </p>
     </DocumentationLayout>
   );
 }

@@ -1,6 +1,6 @@
 import { RenderableProps } from "preact";
 import { useLocation } from "preact-iso";
-import { pages } from "./configuration";
+import { META, pages } from "./configuration";
 
 /* -------------------------------------------------- *
  * Layouts                                            *
@@ -16,51 +16,41 @@ export function DocumentationLayout(props: DocumentationLayoutProps) {
 
   return (
     <>
-      {/* TODO: Footer */}
-      {/* TODO: Header content */}
-      {/* TODO: Unify header across all layouts */}
-      <header>
-        <nav data-variant="fixed">
-          <strong>🐥 Fine</strong>
+      <header data-container>
+        <nav>
+          <strong>{META.title}</strong>
           <ul>
-            <li>
-              <a href="https://github.com/andreasphil/fine">View source</a>
-            </li>
+            {pages.map((page) => (
+              <li>
+                <a
+                  href={page.href}
+                  title={page.title}
+                  data-active={page.href === path}
+                >
+                  {page.title}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
+        <hr />
       </header>
 
-      <div data-nav="fixed" className="sidebar-layout">
-        {/* Sidebar navigation */}
-        <aside className="sidebar-layout__sidebar">
-          <nav>
-            <ul>
-              {pages.map((page) => (
-                <li>
-                  <a
-                    href={page.href}
-                    title={page.title}
-                    data-active={page.href === path}
-                  >
-                    {page.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
+      {/* Main content */}
+      <main data-container>
+        <hgroup>
+          <h1>{props.title}</h1>
+          {props.description ? <p>{props.description}</p> : undefined}
+        </hgroup>
+        <div data-trim="bottom">{props.children}</div>
+      </main>
 
-        {/* Main content */}
-        <main className="sidebar-layout__content">
-          <section className="docs" data-trim="both" data-container>
-            <hgroup>
-              <h1>{props.title}</h1>
-              {props.description ? <p>{props.description}</p> : undefined}
-            </hgroup>
-            <div>{props.children}</div>
-          </section>
-        </main>
-      </div>
+      <footer data-container className="footer">
+        <small>
+          A thing made by <a href={META.authorWebsite}>{META.authorName}</a>. 🐱{" "}
+          <a href={META.repository}>View source</a>.
+        </small>
+      </footer>
     </>
   );
 }
