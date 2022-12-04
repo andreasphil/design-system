@@ -49,7 +49,7 @@
 @mixin darkTheme {
   --color-scheme: dark;
   --c-border: #{tintedHsl(14%, 18%)};
-  --c-border-variant: #{tintedHsl(14%, 12%)};
+  --c-border-variant: #{tintedHsl(14%, 11%)};
   --c-shadow: #{tintedHsl(10%, 4%)};
   --c-bg: #{tintedHsl(10%, 5%)};
   --c-backdrop-bg: #{tintedHsl(10%, 5%, 0.8)};

@@ -12,8 +12,6 @@ body {
   font-size: var(--font-size);
   line-height: var(--line-height);
   padding: var(--body-padding-y, 0) var(--body-padding-x, 0);
-  transition: var(--transition);
-  transition-property: color, background-color;
 }
 
 ::selection {

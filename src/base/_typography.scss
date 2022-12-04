@@ -74,7 +74,7 @@ hgroup {
  * Block typography elements                          *
  * -------------------------------------------------- */
 
- p,
+p,
 pre,
 hr,
 blockquote,
@@ -88,23 +88,17 @@ pre {
   color: var(--c-surface-variant-fg);
   font-size: 0.9em;
   padding: 1rem;
-  transition: var(--transition);
-  transition-property: color, background-color;
 }
 
 hr {
   border: none;
   border-top: var(--border-width) solid var(--c-border-variant);
   height: 0;
-  transition: var(--transition);
-  transition-property: border-color;
 }
 
 blockquote {
   border-left: 0.25rem solid var(--c-border-variant);
   padding: 0.5rem 1rem;
-  transition: var(--transition);
-  transition-property: color, border-color;
 }
 
 figure > blockquote {
@@ -117,8 +111,6 @@ figure > blockquote + figcaption {
   font-size: var(--font-size-small);
   margin-bottom: var(--block-spacing-y);
   padding: 0 1rem 0.5rem;
-  transition: var(--transition);
-  transition-property: color, border-color;
 }
 
 /* -------------------------------------------------- *
@@ -133,17 +125,11 @@ dl {
 
 ol,
 ul {
-  padding: 0 0 0 1.25rem;
-}
-
-ul li {
-  list-style-type: square;
+  padding: 0 0 0 1.5rem;
 }
 
 li::marker {
   color: var(--c-fg-variant);
-  transition: var(--transition);
-  transition-property: color;
 }
 
 li + li {
@@ -166,61 +152,42 @@ abbr {
   text-decoration-style: dashed;
 }
 
-mark,
+code,
+del,
 ins,
-del {
+kbd,
+mark {
   background: none;
   border-radius: var(--border-radius-small);
-  padding: 0 0.25rem;
-  position: relative;
+  padding: 0.125rem;
   text-decoration: none;
-  transition: var(--transition);
-  transition-property: color;
-
-  &::after {
-    background: currentColor;
-    border-radius: inherit;
-    bottom: -0.125rem;
-    color: inherit;
-    content: "";
-    left: -0.125rem;
-    opacity: 0.15;
-    pointer-events: none;
-    position: absolute;
-    right: -0.125rem;
-    top: -0.125rem;
-  }
 }
 
 code {
   background: var(--c-surface-variant-bg);
-  border-radius: var(--border-radius-small);
-  color: var(--c-fg-variant);
+  color: var(--c-surface-variant-fg);
   font-size: 0.9em;
-  padding: 0.125rem 0.125rem;
-  transition-property: color;
-  transition: var(--transition);
 }
 
 mark {
-  color: var(--c-mark, orange);
+  background: var(--c-mark-bg, gold);
+  color: var(--c-mark-fg, sienna);
 }
 
 ins {
-  color: var(--c-ins, limegreen);
+  background: var(--c-ins-bg, mediumspringgreen);
+  color: var(--c-ins-fg, darkgreen);
 }
 
 del {
-  color: var(--c-del, orangered);
+  background: var(--c-del-bg, coral);
+  color: var(--c-del-fg, darkred);
 }
 
 kbd {
   background: var(--c-fg);
-  border-radius: var(--border-radius-small);
   color: var(--c-bg);
-  padding: 0.125rem 0.25rem;
-  transition: var(--transition);
-  transition-property: color, background-color;
+  font-size: 0.9em;
 }
 
 small {
@@ -230,34 +197,22 @@ small {
 sup,
 sub {
   font-size: 0.75rem;
-  letter-spacing: 0.02rem;
-  margin: 0 2px;
-  position: relative;
-}
-
-sub {
-  bottom: -0.125rem;
-  vertical-align: bottom;
-}
-
-sup {
-  top: -0.125rem;
-  vertical-align: top;
 }
 
 /* -------------------------------------------------- *
  * Links                                              *
  * -------------------------------------------------- */
 
-a,
-a:visited {
-  color: var(--c-primary);
-  text-decoration-color: currentColor;
-  transition: var(--transition);
-  transition-property: color, border-color, text-decoration-color;
-}
+a:not([role="button"]) {
+  &,
+  &:visited {
+    color: var(--c-primary);
+    transition: var(--transition);
+    transition-property: color, border-color, text-decoration-color;
+  }
 
-a:hover {
-  color: var(--c-fg);
-  text-decoration-color: currentColor;
+  &:hover {
+    color: var(--c-fg);
+    text-decoration-color: currentColor;
+  }
 }
