@@ -6,6 +6,12 @@
   <strong>Small, opinionated CSS framework to make sites look alright with minimal effort</strong>
 </p>
 
+<p align="center">
+  <a href="https://app.netlify.com/sites/fine-playground/deploys" title="Netlify Status">
+    <img src="https://api.netlify.com/api/v1/badges/3c7e430b-7855-4579-adb3-f879918e2ec0/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
+
 > ⚠️ Work in progress. Things are most certainly incomplete and/or broken, and will definitely change.
 
 - 🔥 Embraces semantic HTML to make native elements look great out of the box, without classes
