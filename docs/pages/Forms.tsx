@@ -1,5 +1,5 @@
+import { DocumentationLayout, Preview } from "@/lib/components";
 import { useState } from "preact/hooks";
-import { DocumentationLayout, Preview } from "../lib/components";
 
 /* -------------------------------------------------- *
  * Examples                                           *

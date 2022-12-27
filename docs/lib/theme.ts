@@ -6,8 +6,6 @@ import { useEffect, useState } from "preact/hooks";
 
 export type Theme = {
   tint?: string;
-  saturate?: string;
-  lighten?: string;
   primary?: {
     hue: string;
     saturation: string;
@@ -35,8 +33,6 @@ function applyTheme(theme: Theme) {
   if (!root) return;
 
   setOrRemove(root, "--theme-tint", theme.tint);
-  setOrRemove(root, "--theme-saturate", theme.saturate);
-  setOrRemove(root, "--theme-lighten", theme.lighten);
 
   if (theme.primary) {
     const primary = [
@@ -56,17 +52,13 @@ function readTheme(): Theme {
   const style = getComputedStyle(root);
   const theme: Theme = {
     tint: style.getPropertyValue("--theme-tint"),
-    saturate: style.getPropertyValue("--theme-saturate"),
-    lighten: style.getPropertyValue("--theme-lighten"),
   };
 
   return theme;
 }
 
 function getThemeCode(theme: Theme) {
-  let code = `--theme-tint: ${theme.tint};
---theme-saturate: ${theme.saturate};
---theme-lighten: ${theme.lighten};`;
+  let code = `--theme-tint: ${theme.tint};`;
 
   if (theme.primary) {
     code += `\n--theme-primary: ${theme.primary.hue} ${theme.primary.saturation}% ${theme.primary.lightness}%;`;

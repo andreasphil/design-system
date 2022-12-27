@@ -1,6 +1,6 @@
+import { META, pages } from "@/lib/configuration";
 import { RenderableProps } from "preact";
 import { useLocation } from "preact-iso";
-import { META, pages } from "./configuration";
 
 /* -------------------------------------------------- *
  * Layouts                                            *

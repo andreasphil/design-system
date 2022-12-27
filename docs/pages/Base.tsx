@@ -1,4 +1,4 @@
-import { DocumentationLayout, Preview } from "../lib/components";
+import { DocumentationLayout, Preview } from "@/lib/components";
 
 /* -------------------------------------------------- *
  * Examples                                           *
@@ -64,7 +64,10 @@ const headingsGroupExampleCode = `
     consectetur, adipisicing elit. Fugit error libero deserunt recusandae.
   </p>
 </hgroup>
-<p>This is normal text.</p>
+<p>
+  This is normal text. Lorem ipsum dolor sit amet consectetur, adipisicing
+  elit. Fugit error libero deserunt recusandae.
+</p>
 `;
 
 function HeadingsGroupExample() {
@@ -122,7 +125,7 @@ export default function Base() {
   return (
     <DocumentationLayout
       title="Base"
-      description="Fine comes with reasonable defaults that are consistent across browsers, as well as styles for typography and and other content-based elements."
+      description="Fine comes with reasonable defaults that are consistent across browsers, as well as styles for typography and other content-based elements."
     >
       {/* Inline elements -------------------- */}
       <h2 id="inline-elements">Inline elements</h2>

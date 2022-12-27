@@ -39,3 +39,17 @@
 .preview__code {
   white-space: pre-wrap;
 }
+
+.palette {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.palette__item {
+  background: var(--bg);
+  border-radius: var(--border-radius);
+  flex: 1 1 0;
+  height: 3rem;
+  transition: background-color var(--transition);
+}

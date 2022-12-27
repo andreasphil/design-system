@@ -48,7 +48,7 @@ or
 ```sh
 npm install       # Download dependencies
 npm start         # Compile stylesheets
-npm docs          # Run playground/documentation
+npm run docs      # Run playground/documentation
 ```
 
 ## Building

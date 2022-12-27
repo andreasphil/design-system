@@ -60,11 +60,11 @@ hgroup {
 
   :first-child:is(h1, h2, h3, h4, h5, h6),
   :is(h1, h2, h3, h4, h5, h6):not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   :is(h1, h2, h3, h4, h5, h6) + p {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     font-size: var(--font-size-h5);
     color: var(--c-fg-variant);
   }

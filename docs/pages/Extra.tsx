@@ -1,4 +1,4 @@
-import { DocumentationLayout, Preview } from "../lib/components";
+import { DocumentationLayout, Preview } from "@/lib/components";
 
 /* -------------------------------------------------- *
  * Examples                                           *
@@ -12,28 +12,6 @@ function SpinnerExample() {
   return (
     <Preview code={spinnerCode}>
       <div dangerouslySetInnerHTML={{ __html: spinnerCode }}></div>
-    </Preview>
-  );
-}
-
-const forcedThemeCode = `
-<article data-theme="dark" data-trim="both">
-  <p>This will always appear in dark mode.</p>
-  <button data-variant="outline">Sounds good!</button>
-</article>
-
-<article data-theme="light" data-trim="both">
-  <p>This will always appear in light mode.</p>
-  <button data-variant="outline">Sounds good!</button>
-</article>`;
-
-function ForcedThemeExample() {
-  return (
-    <Preview code={forcedThemeCode}>
-      <div
-        data-trim="both"
-        dangerouslySetInnerHTML={{ __html: forcedThemeCode }}
-      ></div>
     </Preview>
   );
 }
@@ -70,10 +48,6 @@ export default function Extra() {
       {/* Spinner -------------------- */}
       <h2 id="spinner">Spinner</h2>
       <SpinnerExample />
-
-      {/* Forced theme -------------------- */}
-      <h2 id="forced-theme">Forced light and dark mode</h2>
-      <ForcedThemeExample />
     </DocumentationLayout>
   );
 }

@@ -1,8 +1,4 @@
-import { DocumentationLayout } from "../lib/components";
-
-/* -------------------------------------------------- *
- * Examples                                           *
- * -------------------------------------------------- */
+import { DocumentationLayout } from "@/lib/components";
 
 /* -------------------------------------------------- *
  * Docs                                               *

@@ -1,5 +1,5 @@
-import { DocumentationLayout, Preview } from "../lib/components";
-import useTheme from "../lib/theme";
+import { DocumentationLayout, Preview } from "@/lib/components";
+import useTheme from "@/lib/theme";
 
 /* -------------------------------------------------- *
  * Theme playground                                   *
@@ -47,31 +47,12 @@ function ThemePlayground() {
           gridTemplateColumns: "repeat(auto-fill, minmax(12rem, 1fr))",
         }}
       >
-        <legend>Theme</legend>
         <label>
           Tint
           <input
             type="number"
             value={theme.tint}
             name="tint"
-            onInput={onUpdateTheme}
-          />
-        </label>
-        <label>
-          Saturate
-          <input
-            type="number"
-            value={theme.saturate}
-            name="saturate"
-            onInput={onUpdateTheme}
-          />
-        </label>
-        <label>
-          Lighten
-          <input
-            type="number"
-            value={theme.lighten}
-            name="lighten"
             onInput={onUpdateTheme}
           />
         </label>
@@ -96,7 +77,6 @@ function ThemePlayground() {
           gridTemplateColumns: "repeat(auto-fill, minmax(12rem, 1fr))",
         }}
       >
-        <legend>Primary</legend>
         <label>
           Hue
           <input
@@ -133,6 +113,43 @@ function ThemePlayground() {
 }
 
 /* -------------------------------------------------- *
+ * Color palette                                      *
+ * -------------------------------------------------- */
+
+function ColorPalette() {
+  return (
+    <>
+      <div className="palette">
+        <div className="palette__item" style="--bg: var(--neutral-50)" />
+        <div className="palette__item" style="--bg: var(--neutral-100)" />
+        <div className="palette__item" style="--bg: var(--neutral-200)" />
+        <div className="palette__item" style="--bg: var(--neutral-300)" />
+        <div className="palette__item" style="--bg: var(--neutral-400)" />
+        <div className="palette__item" style="--bg: var(--neutral-500)" />
+        <div className="palette__item" style="--bg: var(--neutral-600)" />
+        <div className="palette__item" style="--bg: var(--neutral-700)" />
+        <div className="palette__item" style="--bg: var(--neutral-800)" />
+        <div className="palette__item" style="--bg: var(--neutral-900)" />
+        <div className="palette__item" style="--bg: var(--neutral-950)" />
+      </div>
+      <div className="palette">
+        <div className="palette__item" style="--bg: var(--primary-50)" />
+        <div className="palette__item" style="--bg: var(--primary-100)" />
+        <div className="palette__item" style="--bg: var(--primary-200)" />
+        <div className="palette__item" style="--bg: var(--primary-300)" />
+        <div className="palette__item" style="--bg: var(--primary-400)" />
+        <div className="palette__item" style="--bg: var(--primary-500)" />
+        <div className="palette__item" />
+        <div className="palette__item" />
+        <div className="palette__item" />
+        <div className="palette__item" />
+        <div className="palette__item" />
+      </div>
+    </>
+  );
+}
+
+/* -------------------------------------------------- *
  * Docs                                               *
  * -------------------------------------------------- */
 
@@ -144,45 +161,24 @@ export default function Customization() {
     >
       <h2>Color scheme</h2>
       <p>
-        Colors are derived from three basic properties: tint, saturation, and
-        lightness. Tweaking these allows you to quickly change the colors of
-        your page without having to touch with any specific color.
+        Fine comes with two color palettes — neutral and primary. All colors
+        share the same hue (should be between 0 and 359), which is stored in the{" "}
+        <code>--theme-tint</code> CSS variable. Changing this variable allows
+        you to easily adjust the entire color scheme, and in most cases, this
+        will be the only variable you need to touch.
       </p>
-      <ul>
-        <li>
-          <p>
-            <code>--theme-tint</code>: This is the hue used by all colors.
-            Should be between 0 and 359. In most cases, this will be the only
-            variable you need to touch.
-          </p>
-        </li>
-        <li>
-          <p>
-            <code>--theme-lighten</code> and <code>--theme-saturate</code>{" "}
-            adjusts the lightness and saturation of the colors. Lightness and
-            saturation of all colors are multiplied with these values. Both are
-            1 by default. Note that the colors are quite sensitive to these
-            modifiers, so small changes usually work best (i.e. no more than
-            plus or minus 0.1).
-          </p>
-        </li>
-      </ul>
-      <h3>Primary color</h3>
       <p>
         By default, the primary color is based on the theme variables just like
         every other color. This will work for many colors. But sometimes you'll
         need more control, e.g. if you want a particularly vibrant primary
-        color. In that case, you can override the primary color by specifying
-        hue, saturation, and lightness:
+        color. When that happens, you can override the primary color by
+        specifying hue, saturation, and lightness:
       </p>
       <pre>--theme-primary: 200 80% 50%</pre>
-      <p>
-        The value will be used for automatically calculating the different
-        variations of the primary color that are needed.
-      </p>
 
       <h3>Playground</h3>
       <p>You can try the different color parameters below:</p>
+      <ColorPalette />
       <ThemePlayground />
 
       <h2>Other variables</h2>
