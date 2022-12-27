@@ -10,7 +10,7 @@ input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [typ
   background-color: var(--c-bg);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--c-border);
-  caret-color: var(--c-primary, initial);
+  caret-color: var(--primary, initial);
   color: inherit;
   font: inherit;
   letter-spacing: inherit;
@@ -22,7 +22,7 @@ input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [typ
   width: 100%;
 
   &:is(:hover, :focus) {
-    border-color: var(--c-primary);
+    border-color: var(--primary);
   }
 
   &:focus {

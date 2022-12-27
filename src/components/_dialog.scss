@@ -15,6 +15,12 @@ dialog {
   width: 100%;
 
   &::backdrop {
-    background: var(--c-backdrop-bg);
+    background: hsl(0 0% 100% / 0.8);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  dialog::backdrop {
+    background: hsl(0 0% 0% / 0.8);
   }
 }

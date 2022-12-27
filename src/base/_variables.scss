@@ -3,6 +3,15 @@
    * Shared                                             *
    * -------------------------------------------------- */
 
+  // Font sizes
+  --font-size-small: 0.875rem;
+  --font-size: 1rem;
+  --font-size-h6: var(--font-size);
+  --font-size-h5: 1.125rem;
+  --font-size-h4: 1.25rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h1: 2.5rem;
   // Spacing
   --block-spacing-y: 2rem;
   --body-padding-y: 1rem;
@@ -25,19 +34,67 @@
   --shadow-elevation-medium: 0 0.25rem 1rem -0.25rem var(--c-shadow);
   --shadow-elevation-high: 0 0.5rem 2rem -0.5rem var(--c-shadow);
 
+  // Theme
+  --theme-tint: 155;
+  --theme-primary: var(--theme-tint) 80% 44%;
+
+  // Default color palette
+  --black: hsl(0, 0%, 0%);
+  --neutral-50: hsl(var(--theme-tint), 15%, 99%);
+  --neutral-100: hsl(var(--theme-tint), 14%, 96%);
+  --neutral-200: hsl(var(--theme-tint), 13%, 89%);
+  --neutral-300: hsl(var(--theme-tint), 12%, 83%);
+  --neutral-400: hsl(var(--theme-tint), 11%, 70%);
+  --neutral-500: hsl(var(--theme-tint), 10%, 55%);
+  --neutral-600: hsl(var(--theme-tint), 11%, 46%);
+  --neutral-700: hsl(var(--theme-tint), 12%, 19%);
+  --neutral-800: hsl(var(--theme-tint), 13%, 11%);
+  --neutral-900: hsl(var(--theme-tint), 14%, 8%);
+  --neutral-950: hsl(var(--theme-tint), 15%, 5%);
+  --white: hsl(0, 0%, 100%);
+
+  --primary: hsl(var(--theme-primary) / 1);
+  --primary-50: hsl(var(--theme-primary) / 0.075);
+  --primary-100: hsl(var(--theme-primary) / 0.18);
+  --primary-200: hsl(var(--theme-primary) / 0.4);
+  --primary-300: hsl(var(--theme-primary) / 0.6);
+  --primary-400: hsl(var(--theme-primary) / 0.7);
+  --primary-500: var(--primary);
+  --on-primary: var(--white);
+}
+
   /* -------------------------------------------------- *
-   * Element-specific but might be useful in other      *
-   * places as well (for other element specific         *
-   * variables check the respective scss files)         *
+ * Dark mode & theming                                *
    * -------------------------------------------------- */
 
-  // Typography
-  --font-size-small: 0.875rem;
-  --font-size: 1rem;
-  --font-size-h6: var(--font-size);
-  --font-size-h5: 1.125rem;
-  --font-size-h4: 1.25rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h1: 2.5rem;
+:root {
+  --color-scheme: light;
+  --c-border: var(--neutral-300);
+  --c-border-variant: var(--neutral-100);
+  --c-outline: var(--primary-100);
+  --c-shadow: var(--neutral-200);
+  --c-bg: var(--neutral-50);
+  --c-fg: var(--neutral-950);
+  --c-fg-variant: var(--neutral-500);
+  --c-surface-bg: var(--white);
+  --c-surface-fg: var(--neutral-950);
+  --c-surface-variant-bg: var(--neutral-100);
+  --c-surface-variant-fg: var(--neutral-950);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-scheme: dark;
+    --c-border: var(--neutral-700);
+    --c-border-variant: var(--neutral-800);
+    --c-outline: var(--primary-100);
+    --c-shadow: var(--black);
+    --c-bg: var(--neutral-950);
+    --c-fg: var(--neutral-50);
+    --c-fg-variant: var(--neutral-500);
+    --c-surface-bg: var(--neutral-900);
+    --c-surface-fg: var(--neutral-50);
+    --c-surface-variant-bg: var(--neutral-800);
+    --c-surface-variant-fg: var(--neutral-50);
+  }
 }

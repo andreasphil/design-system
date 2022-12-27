@@ -5,10 +5,10 @@
 button,
 [role="button"],
 input:is([type="button"], [type="submit"], [type="reset"]) {
-  background: var(--button-color, var(--c-primary));
+  background: var(--button-color, var(--primary));
   border-radius: var(--border-radius);
   border: var(--border-width) solid transparent;
-  color: var(--c-on-primary);
+  color: var(--on-primary);
   font: inherit;
   font-weight: 500;
   letter-spacing: inherit;
@@ -49,12 +49,12 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   &[data-variant="outline"] {
     background: transparent;
     border-color: currentColor;
-    color: var(--button-color, var(--c-primary));
+    color: var(--button-color, var(--primary));
   }
 
   &[data-variant="ghost"] {
     background: transparent;
-    color: var(--button-color, var(--c-primary));
+    color: var(--button-color, var(--primary));
   }
 }
 

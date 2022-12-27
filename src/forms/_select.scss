@@ -20,7 +20,7 @@ select {
   width: 100%;
 
   &:is(:hover, :focus) {
-    border-color: var(--c-primary);
+    border-color: var(--primary);
   }
 
   &:focus {

@@ -19,11 +19,11 @@ input[type="radio"] {
   width: 1.5em;
 
   &:hover {
-    border-color: var(--c-primary);
+    border-color: var(--primary);
   }
 
   &:focus {
-    border-color: var(--c-primary);
+    border-color: var(--primary);
     box-shadow: var(--outline);
   }
 

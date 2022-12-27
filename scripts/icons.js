@@ -11,12 +11,12 @@ import { resolve } from "path";
  */
 function scss(light, dark) {
   return `/* This file is generated with \`node scripts/icons.js\` */
-@mixin lightIcons() {
+:root {
 ${light.join("\n").trim()}
 }
-@mixin darkIcons() {
+@media (prefers-color-scheme: dark) { :root {
 ${dark.join("\n").trim()}
-}`;
+}}`;
 }
 
 /**

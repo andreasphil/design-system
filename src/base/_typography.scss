@@ -206,7 +206,7 @@ sub {
 a:not([role="button"]) {
   &,
   &:visited {
-    color: var(--c-primary);
+    color: var(--primary);
     transition: var(--transition);
     transition-property: color, border-color, text-decoration-color;
   }

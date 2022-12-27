@@ -35,8 +35,11 @@ nav a {
 }
 
 nav a[data-active="true"] {
-  background: var(--c-surface-primary-bg);
-  color: var(--c-primary);
+  &,
+  &:hover {
+    background: var(--primary-100);
+    color: var(--primary);
+  }
 }
 
 nav li a:only-child {

@@ -33,22 +33,18 @@ input[type="checkbox"][role="switch"] {
     width: $knobSize;
   }
 
-  &:hover {
-    border-color: var(--c-primary);
-  }
-
   &:focus {
-    border-color: var(--c-primary);
+    border-color: var(--primary);
     box-shadow: var(--outline);
   }
 
   &:checked {
-    background: var(--c-primary);
-    border-color: var(--c-primary);
+    background: var(--primary);
+    border-color: var(--primary);
   }
 
   &:checked::before {
-    background: var(--c-on-primary);
+    background: var(--on-primary);
     margin-left: calc(100% - $knobSize);
   }
 

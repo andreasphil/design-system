@@ -3,9 +3,11 @@
 // Basic page setup & layouts
 @use "./base/scaffold";
 @use "./base/svg";
-@use "./base/themes";
 @use "./base/typography";
 @use "./base/variables";
+
+// Icons
+@use "./icons/icons";
 
 // Inputs & other form elements
 @use "./forms/checkbox";
