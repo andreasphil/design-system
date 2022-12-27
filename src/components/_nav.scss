@@ -6,9 +6,27 @@ $nav-height: var(--nav-height, 5rem);
 
 nav {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    margin: 0;
+    padding: 0;
+
+    // Remove list styles for link lists
+    li {
+      list-style-type: none;
+      margin-top: 0;
+    }
+  }
 
   &[data-variant~="fixed"] {
     background: var(--c-surface-bg);
@@ -20,6 +38,21 @@ nav {
     right: 0;
     top: 0;
     z-index: var(--nav-z-index, 10);
+  }
+}
+
+// Navs inside headers or with the .horizontal modifier are navbars
+// by default
+header > nav {
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  > ul {
+    align-items: center;
+    flex-direction: row;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 }
 
@@ -44,51 +77,6 @@ nav a[data-active="true"] {
 
 nav li a:only-child {
   display: block;
-}
-
-/* -------------------------------------------------- *
- * Lists                                              *
- * -------------------------------------------------- */
-
-nav > ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0;
-  padding: 0;
-
-  // Remove list styles for link lists
-  li {
-    list-style-type: none;
-    margin-top: 0;
-  }
-}
-
-// Navs inside headers or with the .horizontal modifier are navbars
-// by default
-nav[data-variant~="horizontal"],
-header > nav:not([data-variant~="vertical"]) {
-  justify-content: space-between;
-  align-items: center;
-
-  > ul {
-    align-items: center;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
-  }
-}
-
-// Navs outside headers or with the .vertical modifier flow vertially
-// by default
-nav[data-variant~="vertical"],
-:not(header) > nav:not([data-variant~="horizontal"]) {
-  flex-direction: column;
-
-  > ul {
-    flex-direction: column;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
-  }
 }
 
 /* -------------------------------------------------- *
