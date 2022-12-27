@@ -10,7 +10,7 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   border: var(--border-width) solid transparent;
   color: var(--on-primary);
   font: inherit;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   letter-spacing: inherit;
   outline: none;
   padding: 0.5rem 0.75rem;

@@ -7,7 +7,7 @@ details {
   padding: 1rem 0;
 
   summary {
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     list-style: none;
 
     &::after {
