@@ -4,14 +4,13 @@
 
 $height: 1.5em;
 $padding: 0.125em;
-$knobSize: calc($height - $padding * 2 - var(--border-width) * 2);
+$knobSize: calc($height - $padding * 2);
 
 input[type="checkbox"][role="switch"] {
   -webkit-appearance: none;
   appearance: none;
-  background: var(--c-bg);
+  background: var(--c-border);
   border-radius: $height;
-  border: var(--border-width) var(--c-border) solid;
   font: inherit;
   height: $height;
   margin-right: 0.5rem;
@@ -23,7 +22,7 @@ input[type="checkbox"][role="switch"] {
   width: 2.5em;
 
   &::before {
-    background: var(--c-border);
+    background: var(--c-surface-bg);
     border-radius: 100%;
     content: "";
     display: block;

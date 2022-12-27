@@ -16,7 +16,7 @@ input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [typ
   letter-spacing: inherit;
   outline: none;
   padding: 0.5rem;
-  padding-left: calc(var(--input-has-icon, 0) * (1.2em + 0.4rem) + 0.5rem);
+  padding-left: calc(var(--input-has-icon, 0) * (1.2em + 0.5rem) + 0.5rem);
   transition: var(--transition);
   transition-property: color, background-color, border-color, box-shadow;
   width: 100%;
