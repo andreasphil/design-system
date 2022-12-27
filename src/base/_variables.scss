@@ -29,6 +29,7 @@
   --border-radius: 0.375rem;
   --border-radius-large: 0.75rem;
   --border-width: 1px;
+  --border-width-large: 2px;
   --outline: 0 0 0 4px var(--c-outline);
 
   // Transitions and other effects
@@ -69,9 +70,9 @@
   --on-primary: var(--white);
 }
 
-  /* -------------------------------------------------- *
+/* -------------------------------------------------- *
  * Dark mode & theming                                *
-   * -------------------------------------------------- */
+ * -------------------------------------------------- */
 
 :root {
   --color-scheme: light;
