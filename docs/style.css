@@ -53,3 +53,17 @@
   height: 3rem;
   transition: background-color var(--transition);
 }
+
+.shadows {
+  display: flex;
+  gap: 2rem;
+  margin: var(--block-spacing-y) 0;
+}
+
+.shadows__item {
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  flex: 1 1 0;
+  height: 4rem;
+  background: var(--c-surface-bg);
+}

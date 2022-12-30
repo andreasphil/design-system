@@ -16,6 +16,25 @@ function SpinnerExample() {
   );
 }
 
+function BoxShadowExample() {
+  return (
+    <div className="shadows">
+      <div
+        className="shadows__item"
+        style="--shadow: var(--shadow-elevation-low)"
+      ></div>
+      <div
+        className="shadows__item"
+        style="--shadow: var(--shadow-elevation-medium)"
+      ></div>
+      <div
+        className="shadows__item"
+        style="--shadow: var(--shadow-elevation-high)"
+      ></div>
+    </div>
+  );
+}
+
 /* -------------------------------------------------- *
  * Docs                                               *
  * -------------------------------------------------- */
@@ -48,6 +67,9 @@ export default function Extra() {
       {/* Spinner -------------------- */}
       <h2 id="spinner">Spinner</h2>
       <SpinnerExample />
+
+      <h2>Shadows</h2>
+      <BoxShadowExample />
     </DocumentationLayout>
   );
 }
