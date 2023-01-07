@@ -41,6 +41,10 @@ or
 ```css
 /* CSS */
 @import "finecss/dist/index.min.css" layer(fine);
+
+@layer fine {
+  /* You can add customizations and override variables here. */
+}
 ```
 
 ## Development
