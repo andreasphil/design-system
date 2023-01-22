@@ -11,7 +11,7 @@ const buttonCode = `
 <button data-variant="ghost">Ghost</button>
 <button aria-busy="true">Loading ...</button>
 <button disabled>Disabled</button>
-<button style="--button-color: orangered;" data-variant="outline">Delete</button>
+<button data-variant="muted">Muted</button>
 `;
 
 function ButtonExample() {
@@ -149,6 +149,22 @@ function DialogExample() {
   );
 }
 
+const tabsCode = `
+<ul role="tablist">
+  <li><a href="#" data-active="true">Link</a></li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+</ul>
+`;
+
+function TabsExample() {
+  return (
+    <Preview code={tabsCode}>
+      <div dangerouslySetInnerHTML={{ __html: tabsCode }}></div>
+    </Preview>
+  );
+}
+
 /* -------------------------------------------------- *
  * Docs                                               *
  * -------------------------------------------------- */
@@ -184,6 +200,10 @@ export default function Components() {
         navigation.
       </p>
       <HorizontalNavigationExample />
+
+      {/* Tabs -------------------- */}
+      <h2 id="tabs">Tabs</h2>
+      <TabsExample />
     </DocumentationLayout>
   );
 }

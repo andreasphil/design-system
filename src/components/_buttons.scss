@@ -5,10 +5,16 @@
 button,
 [role="button"],
 input:is([type="button"], [type="submit"], [type="reset"]) {
-  background: var(--button-color, var(--primary));
+  --int-button-bg: var(--primary);
+  --int-button-fg: var(--on-primary);
+  --int-button-border: transparent;
+  --int-button-hover-bg: var(--primary-400);
+
+  background: var(--int-button-bg);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid transparent;
-  color: var(--on-primary);
+  border: var(--border-width) solid var(--int-button-border);
+  box-shadow: var(--shadow-elevation-subtle);
+  color: var(--int-button-fg);
   font: inherit;
   font-weight: var(--font-weight-medium);
   letter-spacing: inherit;
@@ -16,26 +22,10 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   padding: 0.5rem 0.75rem;
   position: relative;
   transition: var(--transition);
-  transition-property: color, background-color, border-color, box-shadow;
+  transition-property: all;
 
-  &::after {
-    background: currentColor;
-    border-radius: inherit;
-    bottom: calc(var(--border-width) * -1);
-    color: inherit;
-    content: "";
-    left: calc(var(--border-width) * -1);
-    pointer-events: none;
-    position: absolute;
-    right: calc(var(--border-width) * -1);
-    top: calc(var(--border-width) * -1);
-    transition: inherit;
-    transition-property: color, background-color, opacity;
-    opacity: 0;
-  }
-
-  &:hover::after {
-    opacity: 0.18;
+  &:hover {
+    background: var(--int-button-hover-bg);
   }
 
   &:focus {
@@ -46,21 +36,27 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
     opacity: var(--disabled-opacity);
   }
 
-  &[data-variant="outline"] {
-    background: transparent;
-    border-color: currentColor;
-    color: var(--button-color, var(--primary));
+  &[data-variant~="outline"] {
+    --int-button-bg: transparent;
+    --int-button-fg: var(--primary);
+    --int-button-border: currentColor;
+    --int-button-hover-bg: var(--primary-100);
+    box-shadow: none;
   }
 
-  &[data-variant="ghost"] {
-    background: transparent;
-    color: var(--button-color, var(--primary));
+  &[data-variant~="ghost"] {
+    --int-button-bg: transparent;
+    --int-button-fg: var(--primary);
+    --int-button-hover-bg: var(--primary-100);
+    box-shadow: none;
   }
-}
 
-button {
-  display: block;
-  width: 100%;
+  &[data-variant~="muted"] {
+    --int-button-bg: transparent;
+    --int-button-fg: var(--c-fg-variant);
+    --int-button-hover-bg: var(--c-surface-variant-bg);
+    box-shadow: none;
+  }
 }
 
 [role="button"] {
