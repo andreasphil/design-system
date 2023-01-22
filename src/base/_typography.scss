@@ -203,16 +203,19 @@ sub {
  * Links                                              *
  * -------------------------------------------------- */
 
-a:not([role="button"]) {
-  &,
-  &:visited {
+a {
+  color: var(--c-fg);
+  transition: var(--transition);
+  transition-property: all;
+  text-decoration-color: var(--c-border);
+  font-weight: var(--font-weight-medium);
+
+  :visited {
     color: var(--primary);
-    transition: var(--transition);
-    transition-property: color, border-color, text-decoration-color;
   }
 
   &:hover {
-    color: var(--c-fg);
+    color: var(--primary);
     text-decoration-color: currentColor;
   }
 }
