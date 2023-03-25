@@ -55,7 +55,7 @@ header > nav {
     margin-right: -0.5rem;
   }
 
-  a[data-active="true"]::after {
+  li a[data-active="true"]::after {
     bottom: -0.25rem;
     height: var(--border-width-large);
     left: var(--border-radius);
@@ -70,7 +70,7 @@ header > nav {
  * -------------------------------------------------- */
 
 // Links within navs have more of a button like look to them
-nav a {
+nav li a {
   border-radius: var(--border-radius);
   color: var(--c-fg);
   margin-bottom: 0.25rem;
@@ -84,7 +84,7 @@ nav a {
   }
 }
 
-nav a[data-active="true"] {
+nav li a[data-active="true"] {
   color: var(--c-fg);
 
   &::after {

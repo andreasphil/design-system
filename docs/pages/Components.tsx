@@ -12,6 +12,9 @@ const buttonCode = `
 <button aria-busy="true">Loading ...</button>
 <button disabled>Disabled</button>
 <button data-variant="muted">Muted</button>
+<a href="#" role="button">Primary link</a>
+<a href="#" data-variant="outline" role="button">Outline link</a>
+<a href="#" data-variant="ghost" role="button">Ghost link</a>
 `;
 
 function ButtonExample() {

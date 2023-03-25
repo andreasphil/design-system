@@ -144,6 +144,7 @@ a,
 u,
 abbr {
   text-decoration: underline;
+  text-decoration-thickness: var(--border-width-large);
   text-underline-offset: 0.25em;
 }
 
