@@ -10,6 +10,6 @@ export const pages = [
 export const META = {
   title: "Fine",
   authorName: "Andreas Philippi",
-  authorWebsite: "https://andreasphil.com",
+  authorWebsite: "https://a13i.dev",
   repository: "https://github.com/andreasphil/fine",
 } as const;
