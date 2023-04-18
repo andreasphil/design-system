@@ -28,7 +28,7 @@ select {
   }
 
   // Add some spacing between text and input when used in labels
-  label > & {
+  :is(label) > & {
     margin-top: 0.25rem;
   }
 

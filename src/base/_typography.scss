@@ -2,12 +2,7 @@
  * Headings                                           *
  * -------------------------------------------------- */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:is(h1, h2, h3, h4, h5, h6) {
   line-height: 1.2;
   margin: max(var(--block-spacing-y), 1em) 0;
 }
@@ -47,14 +42,14 @@ hgroup {
     margin-bottom: 0;
   }
 
-  p:first-child {
+  & p:first-child {
     color: var(--c-fg-variant);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-medium);
     margin-bottom: 0.5rem;
   }
 
-  p + :is(h1, h2, h3, h4, h5, h6) {
+  & p + :is(h1, h2, h3, h4, h5, h6) {
     margin-top: 0.5rem;
   }
 
@@ -74,11 +69,7 @@ hgroup {
  * Block typography elements                          *
  * -------------------------------------------------- */
 
-p,
-pre,
-hr,
-blockquote,
-figure {
+:is(p, pre, hr, blockquote, figure) {
   margin: var(--block-spacing-y) 0;
 }
 
@@ -103,46 +94,43 @@ blockquote {
 
 figure > blockquote {
   margin-bottom: 0;
-}
 
-figure > blockquote + figcaption {
-  border-left: 0.25rem solid var(--c-border-variant);
-  color: var(--c-fg-variant);
-  font-size: var(--font-size-small);
-  margin-bottom: var(--block-spacing-y);
-  padding: 0 1rem 0.5rem;
+  & + figcaption {
+    border-left: 0.25rem solid var(--c-border-variant);
+    color: var(--c-fg-variant);
+    font-size: var(--font-size-small);
+    margin-bottom: var(--block-spacing-y);
+    padding: 0 1rem 0.5rem;
+  }
 }
 
 /* -------------------------------------------------- *
  * Lists                                              *
  * -------------------------------------------------- */
 
-ol,
-ul,
-dl {
+:is(ol, ul, dl) {
   margin: var(--block-spacing-y) 0;
 }
 
-ol,
-ul {
+:is(ol, ul) {
   padding: 0 0 0 1.5rem;
 }
 
-li::marker {
-  color: var(--c-fg-variant);
-}
+li {
+  &::marker {
+    color: var(--c-fg-variant);
+  }
 
-li + li {
-  margin-top: 0.25rem;
+  & + & {
+    margin-top: 0.25rem;
+  }
 }
 
 /* -------------------------------------------------- *
  * Inline                                             *
  * -------------------------------------------------- */
 
-a,
-u,
-abbr {
+:is(a, u, abbr) {
   text-decoration: underline;
   text-decoration-thickness: var(--border-width-large);
   text-underline-offset: 0.25em;
@@ -150,14 +138,10 @@ abbr {
 
 abbr {
   cursor: help;
-  text-decoration-style: dashed;
+  text-decoration-style: dotted;
 }
 
-code,
-del,
-ins,
-kbd,
-mark {
+:is(code, del, ins, kbd, mark) {
   background: none;
   border-radius: var(--border-radius-small);
   padding: 0.125rem;
@@ -195,8 +179,7 @@ small {
   font-size: var(--font-size-small);
 }
 
-sup,
-sub {
+:is(sup, sub) {
   font-size: 0.75rem;
 }
 
@@ -211,8 +194,8 @@ a {
   text-decoration-color: var(--c-border);
   font-weight: var(--font-weight-medium);
 
-  :visited {
-    color: var(--primary);
+  &:visited {
+    color: var(--c-fg);
   }
 
   &:hover {

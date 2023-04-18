@@ -154,7 +154,8 @@ function DialogExample() {
 
 const tabsCode = `
 <ul role="tablist">
-  <li><a href="#" data-active="true">Link</a></li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#" data-active="true">Active link</a></li>
   <li><a href="#">Link</a></li>
   <li><a href="#">Link</a></li>
 </ul>

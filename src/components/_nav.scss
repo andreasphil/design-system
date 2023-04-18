@@ -2,8 +2,6 @@
  * Navbars and -menus                                 *
  * -------------------------------------------------- */
 
-$nav-height: var(--nav-height, 5rem);
-
 nav {
   display: flex;
   flex-direction: column;
@@ -11,7 +9,7 @@ nav {
   gap: 1rem;
   padding: 0;
 
-  ul {
+  & ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -20,18 +18,18 @@ nav {
     margin-right: -0.5rem;
     margin: 0;
     padding: 0;
+  }
 
-    // Remove list styles for link lists
-    li {
-      list-style-type: none;
-      margin-top: 0;
-    }
+  // Remove list styles for link lists
+  & li {
+    list-style-type: none;
+    margin-top: 0;
   }
 
   &[data-variant~="fixed"] {
     background: var(--c-surface-bg);
     box-shadow: var(--shadow-elevation-low);
-    height: $nav-height;
+    height: var(--nav-height, 5rem);
     left: 0;
     padding: 0 var(--body-padding-x);
     position: fixed;
@@ -48,14 +46,14 @@ header > nav {
   flex-direction: row;
   justify-content: space-between;
 
-  > ul {
+  & ul {
     align-items: center;
     flex-direction: row;
     margin-left: -0.5rem;
     margin-right: -0.5rem;
   }
 
-  li a[data-active="true"]::after {
+  & li a[data-active="true"]::after {
     bottom: -0.25rem;
     height: var(--border-width-large);
     left: var(--border-radius);
@@ -74,7 +72,7 @@ nav li a {
   border-radius: var(--border-radius);
   color: var(--c-fg);
   margin-bottom: 0.25rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.15rem 0.5rem;
   position: relative;
   text-decoration: none;
 
@@ -82,25 +80,25 @@ nav li a {
     background: var(--c-surface-variant-bg);
     color: var(--c-fg);
   }
-}
 
-nav li a[data-active="true"] {
-  color: var(--c-fg);
+  &[data-active="true"] {
+    color: var(--c-fg);
 
-  &::after {
-    background: var(--primary);
-    border-radius: var(--border-radius);
-    bottom: var(--border-radius);
-    content: "";
-    left: -0.25rem;
-    position: absolute;
-    top: var(--border-radius);
-    width: var(--border-width-large);
+    &::after {
+      background: var(--primary);
+      border-radius: var(--border-radius);
+      bottom: var(--border-radius);
+      content: "";
+      left: -0.25rem;
+      position: absolute;
+      top: var(--border-radius);
+      width: var(--border-width-large);
+    }
   }
-}
 
-nav li a:only-child {
-  display: block;
+  &:only-child {
+    display: block;
+  }
 }
 
 /* -------------------------------------------------- *
@@ -109,9 +107,9 @@ nav li a:only-child {
  * -------------------------------------------------- */
 
 body[data-nav="fixed"] {
-  padding-top: calc(var(--body-padding-y) + #{$nav-height});
+  padding-top: calc(var(--body-padding-y) + var(--nav-height, 5rem));
 }
 
 [data-nav="fixed"]:not(body) {
-  padding-top: $nav-height;
+  padding-top: var(--nav-height, 5rem);
 }

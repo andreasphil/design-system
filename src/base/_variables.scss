@@ -30,7 +30,7 @@
   --border-radius-large: 0.75rem;
   --border-width: 1px;
   --border-width-large: 2px;
-  --outline: 0 0 0 4px var(--c-outline);
+  --outline: 0 0 0 3px var(--c-outline);
 
   // Transitions and other effects
   --transition-duration: 0.25s;
@@ -61,8 +61,8 @@
   --neutral-500: hsl(var(--theme-tint), 10%, 55%);
   --neutral-600: hsl(var(--theme-tint), 11%, 46%);
   --neutral-700: hsl(var(--theme-tint), 12%, 19%);
-  --neutral-800: hsl(var(--theme-tint), 13%, 11%);
-  --neutral-900: hsl(var(--theme-tint), 14%, 8%);
+  --neutral-800: hsl(var(--theme-tint), 13%, 13%);
+  --neutral-900: hsl(var(--theme-tint), 14%, 9%);
   --neutral-950: hsl(var(--theme-tint), 15%, 4%);
 
   --primary: hsl(var(--theme-primary) / 1);

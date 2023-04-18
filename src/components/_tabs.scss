@@ -3,23 +3,38 @@
  * -------------------------------------------------- */
 
 ul[role="tablist"] {
+  --\$tabs-gap: 0.25rem;
+
   background: var(--c-border-variant);
   border-radius: var(--border-radius);
-  border: var(--border-width-large) solid var(--c-border-variant);
   display: inline-flex;
-  gap: 0.25rem;
-  padding: 0;
+  gap: var(--\$tabs-gap);
+  padding: 0.25rem;
 
-  li {
-    flex: 1 1 0%;
+  & li {
+    flex: 1 1 auto;
     list-style-type: none;
+    position: relative;
     margin: 0;
   }
 
-  a {
+  &
+    li:not(:has([data-active="true"]))
+    + li:not(:has([data-active="true"]))::before {
+    background: var(--c-border);
+    bottom: 0.5rem;
+    content: "";
+    display: block;
+    left: calc((var(--\$tabs-gap) + var(--border-width-large)) / -2);
+    position: absolute;
+    top: 0.5rem;
+    width: var(--border-width-large);
+  }
+
+  & a {
     border-radius: var(--border-radius);
     display: block;
-    padding: 0.375rem 1rem;
+    padding: 0.25rem 1rem;
     text-align: center;
     text-decoration: none;
 
@@ -32,7 +47,6 @@ ul[role="tablist"] {
 
 @media (prefers-color-scheme: dark) {
   ul[role="tablist"] a[data-active="true"] {
-    background: var(--c-border);
     box-shadow: none;
   }
 }

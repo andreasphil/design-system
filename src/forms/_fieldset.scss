@@ -7,7 +7,7 @@ fieldset {
   margin: var(--block-spacing-y) 0;
   padding: 0;
 
-  legend {
+  & legend {
     padding: 0;
     margin-bottom: 0.5rem;
     font-size: var(--font-size-small);

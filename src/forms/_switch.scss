@@ -2,20 +2,20 @@
  * Switches                                           *
  * -------------------------------------------------- */
 
-$height: 1.5em;
-$padding: 0.125em;
-$knobSize: calc($height - $padding * 2);
-
 input[type="checkbox"][role="switch"] {
+  --\$switch-height: 1.5em;
+  --\$switch-padding: 0.125em;
+  --\$switch-knob: calc(var(--\$switch-height) - var(--\$switch-padding) * 2);
+
   -webkit-appearance: none;
   appearance: none;
   background: var(--c-border);
-  border-radius: $height;
+  border-radius: var(--\$switch-height);
   font: inherit;
-  height: $height;
+  height: var(--\$switch-height);
   margin-right: 0.5rem;
   outline: none;
-  padding: $padding;
+  padding: var(--\$switch-padding);
   transition: var(--transition);
   transition-property: background-color, border-color, box-shadow;
   vertical-align: bottom;
@@ -26,10 +26,10 @@ input[type="checkbox"][role="switch"] {
     border-radius: 100%;
     content: "";
     display: block;
-    height: $knobSize;
+    height: var(--\$switch-knob);
     transition: inherit;
     transition-property: background-color, margin;
-    width: $knobSize;
+    width: var(--\$switch-knob);
   }
 
   &:focus {
@@ -44,7 +44,7 @@ input[type="checkbox"][role="switch"] {
 
   &:checked::before {
     background: var(--on-primary);
-    margin-left: calc(100% - $knobSize);
+    margin-left: calc(100% - var(--\$switch-knob));
   }
 
   &:disabled {

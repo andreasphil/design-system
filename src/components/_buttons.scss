@@ -5,16 +5,15 @@
 button,
 [role="button"],
 input:is([type="button"], [type="submit"], [type="reset"]) {
-  --int-button-bg: var(--primary);
-  --int-button-fg: var(--on-primary);
-  --int-button-border: transparent;
-  --int-button-hover-bg: var(--primary-400);
+  --\$button-bg: var(--primary);
+  --\$button-fg: var(--on-primary);
+  --\$button-border: transparent;
+  --\$button-hover-bg: var(--primary-400);
 
-  background: var(--int-button-bg);
+  background: var(--\$button-bg);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--int-button-border);
-  box-shadow: var(--shadow-elevation-subtle);
-  color: var(--int-button-fg);
+  border: var(--border-width) solid var(--\$button-border);
+  color: var(--\$button-fg);
   font: inherit;
   font-weight: var(--font-weight-medium);
   letter-spacing: inherit;
@@ -26,7 +25,7 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   transition-property: all;
 
   &:hover {
-    background: var(--int-button-hover-bg);
+    background: var(--\$button-hover-bg);
   }
 
   &:focus {
@@ -38,25 +37,22 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   }
 
   &[data-variant~="outline"] {
-    --int-button-bg: transparent;
-    --int-button-fg: var(--primary);
-    --int-button-border: currentColor;
-    --int-button-hover-bg: var(--primary-100);
-    box-shadow: none;
+    --\$button-bg: transparent;
+    --\$button-fg: var(--primary);
+    --\$button-border: currentColor;
+    --\$button-hover-bg: var(--primary-100);
   }
 
   &[data-variant~="ghost"] {
-    --int-button-bg: transparent;
-    --int-button-fg: var(--primary);
-    --int-button-hover-bg: var(--primary-100);
-    box-shadow: none;
+    --\$button-bg: transparent;
+    --\$button-fg: var(--primary);
+    --\$button-hover-bg: var(--primary-100);
   }
 
   &[data-variant~="muted"] {
-    --int-button-bg: transparent;
-    --int-button-fg: var(--c-fg-variant);
-    --int-button-hover-bg: var(--c-surface-variant-bg);
-    box-shadow: none;
+    --\$button-bg: transparent;
+    --\$button-fg: var(--c-fg-variant);
+    --\$button-hover-bg: var(--c-surface-variant-bg);
   }
 }
 
@@ -64,7 +60,8 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   display: inline-block;
   text-decoration: none;
 
-  &:hover {
-    color: var(--int-button-fg);
+  &:hover,
+  &:visited {
+    color: var(--\$button-fg);
   }
 }

@@ -3,7 +3,13 @@
  * -------------------------------------------------- */
 
 textarea,
-input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [type="image"]) {
+input:not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="file"],
+    [type="range"],
+    [type="image"]
+  ) {
   -webkit-appearance: none;
   appearance: none;
   background: var(--input-icon) 0.5rem center / 1.2em no-repeat;
@@ -39,7 +45,7 @@ input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [typ
   }
 
   // Add some spacing between text and input when used in labels
-  label > & {
+  :is(label) > & {
     margin-top: 0.25rem;
   }
 
@@ -51,7 +57,13 @@ input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [typ
   }
 }
 
-input:is([type="email"], [type="password"], [type="date"], [type="time"], [type="search"]),
+input:is(
+    [type="email"],
+    [type="password"],
+    [type="date"],
+    [type="time"],
+    [type="search"]
+  ),
 input[data-icon] {
   --input-has-icon: 1;
 }
@@ -79,10 +91,14 @@ input[type="search"] {
 input:is([type="date"], [type="time"], [type="datetime-local"]) {
   // Make date inputs the same height as others by manually setting the control
   // height (fix for Safari)
-  $text-height: calc(var(--line-height) * var(--font-size));
-  $padding: 0.5rem * 2;
-  $border-size: calc(var(--border-width) * 2);
-  height: calc(#{$text-height} + #{$padding} + #{$border-size});
+  --\$input-text-height: calc(var(--line-height) * var(--font-size));
+  --\$input-padding: 0.5rem * 2;
+  --\$input-border-size: calc(var(--border-width) * 2);
+
+  height: calc(
+    var(--\$input-text-height) + var(--\$input-padding) +
+      var(--\$input-border-size)
+  );
 }
 
 textarea[data-resize="false"] {

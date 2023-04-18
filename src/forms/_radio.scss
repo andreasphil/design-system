@@ -31,13 +31,13 @@ input[type="radio"] {
     background: var(--c-fg);
     border-radius: 100%;
     content: "";
-    height: 0.3em;
+    height: 0.4em;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     transition: inherit;
-    width: 0.3em;
+    width: 0.4em;
   }
 
   &:disabled {

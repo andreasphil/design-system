@@ -6,7 +6,7 @@ details {
   border-bottom: var(--border-width) solid var(--c-border-variant);
   padding: 1rem 0;
 
-  summary {
+  & summary {
     font-weight: var(--font-weight-medium);
     list-style: none;
 
@@ -35,15 +35,15 @@ details {
     }
   }
 
-  > :last-child {
-    margin-bottom: 0;
-  }
-
   &[open] > summary {
     margin-bottom: 1rem;
 
     &::after {
       transform: rotate(0deg);
     }
+  }
+
+  > :last-child {
+    margin-bottom: 0;
   }
 }
