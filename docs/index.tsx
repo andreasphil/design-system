@@ -15,7 +15,7 @@ const Forms = lazy(() => import("./pages/Forms"));
 const GettingStarted = lazy(() => import("./pages/GettingStarted"));
 const Error = lazy(() => import("./pages/_Error"));
 
-import "~/dist/index.css";
+import "~/dist/index.min.css";
 import "./style.css";
 
 export function App() {

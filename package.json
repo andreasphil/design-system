@@ -12,23 +12,22 @@
     "dist/index.min.css"
   ],
   "scripts": {
-    "prestart": "npm run build:icons",
-    "start": "sass --no-source-map --watch src/index.scss dist/index.css",
+    "start": "npm run build:styles -- --watch",
     "docs": "wmr",
-    "build": "npm run build:icons; npm run build:styles; npm run build:bundle",
-    "build:icons": "node scripts/icons.js",
-    "build:styles": "sass --no-source-map src/index.scss dist/index.css",
-    "build:bundle": "esbuild dist/index.css --outfile=dist/index.min.css --minify",
+    "build:styles": "postcss src/index.css -o dist/index.min.css",
     "build:docs": "wmr build --prerender",
-    "preversion": "npm run build; git add --force dist/index.min.css README.md"
+    "preversion": "npm run build:styles; git add --force dist/index.min.css"
   },
   "devDependencies": {
-    "esbuild": "^0.14.18",
-    "preact-iso": "^2.3.1",
+    "postcss": "^8.4.22",
+    "postcss-cli": "^10.1.0",
+    "postcss-csso": "^6.0.1",
+    "postcss-import": "^15.1.0",
+    "postcss-inline-svg": "^6.0.0",
+    "postcss-nesting": "^11.2.2",
     "preact": "^10.11.3",
+    "preact-iso": "^2.3.1",
     "sanitize.css": "^13.0.0",
-    "sass": "^1.49.0",
     "wmr": "^3.8.0"
-  },
-  "dependencies": {}
+  }
 }

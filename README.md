@@ -58,10 +58,8 @@ npm run docs      # Run playground/documentation
 ## Building
 
 ```sh
-npm build         # Creates bundled + minified output in dist
-npm build:icons   # Re-builds the icon SCSS file (should run automatically on start and build)
 npm build:styles  # Re-builds the stylesheet
-npm build:docs    # generates the documentation page
+npm build:docs    # Generates the documentation page
 ```
 
 ## Credits

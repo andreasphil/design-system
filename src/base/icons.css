@@ -1,0 +1,28 @@
+/* -------------------------------------------------- *
+ * Icons                                              *
+ * -------------------------------------------------- */
+
+:root {
+  --icon-calendar: svg-load("../icons/calendar.svg", stroke=#000000);
+  --icon-check: svg-load("../icons/check.svg", stroke=#000000);
+  --icon-chevron: svg-load("../icons/chevron.svg", stroke=#000000);
+  --icon-clock: svg-load("../icons/clock.svg", stroke=#000000);
+  --icon-lock: svg-load("../icons/lock.svg", stroke=#000000);
+  --icon-mail: svg-load("../icons/mail.svg", stroke=#000000);
+  --icon-minus: svg-load("../icons/minus.svg", stroke=#000000);
+  --icon-search: svg-load("../icons/search.svg", stroke=#000000);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Icons */
+    --icon-calendar: svg-load("../icons/calendar.svg", stroke=#ffffff);
+    --icon-check: svg-load("../icons/check.svg", stroke=#ffffff);
+    --icon-chevron: svg-load("../icons/chevron.svg", stroke=#ffffff);
+    --icon-clock: svg-load("../icons/clock.svg", stroke=#ffffff);
+    --icon-lock: svg-load("../icons/lock.svg", stroke=#ffffff);
+    --icon-mail: svg-load("../icons/mail.svg", stroke=#ffffff);
+    --icon-minus: svg-load("../icons/minus.svg", stroke=#ffffff);
+    --icon-search: svg-load("../icons/search.svg", stroke=#ffffff);
+  }
+}

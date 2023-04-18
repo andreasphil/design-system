@@ -20,7 +20,7 @@ nav {
     padding: 0;
   }
 
-  // Remove list styles for link lists
+  /* Remove list styles for link lists */
   & li {
     list-style-type: none;
     margin-top: 0;
@@ -39,8 +39,8 @@ nav {
   }
 }
 
-// Navs inside headers or with the .horizontal modifier are navbars
-// by default
+/* Navs inside headers or with the .horizontal modifier are navbars
+by default */
 header > nav {
   align-items: center;
   flex-direction: row;
@@ -67,7 +67,7 @@ header > nav {
  * Links                                              *
  * -------------------------------------------------- */
 
-// Links within navs have more of a button like look to them
+/* Links within navs have more of a button like look to them */
 nav li a {
   border-radius: var(--border-radius);
   color: var(--c-fg);

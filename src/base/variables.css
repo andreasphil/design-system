@@ -3,7 +3,7 @@
    * Shared                                             *
    * -------------------------------------------------- */
 
-  // Font sizes
+  /* Font sizes */
   --font-size-small: 0.875rem;
   --font-size: 1rem;
   --font-size-h6: var(--font-size);
@@ -13,18 +13,18 @@
   --font-size-h2: 2rem;
   --font-size-h1: 2.5rem;
 
-  // Font weights
+  /* Font weights */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
-  // Spacing
+  /* Spacing */
   --block-spacing-y: 2rem;
   --body-padding-y: 1rem;
   --body-padding-x: 1rem;
   --line-height: 1.5;
 
-  // Borders
+  /* Borders */
   --border-radius-small: 0.25rem;
   --border-radius: 0.4rem;
   --border-radius-large: 0.75rem;
@@ -32,24 +32,24 @@
   --border-width-large: 2px;
   --outline: 0 0 0 3px var(--c-outline);
 
-  // Transitions and other effects
+  /* Transitions and other effects */
   --transition-duration: 0.25s;
   --transition-timing-function: ease;
   --transition: var(--transition-duration) var(--transition-timing-function);
   --disabled-opacity: 0.4;
 
-  // Shadows
+  /* Shadows */
   --shadow-elevation-low: 0 0.0625rem 0.125rem 0 var(--c-shadow);
   --shadow-elevation-medium: var(--shadow-elevation-low),
     0 0.15rem 0.75rem -0.2rem var(--c-shadow);
   --shadow-elevation-high: var(--shadow-elevation-low),
     0 0.3rem 1.5rem -0.3rem var(--c-shadow);
 
-  // Theme
+  /* Theme */
   --theme-tint: 158;
   --theme-primary: var(--theme-tint) 80% 44%;
 
-  // Default color palette
+  /* Default color palette */
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
 

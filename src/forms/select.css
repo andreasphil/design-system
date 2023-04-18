@@ -27,12 +27,12 @@ select {
     box-shadow: var(--outline);
   }
 
-  // Add some spacing between text and input when used in labels
+  /* Add some spacing between text and input when used in labels */
   :is(label) > & {
     margin-top: 0.25rem;
   }
 
-  // Style <small> as hint text if added below the input
+  /* Style <small> as hint text if added below the input */
   & + small {
     color: var(--c-fg-variant);
     margin-top: 0.25rem;

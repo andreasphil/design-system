@@ -44,12 +44,12 @@ input:not(
     opacity: 1;
   }
 
-  // Add some spacing between text and input when used in labels
+  /* Add some spacing between text and input when used in labels */
   :is(label) > & {
     margin-top: 0.25rem;
   }
 
-  // Style <small> as hint text if added below the input
+  /* Style <small> as hint text if added below the input */
   & + small {
     color: var(--c-fg-variant);
     display: block;
@@ -89,8 +89,8 @@ input[type="search"] {
 }
 
 input:is([type="date"], [type="time"], [type="datetime-local"]) {
-  // Make date inputs the same height as others by manually setting the control
-  // height (fix for Safari)
+  /* Make date inputs the same height as others by manually setting the control
+  height (fix for Safari) */
   --\$input-text-height: calc(var(--line-height) * var(--font-size));
   --\$input-padding: 0.5rem * 2;
   --\$input-border-size: calc(var(--border-width) * 2);
