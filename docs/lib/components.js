@@ -1,18 +1,20 @@
-import { META, pages } from "@/lib/configuration";
-import { RenderableProps } from "preact";
+import { META } from "@/lib/configuration";
 import { useLocation } from "preact-iso";
 
 /* -------------------------------------------------- *
  * Layouts                                            *
  * -------------------------------------------------- */
 
-type DocumentationLayoutProps = RenderableProps<{
-  title: string;
-  description?: string;
-}>;
-
-export function DocumentationLayout(props: DocumentationLayoutProps) {
+export function DocumentationLayout({ children }) {
   const { path } = useLocation();
+
+  const pages = [
+    { href: "/", title: "Getting started" },
+    { href: "/base", title: "Base" },
+    { href: "/colors", title: "Colors" },
+    { href: "/components", title: "Components" },
+    { href: "/extra", title: "Extra" },
+  ];
 
   return (
     <>
@@ -38,11 +40,7 @@ export function DocumentationLayout(props: DocumentationLayoutProps) {
 
       {/* Main content */}
       <main data-container>
-        <hgroup>
-          <h1>{props.title}</h1>
-          {props.description ? <p>{props.description}</p> : undefined}
-        </hgroup>
-        <div data-trim="bottom">{props.children}</div>
+        <div data-trim="bottom">{children}</div>
       </main>
 
       <footer data-container className="footer">
@@ -59,23 +57,33 @@ export function DocumentationLayout(props: DocumentationLayoutProps) {
  * Building blocks                                    *
  * -------------------------------------------------- */
 
-type PreviewProps = RenderableProps<{
-  code: string;
-}>;
-
-export function Preview(props: PreviewProps) {
+export function Preview({ code, displayCode, previewStyle }) {
   return (
     <div className="preview">
       <details open className="preview__section">
         <summary className="preview__title">Preview</summary>
-        <div className="preview__content" data-trim="both">
-          {props.children}
-        </div>
+        <div
+          className="preview__content"
+          data-trim="both"
+          style={previewStyle}
+          dangerouslySetInnerHTML={{ __html: code }}
+        ></div>
       </details>
       <details className="preview__section">
         <summary className="preview__title">Code</summary>
-        <pre className="preview__code">{props.code.trim()}</pre>
+        <pre className="preview__code">
+          {displayCode ? displayCode.trim() : code.trim()}
+        </pre>
       </details>
     </div>
+  );
+}
+
+export function PageHeader({ title, children }) {
+  return (
+    <hgroup>
+      <h1>{title}</h1>
+      {children}
+    </hgroup>
   );
 }

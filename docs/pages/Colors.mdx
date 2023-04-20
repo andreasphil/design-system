@@ -1,0 +1,29 @@
+import { PageHeader, Preview } from "@/lib/components";
+import { ThemePlayground } from "@/lib/theme";
+import * as Examples from "@/lib/examples";
+
+<PageHeader title="Customization">
+  You can tweak Fine's look and feel to match your project through CSS
+  variables.
+</PageHeader>
+
+## Color scheme
+
+Fine comes with two color palettes — neutral and primary. All colors share the same hue (should be between 0 and 359), which is stored in the `--theme-tint` CSS variable. Changing this variable allows you to easily adjust the entire color scheme, and in most cases, this will be the only variable you need to touch.
+
+By default, the primary color is based on the theme variables just like every other color. This will work for many colors. But sometimes you'll need more control, e.g. if you want a particularly vibrant primary color. When that happens, you can override the primary color by specifying hue, saturation, and lightness:
+
+```
+--theme-primary: 200 80% 50%;
+```
+
+### Playground
+
+You can try the different color parameters below:
+
+<Examples.ColorPalette />
+<ThemePlayground />
+
+## Other variables
+
+There are more variables than can be customized. Have a look at the [variables file](https://github.com/andreasphil/fine/blob/main/src/base/variables.css) to learn more.

@@ -1,0 +1,30 @@
+import { PageHeader, Preview } from "@/lib/components";
+import * as Examples from "@/lib/examples";
+
+<PageHeader title="Base">
+  Fine comes with reasonable defaults that are consistent across browsers, as
+  well as styles for typography and other content-based elements.
+</PageHeader>
+
+## Inline elements
+
+<Preview
+  code={Examples.inlineElements}
+  previewStyle={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(12rem, 1fr))",
+    gap: "1rem",
+  }}
+/>
+
+## Headings
+
+<Preview code={Examples.headings} />
+
+Headings can also appear as groups with a paragraph:
+
+<Preview code={Examples.hgroup} />
+
+## Block elements
+
+<Preview code={Examples.blockElements} />

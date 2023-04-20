@@ -1,0 +1,22 @@
+import { PageHeader, Preview } from "@/lib/components";
+import * as Examples from "@/lib/examples";
+
+<PageHeader title="Extra">
+  Various utilities and small stuff that didn't really fit anywhere else.
+</PageHeader>
+
+## Container
+
+Add the `data-container` attribute to a block element in order to horizontally center it and apply a maximum width. Containers can be customized either globally or on a per-container basis:
+
+- `--container-max-width`: How much the container can grow
+- `--container-padding-x`: Horizontal padding
+- `--container-padding-y`: Vertical padding
+
+## Spinner
+
+<Preview code={Examples.spinner} />
+
+## Shadows
+
+<Examples.BoxShadow />
