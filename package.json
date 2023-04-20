@@ -12,7 +12,7 @@
     "dist/index.min.css"
   ],
   "scripts": {
-    "start": "npm run build:styles -- --watch",
+    "dev": "npm run build:styles -- --watch",
     "docs": "wmr",
     "build:styles": "postcss src/index.css -o dist/index.min.css",
     "build:docs": "wmr build --prerender",
