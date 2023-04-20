@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build:docs"
+  publish = "dist/docs"
+
+[[redirects]]
+  from = '/'
+  to = '/index.html'
+  status = 200
+  force = true
+
+[[redirects]]
+  from = '/*'
+  to = '/index.html'
+  status = 200

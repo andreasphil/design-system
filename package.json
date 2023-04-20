@@ -15,7 +15,7 @@
     "dev": "npm run build:styles -- --watch",
     "docs": "wmr",
     "build:styles": "postcss src/index.css -o dist/index.min.css",
-    "build:docs": "wmr build --prerender",
+    "build:docs": "wmr build",
     "preversion": "npm run build:styles; git add --force dist/index.min.css"
   },
   "devDependencies": {
