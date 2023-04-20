@@ -45,7 +45,7 @@ hgroup {
   & p:first-child {
     color: var(--c-fg-variant);
     font-size: var(--font-size-small);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-bold);
     margin-bottom: 0.5rem;
   }
 
