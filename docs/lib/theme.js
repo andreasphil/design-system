@@ -36,12 +36,14 @@ function readTheme() {
   const root = document.querySelector(":root");
   if (!root) return {};
 
+  // Get the tint from the computed style because we want it to always reflect
+  // the current value no matter if it's been set by the user or through CSS
   const style = getComputedStyle(root);
-
   const theme = { tint: style.getPropertyValue("--theme-tint") };
 
-  const primary = style.getPropertyValue("--theme-primary");
-
+  // Get the theme from the container itself because we're only interested in
+  // custom overrides, not the default set through CSS.
+  const primary = root.style.getPropertyValue("--theme-primary");
   if (primary) {
     const [, hue, saturation, lightness] = primary.match(/(\d+) (\d+)% (\d+)%/);
     theme.primary = { hue, saturation, lightness };
@@ -54,7 +56,8 @@ function getThemeCode(theme) {
   let code = `--theme-tint: ${theme.tint};`;
 
   if (theme.primary) {
-    code += `\n--theme-primary: ${theme.primary.hue} ${theme.primary.saturation}% ${theme.primary.lightness}%;`;
+    const { hue, saturation, lightness } = theme.primary;
+    code += `\n--theme-primary: ${hue} ${saturation}% ${lightness}%;`;
   }
 
   return code;
@@ -69,25 +72,23 @@ export default function useTheme() {
   const [theme, setTheme] = useState({});
   const [overridePrimary, setOverridePrimary] = useState(false);
 
+  // Initially restore the theme from the current styles
   useEffect(() => {
-    // Set the theme during an effect as this will only be run on the client,
-    // not during pre-rendering (where document is not available and so no
-    // theme can be read).
-    setTheme(readTheme());
+    const theme = readTheme();
+    setTheme(theme);
+    setOverridePrimary(Boolean(theme.primary));
   }, []);
 
+  // Apply the updated theme
   useEffect(() => {
-    applyTheme(theme);
-    setCode(getThemeCode(theme));
-  }, [theme]);
+    const themeToApply = {
+      tint: theme.tint,
+      primary: overridePrimary ? theme.primary : undefined,
+    };
 
-  useEffect(() => {
-    const primary = overridePrimary
-      ? { hue: "200", saturation: "80", lightness: "50" }
-      : undefined;
-
-    setTheme((t) => ({ ...t, primary }));
-  }, [overridePrimary]);
+    applyTheme(themeToApply);
+    setCode(getThemeCode(themeToApply));
+  }, [theme, overridePrimary]);
 
   return { code, theme, setTheme, overridePrimary, setOverridePrimary };
 }
@@ -112,11 +113,10 @@ export function ThemePlayground() {
   function onUpdatePrimary(e) {
     setTheme((t) => {
       if (!(e.target instanceof HTMLInputElement)) return t;
-      if (!t.primary) throw new Error();
 
       return {
         ...t,
-        primary: { ...t.primary, [e.target.name]: e.target.value },
+        primary: { ...(t.primary ?? {}), [e.target.name]: e.target.value },
       };
     });
   }
@@ -125,6 +125,10 @@ export function ThemePlayground() {
   function onUpdateOverridePrimary(e) {
     if (e.target instanceof HTMLInputElement) {
       setOverridePrimary(e.target.checked);
+    }
+
+    if (!theme.primary) {
+      theme.primary = { hue: "200", saturation: "80", lightness: "50" };
     }
   }
 
