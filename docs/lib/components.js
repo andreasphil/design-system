@@ -11,8 +11,8 @@ export function DocumentationLayout({ children }) {
   const pages = [
     { href: "/", title: "Getting started" },
     { href: "/base", title: "Base" },
-    { href: "/colors", title: "Colors" },
     { href: "/components", title: "Components" },
+    { href: "/colors", title: "Colors" },
     { href: "/extra", title: "Extra" },
   ];
 
