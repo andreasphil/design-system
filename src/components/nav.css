@@ -9,7 +9,7 @@ nav {
   gap: 1rem;
   padding: 0;
 
-  & ul {
+  & > ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -18,12 +18,11 @@ nav {
     margin-right: -0.5rem;
     margin: 0;
     padding: 0;
-  }
 
-  /* Remove list styles for link lists */
-  & li {
-    list-style-type: none;
-    margin-top: 0;
+    & > li {
+      list-style-type: none;
+      margin-top: 0;
+    }
   }
 
   &[data-variant~="fixed"] {
@@ -46,20 +45,20 @@ header > nav {
   flex-direction: row;
   justify-content: space-between;
 
-  & ul {
+  & > ul {
     align-items: center;
     flex-direction: row;
     margin-left: -0.5rem;
     margin-right: -0.5rem;
-  }
 
-  & li a[data-active="true"]::after {
-    bottom: -0.25rem;
-    height: var(--border-width-large);
-    left: var(--border-radius);
-    right: var(--border-radius);
-    top: unset;
-    width: unset;
+    & > li a[data-active="true"]::after {
+      bottom: -0.25rem;
+      height: var(--border-width-large);
+      left: var(--border-radius);
+      right: var(--border-radius);
+      top: unset;
+      width: unset;
+    }
   }
 }
 
@@ -68,7 +67,7 @@ header > nav {
  * -------------------------------------------------- */
 
 /* Links within navs have more of a button like look to them */
-nav li a {
+nav > ul > li a {
   border-radius: var(--border-radius);
   color: var(--c-fg);
   margin-bottom: 0.25rem;
