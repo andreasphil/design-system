@@ -22,7 +22,7 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   position: relative;
   text-align: center;
   transition: var(--transition);
-  transition-property: all;
+  transition-property: background-color, border-color, box-shadow, color;
 
   &:hover {
     background: var(--\$button-hover-bg);
