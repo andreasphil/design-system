@@ -111,7 +111,29 @@ export const inlineElements = `
  * -------------------------------------------------- */
 
 export const article = `
-<article>This is an article.</article>
+<article>
+  <hgroup>
+    <h3>This is an article</h3>
+    <p>
+      Articles have a card-like appearance and provide some special formatting
+      for their content. For example, the margins of the first and last
+      elements are trimmed, and elements such as <code>hr</code> run over the
+      entire width of the container.
+    </p>
+  </hgroup>
+  <p>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+    clita kasd gubergren, no sea takimata sanctus est.
+  </p>
+  <hr />
+  <p>You can also add a footer:</p>
+  <footer>
+    <button data-variant="ghost">Cancel</button>
+    <button>OK</button>
+  </footer>
+</article>
 `;
 
 export const buttons = `

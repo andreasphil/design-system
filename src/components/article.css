@@ -4,10 +4,39 @@
  * -------------------------------------------------- */
 
 article {
+  --\$article-padding: 2rem;
+
   background: var(--c-surface-bg);
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow-elevation-high);
   color: var(--c-surface-fg);
   margin: var(--block-spacing-y) 0;
-  padding: 2rem 2rem;
+  overflow: hidden;
+  padding: var(--\$article-padding);
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  > :is(hr, footer) {
+    margin-left: calc(-1 * var(--\$article-padding));
+    margin-right: calc(-1 * var(--\$article-padding));
+  }
+
+  &:has(footer) {
+    padding-bottom: 0;
+  }
+
+  > footer {
+    align-items: center;
+    border-top: var(--border-width) solid var(--c-border-variant);
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    padding: 1.25rem var(--\$article-padding);
+  }
 }
