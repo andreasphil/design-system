@@ -22,7 +22,7 @@ export function App() {
     <LocationProvider>
       <div class="app">
         <ErrorBoundary>
-          <DocumentationLayout title="Foo">
+          <DocumentationLayout>
             <Router>
               <GettingStarted path="/" />
               <Base path="/base" />

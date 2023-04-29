@@ -20,7 +20,15 @@ export function DocumentationLayout({ children }) {
     <>
       <header data-container>
         <nav>
-          <strong>{META.title}</strong>
+          <div class="logo__wrapper">
+            <img
+              src="/assets/icon-192.png"
+              class="logo"
+              width="32px"
+              height="32px"
+            />
+            <strong>{META.title}</strong>
+          </div>
           <ul>
             {pages.map((page) => (
               <li>

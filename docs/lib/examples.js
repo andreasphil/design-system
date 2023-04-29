@@ -188,7 +188,7 @@ export const Dialog = () => {
         <summary className="preview__title">Preview</summary>
         <div className="preview__content" data-trim="both">
           <button onClick={() => showDemoDialog()}>Show dialog</button>
-          <dialog ref={dialogRef} style={{ marginTop: "100px" }}>
+          <dialog ref={dialogRef}>
             <button data-variant="outline" onClick={() => closeDemoDialog()}>
               Close dialog
             </button>
