@@ -79,6 +79,10 @@ pre {
   color: var(--c-surface-variant-fg);
   font-size: 0.9em;
   padding: 1rem;
+
+  & code {
+    padding: 0;
+  }
 }
 
 hr {
