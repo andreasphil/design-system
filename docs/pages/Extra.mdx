@@ -20,3 +20,22 @@ Add the `data-container` attribute to a block element in order to horizontally c
 ## Shadows
 
 <Examples.BoxShadow />
+
+## JavaScript
+
+Fine comes with a small number of JavaScript utilities. These are optional, but can help you with some otherwise tedious tasks. You can import them from `fine`.
+
+### Theme color management
+
+Fine can take care of setting the current theme color for you based on your styles and the active color scheme. It uses the value of `--c-surface-bg` and automatically refreshes when the user switches between light and dark mode.
+
+```js
+import { useThemeColor, refreshThemeColor } from "finecss";
+
+// Use unsubscribe() if you need to un-register the event listeners used by
+// the function
+const { unsubscribe } = useThemeColor();
+
+// This will immediately refresh the theme color
+refreshThemeColor();
+```

@@ -6,7 +6,9 @@ import {
   lazy,
   prerender as ssr,
 } from "preact-iso";
+import { useEffect } from "preact/hooks";
 import "~/dist/index.min.css";
+import { useThemeColor } from "~/scripts/fine";
 import { DocumentationLayout } from "./lib/components";
 import "./style.css";
 
@@ -18,6 +20,11 @@ const Extra = lazy(() => import("./pages/Extra.mdx"));
 const GettingStarted = lazy(() => import("./pages/GettingStarted.mdx"));
 
 export function App() {
+  useEffect(() => {
+    const { unsubscribe } = useThemeColor();
+    return () => unsubscribe();
+  }, []);
+
   return (
     <LocationProvider>
       <div class="app">

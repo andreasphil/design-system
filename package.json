@@ -5,11 +5,12 @@
   "author": "Andreas Philippi",
   "license": "MIT",
   "type": "module",
+  "main": "scripts/fine.js",
   "style": "dist/index.min.css",
   "repository": "https://github.com/andreasphil/fine",
   "files": [
-    "src/**/*.scss",
-    "dist/index.min.css"
+    "dist/index.min.css",
+    "scripts/fine.js"
   ],
   "scripts": {
     "dev": "npm run build:styles -- --watch",

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
+import { refreshThemeColor } from "~/scripts/fine";
 
 /* -------------------------------------------------- *
  * Utilities                                          *
@@ -29,6 +30,8 @@ function applyTheme(theme) {
     ].join(" ");
     setOrRemove(root, "--theme-primary", primary);
   } else setOrRemove(root, "--theme-primary");
+
+  refreshThemeColor();
 }
 
 /** Reads the current theme from the root element. */
