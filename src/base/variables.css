@@ -34,7 +34,7 @@
   --outline: 0 0 0 3px var(--c-outline);
 
   /* Transitions and other effects */
-  --transition-duration: 0.25s;
+  --transition-duration: 0.2s;
   --transition-timing-function: ease;
   --transition: var(--transition-duration) var(--transition-timing-function);
   --disabled-opacity: 0.4;
