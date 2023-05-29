@@ -18,8 +18,8 @@ export function DocumentationLayout({ children }) {
 
   return (
     <>
-      <header data-container>
-        <nav>
+      <header>
+        <nav data-variant="fixed">
           <div class="logo__wrapper">
             <Logo />
             <strong>{META.title}</strong>
@@ -38,15 +38,14 @@ export function DocumentationLayout({ children }) {
             ))}
           </ul>
         </nav>
-        <hr />
       </header>
 
       {/* Main content */}
-      <main data-container>
-        <div data-trim="bottom">{children}</div>
+      <main>
+        <div data-trim="both">{children}</div>
       </main>
 
-      <footer data-container className="footer">
+      <footer className="footer">
         <small>
           A thing made by <a href={META.authorWebsite}>{META.authorName}</a>. 🐱{" "}
           <a href={META.repository}>View source</a>.

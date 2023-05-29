@@ -5,13 +5,15 @@ import * as Examples from "@/lib/examples";
   Various utilities and small stuff that didn't really fit anywhere else.
 </PageHeader>
 
-## Container
+## Content width
+
+By default, Fine applies some padding to the `body`, constrains its maximum width, and centers it. You can use the following variables to manage (or disable) the behavior:
 
 Add the `data-container` attribute to a block element in order to horizontally center it and apply a maximum width. Containers can be customized either globally or on a per-container basis:
 
-- `--container-max-width`: How much the container can grow
-- `--container-padding-x`: Horizontal padding
-- `--container-padding-y`: Vertical padding
+- `--body-width`: Will be used as `max-width`
+- `--body-padding-x`
+- `--body-padding-y`
 
 ## Spinner
 
