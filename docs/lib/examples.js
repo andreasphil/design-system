@@ -60,7 +60,7 @@ export const blockElements = `
 
 <figure>
   <blockquote>This is a blockquote with a caption.</blockquote>
-  <figcaption>Caption</figcaption>
+  <figcaption><cite>Caption</cite></figcaption>
 </figure>
 
 <blockquote>This is a blockquote.</blockquote>
