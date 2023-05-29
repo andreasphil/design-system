@@ -35,8 +35,6 @@ export function refreshThemeColor() {
  * current tint color. Note that this registers an event listener for color
  * scheme changes. To remove the listener, run the `unsubscribe` function
  * returned by `useThemeColor`.
- *
- * @returns {{ unsubscribe: () => {} }}
  */
 export function useThemeColor() {
   /** @param {MediaQueryListEvent} e */
@@ -48,8 +46,16 @@ export function useThemeColor() {
     colorScheme.removeEventListener("change", handleColorSchemeChange);
   }
 
+  // Update when color scheme changes
   const colorScheme = window.matchMedia("(prefers-color-scheme: light)");
   colorScheme.addEventListener("change", handleColorSchemeChange);
+
+  // Update when additional styles are loaded
+  document.querySelectorAll("link[rel=stylesheet]").forEach((stylesheet) => {
+    stylesheet.addEventListener("load", () => {
+      refreshThemeColor();
+    });
+  });
 
   refreshThemeColor();
 
