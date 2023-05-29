@@ -13,7 +13,7 @@ input[type="checkbox"][role="switch"] {
   border-radius: var(--\$switch-height);
   font: inherit;
   height: var(--\$switch-height);
-  margin-right: 0.5rem;
+  margin: 0 0.5rem 0 0;
   outline: none;
   padding: var(--\$switch-padding);
   transition: var(--transition);

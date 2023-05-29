@@ -30,7 +30,7 @@ details {
       display: none;
     }
 
-    & + * {
+    + * {
       margin-top: 0;
     }
   }

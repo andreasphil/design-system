@@ -1,8 +1,3 @@
-/* Dependencies */
-@import "sanitize.css/sanitize";
-@import "sanitize.css/assets";
-@import "sanitize.css/typography";
-
 /* Basic page setup & layouts */
 @import "./base/icons.css";
 @import "./base/scaffold.css";

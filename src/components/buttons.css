@@ -10,6 +10,8 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   --\$button-border: transparent;
   --\$button-hover-bg: var(--primary-400);
 
+  -webkit-appearance: button;
+  appearance: button;
   background: var(--\$button-bg);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--\$button-border);
@@ -17,6 +19,7 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   font: inherit;
   font-weight: var(--font-weight-medium);
   letter-spacing: inherit;
+  margin: 0;
   outline: none;
   padding: 0.5rem 0.75rem;
   position: relative;

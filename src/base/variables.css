@@ -3,6 +3,10 @@
    * Shared                                             *
    * -------------------------------------------------- */
 
+  /* Font families */
+  --font-family: system-ui, sans-serif;
+  --font-family-mono: ui-monospace, Menlo, Consolas, monospace;
+
   /* Font sizes */
   --font-size-small: 0.875rem;
   --font-size: 1rem;
@@ -47,7 +51,7 @@
     0 0.3rem 1.5rem -0.3rem var(--c-shadow);
 
   /* Theme */
-  --theme-tint: 158;
+  --theme-tint: 160;
   --theme-primary: var(--theme-tint) 80% 44%;
 
   /* Default color palette */

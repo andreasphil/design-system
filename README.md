@@ -17,7 +17,6 @@
 - 🔥 Embraces semantic HTML to make native elements look great out of the box, without classes
 - 😎 Small set of utilities for additional states and convenience
 - 🐛 Tiny footprint with no runtime dependencies or build step required
-- 🧼 Built on top of [sanitize.css](https://github.com/csstools/sanitize.css) for sane, robust defaults
 - 🌈 Automatic color system that reduces time spent fiddling with color palettes
 - 🪗 Fully responsive
 

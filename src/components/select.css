@@ -12,6 +12,7 @@ select {
   color: inherit;
   font: inherit;
   letter-spacing: inherit;
+  margin: 0;
   outline: none;
   padding: 0.5rem;
   padding-right: calc(0.5rem + 0.5rem + 1em);
@@ -27,14 +28,15 @@ select {
     box-shadow: var(--outline);
   }
 
-  /* Add some spacing between text and input when used in labels */
+  /* Add some spacing between text and select when used in labels */
   :is(label) > & {
     margin-top: 0.25rem;
   }
 
-  /* Style <small> as hint text if added below the input */
-  & + small {
+  /* Style <small> as hint text if added below the select */
+  + small {
     color: var(--c-fg-variant);
+    display: block;
     margin-top: 0.25rem;
   }
 }

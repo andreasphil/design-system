@@ -73,11 +73,16 @@ hgroup {
   margin: var(--block-spacing-y) 0;
 }
 
+:is(code, kbd, pre) {
+  font-family: var(--font-family-mono);
+}
+
 pre {
   background: var(--c-surface-variant-bg);
   border-radius: var(--border-radius);
   color: var(--c-surface-variant-fg);
   font-size: 0.9em;
+  overflow: auto;
   padding: 1rem;
 
   & code {
@@ -122,6 +127,11 @@ figure > blockquote {
 
 :is(ol, ul, dl) {
   margin: var(--block-spacing-y) 0;
+
+  :is(ol, ul, dl) {
+    margin-bottom: 0;
+    margin-top: 0.25rem;
+  }
 }
 
 :is(ol, ul) {
@@ -145,7 +155,7 @@ li {
 :is(a, u, abbr) {
   text-decoration: underline;
   text-decoration-thickness: var(--border-width-large);
-  text-underline-offset: 0.25em;
+  text-underline-offset: 0.2em;
 }
 
 abbr {
@@ -164,6 +174,11 @@ code {
   background: var(--c-surface-variant-bg);
   color: var(--c-surface-variant-fg);
   font-size: 0.9em;
+}
+
+cite {
+  color: var(--c-fg-variant);
+  font-style: normal;
 }
 
 mark {

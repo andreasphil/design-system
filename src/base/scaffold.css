@@ -6,12 +6,24 @@
   color-scheme: var(--color-scheme);
 }
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
 body {
   background: var(--c-bg);
   color: var(--c-fg);
+  font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--line-height);
+  margin: auto;
+  max-width: var(--body-width, 50rem);
+  overflow-wrap: break-word;
   padding: var(--body-padding-y, 0) var(--body-padding-x, 0);
+  tab-size: 4;
 }
 
 ::selection {

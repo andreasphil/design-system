@@ -20,6 +20,7 @@ input:not(
   color: inherit;
   font: inherit;
   letter-spacing: inherit;
+  margin: 0;
   outline: none;
   padding: 0.5rem;
   padding-left: calc(var(--input-has-icon, 0) * (1.2em + 0.5rem) + 0.5rem);
@@ -50,7 +51,7 @@ input:not(
   }
 
   /* Style <small> as hint text if added below the input */
-  & + small {
+  + small {
     color: var(--c-fg-variant);
     display: block;
     margin-top: 0.25rem;
@@ -101,6 +102,10 @@ input:is([type="date"], [type="time"], [type="datetime-local"]) {
   );
 }
 
-textarea[data-resize="false"] {
-  resize: none;
+textarea {
+  resize: vertical;
+
+  [data-resize="false"] {
+    resize: none;
+  }
 }

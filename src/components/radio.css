@@ -11,7 +11,7 @@ input[type="radio"] {
   border: var(--border-width) var(--c-border) solid;
   border-radius: 100%;
   height: 1.5em;
-  margin-right: 0.5rem;
+  margin: 0 0.5rem 0 0;
   position: relative;
   transition: var(--transition);
   transition-property: background-color, border-color, box-shadow;
