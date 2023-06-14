@@ -35,8 +35,8 @@ input[type="radio"] {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
     transition: inherit;
+    translate: -50% -50%;
     width: 0.4em;
   }
 

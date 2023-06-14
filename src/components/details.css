@@ -16,9 +16,9 @@ details {
       display: block;
       float: right;
       height: calc(var(--line-height) * 1em);
-      transform: rotate(-90deg);
+      rotate: -90deg;
+      transition-property: rotate;
       transition: var(--transition);
-      transition-property: transform;
       width: calc(var(--line-height) * 1em);
     }
 
@@ -39,7 +39,7 @@ details {
     margin-bottom: 1rem;
 
     &::after {
-      transform: rotate(0deg);
+      rotate: 0deg;
     }
   }
 
