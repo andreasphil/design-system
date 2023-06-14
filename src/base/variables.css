@@ -65,9 +65,9 @@
   --neutral-400: hsl(var(--theme-tint), 11%, 70%);
   --neutral-500: hsl(var(--theme-tint), 10%, 55%);
   --neutral-600: hsl(var(--theme-tint), 11%, 46%);
-  --neutral-700: hsl(var(--theme-tint), 12%, 19%);
-  --neutral-800: hsl(var(--theme-tint), 13%, 13%);
-  --neutral-900: hsl(var(--theme-tint), 14%, 9%);
+  --neutral-700: hsl(var(--theme-tint), 12%, 17%);
+  --neutral-800: hsl(var(--theme-tint), 13%, 12%);
+  --neutral-900: hsl(var(--theme-tint), 14%, 8%);
   --neutral-950: hsl(var(--theme-tint), 15%, 4%);
 
   --primary: hsl(var(--theme-primary) / 1);
