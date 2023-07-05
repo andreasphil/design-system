@@ -24,8 +24,8 @@ export function DocumentationLayout({ children }) {
             <img
               src="/assets/icon-192.png"
               class="logo"
-              width="32px"
-              height="32px"
+              width="36px"
+              height="36px"
             />
             <strong>{META.title}</strong>
           </div>
