@@ -90,6 +90,16 @@ Wrap a navigation in a `header` element to create horizontal navigation.
 
 To create a navbar like the one you see at the top of the page, add a `data-variant="fixed"` to a `nav` inside a `header`. This will automatically add the necessary spacing to the `body`.
 
+## Menu
+
+<Preview code={Examples.menu} />
+
+Menus can be attached to a button and opened on click. By default, this shows the menu when the button is focused, and nested menues on hover. Note that this can be unreliable due to different ways of handling focus across browsers. For a more robust user experience, set the `aria-expanded` attribute on the `menu` element to `true` to show the menu.
+
+To group a menu with a button, the `button` and the `menu` must be the siblings nested in a single `div` that doesn't contain anything else.
+
+<Preview code={Examples.menuWithButton} />
+
 ## Tabs
 
 <Preview code={Examples.tabs} />

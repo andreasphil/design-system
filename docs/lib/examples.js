@@ -263,6 +263,69 @@ export const input = `
 </label>
 `;
 
+export const menu = `
+<menu>
+  <li><button>Menu item</button></li>
+  <li>
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+      Menu item with icon
+    </button>
+  </li>
+  <li>Section</li>
+  <li>
+    <button>
+      Menu item
+    </button>
+    <menu>
+      <li><button>Menu item</button></li>
+      <li>
+        <button>Menu item</button>
+        <li>
+        <button>Menu item</button>
+        <menu>
+          <li><button>Menu item</button></li>
+          <li><button>Menu item</button></li>
+        </menu>
+      </li>
+      </li>
+    </menu>
+  </li>
+</menu>
+`;
+
+export const menuWithButton = `
+<div>
+  <button>Open menu</button>
+  <menu>
+  <li><button>Menu item</button></li>
+  <li>
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+      Menu item with icon
+    </button>
+  </li>
+  <li>Section</li>
+  <li>
+    <button>Menu item</button>
+    <menu>
+      <li><button>Menu item</button></li>
+      <li>
+        <button>Menu item</button>
+        <li>
+        <button>Menu item</button>
+        <menu>
+          <li><button>Menu item</button></li>
+          <li><button>Menu item</button></li>
+        </menu>
+      </li>
+      </li>
+    </menu>
+  </li>
+</menu>
+</div>
+`;
+
 export const radio = `
 <label>
   <input type="radio" name="radio" value="a" checked />Value A

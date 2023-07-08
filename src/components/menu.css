@@ -1,0 +1,93 @@
+/* -------------------------------------------------- *
+ * Context menu                                       *
+ * -------------------------------------------------- */
+
+menu {
+  background: var(--c-surface-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-elevation-medium);
+  display: inline-block;
+  flex-direction: column;
+  font-size: var(--font-size-small);
+  list-style-type: none;
+  min-width: 12rem;
+  padding: 0.5rem 0;
+  z-index: var(--menu-z-index, 1);
+
+  & button {
+    --\$button-bg: transparent;
+    --\$button-fg: var(--c-fg);
+    --\$button-hover-bg: var(--c-surface-variant-bg);
+
+    justify-content: flex-start;
+    padding: 0.375rem 0.5rem;
+    width: 100%;
+  }
+
+  & li {
+    margin-top: 0;
+    padding: 0 0.5rem;
+    position: relative;
+
+    &:not(:has(button)) {
+      border-top: var(--border-width) solid var(--c-border-variant);
+      color: var(--c-fg-variant);
+      font-weight: var(--font-weight-medium);
+      margin: 0.375rem -0.5rem 0;
+      padding: 0.75rem 1.5rem 0.375rem;
+
+      &:first-child {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0.375rem;
+      }
+    }
+
+    &:hover > menu,
+    & menu[aria-expanded="true"] {
+      display: inline-block;
+    }
+
+    &:has(menu) > button {
+      padding-right: calc(0.5rem + 1.2em);
+
+      &::after {
+        background-repeat: no-repeat;
+        background: var(--icon-chevron) center center/1.2em;
+        bottom: 0.5rem;
+        content: "";
+        display: block;
+        height: 1.2em;
+        position: absolute;
+        right: 0.25rem;
+        rotate: -90deg;
+        width: 1.2em;
+      }
+    }
+  }
+
+  & menu {
+    display: none;
+    left: 100%;
+    margin: 0;
+    position: absolute;
+    top: -0.5rem;
+  }
+}
+
+:is(div, span):has(> button + menu):has(> :nth-child(2):last-child) {
+  position: relative;
+
+  & > menu {
+    display: none;
+    left: 0;
+    margin: 0.25rem 0 0;
+    position: absolute;
+    top: 100%;
+  }
+
+  &:has(:focus-within) > menu:not([aria-expanded="false"]),
+  & menu[aria-expanded="true"] {
+    display: inline-block;
+  }
+}
