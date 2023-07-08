@@ -7,12 +7,13 @@
 
 /* UI components other than inputs */
 @import "./components/article.css";
-@import "./components/buttons.css";
+@import "./components/button.css";
 @import "./components/checkbox.css";
 @import "./components/details.css";
 @import "./components/dialog.css";
 @import "./components/fieldset.css";
 @import "./components/input.css";
+@import "./components/menu.css";
 @import "./components/nav.css";
 @import "./components/radio.css";
 @import "./components/select.css";

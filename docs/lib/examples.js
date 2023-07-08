@@ -143,9 +143,28 @@ export const buttons = `
 <button aria-busy="true">Loading ...</button>
 <button disabled>Disabled</button>
 <button data-variant="muted">Muted</button>
+
+<!-- links with button role -->
 <a href="#" role="button">Primary link</a>
 <a href="#" data-variant="outline" role="button">Outline link</a>
 <a href="#" data-variant="ghost" role="button">Ghost link</a>
+
+<!-- with icons -->
+<button>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+  With icon
+</button>
+
+<button data-variant="outline">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+  With icon
+</button>
+
+<button data-variant="ghost">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+  With icon
+</button>
+
 `;
 
 export const checkbox = `

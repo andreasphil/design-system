@@ -11,13 +11,17 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   --\$button-hover-bg: var(--primary-400);
 
   -webkit-appearance: button;
+  align-items: center;
   appearance: button;
   background: var(--\$button-bg);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--\$button-border);
   color: var(--\$button-fg);
+  display: inline-flex;
   font: inherit;
   font-weight: var(--font-weight-medium);
+  gap: 0.75ch;
+  justify-content: center;
   letter-spacing: inherit;
   margin: 0;
   outline: none;
