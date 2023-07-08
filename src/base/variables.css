@@ -31,11 +31,13 @@
 
   /* Borders */
   --border-radius-small: 0.25rem;
-  --border-radius: 0.4rem;
+  --border-radius: 0.5rem;
   --border-radius-large: 0.75rem;
   --border-width: 1px;
   --border-width-large: 2px;
-  --outline: 0 0 0 3px var(--c-outline);
+  --outline: var(--border-width-large) solid var(--c-outline);
+  --outline-inset: calc(-1 * var(--border-width-large));
+  --outline-outset: var(--border-width-large);
 
   /* Transitions and other effects */
   --transition-duration: 0.2s;
@@ -88,7 +90,7 @@
   --color-scheme: light;
   --c-border: var(--neutral-200);
   --c-border-variant: var(--neutral-100);
-  --c-outline: var(--primary-100);
+  --c-outline: var(--primary);
   --c-shadow: var(--neutral-200);
   --c-bg: var(--neutral-50);
   --c-fg: var(--neutral-950);
@@ -104,7 +106,7 @@
     --color-scheme: dark;
     --c-border: var(--neutral-700);
     --c-border-variant: var(--neutral-800);
-    --c-outline: var(--primary-100);
+    --c-outline: var(--primary);
     --c-shadow: var(--c-bg);
     --c-bg: var(--neutral-950);
     --c-fg: var(--neutral-50);

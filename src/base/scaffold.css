@@ -11,6 +11,7 @@
 ::after {
   box-sizing: border-box;
   background-repeat: no-repeat;
+  outline-color: var(--c-outline);
 }
 
 body {

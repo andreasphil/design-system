@@ -32,9 +32,9 @@ input[type="checkbox"][role="switch"] {
     width: var(--\$switch-knob);
   }
 
-  &:focus {
-    border-color: var(--primary);
-    box-shadow: var(--outline);
+  &:focus-visible {
+    outline-offset: var(--outline-outset);
+    outline: var(--outline);
   }
 
   &:checked {

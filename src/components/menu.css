@@ -18,6 +18,7 @@ menu {
     --\$button-bg: transparent;
     --\$button-fg: var(--c-fg);
     --\$button-hover-bg: var(--c-surface-variant-bg);
+    --\$button-outline-offset: var(--outline-inset);
 
     justify-content: flex-start;
     padding: 0.375rem 0.5rem;
@@ -25,7 +26,6 @@ menu {
   }
 
   & li {
-    margin-top: 0;
     padding: 0 0.5rem;
     position: relative;
 

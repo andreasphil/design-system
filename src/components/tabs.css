@@ -38,6 +38,11 @@ ul[role="tablist"] {
     text-align: center;
     text-decoration: none;
 
+    &:focus-visible {
+      outline-offset: var(--outline-inset);
+      outline: var(--outline);
+    }
+
     &[data-active="true"] {
       background: var(--c-surface-bg);
       box-shadow: var(--shadow-elevation-low);

@@ -33,6 +33,11 @@ nav {
         text-decoration-color: transparent;
       }
 
+      &:focus-visible {
+        outline-offset: var(--outline-inset);
+        outline: var(--outline);
+      }
+
       &[data-active="true"] {
         text-decoration-color: var(--primary);
       }

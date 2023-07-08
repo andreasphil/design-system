@@ -22,9 +22,9 @@ input[type="radio"] {
     border-color: var(--primary);
   }
 
-  &:focus {
-    border-color: var(--primary);
-    box-shadow: var(--outline);
+  &:focus-visible {
+    outline-offset: var(--outline-inset);
+    outline: var(--outline);
   }
 
   &:checked::before {

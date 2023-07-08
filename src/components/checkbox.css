@@ -6,7 +6,6 @@ input[type="checkbox"]:not([role="switch"]) {
   -webkit-appearance: none;
   appearance: none;
   font: inherit;
-  outline: none;
   background: var(--c-bg) no-repeat center center / 1em;
   border: var(--border-width) var(--c-border) solid;
   border-radius: var(--border-radius-small);
@@ -21,9 +20,9 @@ input[type="checkbox"]:not([role="switch"]) {
     border-color: var(--primary);
   }
 
-  &:focus {
-    border-color: var(--primary);
-    box-shadow: var(--outline);
+  &:focus-visible {
+    outline-offset: var(--outline-inset);
+    outline: var(--outline);
   }
 
   &:checked {

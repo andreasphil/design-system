@@ -21,19 +21,19 @@ input:not(
   font: inherit;
   letter-spacing: inherit;
   margin: 0;
-  outline: none;
   padding: 0.5rem;
   padding-left: calc(var(--input-has-icon, 0) * (1.2em + 0.5rem) + 0.5rem);
   transition: var(--transition);
   transition-property: background-color, border-color, box-shadow, color;
   width: 100%;
 
-  &:is(:hover, :focus) {
+  &:hover {
     border-color: var(--primary);
   }
 
-  &:focus {
-    box-shadow: var(--outline);
+  &:focus-visible {
+    outline-offset: var(--outline-inset);
+    outline: var(--outline);
   }
 
   &:disabled {

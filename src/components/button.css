@@ -9,6 +9,7 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   --\$button-fg: var(--on-primary);
   --\$button-border: transparent;
   --\$button-hover-bg: var(--primary-400);
+  --\$button-outline-offset: var(--outline-outset);
 
   -webkit-appearance: button;
   align-items: center;
@@ -24,7 +25,6 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   justify-content: center;
   letter-spacing: inherit;
   margin: 0;
-  outline: none;
   padding: 0.5rem 0.75rem;
   position: relative;
   text-align: center;
@@ -35,8 +35,9 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
     background: var(--\$button-hover-bg);
   }
 
-  &:focus {
-    box-shadow: var(--outline);
+  &:focus-visible {
+    outline-offset: var(--\$button-outline-offset);
+    outline: var(--outline);
   }
 
   &:disabled {
@@ -48,18 +49,21 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
     --\$button-fg: var(--primary);
     --\$button-border: currentColor;
     --\$button-hover-bg: var(--primary-100);
+    --\$button-outline-offset: var(--outline-inset);
   }
 
   &[data-variant~="ghost"] {
     --\$button-bg: transparent;
     --\$button-fg: var(--primary);
     --\$button-hover-bg: var(--primary-100);
+    --\$button-outline-offset: var(--outline-inset);
   }
 
   &[data-variant~="muted"] {
     --\$button-bg: transparent;
     --\$button-fg: var(--c-fg-variant);
     --\$button-hover-bg: var(--c-surface-variant-bg);
+    --\$button-outline-offset: var(--outline-inset);
   }
 }
 

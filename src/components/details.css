@@ -33,6 +33,12 @@ details {
     + * {
       margin-top: 0;
     }
+
+    &:focus-visible {
+      border-radius: 0.125rem;
+      outline-offset: var(--outline-outset);
+      outline: var(--outline);
+    }
   }
 
   &[open] > summary {
