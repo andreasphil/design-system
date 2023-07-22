@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <strong>Small, opinionated CSS framework to make sites look alright with minimal effort</strong>
+  <strong>Small, opinionated CSS framework to make sites look alright with minimal effort—think CSS reset with some extra styling based on semantic HTML—think CSS reset with some extra styling based on semantic HTML!</strong>
 </p>
 
 <p align="center">
@@ -57,14 +57,15 @@ npm run docs      # Run playground/documentation
 ## Building
 
 ```sh
-npm build:styles  # Re-builds the stylesheet
-npm build:docs    # Generates the documentation page
+npm build         # Re-builds the stylesheet
 ```
 
 ## Credits
 
-Apart from the open source packages listed in [package.json](package.json), Fine uses icons from [Lucide](https://lucide.dev/).
+Apart from the open source packages listed in [package.json](package.json), Fine uses:
 
-Fine was inspired by [Pico.css](https://picocss.com).
+- Icons from [Lucide](https://lucide.dev/)
+- Favicons generated with [IconKitchen](https://icon.kitchen/)
+- Inspiration from [Pico.css](https://picocss.com/)
 
 Thanks 🙏

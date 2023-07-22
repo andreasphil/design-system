@@ -13,23 +13,17 @@
     "scripts/fine.js"
   ],
   "scripts": {
-    "dev": "npm run build:styles -- --watch",
-    "docs": "wmr",
-    "build:styles": "postcss src/index.css -o dist/index.min.css",
-    "build:docs": "wmr build",
-    "preversion": "npm run build:styles; git add --force dist/index.min.css"
+    "dev": "npm run build -- --watch",
+    "docs": "npx serve",
+    "build": "postcss src/index.css -o dist/index.min.css",
+    "preversion": "npm run build; git add --force dist/index.min.css"
   },
   "devDependencies": {
-    "@mdx-js/rollup": "^2.3.0",
-    "@types/mdx": "^2.0.5",
     "postcss": "^8.4.27",
     "postcss-cli": "^10.1.0",
     "postcss-csso": "^6.0.1",
     "postcss-import": "^15.1.0",
     "postcss-inline-svg": "^6.0.0",
-    "postcss-nesting": "^11.3.0",
-    "preact": "^10.16.0",
-    "preact-iso": "^2.3.1",
-    "wmr": "^3.8.0"
+    "postcss-nesting": "^12.0.0"
   }
 }

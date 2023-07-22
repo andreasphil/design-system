@@ -1,0 +1,603 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fine: Kitchensink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="./dist/index.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav data-variant="fixed">
+        <div class="logo__wrapper">
+          <img
+            src="./assets/icon-192.png"
+            class="logo"
+            width="36px"
+            height="36px"
+          />
+          <strong>Fine</strong>
+        </div>
+        <ul>
+          <li><a href="#getting-started">Getting started</a></li>
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#base">Base</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#extra">Extra</a></li>
+        </ul>
+      </nav>
+
+      <main data-trim="both">
+        <hgroup>
+          <h1 id="getting-started">Hello, world!</h1>
+          <p>
+            Fine is a small, opinionated CSS framework to make sites look
+            alright with minimal effort—think CSS reset with some extra styling
+            based on semantic HTML! This page is a playground for showcasing the
+            different supported styles. To learn more, check out the repository
+            on <a href="https://github.com/andreasphil/fine">GitHub</a>.
+          </p>
+        </hgroup>
+
+        <section>
+          <h2 id="colors">Colors</h2>
+          <div class="palette">
+            <div class="palette__item" style="--bg: var(--neutral-50)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-100)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-200)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-300)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-400)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-500)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-600)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-700)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-800)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-900)"></div>
+            <div class="palette__item" style="--bg: var(--neutral-950)"></div>
+          </div>
+
+          <div class="palette">
+            <div class="palette__item" style="--bg: var(--primary-50)"></div>
+            <div class="palette__item" style="--bg: var(--primary-100)"></div>
+            <div class="palette__item" style="--bg: var(--primary-200)"></div>
+            <div class="palette__item" style="--bg: var(--primary-300)"></div>
+            <div class="palette__item" style="--bg: var(--primary-400)"></div>
+            <div class="palette__item" style="--bg: var(--primary-500)"></div>
+            <div class="palette__item"></div>
+            <div class="palette__item"></div>
+            <div class="palette__item"></div>
+            <div class="palette__item"></div>
+            <div class="palette__item"></div>
+          </div>
+
+          <div class="example" data-title="Colors">
+            <form name="colors" data-trim="both">
+              <fieldset class="grid-auto">
+                <label>
+                  Tint
+                  <input name="tint" type="number" />
+                  <small>That's the hue for all colors.</small>
+                </label>
+              </fieldset>
+              <label>
+                <input type="checkbox" role="switch" name="overridePrimary" />
+                Use custom primary color
+              </label>
+              <fieldset class="grid-auto">
+                <label>
+                  Hue
+                  <input type="number" name="hue" value="200" />
+                </label>
+                <label>
+                  Saturation
+                  <input type="number" name="saturation" value="80" />
+                </label>
+                <label>
+                  Lightness
+                  <input type="number" name="lightness" value="50" />
+                </label>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+
+        <section>
+          <h2 id="base">Base</h2>
+
+          <div class="example grid-auto" data-title="Inline elements">
+            <a href="#">Anchor</a>
+            <strong>Bold</strong>
+            <em>Italic</em>
+            <u>Underlined</u>
+            <s>Strikethrough</s>
+            <abbr title="An abbreviation">Abbreviation</abbr>
+            <span>Text<sub>sub</sub>, Text<sup>sup</sup></span>
+            <small>Small</small>
+            <span><code>code();</code></span>
+            <span><kbd>Keyboard</kbd></span>
+            <span><mark>Marked</mark></span>
+            <span><del>Deleted</del></span>
+            <span><ins>Inserted</ins></span>
+          </div>
+
+          <div class="example" data-title="Headings">
+            <h1>Headline level 1</h1>
+            <h2>Headline level 2</h2>
+            <h3>Headline level 3</h3>
+            <h4>Headline level 4</h4>
+            <h5>Headline level 5</h5>
+            <h6>Headline level 6</h6>
+          </div>
+
+          <div class="example" data-title="Grouped headings">
+            <hgroup>
+              <p>Above headline</p>
+              <h1>Headline group</h1>
+              <p>
+                This text is grouped with the headline. Lorem ipsum dolor sit
+                amet consectetur, adipisicing elit. Fugit error libero deserunt
+                recusandae.
+              </p>
+            </hgroup>
+            <p>
+              This is normal text. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Fugit error libero deserunt recusandae.
+            </p>
+          </div>
+
+          <div class="example" data-title="Block elements">
+            <ul>
+              <li>Unordered list</li>
+              <li>Unordered list</li>
+              <li>Unordered list</li>
+            </ul>
+            <ol>
+              <li>Ordered list</li>
+              <li>Ordered list</li>
+              <li>Ordered list</li>
+            </ol>
+            <hr />
+            <pre>function hello(name) {"{/* ... */}"}</pre>
+            <figure>
+              <blockquote>This is a blockquote with a caption.</blockquote>
+              <figcaption><cite>Caption</cite></figcaption>
+            </figure>
+            <blockquote>This is a blockquote.</blockquote>
+          </div>
+        </section>
+
+        <section>
+          <h2 id="components">Components</h2>
+
+          <div class="example grid-auto" data-title="Buttons">
+            <button>Primary</button>
+            <button data-variant="outline">Outline</button>
+            <button data-variant="ghost">Ghost</button>
+            <button aria-busy="true">Loading ...</button>
+            <button disabled>Disabled</button>
+            <button data-variant="muted">Muted</button>
+
+            <!-- links with button role -->
+            <a href="#" role="button">Primary link</a>
+            <a href="#" data-variant="outline" role="button">Outline link</a>
+            <a href="#" data-variant="ghost" role="button">Ghost link</a>
+
+            <!-- with icons -->
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              With icon
+            </button>
+
+            <button data-variant="outline">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              With icon
+            </button>
+
+            <button data-variant="ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              With icon
+            </button>
+          </div>
+
+          <div class="example" data-title="Simple input">
+            <label>
+              Label
+              <input type="text" placeholder="Placeholder" />
+              <small>You can also add hints.</small>
+            </label>
+          </div>
+
+          <div class="example grid-auto" data-title="Different input types">
+            <label>
+              Email
+              <input type="email" placeholder="Placeholder" />
+            </label>
+            <label>
+              Password
+              <input type="password" placeholder="Placeholder" />
+            </label>
+            <label>
+              Date
+              <input type="date" placeholder="Placeholder" />
+            </label>
+            <label>
+              Time
+              <input type="time" placeholder="Placeholder" />
+            </label>
+            <label>
+              Search
+              <input type="search" placeholder="Placeholder" />
+            </label>
+            <label>
+              Disabled
+              <input type="text" disabled value="Value" />
+            </label>
+          </div>
+
+          <div class="example" data-title="Textarea">
+            <label>
+              A textarea
+              <textarea data-resize="false"></textarea>
+            </label>
+          </div>
+
+          <div class="example" data-title="Select">
+            <label>
+              A select
+              <select>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <small>Selects can have hints, too.</small>
+            </label>
+          </div>
+
+          <div class="example" data-title="Checkbox">
+            <label> <input type="checkbox" checked />A checkbox </label>
+          </div>
+
+          <div class="example flex-col" data-title="Radio">
+            <label>
+              <input type="radio" name="radio" value="a" checked />Value A
+            </label>
+            <label>
+              <input type="radio" name="radio" value="b" />Value B
+            </label>
+            <label>
+              <input type="radio" name="radio" value="c" />Value C
+            </label>
+          </div>
+
+          <div class="example" data-title="Switch">
+            <label>
+              <input type="checkbox" checked role="switch" />A switch
+            </label>
+          </div>
+
+          <div class="example" data-title="Dialog">
+            <button
+              onclick="document.querySelector('#demo-dialog').showModal()"
+            >
+              Show dialog
+            </button>
+
+            <dialog id="demo-dialog">
+              <button
+                data-variant="outline"
+                onclick="document.querySelector('#demo-dialog').close()"
+              >
+                Close dialog
+              </button>
+            </dialog>
+          </div>
+
+          <div class="example" data-title="Details">
+            <details>
+              <summary>First</summary>
+              <p>Content for the first details block</p>
+            </details>
+            <details>
+              <summary>Second</summary>
+              <p>Content for the second details block</p>
+            </details>
+          </div>
+
+          <div class="example" data-title="Article">
+            <article>
+              <hgroup>
+                <h3>This is an article</h3>
+                <p>
+                  Articles have a card-like appearance and provide some special
+                  formatting for their content. For example, the margins of the
+                  first and last elements are trimmed, and elements such as
+                  <code>hr</code> run over the entire width of the container.
+                </p>
+              </hgroup>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est.
+              </p>
+              <hr />
+              <p>You can also add a footer:</p>
+              <footer>
+                <button data-variant="ghost">Cancel</button>
+                <button>OK</button>
+              </footer>
+            </article>
+          </div>
+
+          <div class="example" data-title="Stacked navigation">
+            <nav>
+              <strong>Title</strong>
+              <ul>
+                <li><a href="#" data-active="true">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="example" data-title="Horizontal navigation">
+            <header>
+              <nav>
+                <strong>Title</strong>
+                <ul>
+                  <li><a href="#" data-active="true">Link</a></li>
+                  <li><a href="#">Link</a></li>
+                  <li><a href="#">Link</a></li>
+                </ul>
+              </nav>
+            </header>
+          </div>
+
+          <div class="example" data-title="Menu">
+            <menu>
+              <li>
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                  Menu item with icon
+                </button>
+              </li>
+              <li><button>Menu item</button></li>
+              <li>Section</li>
+              <li><button>Menu item</button></li>
+              <li><button>Menu item</button></li>
+            </menu>
+          </div>
+
+          <div
+            class="example"
+            style="padding-bottom: 4.5rem"
+            data-title="Menu with button"
+          >
+            <div>
+              <button>Open menu</button>
+              <menu aria-expanded="true">
+                <li><button>Menu item</button></li>
+              </menu>
+            </div>
+          </div>
+
+          <div class="example" data-title="Tabs">
+            <ul role="tablist">
+              <li><a href="#">Link</a></li>
+              <li><a href="#" data-active="true">Active</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 id="extra">Extra</h2>
+
+          <div class="example grid-auto" data-title="Shadows">
+            <div
+              class="shadow"
+              style="--shadow: var(--shadow-elevation-low)"
+            ></div>
+            <div
+              class="shadow"
+              style="--shadow: var(--shadow-elevation-medium)"
+            ></div>
+            <div
+              class="shadow"
+              style="--shadow: var(--shadow-elevation-high)"
+            ></div>
+          </div>
+
+          <div class="example" style="text-align: center" data-title="Spinner">
+            <div aria-busy="true"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <small>
+          A thing made by <a href="https://a13i.dev">Andreas Philippi</a>. 🐱
+          <a href="https://github.com/andreasphil/fine">View source</a>.
+        </small>
+      </footer>
+    </header>
+
+    <style>
+      :root {
+        scroll-behavior: smooth;
+      }
+
+      .logo__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .footer {
+        padding: var(--body-padding-y) 0 0;
+        text-align: center;
+      }
+
+      .grid-auto {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+      }
+
+      .flex-col {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+      }
+
+      .example {
+        background: var(--c-surface-bg);
+        border-radius: var(--border-radius);
+        border: var(--border-width) solid var(--c-border-variant);
+        margin: var(--block-spacing-y) 0;
+        padding: 1rem;
+        padding-top: calc(2rem + var(--font-size-small) * var(--line-height));
+        position: relative;
+      }
+      .example::before {
+        color: var(--c-fg-variant);
+        content: attr(data-title);
+        display: block;
+        font-size: var(--font-size-small);
+        font-weight: var(--font-weight-medium);
+        left: 1rem;
+        position: absolute;
+        text-transform: uppercase;
+        top: 1rem;
+      }
+      .example > :first-child {
+        margin-top: 0;
+      }
+      .example > :last-child {
+        margin-bottom: 0;
+      }
+
+      .shadow {
+        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
+        flex: 1 1 0;
+        height: 4rem;
+        background: var(--c-surface-bg);
+      }
+
+      .palette {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .palette__item {
+        background: var(--bg);
+        border-radius: var(--border-radius);
+        flex: 1 1 0;
+        height: 3rem;
+        transition: background-color var(--transition);
+      }
+    </style>
+
+    <script type="module">
+      import { useThemeColor, refreshThemeColor } from "./scripts/fine.js";
+
+      useThemeColor();
+
+      /* -------------------------------------------------- *
+       * Color scheme adjustments                           *
+       * -------------------------------------------------- */
+
+      const colorsForm = document.forms.colors;
+      const root = document.querySelector(":root");
+
+      const state = [
+        "tint",
+        "hue",
+        "saturation",
+        "lightness",
+        "overridePrimary",
+      ].reduce((all, current) => {
+        all[current] =
+          colorsForm[current].type === "checkbox"
+            ? colorsForm[current].checked
+            : colorsForm[current].value;
+
+        return all;
+      }, {});
+
+      function updateColors() {
+        const { tint, overridePrimary, hue, saturation, lightness } = state;
+
+        // Disable hue, saturation and lightness if we're not overriding the primary color
+        colorsForm.hue.disabled = !overridePrimary;
+        colorsForm.saturation.disabled = !overridePrimary;
+        colorsForm.lightness.disabled = !overridePrimary;
+
+        // Set the tint
+        root.style.setProperty("--theme-tint", tint);
+
+        // Set the primary color
+        const primary = overridePrimary
+          ? `${hue || 1} ${saturation || 1}% ${lightness || 1}%`
+          : "";
+        root.style.setProperty("--theme-primary", primary);
+
+        refreshThemeColor();
+      }
+
+      colorsForm.addEventListener("input", (event) => {
+        state[event.target.name] =
+          event.target.type === "checkbox"
+            ? event.target.checked
+            : event.target.value;
+
+        updateColors();
+      });
+
+      updateColors();
+    </script>
+  </body>
+</html>
