@@ -68,7 +68,6 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
 }
 
 [role="button"] {
-  display: inline-block;
   text-decoration: none;
 
   &:hover,
