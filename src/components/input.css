@@ -46,7 +46,7 @@ input:not(
   }
 
   /* Add some spacing between text and input when used in labels */
-  :is(label) > & {
+  :is(label):not(:has([data-hidden]:first-child)) > & {
     margin-top: 0.25rem;
   }
 
