@@ -26,3 +26,19 @@
   white-space: nowrap;
   width: 1px;
 }
+
+[data-clamp] {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--clamp, 1);
+  overflow: hidden;
+}
+[data-clamp="1"] {
+  --clamp: 1;
+}
+[data-clamp="2"] {
+  --clamp: 2;
+}
+[data-clamp="3"] {
+  --clamp: 3;
+}
