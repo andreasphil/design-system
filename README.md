@@ -50,7 +50,7 @@ or
 
 ```sh
 npm install       # Download dependencies
-npm start         # Compile stylesheets
+npm run dev       # Compile stylesheets
 npm run docs      # Run playground/documentation
 ```
 
