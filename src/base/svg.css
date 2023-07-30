@@ -12,6 +12,7 @@ of SVG "normalization" for the entire page. */
 :not([data-svg="false"]) svg {
   color: currentColor;
   display: block;
+  flex: none;
   height: var(--svg-height, 1.2em);
   width: auto;
 }
