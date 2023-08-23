@@ -74,11 +74,11 @@
 
   --primary: hsl(var(--theme-primary) / 1);
   --on-primary: var(--white);
-  --primary-50: hsl(var(--theme-primary) / 0.075);
-  --primary-100: hsl(var(--theme-primary) / 0.18);
-  --primary-200: hsl(var(--theme-primary) / 0.4);
-  --primary-300: hsl(var(--theme-primary) / 0.6);
-  --primary-400: hsl(var(--theme-primary) / 0.7);
+  --primary-50: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 7.5%);
+  --primary-100: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 18%);
+  --primary-200: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 40%);
+  --primary-300: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 60%);
+  --primary-400: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 70%);
   --primary-500: var(--primary);
 }
 
