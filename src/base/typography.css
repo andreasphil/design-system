@@ -75,13 +75,13 @@ hgroup {
 
 :is(code, kbd, pre) {
   font-family: var(--font-family-mono);
+  font-size: var(--font-size-mono);
 }
 
 pre {
   background: var(--c-surface-variant-bg);
   border-radius: var(--border-radius);
   color: var(--c-surface-variant-fg);
-  font-size: 0.9em;
   overflow: auto;
   padding: 1rem;
 
@@ -173,7 +173,6 @@ abbr {
 code {
   background: var(--c-surface-variant-bg);
   color: var(--c-surface-variant-fg);
-  font-size: 0.9em;
 }
 
 cite {
@@ -199,7 +198,6 @@ del {
 kbd {
   background: var(--c-fg);
   color: var(--c-bg);
-  font-size: 0.9em;
 }
 
 small {
