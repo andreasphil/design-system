@@ -1,0 +1,59 @@
+/* -------------------------------------------------- *
+ * Container with fallback                            *
+ * -------------------------------------------------- */
+
+[data-with-fallback] {
+  > [data-when] {
+    align-items: center;
+    border-radius: var(--border-radius);
+    border: var(--border-width-large) dashed transparent;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    /* Override immediate children margins so we can manage layout ourselves. */
+    > * {
+      margin-bottom: 0;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    /*
+     * If the last row is or has buttons, add some extra spacing to look
+     * better.
+     */
+    > :last-child:has(button),
+    > :last-child:is(button) {
+      margin-top: 0.75rem;
+    }
+  }
+
+  > [data-when="empty"] {
+    border-color: var(--c-border);
+    color: var(--c-fg-variant);
+  }
+
+  > [data-when="error"] {
+    border-color: var(--c-border);
+  }
+}
+
+/* Display fallback element when content is empty or a state is set manually. */
+[data-with-fallback] > :first-child:empty + [data-when="empty"],
+[data-with-fallback="empty"] > [data-when="empty"],
+[data-with-fallback="loading"] > [data-when="loading"],
+[data-with-fallback="error"] > [data-when="error"] {
+  display: flex;
+}
+
+/* Hide content element when empty or a different state is set. */
+[data-with-fallback] > :first-child:empty,
+:is(
+    [data-with-fallback="empty"],
+    [data-with-fallback="loading"],
+    [data-with-fallback="error"]
+  )
+  > :first-child {
+  display: none;
+}

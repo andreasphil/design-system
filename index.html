@@ -436,6 +436,43 @@
               <li><a href="#">Link</a></li>
             </ul>
           </div>
+
+          <div class="example" data-title="Fallback states">
+            <form name="fallbackState" data-trim="both">
+              <label>
+                Select a state
+                <select name="state">
+                  <option value="">With data (default)</option>
+                  <option value="empty-automatic">Empty (automatic)</option>
+                  <option value="empty-manual">Empty (manual)</option>
+                  <option value="loading">Loading</option>
+                  <option value="error">Error</option>
+                </select>
+              </label>
+            </form>
+
+            <hr />
+
+            <div data-with-fallback>
+              <div>Content</div>
+
+              <div data-when="empty">
+                <p><strong>Move along</strong></p>
+                <p>Nothing to see here.</p>
+              </div>
+
+              <div data-when="loading">
+                <div aria-busy="true"></div>
+                <small>Please wait ...</small>
+              </div>
+
+              <div data-when="error">
+                <p><strong>Something went wrong</strong></p>
+                <p>Please try again later.</p>
+                <button data-variant="outline">Retry now</button>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -628,6 +665,38 @@
       });
 
       updateColors();
+
+      /* -------------------------------------------------- *
+       * Empty states                                       *
+       * -------------------------------------------------- */
+
+      const fallbackStateForm = document.forms.fallbackState;
+
+      const fallbackEl = document.querySelector("[data-with-fallback]");
+
+      const fallbackContentEl = document.querySelector(
+        "[data-with-fallback] > :first-child"
+      );
+
+      fallbackStateForm.addEventListener("change", (event) => {
+        const { value } = event.target;
+
+        if (value === "empty-automatic") {
+          fallbackContentEl.innerHTML = "";
+        } else {
+          fallbackContentEl.innerHTML = "Content";
+        }
+
+        if (value === "empty-manual") {
+          fallbackEl.dataset.withFallback = "empty";
+        } else if (value === "loading") {
+          fallbackEl.dataset.withFallback = "loading";
+        } else if (value === "error") {
+          fallbackEl.dataset.withFallback = "error";
+        } else {
+          fallbackEl.dataset.withFallback = "";
+        }
+      });
     </script>
   </body>
 </html>
