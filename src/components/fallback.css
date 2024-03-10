@@ -55,5 +55,5 @@
     [data-with-fallback="error"]
   )
   > :first-child {
-  display: none;
+  display: none !important;
 }
