@@ -1,16 +1,16 @@
 {
-  "name": "finecss",
+  "name": "@andreasphil/design-system",
   "version": "0.24.0",
   "description": "Small, opinionated CSS framework to make sites look alright with minimal effort",
   "author": "Andreas Philippi",
   "license": "MIT",
   "type": "module",
-  "main": "scripts/fine.js",
+  "main": "scripts/utils.js",
   "style": "dist/index.min.css",
-  "repository": "https://github.com/andreasphil/fine",
+  "repository": "https://github.com/andreasphil/design-system",
   "files": [
     "dist/index.min.css",
-    "scripts/fine.js"
+    "scripts/utils.js"
   ],
   "scripts": {
     "dev": "npm run build -- --watch",

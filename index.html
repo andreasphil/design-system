@@ -1,7 +1,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Fine: Kitchensink</title>
+    <title>Design system: Kitchensink</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
@@ -17,7 +17,7 @@
             width="36"
             height="36"
           />
-          <strong>Fine</strong>
+          <strong>Design system</strong>
         </div>
         <ul>
           <li><a href="#getting-started">Getting started</a></li>
@@ -32,11 +32,12 @@
         <hgroup>
           <h1 id="getting-started">Hello, world!</h1>
           <p>
-            Fine is a small, opinionated CSS framework to make sites look
-            alright with minimal effort—think CSS reset with some extra styling
-            based on semantic HTML! This page is a playground for showcasing the
-            different supported styles. To learn more, check out the repository
-            on <a href="https://github.com/andreasphil/fine">GitHub</a>.
+            This is my personal design system: a small, opinionated CSS
+            framework to make sites look alright with minimal effort—think CSS
+            reset with some extra styling based on semantic HTML! This page is a
+            playground for showcasing the different supported styles. To learn
+            more, check out the repository on
+            <a href="https://github.com/andreasphil/design-system">GitHub</a>.
           </p>
         </hgroup>
 
@@ -522,13 +523,6 @@
           </div>
         </section>
       </main>
-
-      <footer class="footer">
-        <small>
-          A thing made by <a href="https://a13i.dev">Andreas Philippi</a>. 🐱
-          <a href="https://github.com/andreasphil/fine">View source</a>.
-        </small>
-      </footer>
     </header>
 
     <style>
@@ -540,11 +534,6 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
-      }
-
-      .footer {
-        padding: var(--body-padding-y) 0 0;
-        text-align: center;
       }
 
       .grid-auto {
@@ -609,7 +598,7 @@
     </style>
 
     <script type="module">
-      import { useThemeColor, refreshThemeColor } from "./scripts/fine.js";
+      import { useThemeColor, refreshThemeColor } from "./scripts/utils.js";
 
       useThemeColor();
 
