@@ -15,7 +15,6 @@ function lookupThemeColor() {
   return bgColor;
 }
 
-/** Sets the document's theme color based on the current styles. */
 export function refreshThemeColor() {
   const themeColor = lookupThemeColor();
   let tag = document.querySelector("meta[name=theme-color]");
@@ -30,14 +29,7 @@ export function refreshThemeColor() {
   tag.setAttribute("content", themeColor);
 }
 
-/**
- * Automatically set the theme color depending on light/dark mode and the
- * current tint color. Note that this registers an event listener for color
- * scheme changes. To remove the listener, run the `unsubscribe` function
- * returned by `useThemeColor`.
- */
 export function useThemeColor() {
-  /** @param {MediaQueryListEvent} e */
   function handleColorSchemeChange() {
     refreshThemeColor();
   }

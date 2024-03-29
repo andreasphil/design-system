@@ -6,6 +6,7 @@
   "license": "MIT",
   "type": "module",
   "main": "scripts/utils.js",
+  "types": "scripts/utils.d.ts",
   "style": "dist/index.min.css",
   "repository": "https://github.com/andreasphil/design-system",
   "files": [
