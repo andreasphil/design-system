@@ -105,7 +105,7 @@ input:is([type="date"], [type="time"], [type="datetime-local"]) {
 textarea {
   resize: vertical;
 
-  [data-resize="false"] {
+  &[data-resize="false"] {
     resize: none;
   }
 }
