@@ -32,14 +32,14 @@ Then import it in your project:
 
 ```js
 // JavaScript
-import "@andreasphil/design-system/dist/index.min.css";
+import "@andreasphil/design-system/style.css";
 ```
 
 or
 
 ```css
 /* CSS */
-@import "@andreasphil/design-system/dist/index.min.css" layer(theme);
+@import "@andreasphil/design-system/style.css" layer(theme);
 
 @layer theme {
   /* You can add customizations and override variables here. */
@@ -48,15 +48,11 @@ or
 
 ## Development
 
+The library is built with [PostCSS](https://postcss.org). Packages are managed by [npm](https://www.npmjs.com). The following commands are available for developing and running the demo:
+
 ```sh
-npm install       # Download dependencies
 npm run dev       # Compile stylesheets
 npm run docs      # Run playground/documentation
-```
-
-## Building
-
-```sh
 npm build         # Re-builds the stylesheet
 ```
 
