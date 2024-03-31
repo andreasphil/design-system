@@ -59,6 +59,7 @@ header > nav {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  white-space: nowrap;
 
   & > ul {
     align-items: center;
