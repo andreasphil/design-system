@@ -1,5 +1,5 @@
 <h1 align="center">
-  Design system 🐥
+  Design System 🐥
 </h1>
 
 <p align="center">
