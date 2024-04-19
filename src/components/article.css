@@ -36,7 +36,7 @@ article {
     border-top: var(--border-width) solid var(--c-border-variant);
     display: flex;
     gap: 0.75rem;
-    justify-content: flex-end;
+    justify-content: end;
     padding: 1.25rem var(--\$article-padding);
   }
 }

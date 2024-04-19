@@ -314,12 +314,30 @@
             </button>
 
             <dialog id="demo-dialog">
+              <header>Dialog header</header>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                sed! Adipisci sequi harum architecto, nesciunt aspernatur minus!
+                Quaerat, pariatur placeat! Optio est accusamus saepe vero quos
+                soluta, necessitatibus voluptates numquam.
+              </p>
+
+              <footer>
               <button
                 data-variant="outline"
                 onclick="document.querySelector('#demo-dialog').close()"
               >
-                Close dialog
+                  Cancel
+                </button>
+
+                <button
+                  autofocus
+                  onclick="document.querySelector('#demo-dialog').close()"
+                >
+                  Confirm
               </button>
+              </footer>
             </dialog>
           </div>
 
