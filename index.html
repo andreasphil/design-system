@@ -324,10 +324,10 @@
               </p>
 
               <footer>
-              <button
-                data-variant="outline"
-                onclick="document.querySelector('#demo-dialog').close()"
-              >
+                <button
+                  data-variant="outline"
+                  onclick="document.querySelector('#demo-dialog').close()"
+                >
                   Cancel
                 </button>
 
@@ -336,7 +336,7 @@
                   onclick="document.querySelector('#demo-dialog').close()"
                 >
                   Confirm
-              </button>
+                </button>
               </footer>
             </dialog>
           </div>
@@ -434,14 +434,10 @@
             </menu>
           </div>
 
-          <div
-            class="example"
-            style="padding-bottom: 4.5rem"
-            data-title="Menu with button"
-          >
+          <div class="example" data-title="Menu as popover">
             <div>
-              <button>Open menu</button>
-              <menu aria-expanded="true">
+              <button popovertarget="button-menu">Open menu</button>
+              <menu id="button-menu" popover>
                 <li><button>Menu item</button></li>
               </menu>
             </div>
