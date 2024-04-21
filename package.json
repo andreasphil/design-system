@@ -20,10 +20,10 @@
     }
   },
   "scripts": {
-    "dev": "npm run build -- --watch",
+    "dev": "pnpm build --watch",
     "docs": "servor --reload",
     "build": "postcss src/index.css -o dist/index.min.css",
-    "preversion": "npm run build; git add --force dist/index.min.css"
+    "preversion": "pnpm build; git add --force dist/index.min.css"
   },
   "devDependencies": {
     "postcss": "^8.4.38",
