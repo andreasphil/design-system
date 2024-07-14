@@ -56,8 +56,7 @@ nav {
   }
 }
 
-/* Navs inside headers or with the .horizontal modifier are navbars
-by default */
+/* Navs inside headers are navbars by default */
 header > nav {
   align-items: center;
   flex-direction: row;
