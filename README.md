@@ -61,7 +61,6 @@ npm build         # Re-builds the stylesheet
 Apart from the open source packages listed in [package.json](package.json), this package uses:
 
 - Icons from [Lucide](https://lucide.dev/)
-- Favicons generated with [IconKitchen](https://icon.kitchen/)
 - Inspiration from [Pico.css](https://picocss.com/)
 
 Thanks 🙏
