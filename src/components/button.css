@@ -8,8 +8,8 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   --\$button-bg: var(--primary);
   --\$button-fg: var(--on-primary);
   --\$button-border: transparent;
-  --\$button-hover-bg: var(--primary-400);
   --\$button-outline-offset: var(--outline-outset);
+  --\$button-hover: color-mix(in srgb, var(--primary), var(--neutral-100) 30%);
 
   -webkit-appearance: button;
   align-items: center;
@@ -32,7 +32,7 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   transition-property: background-color, border-color, box-shadow, color;
 
   &:hover {
-    background: var(--\$button-hover-bg);
+    background: var(--\$button-hover);
   }
 
   &:focus-visible {
@@ -48,21 +48,20 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
     --\$button-bg: transparent;
     --\$button-fg: var(--primary);
     --\$button-border: currentColor;
-    --\$button-hover-bg: var(--primary-100);
-    --\$button-outline-offset: var(--outline-inset);
+    --\$button-hover: var(--primary-100);
   }
 
   &[data-variant~="ghost"] {
     --\$button-bg: transparent;
     --\$button-fg: var(--primary);
-    --\$button-hover-bg: var(--primary-100);
+    --\$button-hover: var(--primary-100);
     --\$button-outline-offset: var(--outline-inset);
   }
 
   &[data-variant~="muted"] {
     --\$button-bg: transparent;
     --\$button-fg: var(--c-fg-variant);
-    --\$button-hover-bg: var(--c-surface-variant-bg);
+    --\$button-hover: var(--c-surface-variant-bg);
     --\$button-outline-offset: var(--outline-inset);
   }
 }

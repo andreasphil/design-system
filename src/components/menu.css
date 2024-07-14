@@ -18,7 +18,7 @@ menu {
   & button {
     --\$button-bg: transparent;
     --\$button-fg: var(--c-fg);
-    --\$button-hover-bg: var(--c-surface-variant-bg);
+    --\$button-hover: var(--c-surface-variant-bg);
     --\$button-outline-offset: var(--outline-inset);
 
     justify-content: flex-start;
