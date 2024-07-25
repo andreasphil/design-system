@@ -38,5 +38,9 @@ article {
     gap: 0.75rem;
     justify-content: end;
     padding: 1.25rem var(--\$article-padding);
+
+    > div:empty {
+      flex: 1;
+    }
   }
 }

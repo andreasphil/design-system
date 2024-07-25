@@ -39,6 +39,10 @@ dialog {
     margin-right: calc(-1 * var(--\$dialog-padding));
     margin-top: var(--block-spacing-y);
     padding: var(--block-spacing-y) var(--\$dialog-padding);
+
+    > div:empty {
+      flex: 1;
+    }
   }
 }
 
