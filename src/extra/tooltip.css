@@ -1,0 +1,31 @@
+/* -------------------------------------------------- *
+ * Tooltip                                            *
+ * -------------------------------------------------- */
+
+[data-tooltip] {
+  position: relative;
+
+  &::after {
+    background: var(--c-fg);
+    border-radius: var(--border-radius-small);
+    color: var(--c-bg);
+    content: attr(data-tooltip);
+    display: block;
+    font-size: var(--font-size-small);
+    left: 50%;
+    opacity: 0;
+    padding: 0.125rem 0.375rem;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: var(--transition);
+    transition-property: translate, opacity;
+    translate: -50% -100%;
+    white-space: nowrap;
+  }
+
+  &:hover::after {
+    translate: -50% calc(-100% - 0.25rem);
+    opacity: 1;
+  }
+}

@@ -24,4 +24,5 @@
 /* Additional utilities and components that go beyond simple styling of
 standard elements */
 @import "./extra/spinner.css";
+@import "./extra/tooltip.css";
 @import "./extra/utils.css";
