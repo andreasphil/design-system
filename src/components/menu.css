@@ -35,7 +35,7 @@ menu {
     position: relative;
 
     &:not(:has(button)) {
-      border-top: var(--border-width) solid var(--c-border-variant);
+      border-top: var(--border-width) solid var(--c-border);
       color: var(--c-fg-variant);
       font-weight: var(--font-weight-medium);
       margin: 0.375rem 0 0;
@@ -46,6 +46,20 @@ menu {
         margin-top: 0;
         padding-top: 0.375rem;
       }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  menu {
+    background: var(--c-surface-variant-bg);
+
+    & button {
+      --\$button-hover: var(--c-surface-bg);
+    }
+
+    & button[data-active="true"] {
+      --\$button-bg: var(--c-surface-bg);
     }
   }
 }
