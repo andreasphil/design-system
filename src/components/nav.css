@@ -28,13 +28,7 @@ nav {
       display: inline-flex;
       gap: 0.75ch;
       padding: 0.25rem 0.5rem;
-      text-decoration-color: transparent;
-
-      &:hover {
-        background: var(--c-surface-variant-bg);
-        color: var(--c-fg);
-        text-decoration-color: transparent;
-      }
+      text-decoration: none;
 
       &:focus-visible {
         outline-offset: var(--outline-inset);
@@ -42,7 +36,7 @@ nav {
       }
 
       &[data-active="true"] {
-        text-decoration-color: var(--primary);
+        background: var(--c-surface-variant-bg);
       }
 
       &:only-child {
