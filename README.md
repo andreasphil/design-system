@@ -48,12 +48,12 @@ or
 
 ## Development
 
-The library is built with [PostCSS](https://postcss.org). Packages are managed by [npm](https://www.npmjs.com). The following commands are available for developing and running the demo:
+The library is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [pnpm](https://pnpm.io). The following commands are available for developing and running the demo:
 
 ```sh
-npm run dev       # Compile stylesheets
-npm run docs      # Run playground/documentation
-npm build         # Re-builds the stylesheet
+pnpm dev          # Compile stylesheets in watch mode
+pnpm run docs     # Run playground/documentation
+pnpm build        # Compile the stylesheet
 ```
 
 ## Credits
