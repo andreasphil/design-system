@@ -20,18 +20,13 @@
     }
   },
   "scripts": {
-    "dev": "pnpm build --watch",
+    "dev": "node ./build --watch",
     "docs": "servor --reload",
-    "build": "postcss src/index.css -o dist/index.min.css",
+    "build": "node ./build",
     "preversion": "pnpm build; git add --force dist/index.min.css"
   },
   "devDependencies": {
-    "postcss": "^8.4.40",
-    "postcss-cli": "^11.0.0",
-    "postcss-csso": "^6.0.1",
-    "postcss-import": "^16.1.0",
-    "postcss-inline-svg": "^6.0.0",
-    "postcss-nesting": "^12.1.5",
+    "lightningcss": "^1.25.1",
     "servor": "^4.0.2"
   }
 }
