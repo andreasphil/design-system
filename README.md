@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <strong>A amall, opinionated CSS framework to make sites look alright with minimal effort</strong>
+  <strong>A small, opinionated CSS framework to make sites look alright with minimal effort</strong>
 </p>
 
 <p align="center">
@@ -20,25 +20,32 @@
 - 🌈 Automatic color system that reduces time spent fiddling with color palettes
 - 🪗 Fully responsive
 
-## Usage
+## Installation
 
-The package is not currently on npm, but you can install it from this repository:
+From a CDN:
 
+```css
+@import url("https://esm.sh/gh/andreasphil/design-system@v0.34.0/dist/index.min.css")
+layer(theme);
 ```
+
+```js
+import { useThemeColor } from "https://esm.sh/gh/andreasphil/design-system@v0.34.0";
+```
+
+With a package manager:
+
+```sh
 npm install github:andreasphil/design-system#<tag>
 ```
 
-Then import it in your project:
+## Usage
 
-```js
-// JavaScript
-import "@andreasphil/design-system/style.css";
-```
+Find the demo at <https://design-system.a13i.dev>.
 
-or
+First, import the CSS. I recommend using [layers](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) to avoid conflicts and to avoid specificity chaos when customizing.
 
 ```css
-/* CSS */
 @import "@andreasphil/design-system/style.css" layer(theme);
 
 @layer theme {
@@ -46,13 +53,26 @@ or
 }
 ```
 
+### Automatic theme color
+
+There is a helper that will manage the theme color for light and dark mode automatically:
+
+```js
+import { useThemeColor } from "@andreasphil/design-system";
+
+const { unsubscribe } = useThemeColor();
+
+// Call when you want to stop automatic theme color management
+unsubscribe();
+```
+
 ## Development
 
-This library is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [pnpm](https://pnpm.io). The following commands are available:
+Design System is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [pnpm](https://pnpm.io). The following commands are available:
 
 ```sh
 pnpm dev          # Compile stylesheets in watch mode
-pnpm build        # Compile the stylesheet
+pnpm build        # Bundle for production
 ```
 
 For a demo, open [index.html](./index.html) in a browser.
