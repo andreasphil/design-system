@@ -21,12 +21,10 @@
   },
   "scripts": {
     "dev": "node ./build --watch",
-    "docs": "servor --reload",
     "build": "node ./build",
     "preversion": "pnpm build; git add --force dist/index.min.css"
   },
   "devDependencies": {
-    "lightningcss": "^1.25.1",
-    "servor": "^4.0.2"
+    "lightningcss": "^1.25.1"
   }
 }

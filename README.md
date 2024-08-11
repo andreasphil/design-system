@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <strong>My personal design system: a amall, opinionated CSS framework to make sites look alright with minimal effort—think CSS reset with some extra styling based on semantic HTML!</strong>
+  <strong>A amall, opinionated CSS framework to make sites look alright with minimal effort.</strong>
 </p>
 
 <p align="center">
@@ -48,19 +48,21 @@ or
 
 ## Development
 
-The library is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [pnpm](https://pnpm.io). The following commands are available for developing and running the demo:
+This library is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [pnpm](https://pnpm.io). The following commands are available:
 
 ```sh
 pnpm dev          # Compile stylesheets in watch mode
-pnpm run docs     # Run playground/documentation
 pnpm build        # Compile the stylesheet
 ```
 
+For a demo, open [index.html](./index.html) in a browser.
+
+## Deployment
+
+Deployment should work out of the box when linking the repository to a project on [Netlify](https://netlify.com).
+
 ## Credits
 
-Apart from the open source packages listed in [package.json](package.json), this package uses:
-
-- Icons from [Lucide](https://lucide.dev/)
-- Inspiration from [Pico.css](https://picocss.com/)
+This library uses a number of open source packages listed in [package.json](./package.json). Icons are from [Lucide](https://lucide.dev/). It was inspired by [Pico.css](https://picocss.com/).
 
 Thanks 🙏
