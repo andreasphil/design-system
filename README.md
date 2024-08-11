@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <strong>A amall, opinionated CSS framework to make sites look alright with minimal effort.</strong>
+  <strong>A amall, opinionated CSS framework to make sites look alright with minimal effort</strong>
 </p>
 
 <p align="center">
