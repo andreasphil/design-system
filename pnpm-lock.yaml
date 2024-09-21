@@ -11,9 +11,6 @@ importers:
       lightningcss:
         specifier: ^1.25.1
         version: 1.25.1
-      servor:
-        specifier: ^4.0.2
-        version: 4.0.2
 
 packages:
 
@@ -80,10 +77,6 @@ packages:
     resolution: {integrity: sha512-V0RMVZzK1+rCHpymRv4URK2lNhIRyO8g7U7zOFwVAhJuat74HtkjIQpQRKNCwFEYkRGpafOpmXXLoaoBcyVtBg==}
     engines: {node: '>= 12.0.0'}
 
-  servor@4.0.2:
-    resolution: {integrity: sha512-MlmQ5Ntv4jDYUN060x/KEmN7emvIqKMZ9OkM+nY8Bf2+KkyLmGsTqWLyAN2cZr5oESAcH00UanUyyrlS1LRjFw==}
-    hasBin: true
-
 snapshots:
 
   detect-libc@1.0.3: {}
@@ -128,5 +121,3 @@ snapshots:
       lightningcss-linux-x64-gnu: 1.25.1
       lightningcss-linux-x64-musl: 1.25.1
       lightningcss-win32-x64-msvc: 1.25.1
-
-  servor@4.0.2: {}
