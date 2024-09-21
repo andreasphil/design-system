@@ -6,7 +6,7 @@
 covers most of what I use SVGs for, namely icons in various controls,
 but may not be wanted in all cases. Use the [data-svg="false"]
 attribute on some container to not apply the rules to any of the SVGs
-in that container. You can also add it to the documents body to opt out
+in that container. You can also add it to the document's body to opt out
 of SVG "normalization" for the entire page. */
 
 :not([data-svg="false"]) svg {

@@ -16,7 +16,7 @@
 
 - 🔥 Embraces semantic HTML to make native elements look great out of the box, without classes
 - 😎 Small set of utilities for additional states and convenience
-- 🐛 Tiny footprint with no runtime dependencies or build step required
+- 🐛 Tiny (<6kb min+gzip) footprint with no runtime dependencies or build step required
 - 🌈 Automatic color system that reduces time spent fiddling with color palettes
 - 🪗 Fully responsive
 
@@ -25,12 +25,12 @@
 From a CDN:
 
 ```css
-@import url("https://esm.sh/gh/andreasphil/design-system@v0.34.0/dist/index.min.css")
+@import url("https://esm.sh/gh/andreasphil/design-system@<tag>/dist/index.min.css")
 layer(theme);
 ```
 
 ```js
-import { useThemeColor } from "https://esm.sh/gh/andreasphil/design-system@v0.34.0";
+import { useThemeColor } from "https://esm.sh/gh/andreasphil/design-system@<tag>";
 ```
 
 With a package manager:
@@ -43,7 +43,7 @@ npm install github:andreasphil/design-system#<tag>
 
 Find the demo at <https://design-system.a13i.dev>.
 
-First, import the CSS. I recommend using [layers](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) to avoid conflicts and to avoid specificity chaos when customizing.
+First, import the CSS. I recommend using [layers](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) to avoid conflicts and specificity chaos when customizing.
 
 ```css
 @import "@andreasphil/design-system/style.css" layer(theme);
@@ -62,7 +62,7 @@ import { useThemeColor } from "@andreasphil/design-system";
 
 const { unsubscribe } = useThemeColor();
 
-// Call when you want to stop automatic theme color management
+// Call if you want to stop automatic theme color management
 unsubscribe();
 ```
 
