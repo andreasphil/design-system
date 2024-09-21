@@ -27,7 +27,7 @@ input[type="checkbox"][role="switch"] {
     content: "";
     display: block;
     height: var(--\$switch-knob);
-    transition: inherit;
+    transition: var(--transition);
     transition-property: background-color, margin;
     width: var(--\$switch-knob);
   }
