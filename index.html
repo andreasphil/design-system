@@ -480,6 +480,33 @@
               <li><a href="#">Link</a></li>
             </ul>
           </div>
+        </section>
+
+        <section>
+          <h2 id="extra">Extra</h2>
+
+          <div class="example grid-auto" data-title="Shadows">
+            <div
+              class="shadow"
+              style="--shadow: var(--shadow-elevation-low)"
+            ></div>
+            <div
+              class="shadow"
+              style="--shadow: var(--shadow-elevation-medium)"
+            ></div>
+            <div
+              class="shadow"
+              style="--shadow: var(--shadow-elevation-high)"
+            ></div>
+          </div>
+
+          <div class="example" style="text-align: center" data-title="Spinner">
+            <div aria-busy="true"></div>
+          </div>
+
+          <div class="example" data-title="Tooltip">
+            <button data-tooltip="This is a tooltip!">Hover me</button>
+          </div>
 
           <div class="example" data-title="Fallback states">
             <form name="fallbackState" data-trim="both">
@@ -517,32 +544,17 @@
               </div>
             </div>
           </div>
-        </section>
 
-        <section>
-          <h2 id="extra">Extra</h2>
-
-          <div class="example grid-auto" data-title="Shadows">
-            <div
-              class="shadow"
-              style="--shadow: var(--shadow-elevation-low)"
-            ></div>
-            <div
-              class="shadow"
-              style="--shadow: var(--shadow-elevation-medium)"
-            ></div>
-            <div
-              class="shadow"
-              style="--shadow: var(--shadow-elevation-high)"
-            ></div>
-          </div>
-
-          <div class="example" style="text-align: center" data-title="Spinner">
-            <div aria-busy="true"></div>
-          </div>
-
-          <div class="example" data-title="Tooltip">
-            <button data-tooltip="This is a tooltip!">Hover me</button>
+          <div class="example grid-auto" data-title="Color Scheme">
+            <div class="color-scheme" data-color-scheme="light">
+              Always in light mode
+            </div>
+            <div class="color-scheme" data-color-scheme="dark">
+              Always in dark mode
+            </div>
+            <div class="color-scheme" data-color-scheme="inverted">
+              Inverted
+            </div>
           </div>
 
           <div class="example" data-title="Line clamp">
@@ -647,6 +659,15 @@
         flex: 1 1 0;
         height: 3rem;
         transition: background-color var(--transition);
+      }
+
+      .color-scheme {
+        border-radius: var(--border-radius);
+        text-align: center;
+        padding: 1rem;
+        background-color: var(--c-bg);
+        color: var(--c-fg);
+        border: var(--border-width) solid var(--c-border);
       }
     </style>
 

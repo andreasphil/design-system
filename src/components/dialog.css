@@ -17,7 +17,7 @@ dialog {
   width: min(30rem, calc(100dvw - 2rem));
 
   &::backdrop {
-    background: hsl(0 0% 100% / 0.8);
+    background: light-dark(hsl(0 0% 100% / 0.8), hsl(0 0% 0% / 0.8));
   }
 
   &:has(footer) {

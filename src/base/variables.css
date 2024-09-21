@@ -88,33 +88,16 @@
  * -------------------------------------------------- */
 
 :root {
-  --color-scheme: light;
-  --c-border: var(--neutral-200);
-  --c-border-variant: var(--neutral-100);
-  --c-outline: var(--primary);
-  --c-shadow: var(--neutral-200);
-  --c-bg: var(--neutral-50);
-  --c-fg: var(--neutral-950);
-  --c-fg-variant: var(--neutral-500);
-  --c-surface-bg: var(--white);
-  --c-surface-fg: var(--neutral-950);
-  --c-surface-variant-bg: var(--neutral-100);
-  --c-surface-variant-fg: var(--neutral-950);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-scheme: dark;
-    --c-border: var(--neutral-700);
-    --c-border-variant: var(--neutral-800);
-    --c-outline: var(--primary);
-    --c-shadow: var(--c-bg);
-    --c-bg: var(--neutral-950);
-    --c-fg: var(--neutral-50);
-    --c-fg-variant: var(--neutral-500);
-    --c-surface-bg: var(--neutral-900);
-    --c-surface-fg: var(--neutral-50);
-    --c-surface-variant-bg: var(--neutral-800);
-    --c-surface-variant-fg: var(--neutral-50);
-  }
+  --color-scheme: light dark;
+  --c-border: light-dark(var(--neutral-200), var(--neutral-700));
+  --c-border-variant: light-dark(var(--neutral-100), var(--neutral-800));
+  --c-outline: light-dark(var(--primary), var(--primary));
+  --c-shadow: light-dark(var(--neutral-200), var(--c-bg));
+  --c-bg: light-dark(var(--neutral-50), var(--neutral-950));
+  --c-fg: light-dark(var(--neutral-950), var(--neutral-50));
+  --c-fg-variant: light-dark(var(--neutral-500), var(--neutral-500));
+  --c-surface-bg: light-dark(var(--white), var(--neutral-900));
+  --c-surface-fg: light-dark(var(--neutral-950), var(--neutral-50));
+  --c-surface-variant-bg: light-dark(var(--neutral-100), var(--neutral-800));
+  --c-surface-variant-fg: light-dark(var(--neutral-950), var(--neutral-50));
 }
