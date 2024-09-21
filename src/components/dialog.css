@@ -4,7 +4,6 @@
 
 dialog {
   --\$dialog-padding: 1rem;
-  --block-spacing-y: 1rem;
 
   background: var(--c-surface-bg);
   border-radius: var(--border-radius-large);
@@ -26,7 +25,7 @@ dialog {
 
   > header {
     font-weight: var(--font-weight-bold);
-    margin-bottom: var(--block-spacing-y);
+    margin-bottom: 1rem;
   }
 
   > footer {
@@ -37,17 +36,15 @@ dialog {
     justify-content: end;
     margin-left: calc(-1 * var(--\$dialog-padding));
     margin-right: calc(-1 * var(--\$dialog-padding));
-    margin-top: var(--block-spacing-y);
-    padding: var(--block-spacing-y) var(--\$dialog-padding);
+    margin-top: 1rem;
+    padding: 1rem var(--\$dialog-padding);
 
     > div:empty {
       flex: 1;
     }
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  dialog::backdrop {
-    background: hsl(0 0% 0% / 0.8);
+  > p {
+    margin: 1rem 0;
   }
 }
