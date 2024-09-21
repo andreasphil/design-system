@@ -5,13 +5,12 @@
 @import "./base/typography.css";
 @import "./base/variables.css";
 
-/* UI components other than inputs */
+/* UI components */
 @import "./components/article.css";
 @import "./components/button.css";
 @import "./components/checkbox.css";
 @import "./components/details.css";
 @import "./components/dialog.css";
-@import "./components/fallback.css";
 @import "./components/fieldset.css";
 @import "./components/input.css";
 @import "./components/menu.css";
@@ -23,7 +22,10 @@
 
 /* Additional utilities and components that go beyond simple styling of
 standard elements */
+@import "./extra/clamp.css";
 @import "./extra/color-scheme.css";
+@import "./extra/fallback.css";
 @import "./extra/spinner.css";
 @import "./extra/tooltip.css";
-@import "./extra/utils.css";
+@import "./extra/trim.css";
+@import "./extra/visually-hidden.css";
