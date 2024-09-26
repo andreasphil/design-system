@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/favicon.png" sizes="any" />
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="./dist/index.min.css" />
   </head>
   <body>
     <header>
       <nav data-variant="fixed">
-        <div class="logo__wrapper">
+        <div class="header-title">
           <img
             src="./assets/icon-192.png"
-            class="logo"
+            class="header-logo"
             width="36"
             height="36"
           />
@@ -29,16 +28,24 @@
       </nav>
 
       <main data-trim="both">
-        <hgroup>
-          <h1 id="getting-started">Hello, world!</h1>
-          <p>
-            A small, opinionated CSS framework to make sites look alright with
-            minimal effort. This page is a playground for showcasing the
-            different supported styles. To learn more, check out the repository
-            on
-            <a href="https://github.com/andreasphil/design-system">GitHub</a>.
-          </p>
-        </hgroup>
+        <div class="home">
+          <img
+            class="logo"
+            src="./assets/icon-192.png"
+            width="72"
+            height="72"
+          />
+          <hgroup>
+            <h1 id="getting-started">Design System</h1>
+            <p>
+              A small, opinionated CSS framework to make sites look alright with
+              minimal effort. This page is a playground for showcasing the
+              different supported styles. To learn more, check out the
+              repository on
+              <a href="https://github.com/andreasphil/design-system">GitHub</a>.
+            </p>
+          </hgroup>
+        </div>
 
         <section>
           <h2 id="colors">Colors</h2>
@@ -585,17 +592,35 @@
     </header>
 
     <style>
+      @import "./dist/index.min.css" layer(theme);
+
       :root {
         scroll-behavior: smooth;
       }
 
-      .logo__wrapper {
+      .home {
+        text-align: center;
+
+        hgroup {
+          margin-bottom: var(--body-padding-y);
+        }
+      }
+
+      .logo {
+        border-radius: calc(var(--border-radius-large) * 2);
+        box-shadow: var(--shadow-elevation-high);
+        display: block;
+        filter: hue-rotate(calc((var(--theme-tint) - 160) * 1deg));
+        margin: 0 auto;
+      }
+
+      .header-title {
         display: flex;
         align-items: center;
         gap: 0.75rem;
       }
 
-      .logo {
+      .header-logo {
         border-radius: var(--border-radius-large);
         box-shadow: var(--shadow-elevation-high);
         filter: hue-rotate(calc((var(--theme-tint) - 160) * 1deg));
