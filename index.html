@@ -88,20 +88,20 @@
               </fieldset>
               <label>
                 <input type="checkbox" role="switch" name="overridePrimary" />
-                Use custom primary color
+                Customize primary color
               </label>
               <fieldset class="grid-auto">
                 <label>
-                  Hue
-                  <input type="number" name="hue" value="200" />
-                </label>
-                <label>
-                  Saturation
-                  <input type="number" name="saturation" value="80" />
-                </label>
-                <label>
                   Lightness
-                  <input type="number" name="lightness" value="50" />
+                  <input type="number" name="lightness" value="63" />
+                </label>
+                <label>
+                  Chroma
+                  <input type="number" name="chroma" value="0.18" />
+                </label>
+                <label>
+                  Hue
+                  <input type="number" name="hue" value="" disabled />
                 </label>
               </fieldset>
             </form>
@@ -610,7 +610,7 @@
         border-radius: calc(var(--border-radius-large) * 2);
         box-shadow: var(--shadow-elevation-high);
         display: block;
-        filter: hue-rotate(calc((var(--theme-tint) - 160) * 1deg));
+        filter: hue-rotate(calc((var(--theme-tint) - 165) * 1deg));
         margin: 0 auto;
       }
 
@@ -623,7 +623,7 @@
       .header-logo {
         border-radius: var(--border-radius-large);
         box-shadow: var(--shadow-elevation-high);
-        filter: hue-rotate(calc((var(--theme-tint) - 160) * 1deg));
+        filter: hue-rotate(calc((var(--theme-tint) - 165) * 1deg));
       }
 
       .grid-auto {
@@ -710,9 +710,9 @@
 
       const state = [
         "tint",
-        "hue",
-        "saturation",
         "lightness",
+        "chroma",
+        "hue",
         "overridePrimary",
       ].reduce((all, current) => {
         all[current] =
@@ -724,19 +724,21 @@
       }, {});
 
       function updateColors() {
-        const { tint, overridePrimary, hue, saturation, lightness } = state;
+        const { tint, overridePrimary, lightness, chroma } = state;
 
-        // Disable hue, saturation and lightness if we're not overriding the primary color
-        colorsForm.hue.disabled = !overridePrimary;
-        colorsForm.saturation.disabled = !overridePrimary;
+        // Disable lightness, chroma, and hue if we're not overriding the primary color
         colorsForm.lightness.disabled = !overridePrimary;
+        colorsForm.chroma.disabled = !overridePrimary;
+
+        // Sync tint content with hue
+        colorsForm.hue.value = colorsForm.tint.value;
 
         // Set the tint
         root.style.setProperty("--theme-tint", tint);
 
         // Set the primary color
         const primary = overridePrimary
-          ? `${hue || 1} ${saturation || 1}% ${lightness || 1}%`
+          ? `${lightness || 1}% ${chroma || 1} ${tint || 1}`
           : "";
         root.style.setProperty("--theme-primary", primary);
 

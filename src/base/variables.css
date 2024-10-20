@@ -54,32 +54,32 @@
     0 0.3rem 1.5rem -0.3rem var(--c-shadow);
 
   /* Theme */
-  --theme-tint: 160;
-  --theme-primary: var(--theme-tint) 80% 44%;
+  --theme-tint: 165;
+  --theme-primary: 75% 0.16 var(--theme-tint);
 
   /* Default color palette */
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
+  --black: oklch(0% 0 0);
+  --white: oklch(100% 0 0);
 
-  --neutral-50: hsl(var(--theme-tint), 15%, 99%);
-  --neutral-100: hsl(var(--theme-tint), 14%, 96%);
-  --neutral-200: hsl(var(--theme-tint), 13%, 89%);
-  --neutral-300: hsl(var(--theme-tint), 12%, 83%);
-  --neutral-400: hsl(var(--theme-tint), 11%, 70%);
-  --neutral-500: hsl(var(--theme-tint), 10%, 55%);
-  --neutral-600: hsl(var(--theme-tint), 11%, 46%);
-  --neutral-700: hsl(var(--theme-tint), 12%, 15%);
-  --neutral-800: hsl(var(--theme-tint), 13%, 10%);
-  --neutral-900: hsl(var(--theme-tint), 14%, 7%);
-  --neutral-950: hsl(var(--theme-tint), 15%, 4%);
+  --neutral-50: oklch(99% 0.001 var(--theme-tint));
+  --neutral-100: oklch(97% 0.003 var(--theme-tint));
+  --neutral-200: oklch(92% 0.008 var(--theme-tint));
+  --neutral-300: oklch(88% 0.012 var(--theme-tint));
+  --neutral-400: oklch(78% 0.02 var(--theme-tint));
+  --neutral-500: oklch(64% 0.025 var(--theme-tint));
+  --neutral-600: oklch(58% 0.02 var(--theme-tint));
+  --neutral-700: oklch(26% 0.012 var(--theme-tint));
+  --neutral-800: oklch(21% 0.011 var(--theme-tint));
+  --neutral-900: oklch(18% 0.01 var(--theme-tint));
+  --neutral-950: oklch(14% 0.005 var(--theme-tint));
 
-  --primary: hsl(var(--theme-primary) / 1);
+  --primary: oklch(var(--theme-primary));
   --on-primary: var(--white);
-  --primary-50: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 7.5%);
-  --primary-100: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 18%);
-  --primary-200: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 40%);
-  --primary-300: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 60%);
-  --primary-400: color-mix(in srgb, var(--c-bg), hsl(var(--theme-primary)) 70%);
+  --primary-50: color-mix(in oklch, var(--c-bg), var(--primary) 7.5%);
+  --primary-100: color-mix(in oklch, var(--c-bg), var(--primary) 18%);
+  --primary-200: color-mix(in oklch, var(--c-bg), var(--primary) 40%);
+  --primary-300: color-mix(in oklch, var(--c-bg), var(--primary) 60%);
+  --primary-400: color-mix(in oklch, var(--c-bg), var(--primary) 70%);
   --primary-500: var(--primary);
 }
 
