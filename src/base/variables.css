@@ -55,7 +55,7 @@
 
   /* Theme */
   --theme-tint: 165;
-  --theme-primary: 75% 0.16 var(--theme-tint);
+  --theme-primary: 72% 0.15 var(--theme-tint);
 
   /* Default color palette */
   --black: oklch(0% 0 0);
