@@ -9,6 +9,12 @@ nav {
   gap: 1rem;
   padding: 0;
 
+  & > strong:first-child {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+  }
+
   & > ul {
     display: flex;
     flex-direction: column;

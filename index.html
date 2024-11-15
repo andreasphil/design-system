@@ -9,15 +9,16 @@
   <body>
     <header>
       <nav data-variant="fixed">
-        <div class="header-title">
+        <strong>
           <img
             src="./assets/icon-192.png"
-            class="header-logo"
+            class="logo"
             width="36"
             height="36"
-          />
-          <strong>Design System</strong>
-        </div>
+            alt=""
+          />Design System
+        </strong>
+
         <ul>
           <li><a href="#getting-started">Getting started</a></li>
           <li><a href="#colors">Colors</a></li>
@@ -608,21 +609,7 @@
       }
 
       .logo {
-        border-radius: calc(var(--border-radius-large) * 2);
-        box-shadow: var(--shadow-elevation-high);
-        display: block;
-        filter: hue-rotate(calc((var(--theme-tint) - 165) * 1deg));
-        margin: 0 auto;
-      }
-
-      .header-title {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
-
-      .header-logo {
-        border-radius: var(--border-radius-large);
+        border-radius: 30%;
         box-shadow: var(--shadow-elevation-high);
         filter: hue-rotate(calc((var(--theme-tint) - 165) * 1deg));
       }
