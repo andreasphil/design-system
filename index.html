@@ -29,24 +29,23 @@
       </nav>
 
       <main data-trim="both">
-        <div class="home">
+        <hgroup class="home">
           <img
-            class="logo"
             src="./assets/icon-192.png"
+            class="logo"
             width="72"
             height="72"
+            alt=""
           />
-          <hgroup>
-            <h1 id="getting-started">Design System</h1>
-            <p>
-              A small, opinionated CSS framework to make sites look alright with
-              minimal effort. This page is a playground for showcasing the
-              different supported styles. To learn more, check out the
-              repository on
-              <a href="https://github.com/andreasphil/design-system">GitHub</a>.
-            </p>
-          </hgroup>
-        </div>
+          <h1 id="getting-started">Design System</h1>
+          <p>
+            A small, opinionated CSS framework to make sites look alright with
+            minimal effort. This page is a playground for showcasing the
+            different supported styles. To learn more, check out the repository
+            on
+            <a href="https://github.com/andreasphil/design-system">GitHub</a>.
+          </p>
+        </hgroup>
 
         <section>
           <h2 id="colors">Colors</h2>
@@ -543,7 +542,7 @@
 
               <div data-when="loading">
                 <div aria-busy="true"></div>
-                <small>Please wait ...</small>
+                <p>Please wait...</p>
               </div>
 
               <div data-when="error">
@@ -602,9 +601,11 @@
 
       .home {
         text-align: center;
+        margin-bottom: var(--body-padding-y);
 
-        hgroup {
-          margin-bottom: var(--body-padding-y);
+        img {
+          display: block;
+          margin: auto;
         }
       }
 
