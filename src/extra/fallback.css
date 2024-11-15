@@ -40,7 +40,7 @@
 }
 
 /* Display fallback element when content is empty or a state is set manually. */
-[data-with-fallback] > :first-child:empty + [data-when="empty"],
+[data-with-fallback=""] > :first-child:empty + [data-when="empty"],
 [data-with-fallback="empty"] > [data-when="empty"],
 [data-with-fallback="loading"] > [data-when="loading"],
 [data-with-fallback="error"] > [data-when="error"] {
