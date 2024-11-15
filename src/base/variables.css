@@ -68,9 +68,9 @@
   --neutral-400: oklch(78% 0.02 var(--theme-tint));
   --neutral-500: oklch(64% 0.025 var(--theme-tint));
   --neutral-600: oklch(58% 0.02 var(--theme-tint));
-  --neutral-700: oklch(26% 0.012 var(--theme-tint));
-  --neutral-800: oklch(21% 0.011 var(--theme-tint));
-  --neutral-900: oklch(18% 0.01 var(--theme-tint));
+  --neutral-700: oklch(26% 0.018 var(--theme-tint));
+  --neutral-800: oklch(21% 0.018 var(--theme-tint));
+  --neutral-900: oklch(18% 0.012 var(--theme-tint));
   --neutral-950: oklch(14% 0.005 var(--theme-tint));
 
   --primary: oklch(var(--theme-primary));
