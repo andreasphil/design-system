@@ -47,6 +47,10 @@ nav {
     & li > hr:only-child {
       margin: 0.375rem 0;
     }
+
+    & li > :is(button, [role="button"]) {
+      padding: calc(0.25rem - var(--border-width)) 0.5rem;
+    }
   }
 }
 
