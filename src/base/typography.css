@@ -43,10 +43,12 @@ hgroup {
   }
 
   & p:first-child {
-    color: var(--c-fg-variant);
+    color: var(--primary);
     font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 1.1;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
   }
 
   & p + :is(h1, h2, h3, h4, h5, h6) {
