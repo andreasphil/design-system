@@ -83,7 +83,7 @@ header > nav {
     }
   }
 
-  &[data-variant~="fixed"] {
+  &[data-variant="fixed"] {
     background: var(--c-surface-bg);
     box-shadow: var(--shadow-elevation-low);
     flex-wrap: nowrap;
