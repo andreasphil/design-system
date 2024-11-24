@@ -47,4 +47,32 @@ dialog {
   > p {
     margin: 1rem 0;
   }
+
+  /* Animated open & close */
+  &,
+  &::backdrop {
+    opacity: 0;
+    transition: all 0.2s ease allow-discrete;
+  }
+
+  & {
+    scale: 0.95;
+  }
+
+  &[open],
+  &[open]::backdrop {
+    opacity: 1;
+    scale: 1;
+  }
+
+  @starting-style {
+    &[open],
+    &[open]::backdrop {
+      opacity: 0;
+    }
+
+    &[open] {
+      scale: 0.95;
+    }
+  }
 }
