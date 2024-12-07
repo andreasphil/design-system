@@ -1,0 +1,29 @@
+/* -------------------------------------------------- *
+ * Output                                             *
+ * -------------------------------------------------- */
+
+output {
+  border: var(--border-width) solid var(--c-border);
+  border-radius: var(--border-radius);
+  color: var(--c-surface-variant-fg);
+  display: block;
+  padding: 1rem;
+
+  &[data-title]::before {
+    color: var(--c-fg-variant);
+    content: attr(data-title);
+    display: block;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 1.1;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  & :is(code, pre) {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
+}
