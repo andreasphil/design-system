@@ -12,8 +12,6 @@
   </a>
 </p>
 
-> ⚠️ Work in progress. Things are most certainly incomplete and/or broken, and will definitely change.
-
 - 🔥 Embraces semantic HTML to make native elements look great out of the box, without classes
 - 😎 Small set of utilities for additional states and convenience
 - 🐛 Tiny (<6kb min+gzip) footprint with no runtime dependencies or build step required
