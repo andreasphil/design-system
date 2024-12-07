@@ -1,5 +1,5 @@
 /* -------------------------------------------------- *
- * Navbars and -menus                                 *
+ * Tabs                                               *
  * -------------------------------------------------- */
 
 ul[role="tablist"] {
@@ -10,6 +10,10 @@ ul[role="tablist"] {
   display: inline-flex;
   gap: var(--\$tabs-gap);
   padding: 0.25rem;
+
+  &[data-variant="block"] {
+    display: flex;
+  }
 
   & li {
     flex: 1 1 auto;
