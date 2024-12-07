@@ -105,6 +105,10 @@
                 </label>
               </fieldset>
             </form>
+
+            <output data-title="Theme">
+              <pre id="colors-output"></pre>
+            </output>
           </div>
         </section>
 
@@ -643,6 +647,7 @@
         font-size: var(--font-size-small);
         font-weight: var(--font-weight-medium);
         left: 1rem;
+        letter-spacing: 1.1;
         position: absolute;
         text-transform: uppercase;
         top: 1rem;
@@ -695,6 +700,7 @@
        * -------------------------------------------------- */
 
       const colorsForm = document.forms.colors;
+      const colorsOutput = document.getElementById("colors-output");
       const root = document.querySelector(":root");
 
       const state = [
@@ -730,6 +736,17 @@
           ? `${lightness || 1}% ${chroma || 1} ${tint || 1}`
           : "";
         root.style.setProperty("--theme-primary", primary);
+
+        // Update output
+        if (tint && primary) {
+          colorsOutput.textContent = `--theme-tint: ${tint};\n--theme-primary: ${primary};`;
+        } else if (tint) {
+          colorsOutput.textContent = `--theme-tint: ${tint};`;
+        } else if (primary) {
+          colorsOutput.textContent = `--theme-primary: ${primary};`;
+        } else {
+          colorsOutput.textContent = "/* No changes */";
+        }
 
         refreshThemeColor();
       }
