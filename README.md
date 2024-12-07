@@ -71,7 +71,7 @@ For a demo, open [index.html](./index.html) in a browser.
 
 ## Deployment
 
-Deployment should work out of the box when linking the repository to a project on [Netlify](https://netlify.com).
+Deployment should work out of the box on GitHub Pages.
 
 ## Credits
 
