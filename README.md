@@ -6,12 +6,6 @@
   <strong>A small, opinionated CSS framework to make sites look good with minimal effort</strong>
 </p>
 
-<p align="center">
-  <a href="https://app.netlify.com/sites/andreasphil-design-system/deploys" title="Netlify Status">
-    <img src="https://api.netlify.com/api/v1/badges/3c7e430b-7855-4579-adb3-f879918e2ec0/deploy-status" alt="Netlify Status" />
-  </a>
-</p>
-
 - 🔥 Embraces semantic HTML to make native elements look great out of the box, without classes
 - 😎 Small set of utilities for additional states and convenience
 - 🐛 Tiny (<6kb min+gzip) footprint with no runtime dependencies or build step required
@@ -39,7 +33,7 @@ npm install github:andreasphil/design-system#<tag>
 
 ## Usage
 
-Find the demo at <https://design-system.a13i.dev>.
+Find the demo at <https://andreasphil.github.io/design-system/>.
 
 First, import the CSS. I recommend using [layers](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) to avoid conflicts and specificity chaos when customizing.
 
