@@ -84,7 +84,8 @@ header > nav {
   }
 
   &[data-variant="fixed"] {
-    background: var(--c-surface-bg);
+    backdrop-filter: blur(12px) saturate(1.5);
+    background: color-mix(in oklch, var(--c-surface-bg), transparent 10%);
     box-shadow: var(--shadow-elevation-low);
     flex-wrap: nowrap;
     height: var(--nav-height, 5rem);
