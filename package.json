@@ -16,13 +16,13 @@
       "types": "./scripts/utils.d.ts"
     },
     "./style.css": {
-      "import": "./dist/index.min.css"
+      "import": "./dist/design-system.min.css"
     }
   },
   "scripts": {
     "dev": "node ./build --watch",
     "build": "node ./build",
-    "preversion": "pnpm build; git add --force dist/index.min.css"
+    "preversion": "pnpm build; git add --force dist/design-system.min.css"
   },
   "devDependencies": {
     "lightningcss": "^1.28.2"

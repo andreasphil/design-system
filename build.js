@@ -49,7 +49,7 @@ function build() {
     },
   });
 
-  writeFileSync("./dist/index.min.css", Buffer.from(code));
+  writeFileSync("./dist/design-system.min.css", Buffer.from(code));
   console.log("✨ Build done");
 }
 
