@@ -23,10 +23,10 @@
     border-top-color: transparent;
     content: "";
     display: inline-block;
-    height: 1em;
+    height: round(1em, 2px);
     opacity: 1;
-    vertical-align: -0.2em;
-    width: 1em;
+    vertical-align: round(-0.2em, 2px);
+    width: round(1em, 2px);
   }
 }
 

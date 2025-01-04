@@ -3,18 +3,20 @@
  * -------------------------------------------------- */
 
 input[type="checkbox"]:not([role="switch"]) {
+  --\$checkbox-size: round(1.5em, 2px);
+
   -webkit-appearance: none;
   appearance: none;
   font: inherit;
-  background: var(--c-bg) no-repeat center center / 1em;
+  background: var(--c-bg) no-repeat center center / round(1rem, 2px);
   border: var(--border-width) var(--c-border) solid;
   border-radius: var(--border-radius-small);
-  height: 1.5em;
+  height: var(--\$checkbox-size);
   margin: 0 0.5rem 0 0;
   transition: var(--transition);
   transition-property: background-color, border-color, box-shadow;
   vertical-align: bottom;
-  width: 1.5em;
+  width: var(--\$checkbox-size);
 
   &:hover {
     border-color: var(--primary);

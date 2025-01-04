@@ -157,7 +157,7 @@ li {
 :is(a, u, abbr) {
   text-decoration: underline;
   text-decoration-thickness: var(--border-width-large);
-  text-underline-offset: 0.2em;
+  text-underline-offset: round(0.2em, 2px);
 }
 
 abbr {

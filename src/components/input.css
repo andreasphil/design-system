@@ -22,7 +22,7 @@ input:not(
   letter-spacing: inherit;
   margin: 0;
   padding: 0.5rem;
-  padding-left: calc(var(--input-has-icon, 0) * (1.2em + 0.5rem) + 0.5rem);
+  padding-left: calc(var(--input-has-icon, 0) * (1.2em + 0.5rem) + 0.75ch);
   transition: var(--transition);
   transition-property: background-color, border-color, box-shadow, color;
   width: 100%;
