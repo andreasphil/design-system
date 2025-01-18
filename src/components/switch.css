@@ -7,17 +7,13 @@ input[type="checkbox"][role="switch"] {
   --\$switch-padding: var(--border-width-large);
   --\$switch-knob: calc(var(--\$switch-size) - var(--\$switch-padding) * 2);
 
-  -webkit-appearance: none;
-  appearance: none;
   background: var(--c-border);
   border-radius: var(--\$switch-size);
-  font: inherit;
   height: var(--\$switch-size);
-  margin: 0 0.5rem 0 0;
-  outline: none;
+  margin-right: 0.75ch;
   padding: var(--\$switch-padding);
   transition: var(--transition);
-  transition-property: background-color, border-color, box-shadow;
+  transition-property: background-color, border-color;
   vertical-align: bottom;
   width: round(calc(var(--\$switch-size) * 1.666), 2px);
 
@@ -28,7 +24,7 @@ input[type="checkbox"][role="switch"] {
     display: block;
     height: var(--\$switch-knob);
     transition: var(--transition);
-    transition-property: background-color, margin;
+    transition-property: margin;
     width: var(--\$switch-knob);
   }
 

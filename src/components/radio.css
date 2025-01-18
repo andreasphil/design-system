@@ -3,22 +3,16 @@
  * -------------------------------------------------- */
 
 input[type="radio"] {
-  --\$radio-size: round(1.5em, 2px);
-
-  -webkit-appearance: none;
-  appearance: none;
-  font: inherit;
-  outline: none;
   background: var(--c-bg);
-  border: var(--border-width) var(--c-border) solid;
   border-radius: 100%;
-  height: var(--\$radio-size);
-  margin: 0 0.5rem 0 0;
+  border: var(--border-width) var(--c-border) solid;
+  height: round(1.5em, 2px);
+  margin-right: 0.75ch;
   position: relative;
   transition: var(--transition);
-  transition-property: background-color, border-color, box-shadow;
+  transition-property: background-color, border-color;
   vertical-align: bottom;
-  width: var(--\$radio-size);
+  width: round(1.5em, 2px);
 
   &:hover {
     border-color: var(--primary);
@@ -33,13 +27,12 @@ input[type="radio"] {
     background: var(--c-fg);
     border-radius: 100%;
     content: "";
-    height: round(calc(var(--\$radio-size) * 0.375), 2px);
+    height: round(0.375rem, 2px);
     left: 50%;
     position: absolute;
     top: 50%;
-    transition: inherit;
     translate: -50% -50%;
-    width: round(calc(var(--\$radio-size) * 0.375), 2px);
+    width: round(0.375rem, 2px);
   }
 
   &:disabled {

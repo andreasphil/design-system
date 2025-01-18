@@ -3,20 +3,14 @@
  * -------------------------------------------------- */
 
 select {
-  -webkit-appearance: none;
-  appearance: none;
   background: var(--c-bg) var(--icon-chevron) right 0.5em center / 1.2em;
   background-repeat: no-repeat;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--c-border);
-  color: inherit;
-  font: inherit;
-  letter-spacing: inherit;
-  margin: 0;
   padding: 0.5rem;
   padding-right: calc(0.5rem + 0.5rem + 1em);
   transition: var(--transition);
-  transition-property: background-color, border-color, box-shadow, color;
+  transition-property: background-color, border-color, color;
   width: 100%;
 
   &:hover {
@@ -29,7 +23,7 @@ select {
   }
 
   /* Add some spacing between text and select when used in labels */
-  :is(label) > & {
+  :is(label):not(:has([data-hidden]:first-child)) > & {
     margin-top: 0.25rem;
   }
 

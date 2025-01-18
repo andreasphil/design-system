@@ -30,3 +30,11 @@ body {
 ::selection {
   background: var(--primary-300);
 }
+
+:is(button, input, textarea, select) {
+  appearance: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+}

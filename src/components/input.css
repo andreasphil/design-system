@@ -10,22 +10,19 @@ input:not(
     [type="range"],
     [type="image"]
   ) {
-  -webkit-appearance: none;
-  appearance: none;
-  background: var(--input-icon) 0.5rem center / 1.2em no-repeat;
+  background: var(--input-icon, none) 0.5rem center / 1.2em no-repeat;
   background-color: var(--c-bg);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--c-border);
-  caret-color: var(--primary, initial);
-  color: inherit;
-  font: inherit;
-  letter-spacing: inherit;
-  margin: 0;
+  caret-color: var(--primary);
   padding: 0.5rem;
   padding-left: calc(var(--input-has-icon, 0) * (1.2em + 0.5rem) + 0.75ch);
   transition: var(--transition);
-  transition-property: background-color, border-color, box-shadow, color;
+  transition-property: background-color, border-color, color;
   width: 100%;
+
+  /* Manually set the input height because some types have inconsistent height */
+  height: calc(1lh + (0.5rem * 2) + var(--border-width) * 2);
 
   &:hover {
     border-color: var(--primary);
@@ -58,48 +55,33 @@ input:not(
   }
 }
 
-input:is(
-    [type="email"],
-    [type="password"],
-    [type="date"],
-    [type="time"],
-    [type="search"]
-  ),
 input[data-icon] {
   --input-has-icon: 1;
 }
 
 input[type="email"] {
+  --input-has-icon: 1;
   --input-icon: var(--icon-mail);
 }
 
 input[type="password"] {
+  --input-has-icon: 1;
   --input-icon: var(--icon-lock);
 }
 
 input[type="date"] {
+  --input-has-icon: 1;
   --input-icon: var(--icon-calendar);
 }
 
 input[type="time"] {
+  --input-has-icon: 1;
   --input-icon: var(--icon-clock);
 }
 
 input[type="search"] {
+  --input-has-icon: 1;
   --input-icon: var(--icon-search);
-}
-
-input:is([type="date"], [type="time"], [type="datetime-local"]) {
-  /* Make date inputs the same height as others by manually setting the control
-  height (fix for Safari) */
-  --\$input-text-height: calc(var(--line-height) * var(--font-size));
-  --\$input-padding: 0.5rem * 2;
-  --\$input-border-size: calc(var(--border-width) * 2);
-
-  height: calc(
-    var(--\$input-text-height) + var(--\$input-padding) +
-      var(--\$input-border-size)
-  );
 }
 
 textarea {

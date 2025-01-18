@@ -11,28 +11,28 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   --\$button-outline-offset: var(--outline-outset);
   --\$button-hover: color-mix(in srgb, var(--primary), var(--neutral-100) 30%);
 
-  -webkit-appearance: button;
   align-items: center;
-  appearance: button;
-  background: var(--\$button-bg);
+  background-color: var(--\$button-bg);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--\$button-border);
   color: var(--\$button-fg);
   display: inline-flex;
-  font: inherit;
   font-weight: var(--font-weight-medium);
   gap: 0.75ch;
   justify-content: center;
-  letter-spacing: inherit;
-  margin: 0;
   padding: 0.5rem 0.75rem;
-  position: relative;
   text-align: center;
+  text-decoration: none;
   transition: var(--transition);
-  transition-property: background-color, border-color, box-shadow, color;
+  transition-property: background-color, border-color, color;
 
   &:hover {
-    background: var(--\$button-hover);
+    color: var(--\$button-fg);
+    background-color: var(--\$button-hover);
+  }
+
+  &:visited {
+    color: var(--\$button-fg);
   }
 
   &:focus-visible {
@@ -63,14 +63,5 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
     --\$button-fg: var(--c-fg-variant);
     --\$button-hover: var(--c-surface-variant-bg);
     --\$button-outline-offset: var(--outline-inset);
-  }
-}
-
-[role="button"] {
-  text-decoration: none;
-
-  &:hover,
-  &:visited {
-    color: var(--\$button-fg);
   }
 }
