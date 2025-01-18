@@ -21,9 +21,6 @@ input:not(
   transition-property: background-color, border-color, color;
   width: 100%;
 
-  /* Manually set the input height because some types have inconsistent height */
-  height: calc(1lh + (0.5rem * 2) + var(--border-width) * 2);
-
   &:hover {
     border-color: var(--primary);
   }
@@ -53,6 +50,11 @@ input:not(
     display: block;
     margin-top: 0.25rem;
   }
+}
+
+input:is([type="date"], [type="time"], [type="datetime-local"]) {
+  /* Manually set the input height because some types have inconsistent height */
+  height: calc(1lh + (0.5rem * 2) + var(--border-width) * 2);
 }
 
 input[data-icon] {
