@@ -11,7 +11,7 @@ dialog {
   box-shadow: var(--shadow-elevation-high);
   color: var(--c-surface-fg);
   margin: 6rem auto 1rem;
-  padding: var(--\$dialog-padding);
+  padding: 1rem;
   position: fixed;
   width: min(30rem, calc(100dvw - 2rem));
 
@@ -34,10 +34,8 @@ dialog {
     display: flex;
     gap: 0.75rem;
     justify-content: end;
-    margin-left: calc(-1 * var(--\$dialog-padding));
-    margin-right: calc(-1 * var(--\$dialog-padding));
-    margin-top: 1rem;
-    padding: 1rem var(--\$dialog-padding);
+    margin: 1rem -1rem 0;
+    padding: 1rem;
 
     > div:empty {
       flex: 1;
