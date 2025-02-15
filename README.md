@@ -60,11 +60,11 @@ unsubscribe();
 
 ## Development
 
-Design System is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [pnpm](https://pnpm.io). The following commands are available:
+Design System is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [npm](https://npmjs.org). The following commands are available:
 
 ```sh
-pnpm dev          # Compile stylesheets in watch mode
-pnpm build        # Bundle for production
+node --run dev          # Compile stylesheets in watch mode
+node --run build        # Bundle for production
 ```
 
 For a demo, open [index.html](./index.html) in a browser.

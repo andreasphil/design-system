@@ -22,10 +22,9 @@
   "scripts": {
     "dev": "node ./build --watch",
     "build": "node ./build",
-    "preversion": "pnpm build; git add --force dist/design-system.min.css"
+    "preversion": "node --run build; git add --force dist/design-system.min.css"
   },
   "devDependencies": {
-    "lightningcss": "^1.28.2"
-  },
-  "packageManager": "pnpm@9.15.0"
+    "lightningcss": "^1.29.1"
+  }
 }
