@@ -58,6 +58,39 @@ const { unsubscribe } = useThemeColor();
 unsubscribe();
 ```
 
+### Optimizing for different types of websites
+
+The Design System tries to strike a balance between styling that works for app-like experiences, and content-heavy pages. Nevertheless, you might want to apply some tweaks to optimize for one or the other. For example, if you're writing an app, you could apply the following:
+
+```css
+:root {
+  /* remove body size restrictions and centering */
+  --body-padding-x: 0;
+  --body-padding-y: 0;
+  --body-width: auto;
+
+  /* remove almost all outer margins */
+  --block-spacing-y: 0;
+
+  /* Make headings the same size as normal text */
+  --font-size-h1: var(--font-size);
+}
+```
+
+On the other hand, the following would work well for pages with lots of text content:
+
+```css
+:root {
+  /* More spacious text */
+  --h-margin-top: 2rem;
+  --line-height: 1.7;
+
+  /* More visible links */
+  --link-fg: var(--primary);
+  --link-hover-fg: var(--c-fg);
+}
+```
+
 ## Development
 
 Design System is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [npm](https://npmjs.org). The following commands are available:
