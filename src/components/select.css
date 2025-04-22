@@ -1,7 +1,3 @@
-/* -------------------------------------------------- *
- * Select boxes                                       *
- * -------------------------------------------------- */
-
 select {
   background: var(--c-bg) var(--icon-chevron) right 0.5em center / 1.2em;
   background-repeat: no-repeat;

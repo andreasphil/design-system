@@ -1,7 +1,3 @@
-/* -------------------------------------------------- *
- * SVGs                                               *
- * -------------------------------------------------- */
-
 /* Util to make using (especially positioning) SVGs more convenient. This
 covers most of what I use SVGs for, namely icons in various controls,
 but may not be wanted in all cases. Use the [data-svg="false"]

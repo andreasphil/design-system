@@ -1,7 +1,3 @@
-/* -------------------------------------------------- *
- * Switches                                           *
- * -------------------------------------------------- */
-
 input[type="checkbox"][role="switch"] {
   --\$switch-size: round(1.5em, 2px);
   --\$switch-padding: var(--border-width-large);

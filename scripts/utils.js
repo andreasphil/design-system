@@ -1,6 +1,4 @@
-/* -------------------------------------------------- *
- * Theme color management                             *
- * -------------------------------------------------- */
+// Theme color management ---------------------------------
 
 function lookupThemeColor() {
   const dummyEl = document.createElement("div");

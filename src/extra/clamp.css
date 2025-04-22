@@ -1,7 +1,3 @@
-/* -------------------------------------------------- *
- * Line clamping                                      *
- * -------------------------------------------------- */
-
 [data-clamp] {
   display: -webkit-box;
   -webkit-box-orient: vertical;

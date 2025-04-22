@@ -1,7 +1,3 @@
-/* -------------------------------------------------- *
- * Context menu                                       *
- * -------------------------------------------------- */
-
 menu {
   background: var(--c-surface-bg);
   border-radius: var(--border-radius);

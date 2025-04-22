@@ -1,7 +1,3 @@
-/* -------------------------------------------------- *
- * Details/summary                                    *
- * -------------------------------------------------- */
-
 details {
   border-bottom: var(--border-width) solid var(--c-border-variant);
   padding: 1rem 0;

@@ -1,8 +1,3 @@
-/* -------------------------------------------------- *
- * Article (as container that's visually separated    *
- * from the other content)                            *
- * -------------------------------------------------- */
-
 article {
   --\$article-padding: 2rem;
 

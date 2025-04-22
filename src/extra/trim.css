@@ -1,7 +1,3 @@
-/* -------------------------------------------------- *
- * Remove top/bottom margin from the first/last child *
- * -------------------------------------------------- */
-
 [data-trim~="top"],
 [data-trim="both"] {
   > *:first-child {
