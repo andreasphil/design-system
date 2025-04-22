@@ -150,7 +150,7 @@ li {
 
 :is(a, u, abbr) {
   text-decoration: underline;
-  text-decoration-thickness: var(--border-width-large);
+  text-decoration-thickness: var(--border-width);
   text-underline-offset: 2px;
 }
 
@@ -207,17 +207,16 @@ small {
 /* Links ----------------------------------------------- */
 
 a {
-  color: var(--c-fg);
   transition: var(--transition);
-  transition-property: background-color, color, text-decoration-color;
-  text-decoration-color: color-mix(in oklch, currentColor, transparent 70%);
+  transition-property: color, text-decoration-color;
   font-weight: var(--font-weight-medium);
 
+  &,
   &:visited {
-    color: var(--c-fg);
+    color: var(--link-fg, var(--c-fg));
   }
 
   &:hover {
-    color: var(--primary);
+    color: var(--link-hover-fg, var(--primary));
   }
 }
