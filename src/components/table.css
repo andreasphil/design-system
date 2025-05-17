@@ -1,0 +1,28 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-indent: 0;
+  width: 100%;
+
+  th,
+  td {
+    border-bottom: var(--border-width) solid var(--c-border);
+    padding: 0.7rem;
+    text-align: left;
+  }
+
+  thead :is(th) {
+    border-bottom: var(--border-width-large) solid var(--c-border);
+    font-weight: var(--font-weight-medium);
+  }
+
+  tfoot :is(td, th) {
+    border-bottom: none;
+    border-top: var(--border-width-large) solid var(--c-border);
+    font-weight: var(--font-weight-medium);
+  }
+
+  &[data-variant="striped"] tr:nth-child(even) {
+    background-color: var(--neutral-50);
+  }
+}
