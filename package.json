@@ -16,7 +16,8 @@
       "types": "./scripts/utils.d.ts"
     },
     "./style.css": {
-      "import": "./dist/design-system.min.css"
+      "import": "./dist/design-system.min.css",
+      "default": "./dist/design-system.min.css"
     }
   },
   "scripts": {
