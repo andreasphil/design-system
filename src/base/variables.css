@@ -1,6 +1,4 @@
 :root {
-  /* Shared ---------------------------------------------- */
-
   /* Font families */
   --font-family: system-ui, sans-serif;
   --font-family-mono: ui-monospace, Menlo, Consolas, monospace;
@@ -26,6 +24,7 @@
   --body-padding-x: clamp(1rem, 1.495vw + 0.75rem, 2rem);
   --body-padding-y: clamp(2rem, 8.972vw - 0.125rem, 5rem);
   --block-spacing-y: 2rem;
+  --body-width: 50rem;
   --line-height: 1.5;
 
   /* Borders */
@@ -46,8 +45,10 @@
 
   /* Shadows */
   --shadow-elevation-low: 0 0.0625rem 0.125rem 0 var(--c-shadow);
+
   --shadow-elevation-medium: var(--shadow-elevation-low),
     0 0.15rem 0.75rem -0.2rem var(--c-shadow);
+
   --shadow-elevation-high: var(--shadow-elevation-low),
     0 0.3rem 1.5rem -0.3rem var(--c-shadow);
 
@@ -79,19 +80,18 @@
   --primary-300: color-mix(in oklch, var(--c-bg), var(--primary) 60%);
   --primary-400: color-mix(in oklch, var(--c-bg), var(--primary) 70%);
   --primary-500: var(--primary);
-}
 
-/* Dark mode & theming --------------------------------- */
-
-:root {
+  /* Contextual colors */
   --color-scheme: light dark;
   --c-border: light-dark(var(--neutral-200), var(--neutral-700));
   --c-border-variant: light-dark(var(--neutral-100), var(--neutral-800));
   --c-outline: light-dark(var(--primary), var(--primary));
-  --c-shadow: light-dark(var(--neutral-200), var(--c-bg));
+  --c-shadow: light-dark(color-mix(in oklch, var(--neutral-900), transparent 91%), var(--c-bg));
   --c-bg: light-dark(var(--neutral-50), var(--neutral-950));
   --c-fg: light-dark(var(--neutral-950), var(--neutral-50));
   --c-fg-variant: light-dark(var(--neutral-500), var(--neutral-500));
+  --c-link: var(--c-fg);
+  --c-link-hover: var(--primary);
   --c-surface-bg: light-dark(var(--white), var(--neutral-900));
   --c-surface-fg: light-dark(var(--neutral-950), var(--neutral-50));
   --c-surface-variant-bg: light-dark(var(--neutral-100), var(--neutral-800));

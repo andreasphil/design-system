@@ -1,27 +1,27 @@
 input[type="checkbox"][role="switch"] {
-  --\$switch-size: round(1.5em, 2px);
-  --\$switch-padding: var(--border-width-large);
-  --\$switch-knob: calc(var(--\$switch-size) - var(--\$switch-padding) * 2);
+  --internal-size: round(1.5em, 2px);
+  --internal-padding: var(--border-width-large);
+  --internal-knob: calc(var(--internal-size) - var(--internal-padding) * 2);
 
   background: var(--c-border);
-  border-radius: var(--\$switch-size);
-  height: var(--\$switch-size);
+  border-radius: var(--internal-size);
+  height: var(--internal-size);
   margin-right: 0.75ch;
-  padding: var(--\$switch-padding);
+  padding: var(--internal-padding);
   transition: var(--transition);
   transition-property: background-color, border-color;
   vertical-align: bottom;
-  width: round(calc(var(--\$switch-size) * 1.666), 2px);
+  width: round(calc(var(--internal-size) * 1.666), 2px);
 
   &::before {
     background: var(--c-surface-bg);
     border-radius: 100%;
     content: "";
     display: block;
-    height: var(--\$switch-knob);
+    height: var(--internal-knob);
     transition: var(--transition);
     transition-property: margin;
-    width: var(--\$switch-knob);
+    width: var(--internal-knob);
   }
 
   &:focus-visible {
@@ -36,7 +36,7 @@ input[type="checkbox"][role="switch"] {
 
   &:checked::before {
     background: var(--on-primary);
-    margin-left: calc(100% - var(--\$switch-knob));
+    margin-left: calc(100% - var(--internal-knob));
   }
 
   &:disabled {

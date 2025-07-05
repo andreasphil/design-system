@@ -60,6 +60,7 @@ header > nav {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  min-height: 5rem;
   white-space: nowrap;
 
   & > ul {
@@ -79,18 +80,17 @@ header > nav {
   }
 
   &[data-variant="fixed"] {
-    backdrop-filter: blur(12px) saturate(1.5);
-    background: color-mix(in oklch, var(--c-surface-bg), transparent 10%);
+    backdrop-filter: blur(16px) saturate(1.5);
+    background: color-mix(in oklch, var(--c-surface-bg), transparent 20%);
     box-shadow: var(--shadow-elevation-low);
     flex-wrap: nowrap;
-    height: var(--nav-height, 5rem);
     left: 0;
     overflow: auto;
     padding: 0 var(--body-padding-x);
     position: fixed;
     right: 0;
     top: 0;
-    z-index: var(--nav-z-index, 10);
+    z-index: 10;
 
     & ul {
       flex-wrap: nowrap;
@@ -101,5 +101,5 @@ header > nav {
 
 /* Automatically increase body padding if it has a fixed nav */
 body:has(nav[data-variant="fixed"]) {
-  padding-top: calc(var(--body-padding-y) + var(--nav-height, 5rem));
+  padding-top: calc(var(--body-padding-y) + 5rem);
 }

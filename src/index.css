@@ -1,33 +1,30 @@
 /* Basic page setup & layouts */
+@import "./base/base.css";
 @import "./base/icons.css";
-@import "./base/scaffold.css";
-@import "./base/svg.css";
-@import "./base/typography.css";
 @import "./base/variables.css";
 
-/* UI components */
-@import "./components/article.css";
-@import "./components/button.css";
-@import "./components/checkbox.css";
-@import "./components/details.css";
-@import "./components/dialog.css";
-@import "./components/fieldset.css";
-@import "./components/input.css";
-@import "./components/menu.css";
-@import "./components/nav.css";
-@import "./components/output.css";
-@import "./components/radio.css";
-@import "./components/select.css";
-@import "./components/switch.css";
-@import "./components/table.css";
-@import "./components/tabs.css";
+/* UI blocks */
+@import "./blocks/article.css";
+@import "./blocks/button.css";
+@import "./blocks/checkbox.css";
+@import "./blocks/details.css";
+@import "./blocks/dialog.css";
+@import "./blocks/fieldset.css";
+@import "./blocks/hgroup.css";
+@import "./blocks/input.css";
+@import "./blocks/menu.css";
+@import "./blocks/nav.css";
+@import "./blocks/output.css";
+@import "./blocks/radio.css";
+@import "./blocks/select.css";
+@import "./blocks/switch.css";
+@import "./blocks/table.css";
+@import "./blocks/tabs.css";
 
-/* Additional utilities and components that go beyond simple styling of
-standard elements */
-@import "./extra/clamp.css";
-@import "./extra/color-scheme.css";
-@import "./extra/fallback.css";
-@import "./extra/spinner.css";
-@import "./extra/tooltip.css";
-@import "./extra/trim.css";
-@import "./extra/visually-hidden.css";
+/* Utilities */
+@import "./utils/clamp.css";
+@import "./utils/fallback.css";
+@import "./utils/spinner.css";
+@import "./utils/tooltip.css";
+@import "./utils/trim.css";
+@import "./utils/visually-hidden.css";

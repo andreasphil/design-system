@@ -1,9 +1,55 @@
+:root {
+  color-scheme: var(--color-scheme);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  outline-color: var(--c-outline);
+}
+
+body {
+  background: var(--c-bg);
+  color: var(--c-fg);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  margin: auto;
+  max-width: var(--body-width);
+  padding: var(--body-padding-y) var(--body-padding-x);
+  tab-size: 4;
+}
+
+::selection {
+  background: var(--primary-300);
+}
+
+:is(button, input, textarea, select) {
+  appearance: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+}
+
+svg {
+  color: currentColor;
+  display: block;
+  flex: none;
+  height: 1.2em;
+  width: auto;
+}
+
 /* Headings -------------------------------------------- */
 
 :is(h1, h2, h3, h4, h5, h6) {
   line-height: 1.2;
-  margin-top: var(--h-margin-top, var(--block-spacing-y));
-  margin-bottom: var(--h-margin-bottom, var(--block-spacing-y));
+  margin-top: var(--block-spacing-y);
+  margin-bottom: var(--block-spacing-y);
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 h1 {
@@ -30,42 +76,6 @@ h6 {
   font-size: var(--font-size-h6);
 }
 
-hgroup {
-  margin: var(--block-spacing-y) 0;
-
-  & > :first-child {
-    margin-top: 0;
-  }
-
-  & > :last-child {
-    margin-bottom: 0;
-  }
-
-  & p:first-child {
-    color: var(--primary);
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-medium);
-    letter-spacing: 1.1;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-  }
-
-  & p + :is(h1, h2, h3, h4, h5, h6) {
-    margin-top: 0.5rem;
-  }
-
-  :first-child:is(h1, h2, h3, h4, h5, h6),
-  :is(h1, h2, h3, h4, h5, h6):not(:last-child) {
-    margin-bottom: 0.75rem;
-  }
-
-  :is(h1, h2, h3, h4, h5, h6) + p {
-    margin-top: 0.75rem;
-    font-size: var(--font-size-h5);
-    color: var(--c-fg-variant);
-  }
-}
-
 /* Block typography elements --------------------------- */
 
 :is(p, pre, hr, blockquote, figure) {
@@ -75,6 +85,10 @@ hgroup {
 :is(code, kbd, pre) {
   font-family: var(--font-family-mono);
   font-size: var(--font-size-mono);
+}
+
+p {
+  overflow-wrap: break-word;
 }
 
 pre {
@@ -175,21 +189,6 @@ cite {
   font-style: normal;
 }
 
-mark {
-  background: var(--c-mark-bg, gold);
-  color: var(--c-mark-fg, sienna);
-}
-
-ins {
-  background: var(--c-ins-bg, mediumspringgreen);
-  color: var(--c-ins-fg, darkgreen);
-}
-
-del {
-  background: var(--c-del-bg, coral);
-  color: var(--c-del-fg, darkred);
-}
-
 kbd {
   background: var(--c-fg);
   color: var(--c-bg);
@@ -197,6 +196,10 @@ kbd {
 
 small {
   font-size: var(--font-size-small);
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
 }
 
 :is(sup, sub) {
@@ -208,14 +211,13 @@ small {
 a {
   transition: var(--transition);
   transition-property: color, text-decoration-color;
-  font-weight: var(--font-weight-medium);
 
   &,
   &:visited {
-    color: var(--link-fg, var(--c-fg));
+    color: var(--c-link);
   }
 
   &:hover {
-    color: var(--link-hover-fg, var(--primary));
+    color: var(--c-link-hover);
   }
 }

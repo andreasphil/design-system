@@ -1,5 +1,5 @@
 dialog {
-  --\$dialog-padding: 1rem;
+  --internal-padding: 1rem;
 
   background: var(--c-surface-bg);
   border-radius: var(--border-radius-large);

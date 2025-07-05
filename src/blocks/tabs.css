@@ -1,10 +1,10 @@
 ul[role="tablist"] {
-  --\$tabs-gap: 0.25rem;
+  --internal-gap: 0.25rem;
 
   background: var(--c-border-variant);
   border-radius: var(--border-radius);
   display: inline-flex;
-  gap: var(--\$tabs-gap);
+  gap: var(--internal-gap);
   padding: 0.25rem;
 
   &[data-variant="block"] {
@@ -25,7 +25,7 @@ ul[role="tablist"] {
     bottom: 0.5rem;
     content: "";
     display: block;
-    left: calc((var(--\$tabs-gap) + var(--border-width-large)) / -2);
+    left: calc((var(--internal-gap) + var(--border-width-large)) / -2);
     position: absolute;
     top: 0.5rem;
     width: var(--border-width-large);

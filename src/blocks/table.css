@@ -21,8 +21,4 @@ table {
     border-top: var(--border-width-large) solid var(--c-border);
     font-weight: var(--font-weight-medium);
   }
-
-  &[data-variant="striped"] tr:nth-child(even) {
-    background-color: var(--neutral-50);
-  }
 }

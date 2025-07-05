@@ -1,5 +1,5 @@
 article {
-  --\$article-padding: 2rem;
+  --internal-padding: 2rem;
 
   background: var(--c-surface-bg);
   border-radius: var(--border-radius-large);
@@ -7,7 +7,7 @@ article {
   color: var(--c-surface-fg);
   margin: var(--block-spacing-y) 0;
   overflow: hidden;
-  padding: var(--\$article-padding);
+  padding: var(--internal-padding);
 
   > :first-child {
     margin-top: 0;
@@ -18,7 +18,7 @@ article {
   }
 
   > :is(hr) {
-    margin-left: calc(-1 * var(--\$article-padding));
-    margin-right: calc(-1 * var(--\$article-padding));
+    margin-left: calc(-1 * var(--internal-padding));
+    margin-right: calc(-1 * var(--internal-padding));
   }
 }

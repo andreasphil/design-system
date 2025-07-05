@@ -23,8 +23,8 @@
           <li><a href="#getting-started">Getting started</a></li>
           <li><a href="#colors">Colors</a></li>
           <li><a href="#base">Base</a></li>
-          <li><a href="#components">Components</a></li>
-          <li><a href="#extra">Extra</a></li>
+          <li><a href="#blocks">Blocks</a></li>
+          <li><a href="#utils">Utils</a></li>
         </ul>
       </nav>
 
@@ -126,9 +126,6 @@
             <small>Small</small>
             <span><code>code();</code></span>
             <span><kbd>Keyboard</kbd></span>
-            <span><mark>Marked</mark></span>
-            <span><del>Deleted</del></span>
-            <span><ins>Inserted</ins></span>
           </div>
 
           <div class="example" data-title="Headings">
@@ -178,7 +175,7 @@
         </section>
 
         <section>
-          <h2 id="components">Components</h2>
+          <h2 id="blocks">Blocks</h2>
 
           <div class="example grid-auto" data-title="Buttons">
             <button>Primary</button>
@@ -466,7 +463,6 @@
               <li><button>Menu item</button></li>
               <li>Section</li>
               <li><button>Menu item</button></li>
-              <li><button data-active="true">Active menu item</button></li>
             </menu>
           </div>
 
@@ -489,7 +485,7 @@
           </div>
 
           <div class="example" data-title="Tables">
-            <table data-variant="striped">
+            <table>
               <thead>
                 <tr>
                   <th>Column 1</th>
@@ -536,22 +532,7 @@
         </section>
 
         <section>
-          <h2 id="extra">Extra</h2>
-
-          <div class="example grid-auto" data-title="Shadows">
-            <div
-              class="shadow"
-              style="--shadow: var(--shadow-elevation-low)"
-            ></div>
-            <div
-              class="shadow"
-              style="--shadow: var(--shadow-elevation-medium)"
-            ></div>
-            <div
-              class="shadow"
-              style="--shadow: var(--shadow-elevation-high)"
-            ></div>
-          </div>
+          <h2 id="utils">Utils</h2>
 
           <div class="example" style="text-align: center" data-title="Spinner">
             <div aria-busy="true"></div>
@@ -598,34 +579,22 @@
             </div>
           </div>
 
-          <div class="example grid-auto" data-title="Color Scheme">
-            <div class="color-scheme" data-color-scheme="light">
-              Always in light mode
-            </div>
-            <div class="color-scheme" data-color-scheme="dark">
-              Always in dark mode
-            </div>
-            <div class="color-scheme" data-color-scheme="inverted">
-              Inverted
-            </div>
-          </div>
-
           <div class="example" data-title="Line clamp">
-            <p data-clamp="1">
+            <p data-clamp>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae
               sequi. Accusamus quaerat sed cum magni dolorem earum perferendis
               mollitia veritatis autem odit amet placeat, vel voluptas, debitis
               eligendi libero temporibus dolore similique?
             </p>
-            <p data-clamp="2">
+            <p data-clamp style="--clamp: 2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae
               sequi. Accusamus quaerat sed cum magni dolorem earum perferendis
               mollitia veritatis autem odit amet placeat, vel voluptas, debitis
               eligendi libero temporibus dolore similique?
             </p>
-            <p data-clamp="3">
+            <p data-clamp style="--clamp: 3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae
               sequi. Accusamus quaerat sed cum magni dolorem earum perferendis
@@ -700,24 +669,16 @@
         margin-bottom: 0;
       }
 
-      .shadow {
-        box-shadow: var(--shadow);
-        border-radius: var(--border-radius);
-        flex: 1 1 0;
-        height: 4rem;
-        background: var(--c-surface-bg);
-      }
-
       .palette {
         display: flex;
         gap: 0.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
       .palette__item {
+        aspect-ratio: 5/4;
         background: var(--bg);
         border-radius: var(--border-radius);
         flex: 1 1 0;
-        height: 3rem;
         transition: background-color var(--transition);
       }
 
@@ -808,7 +769,7 @@
       const fallbackEl = document.querySelector("[data-with-fallback]");
 
       const fallbackContentEl = document.querySelector(
-        "[data-with-fallback] > :first-child",
+        "[data-with-fallback] > :first-child"
       );
 
       fallbackStateForm.addEventListener("change", (event) => {
