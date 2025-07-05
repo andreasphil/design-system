@@ -1,0 +1,21 @@
+.glowicon {
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: attr(data-icon);
+    filter: blur(12px) saturate(1.5) brightness(1.25);
+    font-size: inherit;
+    inset: 0;
+    line-height: inherit;
+    opacity: 0.75;
+    position: absolute;
+    z-index: -1;
+  }
+  @media (prefers-color-scheme: dark) {
+    .glowicon::after {
+      filter: blur(12px) saturate(1.5) brightness(0.75);
+    }
+  }
+}
