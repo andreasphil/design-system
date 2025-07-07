@@ -25,6 +25,10 @@ menu {
     width: 100%;
   }
 
+  & button[data-active="true"] {
+    --internal-bg: var(--c-surface-variant-bg);
+  }
+
   & li {
     padding: 0 0.5rem;
     position: relative;
