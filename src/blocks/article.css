@@ -18,7 +18,6 @@ article {
   }
 
   > :is(hr) {
-    margin-left: calc(-1 * var(--internal-padding));
-    margin-right: calc(-1 * var(--internal-padding));
+    margin: var(--internal-padding) calc(-1 * var(--internal-padding));
   }
 }
