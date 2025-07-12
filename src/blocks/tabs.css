@@ -4,6 +4,7 @@ ul[role="tablist"] {
   background: var(--c-border-variant);
   border-radius: var(--border-radius);
   display: inline-flex;
+  font-weight: var(--font-weight-medium);
   gap: var(--internal-gap);
   padding: 0.25rem;
 
