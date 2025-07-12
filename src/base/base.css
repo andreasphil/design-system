@@ -23,7 +23,7 @@ body {
 }
 
 ::selection {
-  background: var(--primary-300);
+  background: var(--primary-200);
 }
 
 :is(button, input, textarea, select) {
