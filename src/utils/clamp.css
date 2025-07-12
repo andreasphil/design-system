@@ -1,6 +1,0 @@
-[data-clamp] {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: var(--clamp, 1);
-  overflow: hidden;
-}

@@ -12,7 +12,7 @@
         <strong>
           <img
             src="./assets/icon-192.png"
-            class="logo"
+            class="logo rounded-squircle shadow-high"
             width="36"
             height="36"
             alt=""
@@ -28,11 +28,11 @@
         </ul>
       </nav>
 
-      <main data-trim="both">
-        <hgroup class="home">
+      <main class="trim">
+        <hgroup class="text-center margin-y-body">
           <img
             src="./assets/icon-192.png"
-            class="logo"
+            class="logo rounded-squircle shadow-high"
             width="72"
             height="72"
             alt=""
@@ -78,7 +78,7 @@
           </div>
 
           <div class="example" data-title="Colors">
-            <form name="colors" data-trim="both">
+            <form name="colors" class="trim">
               <fieldset class="grid-auto">
                 <label>
                   Tint
@@ -558,7 +558,7 @@
           </div>
 
           <div class="example" data-title="Fallback states">
-            <form name="fallbackState" data-trim="both">
+            <form name="fallbackState">
               <label>
                 Select a state
                 <select name="state">
@@ -595,21 +595,21 @@
           </div>
 
           <div class="example" data-title="Line clamp">
-            <p data-clamp>
+            <p class="clamp">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae
               sequi. Accusamus quaerat sed cum magni dolorem earum perferendis
               mollitia veritatis autem odit amet placeat, vel voluptas, debitis
               eligendi libero temporibus dolore similique?
             </p>
-            <p data-clamp style="--clamp: 2">
+            <p class="clamp" style="--clamp: 2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae
               sequi. Accusamus quaerat sed cum magni dolorem earum perferendis
               mollitia veritatis autem odit amet placeat, vel voluptas, debitis
               eligendi libero temporibus dolore similique?
             </p>
-            <p data-clamp style="--clamp: 3">
+            <p class="clamp" style="--clamp: 3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae
               sequi. Accusamus quaerat sed cum magni dolorem earum perferendis
@@ -639,8 +639,6 @@
       }
 
       .logo {
-        border-radius: 30%;
-        box-shadow: var(--shadow-elevation-high);
         filter: hue-rotate(calc((var(--theme-tint) - 165) * 1deg));
       }
 
@@ -708,6 +706,7 @@
 
       .icons {
         display: flex;
+        flex-wrap: wrap;
         font-size: var(--font-size-h3);
         gap: 1.5rem;
         margin-bottom: 0.5rem;

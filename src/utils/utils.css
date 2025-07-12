@@ -1,0 +1,206 @@
+/* Typography ------------------------------------------ */
+
+.font-mono {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-mono);
+}
+
+.font-size-base {
+  font-size: var(--font-size);
+}
+
+.font-size-small {
+  font-size: var(--font-size-small);
+}
+
+.font-size-h6 {
+  font-size: var(--font-size-h6);
+}
+
+.font-size-h5 {
+  font-size: var(--font-size-h5);
+}
+
+.font-size-h4 {
+  font-size: var(--font-size-h4);
+}
+
+.font-size-h3 {
+  font-size: var(--font-size-h3);
+}
+
+.font-size-h2 {
+  font-size: var(--font-size-h2);
+}
+
+.font-size-h1 {
+  font-size: var(--font-size-h1);
+}
+
+.font-weight-normal {
+  font-weight: --font-weight-normal;
+}
+
+.font-weight-medium {
+  font-weight: --font-weight-medium;
+}
+
+.font-weight-bold {
+  font-weight: --font-weight-bold;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--clamp, 1);
+  overflow: hidden;
+}
+
+/* Colors ---------------------------------------------- */
+
+.color-base {
+  color: var(--c-fg);
+}
+
+.color-variant {
+  color: var(--c-fg-variant);
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.background {
+  background-color: var(--c-bg);
+  color: var(--c-fg);
+}
+
+.surface {
+  background-color: var(--c-surface-bg);
+  color: var(--c-surface-fg);
+}
+
+.surface-variant {
+  background-color: var(--c-surface-variant-bg);
+  color: var(--c-surface-variant-fg);
+}
+
+/* Shadows --------------------------------------------- */
+
+.no-shadow {
+  box-shadow: none;
+}
+
+.shadow-low {
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.shadow-medium {
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.shadow-high {
+  box-shadow: var(--shadow-elevation-high);
+}
+
+/* Borders --------------------------------------------- */
+
+.no-rounded {
+  border-radius: 0;
+}
+
+.rounded-small {
+  border-radius: var(--border-radius-small);
+}
+
+.rounded {
+  border-radius: var(--border-radius);
+}
+
+.rounded-large {
+  border-radius: var(--border-radius-large);
+}
+
+.rounded-squircle {
+  border-radius: 30%;
+}
+
+.no-border {
+  border: none;
+}
+
+.border {
+  border: var(--border-width) solid var(--c-border);
+}
+
+.border-variant {
+  border: var(--border-width) solid var(--c-border-variant);
+}
+
+.border-large {
+  border-width: var(--border-width-large);
+}
+
+/* Spacing --------------------------------------------- */
+
+.trim,
+.trim-block-start {
+  > :first-child {
+    margin-block-start: 0;
+  }
+}
+
+.trim,
+.trim-block-end {
+  > :last-child {
+    margin-block-end: 0;
+  }
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-y-body {
+  margin-block-start: var(--body-padding-y);
+  margin-block-end: var(--body-padding-y);
+}
+
+.margin-y-outer-spacing {
+  margin-block-start: var(--outer-spacing-y);
+  margin-block-end: var(--outer-spacing-y);
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.padding-y-body {
+  padding-block-start: var(--body-padding-y);
+  padding-block-end: var(--body-padding-y);
+}
+
+/* Display --------------------------------------------- */
+
+.visually-hidden:not(:focus):not(:active) {
+  /* See https://www.a11yproject.com/posts/how-to-hide-content/ */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

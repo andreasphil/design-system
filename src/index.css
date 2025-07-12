@@ -23,9 +23,7 @@
 @import "./blocks/tabs.css";
 
 /* Utilities */
-@import "./utils/clamp.css";
 @import "./utils/fallback.css";
 @import "./utils/spinner.css";
 @import "./utils/tooltip.css";
-@import "./utils/trim.css";
-@import "./utils/visually-hidden.css";
+@import "./utils/utils.css";
