@@ -46,8 +46,7 @@ svg {
 
 :is(h1, h2, h3, h4, h5, h6) {
   line-height: 1.2;
-  margin-top: var(--block-spacing-y);
-  margin-bottom: var(--block-spacing-y);
+  margin: var(--block-spacing-y) 0;
   overflow-wrap: break-word;
   text-wrap: balance;
 }
