@@ -1,5 +1,5 @@
 menu {
-  background: light-dark(var(--c-surface-bg), var(--c-surface-variant-bg));
+  background: var(--c-surface-bg);
   border-radius: var(--border-radius);
   border: none;
   box-shadow: var(--shadow-elevation-medium);
@@ -15,10 +15,7 @@ menu {
     --internal-bg: transparent;
     --internal-fg: var(--c-fg);
     --internal-outline-offset: var(--outline-inset);
-    --internal-hover: light-dark(
-      var(--c-surface-variant-bg),
-      var(--c-surface-bg)
-    );
+    --internal-hover: var(--c-surface-variant-bg);
 
     justify-content: flex-start;
     padding: 0.375rem 0.5rem;
