@@ -52,6 +52,7 @@ nav {
     }
 
     & li > :is(button, [role="button"]) {
+      flex: none;
       padding: calc(0.25rem - var(--border-width)) 0.5rem;
     }
   }
@@ -61,7 +62,6 @@ header > nav {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 5rem;
   white-space: nowrap;
 
   & > ul {
@@ -74,7 +74,7 @@ header > nav {
 
     & li > hr:only-child {
       border-top-width: 0;
-      border-left-width: var(--border-width);
+      border-left-width: var(--border-width-large);
       height: 1.5em;
       margin: 0 0.375rem;
     }
@@ -85,6 +85,7 @@ header > nav {
     background: color-mix(in oklch, var(--c-surface-bg), transparent 20%);
     box-shadow: var(--shadow-elevation-low);
     flex-wrap: nowrap;
+    height: 5rem;
     left: 0;
     overflow: auto;
     padding: 0 var(--body-padding-x);
@@ -97,6 +98,11 @@ header > nav {
       flex-wrap: nowrap;
       margin: 0;
     }
+  }
+
+  &:not([data-variant="fixed"]) {
+    margin-top: var(--block-spacing-y);
+    margin-bottom: var(--block-spacing-y);
   }
 }
 
