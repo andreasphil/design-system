@@ -63,14 +63,14 @@
   --neutral-50: oklch(99% 0.001 var(--theme-tint));
   --neutral-100: oklch(97% 0.003 var(--theme-tint));
   --neutral-200: oklch(92% 0.008 var(--theme-tint));
-  --neutral-300: oklch(88% 0.012 var(--theme-tint));
-  --neutral-400: oklch(78% 0.02 var(--theme-tint));
-  --neutral-500: oklch(64% 0.025 var(--theme-tint));
-  --neutral-600: oklch(58% 0.02 var(--theme-tint));
-  --neutral-700: oklch(26% 0.018 var(--theme-tint));
-  --neutral-800: oklch(22% 0.018 var(--theme-tint));
-  --neutral-900: oklch(18% 0.012 var(--theme-tint));
-  --neutral-950: oklch(14% 0.005 var(--theme-tint));
+  --neutral-300: oklch(87% 0.012 var(--theme-tint));
+  --neutral-400: oklch(70% 0.02 var(--theme-tint));
+  --neutral-500: oklch(55% 0.025 var(--theme-tint));
+  --neutral-600: oklch(45% 0.02 var(--theme-tint));
+  --neutral-700: oklch(35% 0.012 var(--theme-tint));
+  --neutral-800: oklch(24% 0.012 var(--theme-tint));
+  --neutral-900: oklch(18% 0.008 var(--theme-tint));
+  --neutral-950: oklch(13% 0.003 var(--theme-tint));
 
   --primary: oklch(var(--theme-primary));
   --on-primary: var(--white);
@@ -89,7 +89,7 @@
   --c-shadow: light-dark(color-mix(in oklch, var(--neutral-900), transparent 91%), var(--c-bg));
   --c-bg: light-dark(var(--neutral-50), var(--neutral-950));
   --c-fg: light-dark(var(--neutral-950), var(--neutral-50));
-  --c-fg-variant: light-dark(var(--neutral-500), var(--neutral-500));
+  --c-fg-variant: light-dark(var(--neutral-400), var(--neutral-500));
   --c-link: var(--c-fg);
   --c-link-hover: var(--primary);
   --c-surface-bg: light-dark(var(--white), var(--neutral-900));
