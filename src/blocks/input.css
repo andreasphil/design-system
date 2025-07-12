@@ -79,6 +79,7 @@ input[type="search"] {
 }
 
 textarea {
+  display: block;
   resize: vertical;
 
   &[no-resize] {
