@@ -3,24 +3,24 @@
 @import "./base/icons.css";
 @import "./base/variables.css";
 
-/* UI blocks */
-@import "./blocks/article.css";
-@import "./blocks/button.css";
-@import "./blocks/checkbox.css";
-@import "./blocks/details.css";
-@import "./blocks/dialog.css";
-@import "./blocks/fieldset.css";
-@import "./blocks/glowicon.css";
-@import "./blocks/hgroup.css";
-@import "./blocks/input.css";
-@import "./blocks/menu.css";
-@import "./blocks/nav.css";
-@import "./blocks/output.css";
-@import "./blocks/radio.css";
-@import "./blocks/select.css";
-@import "./blocks/switch.css";
-@import "./blocks/table.css";
-@import "./blocks/tabs.css";
+/* UI components */
+@import "./components/article.css";
+@import "./components/button.css";
+@import "./components/checkbox.css";
+@import "./components/details.css";
+@import "./components/dialog.css";
+@import "./components/fieldset.css";
+@import "./components/glowicon.css";
+@import "./components/hgroup.css";
+@import "./components/input.css";
+@import "./components/menu.css";
+@import "./components/nav.css";
+@import "./components/output.css";
+@import "./components/radio.css";
+@import "./components/select.css";
+@import "./components/switch.css";
+@import "./components/table.css";
+@import "./components/tabs.css";
 
 /* Utilities */
 @import "./utils/fallback.css";
