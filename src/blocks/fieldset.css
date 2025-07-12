@@ -1,6 +1,6 @@
 fieldset {
   border: none;
-  margin: var(--block-spacing-y) 0;
+  margin: var(--outer-spacing-y) 0;
   padding: 0;
 
   & legend {

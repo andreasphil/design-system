@@ -23,7 +23,7 @@
   /* Calculated with https://andreasphil.github.io/clamp/ */
   --body-padding-x: clamp(1rem, 1.495vw + 0.75rem, 2rem);
   --body-padding-y: clamp(2rem, 8.972vw - 0.125rem, 5rem);
-  --block-spacing-y: 2rem;
+  --outer-spacing-y: 2rem;
   --body-width: 50rem;
   --line-height: 1.5;
 

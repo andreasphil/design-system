@@ -46,7 +46,7 @@ svg {
 
 :is(h1, h2, h3, h4, h5, h6) {
   line-height: 1.2;
-  margin: var(--block-spacing-y) 0;
+  margin: var(--outer-spacing-y) 0;
   overflow-wrap: break-word;
   text-wrap: balance;
 }
@@ -78,7 +78,7 @@ h6 {
 /* Block typography elements --------------------------- */
 
 :is(p, pre, hr, blockquote, figure) {
-  margin: var(--block-spacing-y) 0;
+  margin: var(--outer-spacing-y) 0;
 }
 
 :is(code, kbd, pre) {
@@ -128,7 +128,7 @@ figure > blockquote {
     border-left: 0.25rem solid var(--c-border-variant);
     color: var(--c-fg-variant);
     font-size: var(--font-size-small);
-    margin-bottom: var(--block-spacing-y);
+    margin-bottom: var(--outer-spacing-y);
     padding: 0 1rem 0.5rem;
   }
 }
@@ -136,7 +136,7 @@ figure > blockquote {
 /* Lists ----------------------------------------------- */
 
 :is(ol, ul, dl) {
-  margin: var(--block-spacing-y) 0;
+  margin: var(--outer-spacing-y) 0;
 
   :is(ol, ul, dl) {
     margin-bottom: 0;

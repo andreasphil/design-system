@@ -5,7 +5,7 @@ article {
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow-elevation-high);
   color: var(--c-surface-fg);
-  margin: var(--block-spacing-y) 0;
+  margin: var(--outer-spacing-y) 0;
   overflow: hidden;
   padding: var(--internal-padding);
 

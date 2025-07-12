@@ -3,7 +3,7 @@ output {
   border-radius: var(--border-radius);
   color: var(--c-surface-variant-fg);
   display: block;
-  margin: var(--block-spacing-y) 0;
+  margin: var(--outer-spacing-y) 0;
   padding: 1rem;
 
   &[data-title]::before {

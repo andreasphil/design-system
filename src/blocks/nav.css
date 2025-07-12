@@ -101,8 +101,8 @@ header > nav {
   }
 
   &:not([data-variant="fixed"]) {
-    margin-top: var(--block-spacing-y);
-    margin-bottom: var(--block-spacing-y);
+    margin-top: var(--outer-spacing-y);
+    margin-bottom: var(--outer-spacing-y);
   }
 }
 
