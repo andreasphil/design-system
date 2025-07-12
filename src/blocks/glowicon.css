@@ -13,9 +13,10 @@
     position: absolute;
     z-index: -1;
   }
-  @media (prefers-color-scheme: dark) {
-    .glowicon::after {
-      filter: blur(12px) saturate(1.5) brightness(0.75);
-    }
+}
+
+@media (prefers-color-scheme: dark) {
+  .glowicon::after {
+    filter: blur(12px) saturate(1.5) brightness(0.75);
   }
 }
