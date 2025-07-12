@@ -38,7 +38,7 @@ nav {
         outline: var(--outline);
       }
 
-      &[data-active="true"] {
+      &[active="true"] {
         background: var(--c-surface-variant-bg);
       }
 
@@ -80,7 +80,7 @@ header > nav {
     }
   }
 
-  &[data-variant="fixed"] {
+  &[fixed] {
     backdrop-filter: blur(16px) saturate(1.5);
     background: color-mix(in oklch, var(--c-surface-bg), transparent 20%);
     box-shadow: var(--shadow-elevation-low);
@@ -100,13 +100,13 @@ header > nav {
     }
   }
 
-  &:not([data-variant="fixed"]) {
+  &:not([fixed]) {
     margin-top: var(--outer-spacing-y);
     margin-bottom: var(--outer-spacing-y);
   }
 }
 
 /* Automatically increase body padding if it has a fixed nav */
-body:has(nav[data-variant="fixed"]) {
+body:has(nav[fixed]) {
   padding-top: calc(var(--body-padding-y) + 5rem);
 }

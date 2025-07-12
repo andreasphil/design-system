@@ -8,10 +8,6 @@ ul[role="tablist"] {
   gap: var(--internal-gap);
   padding: 0.25rem;
 
-  &[data-variant="block"] {
-    display: flex;
-  }
-
   & li {
     flex: 1 1 auto;
     list-style-type: none;
@@ -20,8 +16,8 @@ ul[role="tablist"] {
   }
 
   &
-    li:not(:has([data-active="true"]))
-    + li:not(:has([data-active="true"]))::before {
+    li:not(:has([active="true"]))
+    + li:not(:has([active="true"]))::before {
     background: var(--c-border);
     bottom: 0.5rem;
     content: "";
@@ -44,7 +40,7 @@ ul[role="tablist"] {
       outline: var(--outline);
     }
 
-    &[data-active="true"] {
+    &[active="true"] {
       background: var(--c-surface-bg);
       box-shadow: var(--shadow-elevation-low);
     }
@@ -52,7 +48,7 @@ ul[role="tablist"] {
 }
 
 @media (prefers-color-scheme: dark) {
-  ul[role="tablist"] a[data-active="true"] {
+  ul[role="tablist"] a[active="true"] {
     box-shadow: none;
   }
 }

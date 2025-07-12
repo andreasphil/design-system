@@ -40,21 +40,21 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
     opacity: var(--disabled-opacity);
   }
 
-  &[data-variant="outline"] {
+  &[variant="outline"] {
     --internal-bg: transparent;
     --internal-fg: var(--primary);
     --internal-border: currentColor;
     --internal-hover: var(--primary-100);
   }
 
-  &[data-variant="ghost"] {
+  &[variant="ghost"] {
     --internal-bg: transparent;
     --internal-fg: var(--primary);
     --internal-hover: var(--primary-100);
     --internal-outline-offset: var(--outline-inset);
   }
 
-  &[data-variant="muted"] {
+  &[variant="muted"] {
     --internal-bg: transparent;
     --internal-fg: var(--c-fg-variant);
     --internal-hover: var(--c-surface-variant-bg);

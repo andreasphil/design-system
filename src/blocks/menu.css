@@ -22,7 +22,7 @@ menu {
     width: 100%;
   }
 
-  & button[data-active="true"] {
+  & button[active="true"] {
     --internal-bg: var(--c-surface-variant-bg);
   }
 

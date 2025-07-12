@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <nav data-variant="fixed">
+      <nav fixed>
         <strong>
           <img
             src="./assets/icon-192.png"
@@ -179,16 +179,16 @@
 
           <div class="example grid-auto" data-title="Buttons">
             <button>Primary</button>
-            <button data-variant="outline">Outline</button>
-            <button data-variant="ghost">Ghost</button>
+            <button variant="outline">Outline</button>
+            <button variant="ghost">Ghost</button>
             <button aria-busy="true">Loading ...</button>
             <button disabled>Disabled</button>
-            <button data-variant="muted">Muted</button>
+            <button variant="muted">Muted</button>
 
             <!-- links with button role -->
             <a href="#" role="button">Primary link</a>
-            <a href="#" data-variant="outline" role="button">Outline link</a>
-            <a href="#" data-variant="ghost" role="button">Ghost link</a>
+            <a href="#" variant="outline" role="button">Outline link</a>
+            <a href="#" variant="ghost" role="button">Ghost link</a>
 
             <!-- with icons -->
             <button>
@@ -206,7 +206,7 @@
               With icon
             </button>
 
-            <button data-variant="outline">
+            <button variant="outline">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -221,7 +221,7 @@
               With icon
             </button>
 
-            <button data-variant="ghost">
+            <button variant="ghost">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -275,7 +275,7 @@
           <div class="example" data-title="Textarea">
             <label>
               A textarea
-              <textarea data-resize="false"></textarea>
+              <textarea no-resize></textarea>
             </label>
           </div>
 
@@ -332,7 +332,7 @@
 
               <footer>
                 <button
-                  data-variant="outline"
+                  variant="outline"
                   onclick="document.querySelector('#demo-dialog').close()"
                 >
                   Cancel
@@ -385,7 +385,7 @@
             <nav>
               <strong>Title</strong>
               <ul>
-                <li><a href="#" data-active="true">Link</a></li>
+                <li><a href="#" active="true">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><hr /></li>
@@ -415,7 +415,7 @@
               <nav>
                 <strong>Title</strong>
                 <ul>
-                  <li><a href="#" data-active="true">Link</a></li>
+                  <li><a href="#" active="true">Link</a></li>
                   <li><a href="#">Link</a></li>
                   <li><a href="#">Link</a></li>
                   <li><button>Button</button></li>
@@ -463,7 +463,7 @@
               <li><button>Menu item</button></li>
               <li>Section</li>
               <li><button>Menu item</button></li>
-              <li><button data-active="true">Active menu item</button></li>
+              <li><button active="true">Active menu item</button></li>
             </menu>
           </div>
 
@@ -479,7 +479,7 @@
           <div class="example" data-title="Tabs">
             <ul role="tablist">
               <li><a href="#">Link</a></li>
-              <li><a href="#" data-active="true">Active</a></li>
+              <li><a href="#" active="true">Active</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
             </ul>
@@ -573,23 +573,23 @@
 
             <hr />
 
-            <div data-with-fallback>
+            <div has-fallback>
               <div>Content</div>
 
-              <div data-when="empty">
+              <div fallback-for="empty">
                 <p><strong>Move along</strong></p>
                 <p>Nothing to see here.</p>
               </div>
 
-              <div data-when="loading">
+              <div fallback-for="loading">
                 <div aria-busy="true"></div>
                 <p>Please wait...</p>
               </div>
 
-              <div data-when="error">
+              <div fallback-for="error">
                 <p><strong>Something went wrong</strong></p>
                 <p>Please try again later.</p>
-                <button data-variant="outline">Retry now</button>
+                <button variant="outline">Retry now</button>
               </div>
             </div>
           </div>
@@ -788,10 +788,10 @@
 
       const fallbackStateForm = document.forms.fallbackState;
 
-      const fallbackEl = document.querySelector("[data-with-fallback]");
+      const fallbackEl = document.querySelector("[has-fallback]");
 
       const fallbackContentEl = document.querySelector(
-        "[data-with-fallback] > :first-child"
+        "[has-fallback] > :first-child"
       );
 
       fallbackStateForm.addEventListener("change", (event) => {
@@ -804,13 +804,13 @@
         }
 
         if (value === "empty-manual") {
-          fallbackEl.dataset.withFallback = "empty";
+          fallbackEl.setAttribute("has-fallback", "empty");
         } else if (value === "loading") {
-          fallbackEl.dataset.withFallback = "loading";
+          fallbackEl.setAttribute("has-fallback", "loading");
         } else if (value === "error") {
-          fallbackEl.dataset.withFallback = "error";
+          fallbackEl.setAttribute("has-fallback", "error");
         } else {
-          fallbackEl.dataset.withFallback = "";
+          fallbackEl.setAttribute("has-fallback", "");
         }
       });
     </script>

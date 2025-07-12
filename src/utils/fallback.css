@@ -1,5 +1,5 @@
-[data-with-fallback] {
-  > [data-when] {
+[has-fallback] {
+  > [fallback-for] {
     align-items: center;
     border-radius: var(--border-radius);
     border: var(--border-width-large) dashed transparent;
@@ -25,30 +25,30 @@
     }
   }
 
-  > [data-when="empty"] {
+  > [fallback-for="empty"] {
     border-color: var(--c-border);
     color: var(--c-fg-variant);
   }
 
-  > [data-when="error"] {
+  > [fallback-for="error"] {
     border-color: var(--c-border);
   }
 }
 
 /* Display fallback element when content is empty or a state is set manually. */
-[data-with-fallback=""] > :first-child:empty + [data-when="empty"],
-[data-with-fallback="empty"] > [data-when="empty"],
-[data-with-fallback="loading"] > [data-when="loading"],
-[data-with-fallback="error"] > [data-when="error"] {
+[has-fallback=""] > :first-child:empty + [fallback-for="empty"],
+[has-fallback="empty"] > [fallback-for="empty"],
+[has-fallback="loading"] > [fallback-for="loading"],
+[has-fallback="error"] > [fallback-for="error"] {
   display: flex;
 }
 
 /* Hide content element when empty or a different state is set. */
-[data-with-fallback] > :first-child:empty,
+[has-fallback] > :first-child:empty,
 :is(
-    [data-with-fallback="empty"],
-    [data-with-fallback="loading"],
-    [data-with-fallback="error"]
+    [has-fallback="empty"],
+    [has-fallback="loading"],
+    [has-fallback="error"]
   )
   > :first-child {
   display: none !important;

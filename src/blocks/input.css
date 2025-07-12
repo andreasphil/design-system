@@ -53,10 +53,6 @@ input:is([type="date"], [type="time"], [type="datetime-local"]) {
   height: calc(1lh + (0.5rem * 2) + var(--border-width) * 2);
 }
 
-input[data-icon] {
-  --input-has-icon: 1;
-}
-
 input[type="email"] {
   --input-has-icon: 1;
   --input-icon: var(--icon-mail);
@@ -85,7 +81,7 @@ input[type="search"] {
 textarea {
   resize: vertical;
 
-  &[data-resize="false"] {
+  &[no-resize] {
     resize: none;
   }
 }
