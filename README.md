@@ -51,7 +51,7 @@ The CSS loosely follows [CUBE CSS](https://piccalil.li/blog/cube-css/):
 
 - **Blocks:** The framework includes opinionated styling for almost all common HTML elements inside [`src/blocks/`](./src/blocks/).
 
-- **Exceptions:** Some blocks, such as buttons, come with variants (also called exceptions). [According to CUBE CSS](https://cube.fyi/exception.html#why-data-attributes), variants are applied using `data-` attributes.
+- **Exceptions:** Some blocks, such as buttons, come with variants (also called exceptions). [According to CUBE CSS](https://cube.fyi/exception.html#why-data-attributes), variants are applied using attributes.
 
 - **Composition & utilites:** With the exception of a few utilities, these are outside the scope of the framework.
 
