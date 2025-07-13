@@ -86,11 +86,10 @@ header > nav {
     box-shadow: var(--shadow-elevation-low);
     flex-wrap: nowrap;
     height: 5rem;
-    left: 0;
+    inset-inline: 0;
     overflow: auto;
     padding: 0 var(--body-padding-x);
     position: fixed;
-    right: 0;
     top: 0;
     z-index: 10;
 
@@ -101,8 +100,7 @@ header > nav {
   }
 
   &:not([fixed]) {
-    margin-top: var(--outer-spacing-y);
-    margin-bottom: var(--outer-spacing-y);
+    margin-block: var(--outer-spacing-y);
   }
 }
 

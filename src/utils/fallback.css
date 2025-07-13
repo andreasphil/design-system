@@ -10,8 +10,7 @@
 
     /* Override immediate children margins so we can manage layout ourselves. */
     > * {
-      margin-bottom: 0;
-      margin-top: 0;
+      margin-block: 0;
       text-align: center;
     }
 

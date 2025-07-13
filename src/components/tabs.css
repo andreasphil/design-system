@@ -15,16 +15,13 @@ ul[role="tablist"] {
     margin: 0;
   }
 
-  &
-    li:not(:has([active="true"]))
-    + li:not(:has([active="true"]))::before {
+  & li:not(:has([active="true"])) + li:not(:has([active="true"]))::before {
     background: var(--c-border);
-    bottom: 0.5rem;
     content: "";
     display: block;
+    inset-block: 0.5rem;
     left: calc((var(--internal-gap) + var(--border-width-large)) / -2);
     position: absolute;
-    top: 0.5rem;
     width: var(--border-width-large);
   }
 
