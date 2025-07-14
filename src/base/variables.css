@@ -46,11 +46,11 @@
   /* Shadows */
   --shadow-elevation-low: 0 0.0625rem 0.125rem 0 var(--c-shadow);
 
-  --shadow-elevation-medium: var(--shadow-elevation-low),
-    0 0.15rem 0.75rem -0.2rem var(--c-shadow);
+  --shadow-elevation-medium:
+    var(--shadow-elevation-low), 0 0.15rem 0.75rem -0.2rem var(--c-shadow);
 
-  --shadow-elevation-high: var(--shadow-elevation-low),
-    0 0.3rem 1.5rem -0.3rem var(--c-shadow);
+  --shadow-elevation-high:
+    var(--shadow-elevation-low), 0 0.3rem 1.5rem -0.3rem var(--c-shadow);
 
   /* Theme */
   --theme-tint: 165;
@@ -67,10 +67,10 @@
   --neutral-400: oklch(70% 0.02 var(--theme-tint));
   --neutral-500: oklch(55% 0.025 var(--theme-tint));
   --neutral-600: oklch(45% 0.02 var(--theme-tint));
-  --neutral-700: oklch(35% 0.012 var(--theme-tint));
-  --neutral-800: oklch(24% 0.012 var(--theme-tint));
-  --neutral-900: oklch(18% 0.008 var(--theme-tint));
-  --neutral-950: oklch(13% 0.003 var(--theme-tint));
+  --neutral-700: oklch(31% 0.018 var(--theme-tint));
+  --neutral-800: oklch(22% 0.014 var(--theme-tint));
+  --neutral-900: oklch(18% 0.012 var(--theme-tint));
+  --neutral-950: oklch(13% 0.005 var(--theme-tint));
 
   --primary: oklch(var(--theme-primary));
   --on-primary: var(--white);
