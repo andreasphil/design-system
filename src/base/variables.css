@@ -7,11 +7,11 @@
   --font-size: 1rem;
   --font-size-small: calc(var(--font-size) * 0.875);
   --font-size-h6: var(--font-size);
-  --font-size-h5: calc(var(--font-size));
-  --font-size-h4: calc(var(--font-size) * 1.2);
-  --font-size-h3: calc(var(--font-size) * 1.4);
-  --font-size-h2: calc(var(--font-size) * 1.8);
-  --font-size-h1: calc(var(--font-size) * 2.2);
+  --font-size-h5: var(--font-size);
+  --font-size-h4: calc(var(--font-size) * 1.1);
+  --font-size-h3: calc(var(--font-size) * 1.25);
+  --font-size-h2: calc(var(--font-size) * 1.45);
+  --font-size-h1: calc(var(--font-size) * 2);
   --font-size-mono: 0.9em;
 
   /* Font weights */
