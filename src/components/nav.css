@@ -80,6 +80,11 @@ header > nav {
     }
   }
 
+  &[align-left] {
+    gap: 1.25rem;
+    justify-content: flex-start;
+  }
+
   &[fixed] {
     backdrop-filter: blur(16px) saturate(1.5);
     background: color-mix(in oklch, var(--c-surface-bg), transparent 20%);
