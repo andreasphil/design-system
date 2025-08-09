@@ -33,7 +33,6 @@ function svgToData(raw, stroke) {
 function build() {
   let { code } = bundle({
     filename: "./src/index.css",
-    minify: true,
 
     visitor: {
       Function: {
@@ -49,7 +48,7 @@ function build() {
     },
   });
 
-  writeFileSync("./dist/design-system.min.css", Buffer.from(code));
+  writeFileSync("./dist/design-system.css", Buffer.from(code));
   console.log("✨ Build done");
 }
 

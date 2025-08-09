@@ -8,7 +8,7 @@
 
 - 🔥 Embraces semantic HTML to make native elements look great out of the box, without classes
 - 😎 Small set of utilities for additional states and convenience
-- 🐛 Tiny (<6kb min+gzip) footprint with no runtime dependencies or build step required
+- 🐛 Tiny (~6kb min+gzip) footprint with no runtime dependencies or build step required
 - 🌈 Automatic color system that reduces time spent fiddling with color palettes
 - 🪗 Fully responsive
 
@@ -17,7 +17,7 @@
 From a CDN:
 
 ```css
-@import url("https://esm.sh/gh/andreasphil/design-system@<tag>/dist/design-system.min.css")
+@import url("https://esm.sh/gh/andreasphil/design-system@<tag>/dist/design-system.css")
 layer(theme);
 ```
 

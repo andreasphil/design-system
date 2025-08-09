@@ -16,14 +16,14 @@
       "types": "./scripts/utils.d.ts"
     },
     "./style.css": {
-      "import": "./dist/design-system.min.css",
-      "default": "./dist/design-system.min.css"
+      "import": "./dist/design-system.css",
+      "default": "./dist/design-system.css"
     }
   },
   "scripts": {
     "dev": "node ./build --watch",
     "build": "node ./build",
-    "preversion": "node --run build; git add --force dist/design-system.min.css"
+    "preversion": "node --run build; git add --force dist/design-system.css"
   },
   "devDependencies": {
     "lightningcss": "^1.29.3"
