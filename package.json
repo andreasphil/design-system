@@ -26,6 +26,6 @@
     "preversion": "node --run build; git add --force dist/design-system.css"
   },
   "devDependencies": {
-    "lightningcss": "^1.29.3"
+    "lightningcss": "^1.30.1"
   }
 }
