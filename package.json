@@ -7,14 +7,9 @@
   "type": "module",
   "repository": "https://github.com/andreasphil/design-system",
   "files": [
-    "dist",
-    "scripts"
+    "dist"
   ],
   "exports": {
-    ".": {
-      "import": "./scripts/utils.js",
-      "types": "./scripts/utils.d.ts"
-    },
     "./style.css": {
       "import": "./dist/design-system.css",
       "default": "./dist/design-system.css"

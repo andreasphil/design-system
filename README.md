@@ -55,19 +55,6 @@ The CSS loosely follows [CUBE CSS](https://piccalil.li/blog/cube-css/):
 
 - **Composition & utilites:** With the exception of a few utilities, these are outside the scope of the framework.
 
-### Automatic theme color
-
-There is a helper that will manage the theme color for light and dark mode automatically:
-
-```js
-import { useThemeColor } from "@andreasphil/design-system";
-
-const { unsubscribe } = useThemeColor();
-
-// Call if you want to stop automatic theme color management
-unsubscribe();
-```
-
 ## Development
 
 Design System is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [npm](https://npmjs.org). The following commands are available:
