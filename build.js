@@ -31,24 +31,34 @@ function svgToData(raw, stroke) {
 }
 
 function build() {
-  let { code } = bundle({
-    filename: "./src/index.css",
+  const entries = [
+    { from: "./src/index.css", to: "./dist/design-system.css" },
+    { from: "./src/utils/utils.css", to: "./dist/design-system-utils.css" },
+  ];
 
-    visitor: {
-      Function: {
-        icon: ({ arguments: args }) => {
-          let path = args[0].value.value;
-          let raw = readFileSync(`./src/icons/${path}`, { encoding: "utf-8" });
-          let color = rgbToHex(args[2].value);
-          let iconUrl = svgToData(raw, color);
+  entries.forEach(({ from, to }) => {
+    let { code } = bundle({
+      filename: from,
 
-          return { raw: `url("${iconUrl}")` };
+      visitor: {
+        Function: {
+          icon: ({ arguments: args }) => {
+            let path = args[0].value.value;
+            let raw = readFileSync(`./src/icons/${path}`, {
+              encoding: "utf-8",
+            });
+            let color = rgbToHex(args[2].value);
+            let iconUrl = svgToData(raw, color);
+
+            return { raw: `url("${iconUrl}")` };
+          },
         },
       },
-    },
+    });
+
+    writeFileSync(to, Buffer.from(code));
   });
 
-  writeFileSync("./dist/design-system.css", Buffer.from(code));
   console.log("✨ Build done");
 }
 

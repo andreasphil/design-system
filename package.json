@@ -13,12 +13,16 @@
     "./style.css": {
       "import": "./dist/design-system.css",
       "default": "./dist/design-system.css"
+    },
+    "./utils.css": {
+      "import": "./dist/design-system-utils.css",
+      "default": "./dist/design-system-utils.css"
     }
   },
   "scripts": {
     "dev": "node ./build --watch",
     "build": "node ./build",
-    "preversion": "node --run build; git add --force dist/design-system.css"
+    "preversion": "node --run build; git add --force dist/*.css"
   },
   "devDependencies": {
     "lightningcss": "^1.30.1"

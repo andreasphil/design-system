@@ -19,10 +19,9 @@ From a CDN:
 ```css
 @import url("https://esm.sh/gh/andreasphil/design-system@<tag>/dist/design-system.css")
 layer(theme);
-```
 
-```js
-import { useThemeColor } from "https://esm.sh/gh/andreasphil/design-system@<tag>";
+/* Optional: import utilities */
+@import url("https://esm.sh/gh/andreasphil/design-system@<tag>/dist/design-system-utils.css");
 ```
 
 With a package manager:
@@ -39,6 +38,7 @@ First, import the CSS. I recommend using [layers](https://developer.mozilla.org/
 
 ```css
 @import "@andreasphil/design-system/style.css" layer(theme);
+@import "@andreasphil/design-system/utils.css";
 
 @layer theme {
   /* You can add customizations and override variables here. */
