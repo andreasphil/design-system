@@ -6,13 +6,13 @@ input:not(
     [type="range"],
     [type="image"]
   ) {
-  background: var(--input-icon, none) 0.5rem center / 1.2em no-repeat;
+  background: var(--input-icon, none) 0.75rem center / 1.2em no-repeat;
   background-color: var(--c-bg);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--c-border);
   caret-color: var(--primary);
   padding: 0.5rem;
-  padding-left: calc(var(--input-has-icon, 0) * (1.2em + 0.5rem) + 0.75ch);
+  padding-left: calc(var(--input-has-icon, 0) * (1.2em + 0.5rem) + 0.75rem);
   transition: var(--transition);
   transition-property: background-color, border-color, color;
   width: 100%;

@@ -1,8 +1,9 @@
 ul[role="tablist"] {
+  --internal-border-radius: var(--border-radius);
   --internal-gap: 0.25rem;
 
   background: var(--c-border-variant);
-  border-radius: var(--border-radius);
+  border-radius: var(--internal-border-radius);
   display: inline-flex;
   font-weight: var(--font-weight-medium);
   gap: var(--internal-gap);
@@ -26,7 +27,7 @@ ul[role="tablist"] {
   }
 
   & a {
-    border-radius: var(--border-radius);
+    border-radius: calc(var(--internal-border-radius) - 0.25rem);
     display: block;
     padding: 0.25rem 1rem;
     text-align: center;

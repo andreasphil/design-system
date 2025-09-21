@@ -1,10 +1,10 @@
 select {
-  background: var(--c-bg) var(--icon-chevron) right 0.5em center / 1.2em;
+  background: var(--c-bg) var(--icon-chevron) right 0.75rem center / 1.2em;
   background-repeat: no-repeat;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--c-border);
-  padding: 0.5rem;
-  padding-right: calc(0.5rem + 0.5rem + 1em);
+  padding: 0.5rem 0.75rem;
+  padding-right: calc(0.75rem * 2 + 1em);
   transition: var(--transition);
   transition-property: background-color, border-color, color;
   width: 100%;

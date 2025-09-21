@@ -1,5 +1,5 @@
 dialog {
-  --internal-padding: 1rem;
+  --internal-padding: var(--border-radius-large);
 
   background: var(--c-surface-bg);
   border-radius: var(--border-radius-large);
@@ -7,9 +7,14 @@ dialog {
   box-shadow: var(--shadow-elevation-high);
   color: var(--c-surface-fg);
   margin: 6rem auto 1rem;
-  padding: 1rem;
+  padding: var(--internal-padding);
   position: fixed;
   width: min(30rem, calc(100dvw - 2rem));
+
+  &:focus-visible {
+    outline-offset: var(--outline-outset);
+    outline: var(--outline);
+  }
 
   &::backdrop {
     background: light-dark(hsl(0 0% 100% / 0.8), hsl(0 0% 0% / 0.8));
@@ -21,7 +26,7 @@ dialog {
 
   > header {
     font-weight: var(--font-weight-bold);
-    margin-bottom: 1rem;
+    margin-bottom: var(--internal-padding);
   }
 
   > footer {
@@ -30,16 +35,20 @@ dialog {
     display: flex;
     gap: 0.75rem;
     justify-content: end;
-    margin: 1rem -1rem 0;
-    padding: 1rem;
+    margin: var(--internal-padding) calc(var(--internal-padding) * -1) 0;
+    padding: var(--internal-padding);
+
+    > * {
+      flex: 1;
+    }
 
     > div:empty {
-      flex: 1;
+      flex: 2;
     }
   }
 
   > p {
-    margin: 1rem 0;
+    margin: var(--internal-padding) 0;
   }
 
   /* Animated open & close */
@@ -66,7 +75,7 @@ dialog {
     }
 
     &[open] {
-      scale: 0.95;
+      scale: 1.1;
     }
   }
 }
