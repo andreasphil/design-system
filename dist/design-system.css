@@ -164,7 +164,7 @@ abbr {
 :is(code, del, ins, kbd, mark) {
   border-radius: var(--border-radius-small);
   background: none;
-  padding: .125rem;
+  padding: .25rem .375rem;
   text-decoration: none;
 }
 
@@ -252,9 +252,9 @@ a {
   --outer-spacing-y: 2rem;
   --body-width: 50rem;
   --line-height: 1.5;
-  --border-radius-small: .25rem;
-  --border-radius: .5rem;
-  --border-radius-large: .75rem;
+  --border-radius-small: .5rem;
+  --border-radius: .75rem;
+  --border-radius-large: 1.25rem;
   --border-width: 1px;
   --border-width-large: 2px;
   --outline: var(--border-width-large) solid var(--c-outline);
@@ -273,12 +273,12 @@ a {
   --white: oklch(100% 0 0);
   --neutral-50: oklch(99% .001 var(--theme-tint));
   --neutral-100: oklch(97% .003 var(--theme-tint));
-  --neutral-200: oklch(92% .008 var(--theme-tint));
+  --neutral-200: oklch(95% .008 var(--theme-tint));
   --neutral-300: oklch(87% .012 var(--theme-tint));
   --neutral-400: oklch(70% .02 var(--theme-tint));
   --neutral-500: oklch(55% .025 var(--theme-tint));
   --neutral-600: oklch(45% .02 var(--theme-tint));
-  --neutral-700: oklch(31% .018 var(--theme-tint));
+  --neutral-700: oklch(25% .018 var(--theme-tint));
   --neutral-800: oklch(22% .014 var(--theme-tint));
   --neutral-900: oklch(18% .012 var(--theme-tint));
   --neutral-950: oklch(13% .005 var(--theme-tint));
@@ -294,7 +294,7 @@ a {
   --c-border: light-dark(var(--neutral-200), var(--neutral-700));
   --c-border-variant: light-dark(var(--neutral-100), var(--neutral-800));
   --c-outline: light-dark(var(--primary), var(--primary));
-  --c-shadow: light-dark(color-mix(in oklch, var(--neutral-900), transparent 91%), var(--c-bg));
+  --c-shadow: light-dark(color-mix(in oklch, var(--neutral-900), transparent 94%), var(--c-bg));
   --c-bg: light-dark(var(--neutral-50), var(--neutral-950));
   --c-fg: light-dark(var(--neutral-950), var(--neutral-50));
   --c-fg-variant: light-dark(var(--neutral-400), var(--neutral-500));
@@ -332,22 +332,20 @@ article {
 button, [role="button"], input:is([type="button"], [type="submit"], [type="reset"]) {
   --internal-bg: var(--primary);
   --internal-fg: var(--on-primary);
-  --internal-border: transparent;
-  --internal-outline-offset: var(--outline-outset);
   --internal-hover: color-mix(in oklch, var(--primary), var(--neutral-100) 15%);
   background-color: var(--internal-bg);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--internal-border);
   color: var(--internal-fg);
   font-weight: var(--font-weight-medium);
+  padding: calc(.5rem + var(--border-width)) 1rem;
   text-align: center;
   transition: var(--transition);
+  border: none;
   justify-content: center;
   align-items: center;
   gap: .75ch;
-  padding: .5rem .75rem;
   text-decoration: none;
-  transition-property: background-color, border-color, color;
+  transition-property: background-color, color;
   display: inline-flex;
 
   &:hover {
@@ -360,7 +358,7 @@ button, [role="button"], input:is([type="button"], [type="submit"], [type="reset
   }
 
   &:focus-visible {
-    outline-offset: var(--internal-outline-offset);
+    outline-offset: var(--outline-outset);
     outline: var(--outline);
   }
 
@@ -368,25 +366,22 @@ button, [role="button"], input:is([type="button"], [type="submit"], [type="reset
     opacity: var(--disabled-opacity);
   }
 
-  &[variant="outline"] {
-    --internal-bg: transparent;
+  &[variant="secondary"] {
+    --internal-bg: light-dark(var(--primary-50), var(--primary-100));
     --internal-fg: var(--primary);
-    --internal-border: currentColor;
-    --internal-hover: var(--primary-100);
+    --internal-hover: light-dark(var(--primary-100), var(--primary-200));
   }
 
   &[variant="ghost"] {
     --internal-bg: transparent;
     --internal-fg: var(--primary);
-    --internal-hover: var(--primary-100);
-    --internal-outline-offset: var(--outline-inset);
+    --internal-hover: light-dark(var(--primary-50), var(--primary-100));
   }
 
   &[variant="muted"] {
     --internal-bg: transparent;
     --internal-fg: var(--c-fg-variant);
     --internal-hover: var(--c-surface-variant-bg);
-    --internal-outline-offset: var(--outline-inset);
   }
 }
 
@@ -476,16 +471,21 @@ details {
 }
 
 dialog {
-  --internal-padding: 1rem;
+  --internal-padding: var(--border-radius-large);
   background: var(--c-surface-bg);
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow-elevation-high);
   color: var(--c-surface-fg);
+  padding: var(--internal-padding);
   border: none;
   width: min(30rem, 100dvw - 2rem);
   margin: 6rem auto 1rem;
-  padding: 1rem;
   position: fixed;
+
+  &:focus-visible {
+    outline-offset: var(--outline-outset);
+    outline: var(--outline);
+  }
 
   &::backdrop {
     background: light-dark(#fffc, #000c);
@@ -497,25 +497,29 @@ dialog {
 
   & > header {
     font-weight: var(--font-weight-bold);
-    margin-bottom: 1rem;
+    margin-bottom: var(--internal-padding);
   }
 
   & > footer {
     border-top: var(--border-width) solid var(--c-border-variant);
+    margin: var(--internal-padding) calc(var(--internal-padding) * -1) 0;
+    padding: var(--internal-padding);
     justify-content: end;
     align-items: center;
     gap: .75rem;
-    margin: 1rem -1rem 0;
-    padding: 1rem;
     display: flex;
 
-    & > div:empty {
+    & > * {
       flex: 1;
+    }
+
+    & > div:empty {
+      flex: 2;
     }
   }
 
   & > p {
-    margin: 1rem 0;
+    margin: var(--internal-padding) 0;
   }
 
   &, &::backdrop {
@@ -538,7 +542,7 @@ dialog {
     }
 
     &[open] {
-      scale: .95;
+      scale: 1.1;
     }
   }
 }
@@ -592,13 +596,13 @@ hgroup {
 }
 
 textarea, input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [type="image"]) {
-  background: var(--input-icon, none) .5rem center / 1.2em no-repeat;
+  background: var(--input-icon, none) .75rem center / 1.2em no-repeat;
   background-color: var(--c-bg);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--c-border);
   caret-color: var(--primary);
   padding: .5rem;
-  padding-left: calc(var(--input-has-icon, 0) * (1.2em + .5rem)  + .75ch);
+  padding-left: calc(var(--input-has-icon, 0) * (1.2em + .5rem)  + .75rem);
   transition: var(--transition);
   width: 100%;
   transition-property: background-color, border-color, color;
@@ -686,11 +690,15 @@ menu {
   & button {
     --internal-bg: transparent;
     --internal-fg: var(--c-fg);
-    --internal-outline-offset: var(--outline-inset);
     --internal-hover: var(--c-surface-variant-bg);
+    border-radius: calc(var(--border-radius)  - .375rem);
     justify-content: flex-start;
     width: 100%;
     padding: .375rem .5rem;
+
+    &:focus-visible {
+      outline-offset: var(--outline-inset) !important;
+    }
   }
 
   & button[active="true"] {
@@ -732,7 +740,7 @@ nav {
   & > ul {
     flex-flow: column wrap;
     gap: .25rem;
-    margin: 0 -.5rem;
+    margin: 0 -.75rem;
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -746,7 +754,7 @@ nav {
       font-weight: var(--font-weight-medium);
       align-items: center;
       gap: .75ch;
-      padding: .25rem .5rem;
+      padding: .375rem .75rem;
       text-decoration: none;
       display: inline-flex;
 
@@ -769,8 +777,8 @@ nav {
     }
 
     & li > :is(button, [role="button"]) {
-      padding: calc(.25rem - var(--border-width)) .5rem;
       flex: none;
+      padding: .375rem .75rem;
     }
   }
 }
@@ -805,7 +813,7 @@ header > nav {
   &[fixed] {
     backdrop-filter: blur(16px) saturate(1.5);
     background: color-mix(in oklch, var(--c-surface-bg), transparent 20%);
-    box-shadow: var(--shadow-elevation-low);
+    box-shadow: var(--shadow-elevation-medium);
     height: 5rem;
     padding: 0 var(--body-padding-x);
     inset-inline: 0;
@@ -896,13 +904,13 @@ input[type="radio"] {
 }
 
 select {
-  background: var(--c-bg) var(--icon-chevron) right .5em center / 1.2em;
+  background: var(--c-bg) var(--icon-chevron) right .75rem center / 1.2em;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--c-border);
   transition: var(--transition);
   background-repeat: no-repeat;
   width: 100%;
-  padding: .5rem calc(1rem + 1em) .5rem .5rem;
+  padding: .5rem calc(1.5rem + 1em) .5rem .75rem;
   transition-property: background-color, border-color, color;
 
   &:hover {
@@ -995,9 +1003,10 @@ table {
 }
 
 ul[role="tablist"] {
+  --internal-border-radius: var(--border-radius);
   --internal-gap: .25rem;
   background: var(--c-border-variant);
-  border-radius: var(--border-radius);
+  border-radius: var(--internal-border-radius);
   font-weight: var(--font-weight-medium);
   gap: var(--internal-gap);
   padding: .25rem;
@@ -1021,7 +1030,7 @@ ul[role="tablist"] {
   }
 
   & a {
-    border-radius: var(--border-radius);
+    border-radius: calc(var(--internal-border-radius)  - .25rem);
     text-align: center;
     padding: .25rem 1rem;
     text-decoration: none;
@@ -1134,7 +1143,7 @@ ul[role="tablist"] {
     pointer-events: none;
     transition: var(--transition);
     white-space: nowrap;
-    padding: .125rem .375rem;
+    padding: .25rem .5rem;
     transition-property: translate, opacity;
     display: block;
     position: absolute;
@@ -1146,216 +1155,5 @@ ul[role="tablist"] {
   &:hover:after {
     opacity: 1;
     translate: -50% calc(-100% - .25rem);
-  }
-}
-
-.font-mono {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-mono);
-}
-
-.font-size-base {
-  font-size: var(--font-size);
-}
-
-.font-size-small {
-  font-size: var(--font-size-small);
-}
-
-.font-size-h6 {
-  font-size: var(--font-size-h6);
-}
-
-.font-size-h5 {
-  font-size: var(--font-size-h5);
-}
-
-.font-size-h4 {
-  font-size: var(--font-size-h4);
-}
-
-.font-size-h3 {
-  font-size: var(--font-size-h3);
-}
-
-.font-size-h2 {
-  font-size: var(--font-size-h2);
-}
-
-.font-size-h1 {
-  font-size: var(--font-size-h1);
-}
-
-.font-weight-normal {
-  font-weight: var(--font-weight-normal);
-}
-
-.font-weight-medium {
-  font-weight: var(--font-weight-medium);
-}
-
-.font-weight-bold {
-  font-weight: var(--font-weight-bold);
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.clamp {
-  -webkit-line-clamp: var(--clamp, 1);
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  overflow: hidden;
-}
-
-.color-base {
-  color: var(--c-fg);
-}
-
-.color-variant {
-  color: var(--c-fg-variant);
-}
-
-.color-primary {
-  color: var(--primary);
-}
-
-.background {
-  background-color: var(--c-bg);
-  color: var(--c-fg);
-}
-
-.surface {
-  background-color: var(--c-surface-bg);
-  color: var(--c-surface-fg);
-}
-
-.surface-variant {
-  background-color: var(--c-surface-variant-bg);
-  color: var(--c-surface-variant-fg);
-}
-
-.no-shadow {
-  box-shadow: none;
-}
-
-.shadow-low {
-  box-shadow: var(--shadow-elevation-low);
-}
-
-.shadow-medium {
-  box-shadow: var(--shadow-elevation-medium);
-}
-
-.shadow-high {
-  box-shadow: var(--shadow-elevation-high);
-}
-
-.no-rounded {
-  border-radius: 0;
-}
-
-.rounded-small {
-  border-radius: var(--border-radius-small);
-}
-
-.rounded {
-  border-radius: var(--border-radius);
-}
-
-.rounded-large {
-  border-radius: var(--border-radius-large);
-}
-
-.rounded-squircle {
-  border-radius: 30%;
-}
-
-.no-border {
-  border: none;
-}
-
-.border {
-  border: var(--border-width) solid var(--c-border);
-}
-
-.border-variant {
-  border: var(--border-width) solid var(--c-border-variant);
-}
-
-.border-large {
-  border-width: var(--border-width-large);
-}
-
-.trim, .trim-top {
-  & > :first-child {
-    margin-top: 0;
-  }
-}
-
-.trim, .trim-bottom {
-  & > :last-child {
-    margin-bottom: 0;
-  }
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.margin-y-body {
-  margin-block: var(--body-padding-y);
-}
-
-.margin-y-outer-spacing {
-  margin-block: var(--outer-spacing-y);
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.padding-y-body {
-  padding-block: var(--body-padding-y);
-}
-
-.visually-hidden:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  overflow: hidden;
-}
-
-.glow {
-  z-index: 1;
-  position: relative;
-
-  &:after {
-    content: attr(data-content);
-    filter: blur(12px) saturate(1.5) brightness(1.25);
-    font-size: inherit;
-    line-height: inherit;
-    opacity: .75;
-    z-index: -1;
-    position: absolute;
-    inset: 0;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .glow:after {
-    filter: blur(12px) saturate(1.5) brightness(.75);
   }
 }
