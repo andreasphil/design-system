@@ -40,8 +40,8 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
     opacity: var(--disabled-opacity);
   }
 
-  &[variant="outline"] {
-    --internal-bg: transparent;
+  &[variant="secondary"] {
+    --internal-bg: light-dark(var(--primary-50), var(--primary-100));
     --internal-fg: var(--primary);
     --internal-border: currentColor;
     --internal-hover: var(--primary-100);
