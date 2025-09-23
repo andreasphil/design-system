@@ -27,367 +27,396 @@
           <li><a href="#utils">Utils</a></li>
         </ul>
       </nav>
+    </header>
 
-      <main class="trim">
-        <hgroup class="text-center margin-y-body">
-          <img
-            src="./assets/icon-192.png"
-            class="logo rounded-squircle shadow-high"
-            width="72"
-            height="72"
-            alt=""
-          />
-          <h1 id="getting-started">Design System</h1>
-          <p>
-            A small, opinionated CSS framework to make sites look good with
-            minimal effort. This page is a playground for showcasing the
-            different supported styles. To learn more, check out the repository
-            on
-            <a href="https://github.com/andreasphil/design-system">GitHub.</a>
-          </p>
-        </hgroup>
+    <main class="trim">
+      <hgroup class="text-center margin-y-body">
+        <img
+          src="./assets/icon-192.png"
+          class="logo rounded-squircle shadow-high"
+          width="72"
+          height="72"
+          alt=""
+        />
+        <h1 id="getting-started">Design System</h1>
+        <p>
+          A small, opinionated CSS framework to make sites look good with
+          minimal effort. This page is a playground for showcasing the different
+          supported styles. To learn more, check out the repository on
+          <a href="https://github.com/andreasphil/design-system">GitHub.</a>
+        </p>
+      </hgroup>
 
-        <section>
-          <h2 id="colors">Colors</h2>
-          <div class="palette">
-            <div class="palette__item" style="--bg: var(--neutral-50)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-100)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-200)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-300)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-400)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-500)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-600)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-700)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-800)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-900)"></div>
-            <div class="palette__item" style="--bg: var(--neutral-950)"></div>
-          </div>
+      <section>
+        <h2 id="colors">Colors</h2>
+        <div class="palette">
+          <div class="palette__item" style="--bg: var(--neutral-50)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-100)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-200)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-300)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-400)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-500)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-600)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-700)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-800)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-900)"></div>
+          <div class="palette__item" style="--bg: var(--neutral-950)"></div>
+        </div>
 
-          <div class="palette">
-            <div class="palette__item" style="--bg: var(--primary-50)"></div>
-            <div class="palette__item" style="--bg: var(--primary-100)"></div>
-            <div class="palette__item" style="--bg: var(--primary-200)"></div>
-            <div class="palette__item" style="--bg: var(--primary-300)"></div>
-            <div class="palette__item" style="--bg: var(--primary-400)"></div>
-            <div class="palette__item" style="--bg: var(--primary-500)"></div>
-            <div class="palette__item"></div>
-            <div class="palette__item"></div>
-            <div class="palette__item"></div>
-            <div class="palette__item"></div>
-            <div class="palette__item"></div>
-          </div>
+        <div class="palette">
+          <div class="palette__item" style="--bg: var(--primary-50)"></div>
+          <div class="palette__item" style="--bg: var(--primary-100)"></div>
+          <div class="palette__item" style="--bg: var(--primary-200)"></div>
+          <div class="palette__item" style="--bg: var(--primary-300)"></div>
+          <div class="palette__item" style="--bg: var(--primary-400)"></div>
+          <div class="palette__item" style="--bg: var(--primary-500)"></div>
+          <div class="palette__item"></div>
+          <div class="palette__item"></div>
+          <div class="palette__item"></div>
+          <div class="palette__item"></div>
+          <div class="palette__item"></div>
+        </div>
 
-          <div class="example" data-title="Colors">
-            <form name="colors" class="trim">
-              <fieldset class="grid-auto">
-                <label>
-                  Tint
-                  <input name="tint" type="number" />
-                  <small>That's the hue for all colors.</small>
-                </label>
-              </fieldset>
+        <div class="example" data-title="Colors">
+          <form name="colors" class="trim">
+            <fieldset class="grid-auto">
               <label>
-                <input type="checkbox" role="switch" name="overridePrimary" />
-                Customize primary color
+                Tint
+                <input name="tint" type="number" />
+                <small>That's the hue for all colors.</small>
               </label>
-              <fieldset class="grid-auto">
-                <label>
-                  Lightness
-                  <input type="number" name="lightness" value="63" />
-                </label>
-                <label>
-                  Chroma
-                  <input type="number" name="chroma" value="0.18" />
-                </label>
-                <label>
-                  Hue
-                  <input type="number" name="hue" value="" disabled />
-                </label>
-              </fieldset>
-            </form>
+            </fieldset>
+            <label>
+              <input type="checkbox" role="switch" name="overridePrimary" />
+              Customize primary color
+            </label>
+            <fieldset class="grid-auto">
+              <label>
+                Lightness
+                <input type="number" name="lightness" value="63" />
+              </label>
+              <label>
+                Chroma
+                <input type="number" name="chroma" value="0.18" />
+              </label>
+              <label>
+                Hue
+                <input type="number" name="hue" value="" disabled />
+              </label>
+            </fieldset>
+          </form>
 
-            <output data-title="Theme">
-              <pre id="colors-output"></pre>
-            </output>
-          </div>
-        </section>
+          <output data-title="Theme">
+            <pre id="colors-output"></pre>
+          </output>
+        </div>
+      </section>
 
-        <section>
-          <h2 id="base">Base</h2>
+      <section>
+        <h2 id="base">Base</h2>
 
-          <div class="example grid-auto" data-title="Inline elements">
-            <a href="#">Anchor</a>
-            <strong>Bold</strong>
-            <em>Italic</em>
-            <u>Underlined</u>
-            <s>Strikethrough</s>
-            <abbr title="An abbreviation">Abbreviation</abbr>
-            <span>Text<sub>sub</sub>, Text<sup>sup</sup></span>
-            <small>Small</small>
-            <span><code>code();</code></span>
-            <span><kbd>Keyboard</kbd></span>
-          </div>
+        <div class="example grid-auto" data-title="Inline elements">
+          <a href="#">Anchor</a>
+          <strong>Bold</strong>
+          <em>Italic</em>
+          <u>Underlined</u>
+          <s>Strikethrough</s>
+          <abbr title="An abbreviation">Abbreviation</abbr>
+          <span>Text<sub>sub</sub>, Text<sup>sup</sup></span>
+          <small>Small</small>
+          <span><code>code();</code></span>
+          <span><kbd>Keyboard</kbd></span>
+        </div>
 
-          <div class="example" data-title="Headings">
-            <h1>Headline level 1</h1>
-            <h2>Headline level 2</h2>
-            <h3>Headline level 3</h3>
-            <h4>Headline level 4</h4>
-            <h5>Headline level 5</h5>
-            <h6>Headline level 6</h6>
-          </div>
+        <div class="example" data-title="Headings">
+          <h1>Headline level 1</h1>
+          <h2>Headline level 2</h2>
+          <h3>Headline level 3</h3>
+          <h4>Headline level 4</h4>
+          <h5>Headline level 5</h5>
+          <h6>Headline level 6</h6>
+        </div>
 
-          <div class="example" data-title="Grouped headings">
+        <div class="example" data-title="Grouped headings">
+          <hgroup>
+            <p>Above headline</p>
+            <h1>Headline group</h1>
+            <p>
+              This text is grouped with the headline. Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Fugit error libero deserunt
+              recusandae.
+            </p>
+          </hgroup>
+          <p>
+            This is normal text. Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Fugit error libero deserunt recusandae.
+          </p>
+        </div>
+
+        <div class="example" data-title="Block elements">
+          <ul>
+            <li>Unordered list</li>
+            <li>Unordered list</li>
+            <li>Unordered list</li>
+          </ul>
+          <ol>
+            <li>Ordered list</li>
+            <li>Ordered list</li>
+            <li>Ordered list</li>
+          </ol>
+          <hr />
+          <pre>function hello(name) {"{/* ... */}"}</pre>
+          <figure>
+            <blockquote>This is a blockquote with a caption.</blockquote>
+            <figcaption><cite>Caption</cite></figcaption>
+          </figure>
+          <blockquote>This is a blockquote.</blockquote>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="components">Components</h2>
+
+        <div class="example grid-auto" data-title="Buttons">
+          <button>Primary</button>
+          <button variant="secondary">Secondary</button>
+          <button variant="ghost">Ghost</button>
+          <button aria-busy="true">Loading ...</button>
+          <button disabled>Disabled</button>
+          <button variant="muted">Muted</button>
+
+          <!-- links with button role -->
+          <a href="#" role="button">Primary link</a>
+          <a href="#" variant="secondary" role="button">Secondary link</a>
+          <a href="#" variant="ghost" role="button">Ghost link</a>
+
+          <!-- with icons -->
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+            With icon
+          </button>
+
+          <button variant="secondary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+            With icon
+          </button>
+
+          <button variant="ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+            With icon
+          </button>
+        </div>
+
+        <div class="example" data-title="Simple input">
+          <label>
+            Label
+            <input type="text" placeholder="Placeholder" />
+            <small>You can also add hints.</small>
+          </label>
+        </div>
+
+        <div class="example grid-auto" data-title="Different input types">
+          <label>
+            Email
+            <input type="email" placeholder="Placeholder" />
+          </label>
+          <label>
+            Password
+            <input type="password" placeholder="Placeholder" />
+          </label>
+          <label>
+            Date
+            <input type="date" placeholder="Placeholder" />
+          </label>
+          <label>
+            Time
+            <input type="time" placeholder="Placeholder" />
+          </label>
+          <label>
+            Search
+            <input type="search" placeholder="Placeholder" />
+          </label>
+          <label>
+            Disabled
+            <input type="text" disabled value="Value" />
+          </label>
+        </div>
+
+        <div class="example" data-title="Textarea">
+          <label>
+            A textarea
+            <textarea no-resize></textarea>
+          </label>
+        </div>
+
+        <div class="example" data-title="Select">
+          <label>
+            A select
+            <select>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <small>Selects can have hints, too.</small>
+          </label>
+        </div>
+
+        <div class="example" data-title="Checkbox">
+          <label> <input type="checkbox" checked />A checkbox </label>
+        </div>
+
+        <div class="example flex-col" data-title="Radio">
+          <label>
+            <input type="radio" name="radio" value="a" checked />Value A
+          </label>
+          <label> <input type="radio" name="radio" value="b" />Value B </label>
+          <label> <input type="radio" name="radio" value="c" />Value C </label>
+        </div>
+
+        <div class="example" data-title="Switch">
+          <label>
+            <input type="checkbox" checked role="switch" />A switch
+          </label>
+        </div>
+
+        <div class="example" data-title="Dialog">
+          <button onclick="document.querySelector('#demo-dialog').showModal()">
+            Show dialog
+          </button>
+
+          <dialog id="demo-dialog">
+            <header>Dialog header</header>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sed!
+              Adipisci sequi harum architecto, nesciunt aspernatur minus!
+              Quaerat, pariatur placeat! Optio est accusamus saepe vero quos
+              soluta, necessitatibus voluptates numquam.
+            </p>
+
+            <footer>
+              <button
+                variant="secondary"
+                onclick="document.querySelector('#demo-dialog').close()"
+              >
+                Cancel
+              </button>
+
+              <button
+                autofocus
+                onclick="document.querySelector('#demo-dialog').close()"
+              >
+                Confirm
+              </button>
+            </footer>
+          </dialog>
+        </div>
+
+        <div class="example" data-title="Details">
+          <details>
+            <summary>First</summary>
+            <p>Content for the first details block</p>
+          </details>
+          <details>
+            <summary>Second</summary>
+            <p>Content for the second details block</p>
+          </details>
+        </div>
+
+        <div class="example" data-title="Article">
+          <article>
             <hgroup>
-              <p>Above headline</p>
-              <h1>Headline group</h1>
+              <h3>This is an article</h3>
               <p>
-                This text is grouped with the headline. Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Fugit error libero deserunt
-                recusandae.
+                Articles have a card-like appearance and provide some special
+                formatting for their content. For example, the margins of the
+                first and last elements are trimmed, and elements such as
+                <code>hr</code> run over the entire width of the container.
               </p>
             </hgroup>
-            <p>
-              This is normal text. Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Fugit error libero deserunt recusandae.
-            </p>
-          </div>
-
-          <div class="example" data-title="Block elements">
-            <ul>
-              <li>Unordered list</li>
-              <li>Unordered list</li>
-              <li>Unordered list</li>
-            </ul>
-            <ol>
-              <li>Ordered list</li>
-              <li>Ordered list</li>
-              <li>Ordered list</li>
-            </ol>
             <hr />
-            <pre>function hello(name) {"{/* ... */}"}</pre>
-            <figure>
-              <blockquote>This is a blockquote with a caption.</blockquote>
-              <figcaption><cite>Caption</cite></figcaption>
-            </figure>
-            <blockquote>This is a blockquote.</blockquote>
-          </div>
-        </section>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est.
+            </p>
+          </article>
+        </div>
 
-        <section>
-          <h2 id="components">Components</h2>
+        <div
+          class="example"
+          data-title="Stacked navigation"
+          style="padding-inline: 1.5rem"
+        >
+          <nav>
+            <strong>Title</strong>
+            <ul>
+              <li><a href="#" active="true">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><hr /></li>
+              <li><a href="#">Link</a></li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                  Link
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-          <div class="example grid-auto" data-title="Buttons">
-            <button>Primary</button>
-            <button variant="secondary">Secondary</button>
-            <button variant="ghost">Ghost</button>
-            <button aria-busy="true">Loading ...</button>
-            <button disabled>Disabled</button>
-            <button variant="muted">Muted</button>
-
-            <!-- links with button role -->
-            <a href="#" role="button">Primary link</a>
-            <a href="#" variant="secondary" role="button">Secondary link</a>
-            <a href="#" variant="ghost" role="button">Ghost link</a>
-
-            <!-- with icons -->
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-              </svg>
-              With icon
-            </button>
-
-            <button variant="secondary">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-              </svg>
-              With icon
-            </button>
-
-            <button variant="ghost">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-              </svg>
-              With icon
-            </button>
-          </div>
-
-          <div class="example" data-title="Simple input">
-            <label>
-              Label
-              <input type="text" placeholder="Placeholder" />
-              <small>You can also add hints.</small>
-            </label>
-          </div>
-
-          <div class="example grid-auto" data-title="Different input types">
-            <label>
-              Email
-              <input type="email" placeholder="Placeholder" />
-            </label>
-            <label>
-              Password
-              <input type="password" placeholder="Placeholder" />
-            </label>
-            <label>
-              Date
-              <input type="date" placeholder="Placeholder" />
-            </label>
-            <label>
-              Time
-              <input type="time" placeholder="Placeholder" />
-            </label>
-            <label>
-              Search
-              <input type="search" placeholder="Placeholder" />
-            </label>
-            <label>
-              Disabled
-              <input type="text" disabled value="Value" />
-            </label>
-          </div>
-
-          <div class="example" data-title="Textarea">
-            <label>
-              A textarea
-              <textarea no-resize></textarea>
-            </label>
-          </div>
-
-          <div class="example" data-title="Select">
-            <label>
-              A select
-              <select>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-              <small>Selects can have hints, too.</small>
-            </label>
-          </div>
-
-          <div class="example" data-title="Checkbox">
-            <label> <input type="checkbox" checked />A checkbox </label>
-          </div>
-
-          <div class="example flex-col" data-title="Radio">
-            <label>
-              <input type="radio" name="radio" value="a" checked />Value A
-            </label>
-            <label>
-              <input type="radio" name="radio" value="b" />Value B
-            </label>
-            <label>
-              <input type="radio" name="radio" value="c" />Value C
-            </label>
-          </div>
-
-          <div class="example" data-title="Switch">
-            <label>
-              <input type="checkbox" checked role="switch" />A switch
-            </label>
-          </div>
-
-          <div class="example" data-title="Dialog">
-            <button
-              onclick="document.querySelector('#demo-dialog').showModal()"
-            >
-              Show dialog
-            </button>
-
-            <dialog id="demo-dialog">
-              <header>Dialog header</header>
-
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-                sed! Adipisci sequi harum architecto, nesciunt aspernatur minus!
-                Quaerat, pariatur placeat! Optio est accusamus saepe vero quos
-                soluta, necessitatibus voluptates numquam.
-              </p>
-
-              <footer>
-                <button
-                  variant="secondary"
-                  onclick="document.querySelector('#demo-dialog').close()"
-                >
-                  Cancel
-                </button>
-
-                <button
-                  autofocus
-                  onclick="document.querySelector('#demo-dialog').close()"
-                >
-                  Confirm
-                </button>
-              </footer>
-            </dialog>
-          </div>
-
-          <div class="example" data-title="Details">
-            <details>
-              <summary>First</summary>
-              <p>Content for the first details block</p>
-            </details>
-            <details>
-              <summary>Second</summary>
-              <p>Content for the second details block</p>
-            </details>
-          </div>
-
-          <div class="example" data-title="Article">
-            <article>
-              <hgroup>
-                <h3>This is an article</h3>
-                <p>
-                  Articles have a card-like appearance and provide some special
-                  formatting for their content. For example, the margins of the
-                  first and last elements are trimmed, and elements such as
-                  <code>hr</code> run over the entire width of the container.
-                </p>
-              </hgroup>
-              <hr />
-              <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est.
-              </p>
-            </article>
-          </div>
-
-          <div class="example" data-title="Stacked navigation" style="padding-inline: 1.5rem;">
+        <div class="example" data-title="Horizontal navigation">
+          <header>
             <nav>
               <strong>Title</strong>
               <ul>
                 <li><a href="#" active="true">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
+                <li><button>Button</button></li>
                 <li><hr /></li>
                 <li><a href="#">Link</a></li>
                 <li>
@@ -408,281 +437,241 @@
                 </li>
               </ul>
             </nav>
-          </div>
+          </header>
+        </div>
 
-          <div class="example" data-title="Horizontal navigation">
-            <header>
-              <nav>
-                <strong>Title</strong>
-                <ul>
-                  <li><a href="#" active="true">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><button>Button</button></li>
-                  <li><hr /></li>
-                  <li><a href="#">Link</a></li>
-                  <li>
-                    <a href="#">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                      </svg>
-                      Link
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </header>
-          </div>
+        <div class="example" data-title="Menu">
+          <menu>
+            <li>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+                Menu item with icon
+              </button>
+            </li>
+            <li><button>Menu item</button></li>
+            <li>Section</li>
+            <li><button>Menu item</button></li>
+            <li><button active="true">Active menu item</button></li>
+          </menu>
+        </div>
 
-          <div class="example" data-title="Menu">
-            <menu>
-              <li>
-                <button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                  </svg>
-                  Menu item with icon
-                </button>
-              </li>
+        <div class="example" data-title="Menu as popover">
+          <div>
+            <button popovertarget="button-menu">Open menu</button>
+            <menu id="button-menu" popover>
               <li><button>Menu item</button></li>
-              <li>Section</li>
-              <li><button>Menu item</button></li>
-              <li><button active="true">Active menu item</button></li>
             </menu>
           </div>
+        </div>
 
-          <div class="example" data-title="Menu as popover">
-            <div>
-              <button popovertarget="button-menu">Open menu</button>
-              <menu id="button-menu" popover>
-                <li><button>Menu item</button></li>
-              </menu>
+        <div class="example" data-title="Tabs">
+          <ul role="tablist">
+            <li><a href="#">Link</a></li>
+            <li><a href="#" active="true">Active</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
+
+        <div class="example" data-title="Tables">
+          <table>
+            <thead>
+              <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 4, Cell 1</td>
+                <td>Row 4, Cell 2</td>
+                <td>Row 4, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 5, Cell 1</td>
+                <td>Row 5, Cell 2</td>
+                <td>Row 5, Cell 3</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+                <td>Footer 3</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="utils">Utils</h2>
+
+        <div class="example" style="text-align: center" data-title="Spinner">
+          <div aria-busy="true"></div>
+        </div>
+
+        <div class="example" data-title="Tooltip">
+          <button data-tooltip="This is a tooltip!">Hover me</button>
+        </div>
+
+        <div class="example" data-title="Fallback states">
+          <form name="fallbackState">
+            <label>
+              Select a state
+              <select name="state">
+                <option value="">With data (default)</option>
+                <option value="empty-automatic">Empty (automatic)</option>
+                <option value="empty-manual">Empty (manual)</option>
+                <option value="loading">Loading</option>
+                <option value="error">Error</option>
+              </select>
+            </label>
+          </form>
+
+          <hr />
+
+          <div has-fallback>
+            <div>Content</div>
+
+            <div fallback-for="empty">
+              <p><strong>Move along</strong></p>
+              <p>Nothing to see here.</p>
+            </div>
+
+            <div fallback-for="loading">
+              <div aria-busy="true"></div>
+              <p>Please wait...</p>
+            </div>
+
+            <div fallback-for="error">
+              <p><strong>Something went wrong</strong></p>
+              <p>Please try again later.</p>
+              <button variant="secondary">Retry now</button>
             </div>
           </div>
+        </div>
 
-          <div class="example" data-title="Tabs">
-            <ul role="tablist">
-              <li><a href="#">Link</a></li>
-              <li><a href="#" active="true">Active</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-            </ul>
+        <div
+          class="example grid-auto"
+          data-title="Typography"
+          style="align-items: center"
+        >
+          <span class="font-size-h1">font-size-h1</span>
+          <span class="font-size-h2">font-size-h2</span>
+          <span class="font-size-h3">font-size-h3</span>
+          <span class="font-size-h4">font-size-h4</span>
+          <span class="font-size-h5">font-size-h5</span>
+          <span class="font-size-h6">font-size-h6</span>
+          <span class="font-size-base">font-size-base</span>
+          <span class="font-size-small">font-size-small</span>
+          <span class="font-mono">font-mono</span>
+          <span class="font-weight-normal">font-weight-normal</span>
+          <span class="font-weight-medium">font-weight-medium</span>
+          <span class="font-weight-bold">font-weight-bold</span>
+        </div>
+
+        <div class="example" data-title="Text alignment">
+          <div class="text-left">text-left</div>
+          <div class="text-center">text-center</div>
+          <div class="text-right">text-right</div>
+        </div>
+
+        <div class="example" data-title="Text glow">
+          <div class="icons">
+            <span class="glow" data-content="🌸">🌸</span>
+            <span class="glow" data-content="👾">👾</span>
+            <span class="glow" data-content="🐳">🐳</span>
+            <span class="glow" data-content="🐢">🐢</span>
+            <span class="glow" data-content="🌞">🌞</span>
+            <span class="glow" data-content="🦁">🦁</span>
+            <span class="glow" data-content="🍎">🍎</span>
+            <span class="glow" data-content="🐑">🐑</span>
+            <span class="glow" data-content="🐜">🐜</span>
           </div>
+        </div>
 
-          <div class="example" data-title="Tables">
-            <table>
-              <thead>
-                <tr>
-                  <th>Column 1</th>
-                  <th>Column 2</th>
-                  <th>Column 3</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Row 1, Cell 1</td>
-                  <td>Row 1, Cell 2</td>
-                  <td>Row 1, Cell 3</td>
-                </tr>
-                <tr>
-                  <td>Row 2, Cell 1</td>
-                  <td>Row 2, Cell 2</td>
-                  <td>Row 2, Cell 3</td>
-                </tr>
-                <tr>
-                  <td>Row 3, Cell 1</td>
-                  <td>Row 3, Cell 2</td>
-                  <td>Row 3, Cell 3</td>
-                </tr>
-                <tr>
-                  <td>Row 4, Cell 1</td>
-                  <td>Row 4, Cell 2</td>
-                  <td>Row 4, Cell 3</td>
-                </tr>
-                <tr>
-                  <td>Row 5, Cell 1</td>
-                  <td>Row 5, Cell 2</td>
-                  <td>Row 5, Cell 3</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td>Footer 1</td>
-                  <td>Footer 2</td>
-                  <td>Footer 3</td>
-                </tr>
-              </tfoot>
-            </table>
+        <div class="example" data-title="Line clamp">
+          <p class="clamp">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae sequi.
+            Accusamus quaerat sed cum magni dolorem earum perferendis mollitia
+            veritatis autem odit amet placeat, vel voluptas, debitis eligendi
+            libero temporibus dolore similique?
+          </p>
+          <p class="clamp" style="--clamp: 2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae sequi.
+            Accusamus quaerat sed cum magni dolorem earum perferendis mollitia
+            veritatis autem odit amet placeat, vel voluptas, debitis eligendi
+            libero temporibus dolore similique?
+          </p>
+        </div>
+
+        <div class="example grid-auto" data-title="Colors">
+          <span class="color-base">color-base</span>
+          <span class="color-variant">color-variant</span>
+          <span class="color-primary">color-primary</span>
+          <div class="background">background</div>
+          <div class="surface">surface</div>
+          <div class="surface-variant">surface-variant</div>
+        </div>
+
+        <div class="example grid-auto" data-title="Shadows">
+          <div class="shadow-low rounded" style="padding: 1rem">shadow-low</div>
+          <div class="shadow-medium rounded" style="padding: 1rem">
+            shadow-medium
           </div>
-        </section>
-
-        <section>
-          <h2 id="utils">Utils</h2>
-
-          <div class="example" style="text-align: center" data-title="Spinner">
-            <div aria-busy="true"></div>
+          <div class="shadow-high rounded" style="padding: 1rem">
+            shadow-high
           </div>
+          <div class="no-shadow rounded" style="padding: 1rem">no-shadow</div>
+        </div>
 
-          <div class="example" data-title="Tooltip">
-            <button data-tooltip="This is a tooltip!">Hover me</button>
+        <div class="example grid-auto" data-title="Borders">
+          <div class="border" style="padding: 1rem">border</div>
+          <div class="border-variant" style="padding: 1rem">border-variant</div>
+          <div class="border border-large" style="padding: 1rem">
+            border-large
           </div>
-
-          <div class="example" data-title="Fallback states">
-            <form name="fallbackState">
-              <label>
-                Select a state
-                <select name="state">
-                  <option value="">With data (default)</option>
-                  <option value="empty-automatic">Empty (automatic)</option>
-                  <option value="empty-manual">Empty (manual)</option>
-                  <option value="loading">Loading</option>
-                  <option value="error">Error</option>
-                </select>
-              </label>
-            </form>
-
-            <hr />
-
-            <div has-fallback>
-              <div>Content</div>
-
-              <div fallback-for="empty">
-                <p><strong>Move along</strong></p>
-                <p>Nothing to see here.</p>
-              </div>
-
-              <div fallback-for="loading">
-                <div aria-busy="true"></div>
-                <p>Please wait...</p>
-              </div>
-
-              <div fallback-for="error">
-                <p><strong>Something went wrong</strong></p>
-                <p>Please try again later.</p>
-                <button variant="secondary">Retry now</button>
-              </div>
-            </div>
+          <div class="no-border" style="padding: 1rem">no-border</div>
+          <div class="border rounded-small" style="padding: 1rem">
+            rounded-small
           </div>
-
-          <div
-            class="example grid-auto"
-            data-title="Typography"
-            style="align-items: center"
-          >
-            <span class="font-size-h1">font-size-h1</span>
-            <span class="font-size-h2">font-size-h2</span>
-            <span class="font-size-h3">font-size-h3</span>
-            <span class="font-size-h4">font-size-h4</span>
-            <span class="font-size-h5">font-size-h5</span>
-            <span class="font-size-h6">font-size-h6</span>
-            <span class="font-size-base">font-size-base</span>
-            <span class="font-size-small">font-size-small</span>
-            <span class="font-mono">font-mono</span>
-            <span class="font-weight-normal">font-weight-normal</span>
-            <span class="font-weight-medium">font-weight-medium</span>
-            <span class="font-weight-bold">font-weight-bold</span>
+          <div class="border rounded" style="padding: 1rem">rounded</div>
+          <div class="border rounded-large" style="padding: 1rem">
+            rounded-large
           </div>
-
-          <div class="example" data-title="Text alignment">
-            <div class="text-left">text-left</div>
-            <div class="text-center">text-center</div>
-            <div class="text-right">text-right</div>
-          </div>
-
-          <div class="example" data-title="Text glow">
-            <div class="icons">
-              <span class="glow" data-content="🌸">🌸</span>
-              <span class="glow" data-content="👾">👾</span>
-              <span class="glow" data-content="🐳">🐳</span>
-              <span class="glow" data-content="🐢">🐢</span>
-              <span class="glow" data-content="🌞">🌞</span>
-              <span class="glow" data-content="🦁">🦁</span>
-              <span class="glow" data-content="🍎">🍎</span>
-              <span class="glow" data-content="🐑">🐑</span>
-              <span class="glow" data-content="🐜">🐜</span>
-            </div>
-          </div>
-
-          <div class="example" data-title="Line clamp">
-            <p class="clamp">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae
-              sequi. Accusamus quaerat sed cum magni dolorem earum perferendis
-              mollitia veritatis autem odit amet placeat, vel voluptas, debitis
-              eligendi libero temporibus dolore similique?
-            </p>
-            <p class="clamp" style="--clamp: 2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              quo ipsa beatae omnis nihil dolores. Dignissimos, recusandae
-              sequi. Accusamus quaerat sed cum magni dolorem earum perferendis
-              mollitia veritatis autem odit amet placeat, vel voluptas, debitis
-              eligendi libero temporibus dolore similique?
-            </p>
-          </div>
-
-          <div class="example grid-auto" data-title="Colors">
-            <span class="color-base">color-base</span>
-            <span class="color-variant">color-variant</span>
-            <span class="color-primary">color-primary</span>
-            <div class="background">background</div>
-            <div class="surface">surface</div>
-            <div class="surface-variant">surface-variant</div>
-          </div>
-
-          <div class="example grid-auto" data-title="Shadows">
-            <div class="shadow-low rounded" style="padding: 1rem">
-              shadow-low
-            </div>
-            <div class="shadow-medium rounded" style="padding: 1rem">
-              shadow-medium
-            </div>
-            <div class="shadow-high rounded" style="padding: 1rem">
-              shadow-high
-            </div>
-            <div class="no-shadow rounded" style="padding: 1rem">
-              no-shadow
-            </div>
-          </div>
-
-          <div class="example grid-auto" data-title="Borders">
-            <div class="border" style="padding: 1rem">border</div>
-            <div class="border-variant" style="padding: 1rem">
-              border-variant
-            </div>
-            <div class="border border-large" style="padding: 1rem">
-              border-large
-            </div>
-            <div class="no-border" style="padding: 1rem">no-border</div>
-            <div class="border rounded-small" style="padding: 1rem">
-              rounded-small
-            </div>
-            <div class="border rounded" style="padding: 1rem">rounded</div>
-            <div class="border rounded-large" style="padding: 1rem">
-              rounded-large
-            </div>
-            <div class="border no-rounded" style="padding: 1rem">
-              no-rounded
-            </div>
-          </div>
-        </section>
-      </main>
-    </header>
+          <div class="border no-rounded" style="padding: 1rem">no-rounded</div>
+        </div>
+      </section>
+    </main>
 
     <style>
       @import "./dist/design-system.css" layer(theme);
@@ -848,7 +837,7 @@
       const fallbackEl = document.querySelector("[has-fallback]");
 
       const fallbackContentEl = document.querySelector(
-        "[has-fallback] > :first-child"
+        "[has-fallback] > :first-child",
       );
 
       fallbackStateForm.addEventListener("change", (event) => {
