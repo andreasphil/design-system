@@ -49,7 +49,7 @@ The CSS loosely follows [CUBE CSS](https://piccalil.li/blog/cube-css/):
 
 - **Global, high-level styles:** nost styling is global styling of plain HTML elements. There are a bunch of design tokens for colors, fonts, shared spacing, etc. in [`src/base/variables.css`](./src/base/variables.css) that you can use to customize the Design System or apply to your own components.
 
-- **Blocks:** The framework includes opinionated styling for almost all common HTML elements inside [`src/blocks/`](./src/blocks/).
+- **Blocks:** The framework includes opinionated styling for almost all common HTML elements inside.
 
 - **Exceptions:** Some blocks, such as buttons, come with variants (also called exceptions). [According to CUBE CSS](https://cube.fyi/exception.html#why-data-attributes), variants are applied using attributes.
 
