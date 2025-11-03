@@ -58,10 +58,6 @@ dialog {
     transition: all 0.2s ease allow-discrete;
   }
 
-  & {
-    scale: 0.95;
-  }
-
   &[open],
   &[open]::backdrop {
     opacity: 1;
@@ -75,7 +71,7 @@ dialog {
     }
 
     &[open] {
-      scale: 1.1;
+      scale: 1.05;
     }
   }
 }
