@@ -469,8 +469,22 @@
 
         <div class="example" data-title="Menu as popover">
           <div>
-            <button popovertarget="button-menu">Open menu</button>
-            <menu id="button-menu" popover>
+            <button
+              popovertarget="button-menu"
+              style="anchor-name: --anchor-el;"
+            >
+              Open menu
+            </button>
+            <menu
+              id="button-menu"
+              class="no-margin"
+              popover
+              style="
+                position-anchor: --anchor-el;
+                position: absolute;
+                position-area: bottom span-right;
+              "
+            >
               <li><button>Menu item</button></li>
             </menu>
           </div>
