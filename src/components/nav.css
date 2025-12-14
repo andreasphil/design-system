@@ -56,60 +56,60 @@ nav {
       padding: 0.375rem 0.75rem;
     }
   }
-}
 
-header > nav {
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  white-space: nowrap;
-
-  & > ul {
+  header > & {
     align-items: center;
     flex-direction: row;
+    justify-content: space-between;
+    white-space: nowrap;
 
-    & > li + li {
-      margin-top: 0;
+    & > ul {
+      align-items: center;
+      flex-direction: row;
+
+      & > li + li {
+        margin-top: 0;
+      }
+
+      & li > hr:only-child {
+        border-top-width: 0;
+        border-left-width: var(--border-width-large);
+        height: 1.5em;
+        margin: 0 0.375rem;
+      }
     }
 
-    & li > hr:only-child {
-      border-top-width: 0;
-      border-left-width: var(--border-width-large);
-      height: 1.5em;
-      margin: 0 0.375rem;
+    &[align-left] {
+      gap: 1.25rem;
+      justify-content: flex-start;
     }
-  }
 
-  &[align-left] {
-    gap: 1.25rem;
-    justify-content: flex-start;
-  }
-
-  &[fixed] {
-    backdrop-filter: blur(16px) saturate(1.5);
-    background: color-mix(in oklch, var(--c-surface-bg), transparent 20%);
-    box-shadow: var(--shadow-elevation-medium);
-    flex-wrap: nowrap;
-    height: 5rem;
-    inset-inline: 0;
-    overflow: auto;
-    padding: 0 var(--body-padding-x);
-    position: fixed;
-    top: 0;
-    z-index: 10;
-
-    & ul {
+    &[fixed] {
+      backdrop-filter: var(--backdrop-glass);
+      background: var(--c-glass);
+      border-bottom: var(--border-width) solid var(--c-border-variant);
       flex-wrap: nowrap;
-      margin: 0;
+      height: 5rem;
+      inset-inline: 0;
+      overflow: auto;
+      padding: 0 var(--body-padding-x);
+      position: fixed;
+      top: 0;
+      z-index: 10;
+
+      & ul {
+        flex-wrap: nowrap;
+        margin: 0;
+      }
+    }
+
+    &:not([fixed]) {
+      margin-block: var(--outer-spacing-y);
     }
   }
 
-  &:not([fixed]) {
-    margin-block: var(--outer-spacing-y);
+  /* Automatically increase body padding if it has a fixed nav */
+  body:has(&[fixed]) {
+    padding-top: calc(var(--body-padding-y) + 5rem);
   }
-}
-
-/* Automatically increase body padding if it has a fixed nav */
-body:has(nav[fixed]) {
-  padding-top: calc(var(--body-padding-y) + 5rem);
 }

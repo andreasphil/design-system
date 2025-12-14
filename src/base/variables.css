@@ -38,10 +38,11 @@
   --outline-outset: var(--border-width-large);
 
   /* Transitions and other effects */
+  --backdrop-glass: blur(16px) saturate(1.5);
+  --disabled-opacity: 0.4;
   --transition-duration: 0.2s;
   --transition-timing-function: ease;
   --transition: var(--transition-duration) var(--transition-timing-function);
-  --disabled-opacity: 0.4;
 
   /* Shadows */
   --shadow-elevation-low: 0 0.0625rem 0.125rem 0 var(--c-shadow);
@@ -96,4 +97,5 @@
   --c-surface-fg: light-dark(var(--neutral-950), var(--neutral-50));
   --c-surface-variant-bg: light-dark(var(--neutral-100), var(--neutral-800));
   --c-surface-variant-fg: light-dark(var(--neutral-950), var(--neutral-50));
+  --c-glass: oklch(from var(--c-surface-bg) l c h / 70%);
 }
