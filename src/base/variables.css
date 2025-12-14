@@ -87,7 +87,7 @@
   --c-border: light-dark(var(--neutral-200), var(--neutral-700));
   --c-border-variant: light-dark(var(--neutral-100), var(--neutral-800));
   --c-outline: light-dark(var(--primary), var(--primary));
-  --c-shadow: light-dark(color-mix(in oklch, var(--neutral-900), transparent 94%), var(--c-bg));
+  --c-shadow: light-dark(oklch(from var(--neutral-900) l c h / 6%), var(--c-bg));
   --c-bg: light-dark(var(--neutral-50), var(--neutral-950));
   --c-fg: light-dark(var(--neutral-950), var(--neutral-50));
   --c-fg-variant: light-dark(var(--neutral-400), var(--neutral-500));
