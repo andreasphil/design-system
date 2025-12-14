@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "node ./build --watch",
     "build": "node ./build",
-    "preversion": "node --run build; git add --force dist/*.css"
+    "preversion": "node --run build; git add ./dist"
   },
   "devDependencies": {
     "lightningcss": "^1.30.1"
