@@ -1,0 +1,37 @@
+.card {
+  background-color: var(--c-surface-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-elevation-low);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  line-height: 1.25;
+  padding: 1.125rem 1.25rem;
+  transition-property: color, background-color;
+
+  &:is(a, button) {
+    text-decoration: none;
+
+    &:is(:hover, :focus-visible) {
+      outline-offset: var(--outline-inset);
+      outline: var(--outline);
+    }
+  }
+
+  header {
+    margin-bottom: var(--outer-spacing-y);
+  }
+
+  p:first-of-type {
+    color: var(--c-fg);
+    font-weight: var(--font-weight-medium);
+    margin-top: auto;
+  }
+
+  p {
+    color: var(--c-fg-variant);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+  }
+}

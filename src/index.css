@@ -6,6 +6,7 @@
 /* UI components */
 @import "./components/article.css";
 @import "./components/button.css";
+@import "./components/card.css";
 @import "./components/checkbox.css";
 @import "./components/details.css";
 @import "./components/dialog.css";

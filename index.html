@@ -485,6 +485,24 @@
           </ul>
         </div>
 
+        <div class="example grid-auto" data-title="Cards">
+          <div class="card">
+            <header class="glow" data-content="🍯">🍯</header>
+            <p>Container card</p>
+            <p class="clamp" style="--clamp: 2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+              nesciunt neque minima temporibus velit adipisci praesentium ut,
+              fugiat porro vero.
+            </p>
+          </div>
+
+          <a href="#" class="card">
+            <header class="glow" data-content="🌎">🌎</header>
+            <p>Link card</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </a>
+        </div>
+
         <div class="example" data-title="Tables">
           <table>
             <thead>
@@ -839,7 +857,7 @@
       const fallbackEl = document.querySelector("[has-fallback]");
 
       const fallbackContentEl = document.querySelector(
-        "[has-fallback] > :first-child",
+        "[has-fallback] > :first-child"
       );
 
       fallbackStateForm.addEventListener("change", (event) => {
