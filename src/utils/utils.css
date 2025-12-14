@@ -137,6 +137,13 @@
   border-radius: 30%;
 }
 
+@supports (corner-shape: squircle) {
+  .rounded-squircle {
+    border-radius: 50%;
+    corner-shape: squircle;
+  }
+}
+
 .no-border {
   border: none;
 }
@@ -174,7 +181,7 @@
 }
 
 .margin-y-body {
-  margin-block:var(--body-padding-y);
+  margin-block: var(--body-padding-y);
 }
 
 .margin-y-outer-spacing {
