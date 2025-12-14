@@ -46,36 +46,36 @@ input:not(
     display: block;
     margin-top: 0.25rem;
   }
-}
 
-input:is([type="date"], [type="time"], [type="datetime-local"]) {
-  /* Manually set the input height because some types have inconsistent height */
-  height: calc(1lh + (0.5rem * 2) + var(--border-width) * 2);
-}
+  &:is([type="date"], [type="time"], [type="datetime-local"]) {
+    /* Manually set the input height because some types have inconsistent height */
+    height: calc(1lh + (0.5rem * 2) + var(--border-width) * 2);
+  }
 
-input[type="email"] {
-  --input-has-icon: 1;
-  --input-icon: var(--icon-mail);
-}
+  &[type="email"] {
+    --input-has-icon: 1;
+    --input-icon: var(--icon-mail);
+  }
 
-input[type="password"] {
-  --input-has-icon: 1;
-  --input-icon: var(--icon-lock);
-}
+  &[type="password"] {
+    --input-has-icon: 1;
+    --input-icon: var(--icon-lock);
+  }
 
-input[type="date"] {
-  --input-has-icon: 1;
-  --input-icon: var(--icon-calendar);
-}
+  &[type="date"] {
+    --input-has-icon: 1;
+    --input-icon: var(--icon-calendar);
+  }
 
-input[type="time"] {
-  --input-has-icon: 1;
-  --input-icon: var(--icon-clock);
-}
+  &[type="time"] {
+    --input-has-icon: 1;
+    --input-icon: var(--icon-clock);
+  }
 
-input[type="search"] {
-  --input-has-icon: 1;
-  --input-icon: var(--icon-search);
+  &[type="search"] {
+    --input-has-icon: 1;
+    --input-icon: var(--icon-search);
+  }
 }
 
 textarea {
