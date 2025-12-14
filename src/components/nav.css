@@ -5,12 +5,14 @@ nav {
   gap: 1rem;
   padding: 0;
 
+  /* Strong as the first item = add some layout to support logo + text */
   & > strong:first-child {
     align-items: center;
     display: flex;
     gap: 0.75rem;
   }
 
+  /* Nav list - vertical by default */
   & > ul {
     display: flex;
     flex-direction: column;
@@ -20,11 +22,11 @@ nav {
     margin: 0 -0.75rem;
     padding: 0;
 
-    & li {
+    li {
       flex: none;
     }
 
-    & li > a {
+    li > a {
       align-items: center;
       border-radius: var(--border-radius);
       font-weight: var(--font-weight-medium);
@@ -47,16 +49,17 @@ nav {
       }
     }
 
-    & li > hr:only-child {
+    li > hr:only-child {
       margin: 0.375rem 0;
     }
 
-    & li > :is(button, [role="button"]) {
+    li > :is(button, [role="button"]) {
       flex: none;
       padding: 0.375rem 0.75rem;
     }
   }
 
+  /* In a header element: nav list is horizontal */
   header > & {
     align-items: center;
     flex-direction: row;
@@ -71,7 +74,7 @@ nav {
         margin-top: 0;
       }
 
-      & li > hr:only-child {
+      li > hr:only-child {
         border-top-width: 0;
         border-left-width: var(--border-width-large);
         height: 1.5em;
@@ -97,7 +100,7 @@ nav {
       top: 0;
       z-index: 10;
 
-      & ul {
+      ul {
         flex-wrap: nowrap;
         margin: 0;
       }

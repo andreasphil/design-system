@@ -22,12 +22,14 @@
     margin-bottom: var(--outer-spacing-y);
   }
 
+  /* First p = "heading" of the card */
   p:first-of-type {
     color: var(--c-fg);
     font-weight: var(--font-weight-medium);
     margin-top: auto;
   }
 
+  /* Additional ps = "description" of the card */
   p {
     color: var(--c-fg-variant);
     font-size: var(--font-size-small);

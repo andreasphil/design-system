@@ -12,7 +12,7 @@ menu {
   width: max-content;
   z-index: 1;
 
-  & button {
+  button {
     --internal-bg: transparent;
     --internal-fg: var(--c-fg);
     --internal-hover: var(--c-surface-variant-bg);
@@ -27,11 +27,11 @@ menu {
     }
   }
 
-  & button[active="true"] {
+  button[active="true"] {
     --internal-bg: var(--c-surface-variant-bg);
   }
 
-  & li {
+  li {
     padding: 0 0.5rem;
     position: relative;
 

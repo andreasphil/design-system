@@ -9,24 +9,27 @@ ul[role="tablist"] {
   gap: var(--internal-gap);
   padding: 0.25rem;
 
-  & li {
+  li {
     flex: 1 1 auto;
     list-style-type: none;
     position: relative;
     margin: 0;
   }
 
-  & li:not(:has([active="true"])) + li:not(:has([active="true"]))::before {
-    background: var(--c-border);
-    content: "";
-    display: block;
-    inset-block: 0.5rem;
-    left: calc((var(--internal-gap) + var(--border-width-large)) / -2);
-    position: absolute;
-    width: var(--border-width-large);
+  /* Add a separator between inactive sibling elements */
+  li:not(:has([active="true"])) {
+    & + &::before {
+      background: var(--c-border);
+      content: "";
+      display: block;
+      inset-block: 0.5rem;
+      left: calc((var(--internal-gap) + var(--border-width-large)) / -2);
+      position: absolute;
+      width: var(--border-width-large);
+    }
   }
 
-  & a {
+  a {
     border-radius: calc(var(--internal-border-radius) - 0.25rem);
     display: block;
     padding: 0.25rem 1rem;

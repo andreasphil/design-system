@@ -38,10 +38,12 @@ dialog {
     margin: var(--internal-padding) calc(var(--internal-padding) * -1) 0;
     padding: var(--internal-padding);
 
+    /* Distribute spacing evenly between all items in the footer */
     > * {
       flex: 1;
     }
 
+    /* Empty div as a spacer between items */
     > div:empty {
       flex: 2;
     }
