@@ -54,28 +54,27 @@
     var(--shadow-elevation-low), 0 0.3rem 1.5rem -0.3rem var(--c-shadow);
 
   /* Theme */
-  --theme-tint: 165;
-  --theme-primary: 72% 0.15 var(--theme-tint);
+  --tint: 165;
 
   /* Default color palette */
   --black: oklch(0% 0 0);
   --white: oklch(100% 0 0);
 
-  --neutral-50: oklch(99% 0.001 var(--theme-tint));
-  --neutral-100: oklch(97% 0.003 var(--theme-tint));
-  --neutral-200: oklch(95% 0.008 var(--theme-tint));
-  --neutral-300: oklch(87% 0.012 var(--theme-tint));
-  --neutral-400: oklch(70% 0.02 var(--theme-tint));
-  --neutral-500: oklch(55% 0.025 var(--theme-tint));
-  --neutral-600: oklch(45% 0.02 var(--theme-tint));
-  --neutral-700: oklch(25% 0.018 var(--theme-tint));
-  --neutral-800: oklch(22% 0.014 var(--theme-tint));
-  --neutral-900: oklch(18% 0.012 var(--theme-tint));
-  --neutral-950: oklch(13% 0.005 var(--theme-tint));
+  --neutral-50: oklch(from var(--primary) 99% 0.001 h);
+  --neutral-100: oklch(from var(--primary) 97% 0.003 h);
+  --neutral-200: oklch(from var(--primary) 95% 0.008 h);
+  --neutral-300: oklch(from var(--primary) 87% 0.012 h);
+  --neutral-400: oklch(from var(--primary) 70% 0.02 h);
+  --neutral-500: oklch(from var(--primary) 55% 0.025 h);
+  --neutral-600: oklch(from var(--primary) 45% 0.02 h);
+  --neutral-700: oklch(from var(--primary) 25% 0.018 h);
+  --neutral-800: oklch(from var(--primary) 22% 0.014 h);
+  --neutral-900: oklch(from var(--primary) 18% 0.012 h);
+  --neutral-950: oklch(from var(--primary) 13% 0.005 h);
 
-  --primary: oklch(var(--theme-primary));
+  --primary: oklch(72% 0.15 var(--tint));
   --on-primary: var(--white);
-  --primary-50: color-mix(in oklch, var(--c-bg), var(--primary) 7.5%);
+  --primary-50: color-mix(in oklch, var(--c-bg), var(--primary) 9%);
   --primary-100: color-mix(in oklch, var(--c-bg), var(--primary) 18%);
   --primary-200: color-mix(in oklch, var(--c-bg), var(--primary) 40%);
   --primary-300: color-mix(in oklch, var(--c-bg), var(--primary) 60%);

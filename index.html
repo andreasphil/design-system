@@ -726,7 +726,7 @@
       }
 
       .logo {
-        filter: hue-rotate(calc((var(--theme-tint) - 165) * 1deg));
+        filter: hue-rotate(calc((var(--tint) - 165) * 1deg));
       }
 
       .grid-auto {
@@ -833,21 +833,21 @@
         colorsForm.hue.value = colorsForm.tint.value;
 
         // Set the tint
-        root.style.setProperty("--theme-tint", tint);
+        root.style.setProperty("--tint", tint);
 
         // Set the primary color
         const primary = overridePrimary
-          ? `${lightness || 1}% ${chroma || 1} ${tint || 1}`
+          ? `oklch(${lightness || 1}% ${chroma || 1} ${tint || 1})`
           : "";
-        root.style.setProperty("--theme-primary", primary);
+        root.style.setProperty("--primary", primary);
 
         // Update output
         if (tint && primary) {
-          colorsOutput.textContent = `--theme-tint: ${tint};\n--theme-primary: ${primary};`;
+          colorsOutput.textContent = `--tint: ${tint};\n--primary: ${primary};`;
         } else if (tint) {
-          colorsOutput.textContent = `--theme-tint: ${tint};`;
+          colorsOutput.textContent = `--tint: ${tint};`;
         } else if (primary) {
-          colorsOutput.textContent = `--theme-primary: ${primary};`;
+          colorsOutput.textContent = `--primary: ${primary};`;
         } else {
           colorsOutput.textContent = "/* No changes */";
         }
