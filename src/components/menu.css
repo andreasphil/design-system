@@ -6,6 +6,7 @@ menu {
   flex-direction: column;
   font-size: var(--font-size-small);
   list-style-type: none;
+  margin: var(--outer-spacing-y) 0;
   min-width: 12rem;
   padding: 0.5rem 0;
   width: max-content;
