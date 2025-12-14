@@ -162,7 +162,7 @@ li {
 
 :is(a, u, abbr) {
   text-decoration: underline;
-  text-decoration-thickness: var(--border-width);
+  text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
 
@@ -208,6 +208,7 @@ strong {
 /* Links ----------------------------------------------- */
 
 a {
+  text-decoration-color: oklch(from currentColor l c h / 20%);
   transition: var(--transition);
   transition-property: color, text-decoration-color;
 
