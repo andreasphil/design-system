@@ -26,6 +26,7 @@
   --outer-spacing-y: 2rem;
   --body-width: 50rem;
   --line-height: 1.5;
+  --line-height-condensed: 1.2;
 
   /* Borders */
   --border-radius-small: 0.5rem;
