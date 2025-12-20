@@ -27,7 +27,7 @@ menu {
     }
   }
 
-  button[active="true"] {
+  button[aria-pressed="true"] {
     --internal-bg: var(--c-surface-variant-bg);
   }
 
