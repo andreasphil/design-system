@@ -40,7 +40,9 @@ nav {
         outline: var(--outline);
       }
 
-      &[active="true"] {
+      &[aria-current="true"],
+      &[aria-current="location"],
+      &[aria-current="page"] {
         background: var(--c-surface-variant-bg);
       }
 
