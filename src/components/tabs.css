@@ -17,7 +17,7 @@ ul[role="tablist"] {
   }
 
   /* Add a separator between inactive sibling elements */
-  li:not(:has([active="true"])) {
+  li:not(:has([aria-selected="true"])) {
     & + &::before {
       background: var(--c-border);
       content: "";
@@ -41,7 +41,7 @@ ul[role="tablist"] {
       outline: var(--outline);
     }
 
-    &[active="true"] {
+    &[aria-selected="true"] {
       background: var(--c-surface-bg);
       box-shadow: var(--shadow-elevation-low);
     }
@@ -49,7 +49,7 @@ ul[role="tablist"] {
 }
 
 @media (prefers-color-scheme: dark) {
-  ul[role="tablist"] a[active="true"] {
+  ul[role="tablist"] a[aria-selected="true"] {
     box-shadow: none;
   }
 }
