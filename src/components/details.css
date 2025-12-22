@@ -2,51 +2,60 @@ details {
   border-bottom: var(--border-width) solid var(--c-border-variant);
   padding: 1rem 0;
 
-  & summary {
-    font-weight: var(--font-weight-medium);
-    list-style: none;
-
-    + * {
-      margin-top: 0;
-    }
-
-    &:focus-visible {
-      border-radius: 0.125rem;
-      outline-offset: var(--outline-outset);
-      outline: var(--outline);
-    }
-
-    /* Custom marker icon */
-    &::after {
-      background: var(--icon-chevron) center center / 1em no-repeat;
-      content: "";
-      display: block;
-      float: right;
-      height: calc(var(--line-height) * 1em);
-      rotate: -90deg;
-      transition-property: rotate;
-      transition: var(--transition);
-      width: calc(var(--line-height) * 1em);
-    }
-
-    &::marker {
-      display: none;
-    }
-
-    &::-webkit-details-marker {
-      display: none;
-    }
+  &::details-content {
+    height: 0;
+    interpolate-size: allow-keywords;
+    overflow: hidden;
+    transition: var(--transition);
+    transition-behavior: allow-discrete;
+    transition-property: height, content-visibility;
   }
 
-  &[open] > summary {
-    margin-bottom: 1rem;
-
-    &::after {
-      rotate: 0deg;
-    }
+  &[open]::details-content {
+    height: auto;
   }
 
-  > :last-child {
+  & > :not(summary):first-of-type {
+    margin-top: 1rem;
+  }
+
+  & > :last-child {
     margin-bottom: 0;
+  }
+}
+
+summary {
+  border-radius: var(--border-radius-small);
+  font-weight: var(--font-weight-medium);
+  list-style: none;
+
+  &:focus-visible {
+    outline-offset: var(--outline-outset);
+    outline: var(--outline);
+  }
+
+  /* Custom marker icon */
+  &::after {
+    background: var(--icon-chevron) center center / 1em no-repeat;
+    content: "";
+    display: block;
+    float: right;
+    height: calc(var(--line-height) * 1em);
+    rotate: -90deg;
+    transition: var(--transition);
+    transition-property: rotate;
+    width: calc(var(--line-height) * 1em);
+  }
+
+  details[open] &::after {
+    rotate: 0deg;
+  }
+
+  &::marker {
+    display: none;
+  }
+
+  &::-webkit-details-marker {
+    display: none;
   }
 }
