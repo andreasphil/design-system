@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -313,11 +313,15 @@
 
         <div class="example" data-title="Dialog">
           <button commandfor="demo-dialog" command="show-modal">
-            Show dialog
+            Regular dialog
+          </button>
+
+          <button commandfor="demo-dialog-small" command="show-modal">
+            Small dialog
           </button>
 
           <dialog id="demo-dialog">
-            <header>Dialog header</header>
+            <header>Regular dialog</header>
 
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sed!
@@ -329,15 +333,35 @@
             <footer>
               <button
                 variant="secondary"
-                onclick="document.querySelector('#demo-dialog').close()"
+                command="close"
+                commandfor="demo-dialog"
               >
                 Cancel
               </button>
 
+              <button autofocus command="close" commandfor="demo-dialog">
+                Confirm
+              </button>
+            </footer>
+          </dialog>
+
+          <dialog id="demo-dialog-small" small>
+            <header>Small dialog</header>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sed!
+            </p>
+
+            <footer>
               <button
-                autofocus
-                onclick="document.querySelector('#demo-dialog').close()"
+                variant="secondary"
+                command="close"
+                commandfor="demo-dialog-small"
               >
+                Cancel
+              </button>
+
+              <button autofocus command="close" commandfor="demo-dialog-small">
                 Confirm
               </button>
             </footer>
@@ -871,7 +895,7 @@
       const fallbackEl = document.querySelector("[has-fallback]");
 
       const fallbackContentEl = document.querySelector(
-        "[has-fallback] > :first-child"
+        "[has-fallback] > :first-child",
       );
 
       fallbackStateForm.addEventListener("change", (event) => {
