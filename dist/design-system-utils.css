@@ -59,6 +59,10 @@
   text-align: center;
 }
 
+.text-pretty {
+  text-wrap: pretty;
+}
+
 .clamp {
   -webkit-line-clamp: var(--clamp, 1);
   -webkit-box-orient: vertical;
@@ -127,6 +131,13 @@
 
 .rounded-squircle {
   border-radius: 30%;
+}
+
+@supports (corner-shape: squircle) {
+  .rounded-squircle {
+    corner-shape: squircle;
+    border-radius: 50%;
+  }
 }
 
 .no-border {
