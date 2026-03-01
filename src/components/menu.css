@@ -3,7 +3,6 @@ menu {
   border-radius: var(--border-radius);
   border: none;
   box-shadow: var(--shadow-elevation-medium);
-  display: flex;
   flex-direction: column;
   font-size: var(--font-size-small);
   gap: 0.25rem;
@@ -13,6 +12,11 @@ menu {
   padding: 0.5rem 0;
   width: max-content;
   z-index: 1;
+
+  &:not([popover]),
+  &:popover-open {
+    display: flex;
+  }
 
   button {
     --internal-bg: transparent;
@@ -33,7 +37,7 @@ menu {
     --internal-bg: var(--c-surface-variant-bg);
   }
 
-  li {
+  [role="menu-item"] {
     padding: 0 0.5rem;
     position: relative;
 
