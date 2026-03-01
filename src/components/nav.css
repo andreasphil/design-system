@@ -72,10 +72,6 @@ nav {
       align-items: center;
       flex-direction: row;
 
-      & > li + li {
-        margin-top: 0;
-      }
-
       li > hr:only-child {
         border-top-width: 0;
         border-left-width: var(--border-width-large);

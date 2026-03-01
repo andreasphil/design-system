@@ -3,8 +3,10 @@ menu {
   border-radius: var(--border-radius);
   border: none;
   box-shadow: var(--shadow-elevation-medium);
+  display: flex;
   flex-direction: column;
   font-size: var(--font-size-small);
+  gap: 0.25rem;
   list-style-type: none;
   margin: var(--outer-spacing-y) 0;
   min-width: 12rem;
