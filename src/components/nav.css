@@ -6,14 +6,14 @@ nav {
   padding: 0;
 
   /* Strong as the first item = add some layout to support logo + text */
-  & > strong:first-child {
+  strong:first-child {
     align-items: center;
     display: flex;
     gap: 0.75rem;
   }
 
   /* Nav list - vertical by default */
-  & > ul {
+  ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -24,40 +24,44 @@ nav {
 
     li {
       flex: none;
-    }
 
-    li > a {
-      align-items: center;
-      border-radius: var(--border-radius);
-      font-weight: var(--font-weight-medium);
-      display: inline-flex;
-      gap: 0.75ch;
-      padding: 0.375rem 0.75rem;
-      text-decoration: none;
-
-      &:focus-visible {
-        outline-offset: var(--outline-inset);
-        outline: var(--outline);
+      &:not(:has(a, hr, button)) {
+        padding: 0.375rem 0.75rem;
       }
 
-      &[aria-current="true"],
-      &[aria-current="location"],
-      &[aria-current="page"] {
-        background: var(--c-surface-variant-bg);
+      hr:only-child {
+        margin: 0.375rem 0;
       }
 
-      &:only-child {
-        display: flex;
+      :is(button, [role="button"]) {
+        flex: none;
+        padding: 0.375rem 0.75rem;
       }
-    }
 
-    li > hr:only-child {
-      margin: 0.375rem 0;
-    }
+      a {
+        align-items: center;
+        border-radius: var(--border-radius);
+        font-weight: var(--font-weight-medium);
+        display: inline-flex;
+        gap: 0.75ch;
+        padding: 0.375rem 0.75rem;
+        text-decoration: none;
 
-    li > :is(button, [role="button"]) {
-      flex: none;
-      padding: 0.375rem 0.75rem;
+        &:focus-visible {
+          outline-offset: var(--outline-inset);
+          outline: var(--outline);
+        }
+
+        &[aria-current="true"],
+        &[aria-current="location"],
+        &[aria-current="page"] {
+          background: var(--c-surface-variant-bg);
+        }
+
+        &:only-child {
+          display: flex;
+        }
+      }
     }
   }
 
@@ -68,11 +72,11 @@ nav {
     justify-content: space-between;
     white-space: nowrap;
 
-    & > ul {
+    ul {
       align-items: center;
       flex-direction: row;
 
-      li > hr:only-child {
+      li hr:only-child {
         border-top-width: 0;
         border-left-width: var(--border-width-large);
         height: 1.5em;
@@ -86,17 +90,11 @@ nav {
     }
 
     &[fixed] {
-      backdrop-filter: var(--backdrop-glass);
-      background: var(--c-glass);
-      border-bottom: var(--border-width) solid var(--c-border-variant);
       flex-wrap: nowrap;
       height: 5rem;
-      inset-inline: 0;
+      margin-inline: auto;
       overflow: auto;
-      padding: 0 var(--body-padding-x);
-      position: fixed;
-      top: 0;
-      z-index: 10;
+      padding: 0 max(var(--body-padding-x), 1rem);
 
       ul {
         flex-wrap: nowrap;
@@ -107,6 +105,16 @@ nav {
     &:not([fixed]) {
       margin-block: var(--outer-spacing-y);
     }
+  }
+
+  header:has(&[fixed]) {
+    backdrop-filter: var(--backdrop-glass);
+    background: var(--c-glass);
+    border-bottom: var(--border-width) solid var(--c-border-variant);
+    inset-inline: 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
   }
 
   /* Automatically increase body padding if it has a fixed nav */
