@@ -6,19 +6,18 @@ table {
 
   th,
   td {
-    border-bottom: var(--border-width) solid var(--c-border);
-    padding: 0.7rem;
+    border: var(--border-width) solid var(--c-border);
+    padding: 0.6125rem 0.75rem;
     text-align: left;
   }
 
   thead :is(th) {
-    border-bottom: var(--border-width-large) solid var(--c-border);
+    border-bottom-width: var(--border-width-large);
     font-weight: var(--font-weight-medium);
   }
 
   tfoot :is(td, th) {
-    border-bottom: none;
-    border-top: var(--border-width-large) solid var(--c-border);
+    border-top-width: var(--border-width-large);
     font-weight: var(--font-weight-medium);
   }
 }
