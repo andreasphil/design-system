@@ -47,6 +47,11 @@
   font-weight: var(--font-weight-bold);
 }
 
+.caps {
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
 .text-left {
   text-align: left;
 }
