@@ -1,6 +1,7 @@
 // @ts-check
-import { bundle } from "lightningcss";
+
 import { readFileSync, writeFileSync, watch } from "node:fs";
+import { bundle } from "lightningcss";
 
 /**
  * @param {object} rgb
@@ -19,11 +20,7 @@ function rgbToHex({ r, g, b }) {
  * @returns {string}
  */
 function svgToData(raw, stroke) {
-  let result = raw
-    .trim()
-    .replace(/\n/g, "")
-    .replace(/\s+/g, " ")
-    .replace(/> </g, "><");
+  let result = raw.trim().replace(/\n/g, "").replace(/\s+/g, " ").replace(/> </g, "><");
 
   if (stroke) result = result.replace(/stroke="[^"]+"/g, `stroke="${stroke}"`);
 

@@ -48,11 +48,9 @@
   /* Shadows */
   --shadow-elevation-low: 0 0.0625rem 0.125rem 0 var(--c-shadow);
 
-  --shadow-elevation-medium:
-    var(--shadow-elevation-low), 0 0.15rem 0.75rem -0.2rem var(--c-shadow);
+  --shadow-elevation-medium: var(--shadow-elevation-low), 0 0.15rem 0.75rem -0.2rem var(--c-shadow);
 
-  --shadow-elevation-high:
-    var(--shadow-elevation-low), 0 0.3rem 1.5rem -0.3rem var(--c-shadow);
+  --shadow-elevation-high: var(--shadow-elevation-low), 0 0.3rem 1.5rem -0.3rem var(--c-shadow);
 
   /* Theme */
   --tint: 165;

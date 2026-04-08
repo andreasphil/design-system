@@ -1,11 +1,5 @@
 textarea,
-input:not(
-    [type="checkbox"],
-    [type="radio"],
-    [type="file"],
-    [type="range"],
-    [type="image"]
-  ) {
+input:not([type="checkbox"], [type="radio"], [type="file"], [type="range"], [type="image"]) {
   background: var(--input-icon, none) 0.75rem center / 1.2em no-repeat;
   background-color: var(--c-bg);
   border-radius: var(--border-radius);

@@ -17,8 +17,7 @@
 From a CDN:
 
 ```css
-@import url("https://esm.sh/gh/andreasphil/design-system@<tag>/dist/design-system.css")
-layer(theme);
+@import url("https://esm.sh/gh/andreasphil/design-system@<tag>/dist/design-system.css") layer(theme);
 
 /* Optional: import utilities */
 @import url("https://esm.sh/gh/andreasphil/design-system@<tag>/dist/design-system-utils.css");

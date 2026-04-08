@@ -44,11 +44,6 @@
 
 /* Hide content element when empty or a different state is set. */
 [has-fallback] > :first-child:empty,
-:is(
-    [has-fallback="empty"],
-    [has-fallback="loading"],
-    [has-fallback="error"]
-  )
-  > :first-child {
+:is([has-fallback="empty"], [has-fallback="loading"], [has-fallback="error"]) > :first-child {
   display: none !important;
 }
