@@ -47,7 +47,7 @@ function build() {
             let raw = readFileSync(`./src/icons/${path}`, {
               encoding: "utf-8",
             });
-            let color = rgbToHex(args[2].value);
+            let color = rgbToHex(args.find((a) => a.type === "color").value);
             let iconUrl = svgToData(raw, color);
 
             return { raw: `url("${iconUrl}")` };
