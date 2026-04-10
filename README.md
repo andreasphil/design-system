@@ -26,7 +26,7 @@ From a CDN:
 With a package manager:
 
 ```sh
-npm install github:andreasphil/design-system#<tag>
+pnpm add github:andreasphil/design-system#<tag>
 ```
 
 ## Usage
@@ -36,10 +36,12 @@ Find the demo at <https://andreasphil.github.io/design-system/>.
 First, import the CSS. I recommend using [layers](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) to avoid conflicts and specificity chaos when customizing.
 
 ```css
-@import "@andreasphil/design-system/style.css" layer(theme);
-@import "@andreasphil/design-system/utils.css";
+@layer base, utils;
 
-@layer theme {
+@import "@andreasphil/design-system/style.css" layer(base);
+@import "@andreasphil/design-system/utils.css" layer(utils);
+
+@layer base {
   /* You can add customizations and override variables here. */
 }
 ```
@@ -59,15 +61,11 @@ The CSS loosely follows [CUBE CSS](https://piccalil.li/blog/cube-css/):
 Design System is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [pnpm](https://pnpm.io). The following commands are available:
 
 ```sh
-node --run dev          # Compile stylesheets in watch mode
-node --run build        # Bundle for production
+node --run dev    # Compile stylesheets in watch mode
+node --run build  # Bundle for production
 ```
 
 For a demo, open [index.html](./index.html) in a browser.
-
-## Deployment
-
-Deployment should work out of the box on GitHub Pages.
 
 ## Credits
 
