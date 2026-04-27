@@ -23,7 +23,7 @@
   /* Calculated with https://andreasphil.github.io/clamp/ */
   --body-padding-x: clamp(1rem, 1.495vw + 0.75rem, 2rem);
   --body-padding-y: clamp(2rem, 8.972vw - 0.125rem, 5rem);
-  --outer-spacing-y: 2rem;
+  --outer-spacing-y: 1.5rem;
   --body-width: 50rem;
   --line-height: 1.5;
   --line-height-condensed: 1.2;
@@ -47,9 +47,7 @@
 
   /* Shadows */
   --shadow-elevation-low: 0 0.0625rem 0.125rem 0 var(--c-shadow);
-
   --shadow-elevation-medium: var(--shadow-elevation-low), 0 0.15rem 0.75rem -0.2rem var(--c-shadow);
-
   --shadow-elevation-high: var(--shadow-elevation-low), 0 0.3rem 1.5rem -0.3rem var(--c-shadow);
 
   /* Theme */
