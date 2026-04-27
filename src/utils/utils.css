@@ -1,5 +1,9 @@
 /* Typography ------------------------------------------ */
 
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
 .font-mono {
   font-family: var(--font-family-mono);
   font-size: var(--font-size-mono);
