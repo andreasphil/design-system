@@ -236,7 +236,7 @@ a {
   --font-weight-bold: 700;
   --body-padding-x: clamp(1rem, 1.495vw + .75rem, 2rem);
   --body-padding-y: clamp(2rem, 8.972vw - .125rem, 5rem);
-  --outer-spacing-y: 2rem;
+  --outer-spacing-y: 1.5rem;
   --body-width: 50rem;
   --line-height: 1.5;
   --line-height-condensed: 1.2;
@@ -365,6 +365,21 @@ button, [role="button"], input:is([type="button"], [type="submit"], [type="reset
     --internal-bg: transparent;
     --internal-fg: var(--primary);
     --internal-hover: light-dark(var(--primary-50), var(--primary-100));
+  }
+
+  &[variant="inverted"] {
+    --internal-bg: light-dark(var(--neutral-950), var(--neutral-50));
+    --internal-fg: light-dark(var(--neutral-50), var(--neutral-950));
+    --internal-hover: light-dark(var(--neutral-700), var(--neutral-200));
+    outline-color: var(--internal-bg);
+  }
+
+  &[variant="haptic"] {
+    text-shadow: 1px 1px oklch(from var(--primary) calc(l - .075) c h);
+    box-shadow: 0 .0625rem .125rem 0 var(--primary-300),
+      0 .15rem .75rem -.2rem var(--primary-300),
+      oklch(from var(--primary) calc(l + .05) c h) 0 2px 2px inset,
+      oklch(from var(--primary) calc(l - .05) c h) 0 -2px 2px inset;
   }
 
   &[variant="muted"] {
@@ -765,6 +780,10 @@ menu {
   }
 }
 
+:root {
+  --internal-nav-height: 4rem;
+}
+
 nav {
   flex-flow: column wrap;
   gap: 1rem;
@@ -850,7 +869,7 @@ nav {
     }
 
     &[fixed] {
-      height: 5rem;
+      height: var(--internal-nav-height);
       padding: 0 max(var(--body-padding-x), 1rem);
       flex-wrap: nowrap;
       margin-inline: auto;
@@ -878,7 +897,7 @@ nav {
   }
 
   body:has(&[fixed]) {
-    padding-top: calc(var(--body-padding-y) + 5rem);
+    padding-top: calc(var(--body-padding-y) + var(--internal-nav-height));
   }
 }
 
