@@ -1,3 +1,7 @@
+:root {
+  --internal-nav-height: 4rem;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -91,7 +95,7 @@ nav {
 
     &[fixed] {
       flex-wrap: nowrap;
-      height: 5rem;
+      height: var(--internal-nav-height);
       margin-inline: auto;
       overflow: auto;
       padding: 0 max(var(--body-padding-x), 1rem);
@@ -119,6 +123,6 @@ nav {
 
   /* Automatically increase body padding if it has a fixed nav */
   body:has(&[fixed]) {
-    padding-top: calc(var(--body-padding-y) + 5rem);
+    padding-top: calc(var(--body-padding-y) + var(--internal-nav-height));
   }
 }
