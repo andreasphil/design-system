@@ -50,6 +50,14 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
     --internal-hover: light-dark(var(--primary-50), var(--primary-100));
   }
 
+  &[variant="inverted"] {
+    --internal-bg: light-dark(var(--neutral-950), var(--neutral-50));
+    --internal-fg: light-dark(var(--neutral-50), var(--neutral-950));
+    --internal-hover: light-dark(var(--neutral-700), var(--neutral-200));
+
+    outline-color: var(--internal-bg);
+  }
+
   &[variant="muted"] {
     --internal-bg: transparent;
     --internal-fg: var(--c-fg-variant);
