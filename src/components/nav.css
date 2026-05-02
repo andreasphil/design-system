@@ -6,7 +6,7 @@ nav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
   padding: 0;
 
   /* Strong as the first item = add some layout to support logo + text */
@@ -89,7 +89,6 @@ nav {
     }
 
     &[align-left] {
-      gap: 1.25rem;
       justify-content: flex-start;
     }
 
