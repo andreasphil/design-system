@@ -40,11 +40,11 @@ summary {
     content: "";
     display: block;
     float: right;
-    height: calc(var(--line-height) * 1em);
+    height: 1lh;
     rotate: -90deg;
     transition: var(--transition);
     transition-property: rotate;
-    width: calc(var(--line-height) * 1em);
+    width: 1lh;
   }
 
   details[open] &::after {

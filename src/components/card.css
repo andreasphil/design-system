@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  line-height: var(--line-height-condensed);
+  line-height: normal;
   padding: 1.125rem 1.25rem;
   transition-property: color, background-color;
 

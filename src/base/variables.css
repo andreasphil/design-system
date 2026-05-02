@@ -25,8 +25,6 @@
   --body-padding-y: clamp(2rem, 8.972vw - 0.125rem, 5rem);
   --outer-spacing-y: 1.5rem;
   --body-width: 50rem;
-  --line-height: 1.5;
-  --line-height-condensed: 1.2;
 
   /* Borders */
   --border-radius-small: 0.5rem;
