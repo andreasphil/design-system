@@ -1,6 +1,6 @@
 {
   "name": "@andreasphil/design-system",
-  "version": "0.56.0",
+  "version": "0.57.0",
   "description": "Small, opinionated CSS framework to make sites look good with minimal effort",
   "license": "MIT",
   "author": "Andreas Philippi",
@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "node ./build --watch",
     "build": "node ./build",
-    "preversion": "node --run build; git add ./dist"
+    "bump-version": "node --run build && git add ./dist && pnpm version minor --no-git-checks"
   },
   "devDependencies": {
     "lightningcss": "^1.32.0"

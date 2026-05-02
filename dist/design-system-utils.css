@@ -189,14 +189,6 @@
   margin-block: var(--outer-spacing-y);
 }
 
-.no-padding {
-  padding: 0;
-}
-
-.padding-y-body {
-  padding-block: var(--body-padding-y);
-}
-
 .visually-hidden:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
