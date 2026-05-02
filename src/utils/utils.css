@@ -201,14 +201,6 @@
   margin-block: var(--outer-spacing-y);
 }
 
-.no-padding {
-  padding: 0;
-}
-
-.padding-y-body {
-  padding-block: var(--body-padding-y);
-}
-
 /* Display --------------------------------------------- */
 
 .visually-hidden:not(:focus):not(:active) {
