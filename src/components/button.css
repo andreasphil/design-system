@@ -61,8 +61,8 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   &[variant="haptic"] {
     text-shadow: 1px 1px oklch(from var(--primary) calc(l - 0.075) c h);
     box-shadow:
-      0 0.0625rem 0.125rem 0 var(--primary-300),
-      0 0.15rem 0.75rem -0.2rem var(--primary-300),
+      0 0.0625rem 0.125rem 0 light-dark(var(--primary-300), var(--primary-200)),
+      0 0.15rem 0.75rem -0.2rem light-dark(var(--primary-300), var(--primary-200)),
       oklch(from var(--primary) calc(l + 0.05) c h) 0 2px 2px inset,
       oklch(from var(--primary) calc(l - 0.05) c h) 0 -2px 2px inset;
   }
