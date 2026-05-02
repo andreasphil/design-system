@@ -168,6 +168,10 @@ abbr {
 code {
   background: var(--c-surface-variant-bg);
   color: var(--c-surface-variant-fg);
+
+  a & {
+    color: inherit;
+  }
 }
 
 cite {
