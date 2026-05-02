@@ -25,47 +25,47 @@ nav {
     list-style-type: none;
     margin: 0 -0.75rem;
     padding: 0;
+  }
 
-    li {
+  li {
+    flex: none;
+
+    &:not(:has(a, hr, button)) {
+      padding: 0.375rem 0.75rem;
+    }
+
+    hr:only-child {
+      margin: 0.375rem 0;
+    }
+
+    :is(button, [role="button"]) {
       flex: none;
+      padding: 0.375rem 0.75rem;
+    }
+  }
 
-      &:not(:has(a, hr, button)) {
-        padding: 0.375rem 0.75rem;
-      }
+  a {
+    align-items: center;
+    border-radius: var(--border-radius);
+    font-weight: var(--font-weight-medium);
+    display: inline-flex;
+    gap: 0.75ch;
+    padding: 0.375rem 0.75rem;
+    text-decoration: none;
 
-      hr:only-child {
-        margin: 0.375rem 0;
-      }
+    &:focus-visible {
+      outline-offset: var(--outline-inset);
+      outline: var(--outline);
+    }
 
-      :is(button, [role="button"]) {
-        flex: none;
-        padding: 0.375rem 0.75rem;
-      }
+    &[aria-current="true"],
+    &[aria-current="location"],
+    &[aria-current="page"] {
+      background: var(--c-surface-variant-bg);
+    }
 
-      a {
-        align-items: center;
-        border-radius: var(--border-radius);
-        font-weight: var(--font-weight-medium);
-        display: inline-flex;
-        gap: 0.75ch;
-        padding: 0.375rem 0.75rem;
-        text-decoration: none;
-
-        &:focus-visible {
-          outline-offset: var(--outline-inset);
-          outline: var(--outline);
-        }
-
-        &[aria-current="true"],
-        &[aria-current="location"],
-        &[aria-current="page"] {
-          background: var(--c-surface-variant-bg);
-        }
-
-        &:only-child {
-          display: flex;
-        }
-      }
+    &:only-child {
+      display: flex;
     }
   }
 
