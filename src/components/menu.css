@@ -37,7 +37,7 @@ menu {
     --internal-bg: var(--c-surface-variant-bg);
   }
 
-  [role="menu-item"] {
+  [role="menuitem"] {
     padding: 0 0.5rem;
     position: relative;
 
