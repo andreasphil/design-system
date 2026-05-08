@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "node ./build --watch",
     "build": "node ./build",
-    "bump-version": "node --run build && git add ./dist && pnpm version minor --no-git-checks"
+    "preversion": "node --run build && git add dist/"
   },
   "devDependencies": {
     "lightningcss": "^1.32.0"
