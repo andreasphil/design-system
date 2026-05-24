@@ -414,7 +414,7 @@ button, [role="button"], input:is([type="button"], [type="submit"], [type="reset
   }
 
   & header {
-    margin-bottom: var(--outer-spacing-y);
+    margin-bottom: 1.5rem;
   }
 
   & p:first-of-type {
