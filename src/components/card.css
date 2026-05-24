@@ -19,7 +19,7 @@
   }
 
   header {
-    margin-bottom: var(--outer-spacing-y);
+    margin-bottom: 1.5rem;
   }
 
   /* First p = "heading" of the card */
