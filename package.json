@@ -20,8 +20,8 @@
     }
   },
   "scripts": {
-    "dev": "node ./build --watch",
     "build": "node ./build",
+    "dev": "node ./build --watch",
     "preversion": "node --run build && git add dist/"
   },
   "devDependencies": {
