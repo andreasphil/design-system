@@ -8,6 +8,7 @@ dialog {
   box-shadow: var(--shadow-elevation-high);
   color: var(--c-surface-fg);
   container-type: inline-size;
+  inset: 0;
   margin: 6rem auto 1rem;
   padding: var(--internal-padding);
   position: fixed;
