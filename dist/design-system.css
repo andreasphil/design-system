@@ -537,6 +537,7 @@ dialog {
   border: none;
   margin: 6rem auto 1rem;
   position: fixed;
+  inset: 0;
   container-type: inline-size;
 
   &[small] {
