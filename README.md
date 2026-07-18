@@ -58,7 +58,7 @@ The CSS loosely follows [CUBE CSS](https://piccalil.li/blog/cube-css/):
 
 ## Development
 
-Design System is built with [Lightning CSS](https://lightningcss.dev). Packages are managed by [pnpm](https://pnpm.io). The following commands are available:
+Design System is built with [Lightning CSS](https://lightningcss.dev). Packages are managed with [pnpm](https://pnpm.io). The following commands are available:
 
 ```sh
 node --run dev    # Compile stylesheets in watch mode
