@@ -42,30 +42,33 @@ nav {
       flex: none;
       padding: 0.375rem 0.75rem;
     }
-  }
 
-  a {
-    align-items: center;
-    border-radius: var(--border-radius);
-    font-weight: var(--font-weight-medium);
-    display: inline-flex;
-    gap: 0.75ch;
-    padding: 0.375rem 0.75rem;
-    text-decoration: none;
+    a {
+      border-radius: var(--border-radius);
+      font-weight: var(--font-weight-medium);
+      padding: 0.375rem 0.75rem;
+      text-decoration: none;
 
-    &:focus-visible {
-      outline-offset: var(--outline-inset);
-      outline: var(--outline);
+      &:focus-visible {
+        outline-offset: var(--outline-inset);
+        outline: var(--outline);
+      }
+
+      &[aria-current="true"],
+      &[aria-current="location"],
+      &[aria-current="page"] {
+        background: var(--c-surface-variant-bg);
+      }
+
+      &:only-child {
+        display: flex;
+      }
     }
 
-    &[aria-current="true"],
-    &[aria-current="location"],
-    &[aria-current="page"] {
-      background: var(--c-surface-variant-bg);
-    }
-
-    &:only-child {
-      display: flex;
+    a {
+      align-items: center;
+      display: inline-flex;
+      gap: 0.75ch;
     }
   }
 
