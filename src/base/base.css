@@ -138,6 +138,14 @@ figure > blockquote {
 
 :is(ol, ul, dl) {
   margin: var(--outer-spacing-y) 0;
+
+  li & {
+    margin-block: 0;
+  }
+}
+
+ul {
+  list-style-type: disc;
 }
 
 li {
