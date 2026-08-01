@@ -9,8 +9,8 @@ nav {
   gap: 1.25rem;
   padding: 0;
 
-  /* Strong as the first item = add some layout to support logo + text */
-  strong:first-child {
+  /* Strong as the first item & links = add some layout to support logo + text */
+  :is(strong:first-child, a) {
     align-items: center;
     display: flex;
     gap: 0.75rem;
@@ -59,16 +59,6 @@ nav {
       &[aria-current="page"] {
         background: var(--c-surface-variant-bg);
       }
-
-      &:only-child {
-        display: flex;
-      }
-    }
-
-    a {
-      align-items: center;
-      display: inline-flex;
-      gap: 0.75ch;
     }
   }
 
