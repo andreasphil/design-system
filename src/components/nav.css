@@ -9,11 +9,17 @@ nav {
   gap: 1.25rem;
   padding: 0;
 
-  /* Strong as the first item & links = add some layout to support logo + text */
-  :is(strong:first-child, a) {
+  /* Strong as the first item = add some layout to support logo + text */
+  strong:first-child {
     align-items: center;
     display: flex;
     gap: 0.75rem;
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+    gap: 0.75ch;
   }
 
   /* Nav list - vertical by default */
