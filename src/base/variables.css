@@ -5,13 +5,13 @@
 
   /* Font sizes */
   --font-size: 1rem;
-  --font-size-small: calc(var(--font-size) * 0.875);
-  --font-size-h6: var(--font-size);
-  --font-size-h5: var(--font-size);
-  --font-size-h4: calc(var(--font-size) * 1.1);
-  --font-size-h3: calc(var(--font-size) * 1.25);
-  --font-size-h2: calc(var(--font-size) * 1.45);
-  --font-size-h1: calc(var(--font-size) * 2);
+  --font-size-small: 0.875em;
+  --font-size-h6: 1em;
+  --font-size-h5: 1em;
+  --font-size-h4: 1.1em;
+  --font-size-h3: 1.25em;
+  --font-size-h2: 1.45em;
+  --font-size-h1: 2em;
   --font-size-mono: 0.9em;
 
   /* Font weights */
