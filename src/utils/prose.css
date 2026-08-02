@@ -15,11 +15,13 @@
   max-width: var(--prose-max-width);
   text-wrap: pretty;
 
-  > :first-child {
+  > :first-child,
+  > ul:first-child > li:first-child p {
     margin-top: 0;
   }
 
-  > :last-child {
+  > :last-child,
+  > ul:last-child > li:last-child p {
     margin-bottom: 0;
   }
 
