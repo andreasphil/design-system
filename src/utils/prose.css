@@ -1,0 +1,41 @@
+.prose {
+  /* Overrides */
+  --c-link-hover: var(--c-fg);
+  --c-link: var(--primary);
+  --outer-spacing-y: 1rem;
+
+  /* Prose-specific sizes */
+  --prose-font-size: var(--font-size);
+  --prose-line-height: 1.75;
+  --prose-max-width: 80ch;
+
+  font-size: var(--prose-font-size);
+  line-height: var(--prose-line-height);
+  margin-inline: auto;
+  max-width: var(--prose-max-width);
+  text-wrap: pretty;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    margin-bottom: calc(var(--outer-spacing-y) * 2);
+  }
+
+  :is(h1, h2, h3) {
+    margin-top: calc(var(--outer-spacing-y) * 2);
+  }
+
+  :is(ol, ul) {
+    padding-left: 2rem;
+  }
+
+  li {
+    margin-top: 0.25rem;
+  }
+}
