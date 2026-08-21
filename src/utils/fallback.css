@@ -5,7 +5,7 @@
     border: var(--border-width-large) dashed transparent;
     display: none;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.25rem;
     padding: 1rem;
 
     /* Override immediate children margins so we can manage layout ourselves. */
@@ -14,10 +14,7 @@
       text-align: center;
     }
 
-    /*
-     * If the last row is or has buttons, add some extra spacing to look
-     * better.
-     */
+    /* If the last row is or has buttons, add some extra spacing to look better. */
     > :last-child:has(button),
     > :last-child:is(button) {
       margin-top: 0.75rem;
