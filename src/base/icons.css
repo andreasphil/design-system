@@ -11,7 +11,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Icons */
     --icon-calendar: icon("calendar.svg", #ffffff);
     --icon-check: icon("check.svg", #ffffff);
     --icon-chevron: icon("chevron.svg", #ffffff);
