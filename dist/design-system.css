@@ -1063,7 +1063,8 @@ table {
   width: 100%;
 
   & th, & td {
-    border: var(--border-width) solid var(--c-border);
+    border: 0px solid var(--c-border);
+    border-width: var(--border-width) 0;
     text-align: left;
     padding: .6125rem .75rem;
   }
@@ -1133,34 +1134,36 @@ ul[role="tablist"] {
   }
 }
 
-[has-fallback] {
-  & > [fallback-for] {
-    border-radius: var(--border-radius);
-    border: var(--border-width-large) dashed transparent;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-    padding: 1rem;
-    display: none;
+[fallback-for] {
+  border-radius: var(--border-radius);
+  border: var(--border-width-large) dashed transparent;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;
+  padding: 1rem;
+  display: flex;
 
-    & > * {
-      text-align: center;
-      margin-block: 0;
-    }
-
-    & > :last-child:has(button), & > :last-child:is(button) {
-      margin-top: .75rem;
-    }
+  & > * {
+    text-align: center;
+    margin-block: 0;
   }
 
-  & > [fallback-for="empty"] {
-    border-color: var(--c-border);
-    color: var(--c-fg-variant);
+  & > :last-child:has(button), & > :last-child:is(button) {
+    margin-top: .75rem;
   }
+}
 
-  & > [fallback-for="error"] {
-    border-color: var(--c-border);
-  }
+[fallback-for="empty"] {
+  border-color: var(--c-border);
+  color: var(--c-fg-variant);
+}
+
+[fallback-for="error"] {
+  border-color: var(--c-border);
+}
+
+[has-fallback] > [fallback-for] {
+  display: none;
 }
 
 [has-fallback=""] > :first-child:empty + [fallback-for="empty"], [has-fallback="empty"] > [fallback-for="empty"], [has-fallback="loading"] > [fallback-for="loading"], [has-fallback="error"] > [fallback-for="error"] {
