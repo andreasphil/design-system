@@ -580,6 +580,24 @@
           </div>
         </div>
 
+        <div class="example flex-col" data-title="Standalone fallback">
+          <div fallback-for="empty">
+            <p><strong>Move along</strong></p>
+            <p>Nothing to see here.</p>
+          </div>
+
+          <div fallback-for="loading">
+            <div aria-busy="true"></div>
+            <p>Please wait...</p>
+          </div>
+
+          <div fallback-for="error">
+            <p><strong>Something went wrong</strong></p>
+            <p>Please try again later.</p>
+            <button variant="secondary">Retry now</button>
+          </div>
+        </div>
+
         <div class="example grid-auto" data-title="Typography" style="align-items: center">
           <span class="font-size-h1">font-size-h1</span>
           <span class="font-size-h2">font-size-h2</span>
