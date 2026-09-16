@@ -252,9 +252,9 @@ a {
   --body-padding-y: clamp(2rem, 8.972vw - .125rem, 5rem);
   --outer-spacing-y: 1.5rem;
   --body-width: 50rem;
-  --border-radius-small: .5rem;
-  --border-radius: .75rem;
-  --border-radius-large: 1.25rem;
+  --border-radius-small: .375rem;
+  --border-radius: .625rem;
+  --border-radius-large: 1rem;
   --border-width: 1px;
   --border-width-large: 2px;
   --outline: var(--border-width-large) solid var(--c-outline);
