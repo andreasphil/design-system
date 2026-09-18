@@ -7,11 +7,15 @@ menu {
   font-size: var(--font-size-small);
   gap: 0.25rem;
   list-style-type: none;
-  margin: 0;
+  margin: var(--outer-spacing-y) 0;
   min-width: 12rem;
   padding: 0.5rem 0;
   width: max-content;
   z-index: 1;
+
+  &[popover] {
+    margin-block: 0.25rem;
+  }
 
   &:not([popover]),
   &:popover-open {
