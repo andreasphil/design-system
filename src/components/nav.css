@@ -45,7 +45,7 @@ nav {
     }
 
     hr:only-child {
-      margin: var(--internal-space-y) 0;
+      margin: var(--internal-space);
     }
 
     :is(button, [role="button"]) {
