@@ -283,11 +283,11 @@
         </div>
 
         <div class="example" data-title="Dialog">
-          <button commandfor="demo-dialog" command="show-modal" variant="ghost">
+          <button commandfor="demo-dialog" command="show-modal" variant="ghost" size="small">
             Regular dialog
           </button>
 
-          <button commandfor="demo-dialog-small" command="show-modal" variant="ghost">
+          <button commandfor="demo-dialog-small" command="show-modal" variant="ghost" size="small">
             Small dialog
           </button>
 
@@ -444,7 +444,9 @@
 
         <div class="example" data-title="Menu as popover">
           <div>
-            <button popovertarget="button-menu" style="anchor-name: --anchor-el">Open menu</button>
+            <button popovertarget="button-menu" style="anchor-name: --anchor-el" size="small">
+              Open menu
+            </button>
             <menu
               id="button-menu"
               popover
@@ -540,7 +542,7 @@
         </div>
 
         <div class="example" data-title="Tooltip">
-          <button data-tooltip="This is a tooltip!">Hover me</button>
+          <abbr data-tooltip="This is a tooltip!">Hover me</abbr>
         </div>
 
         <div class="example" data-title="Fallback states">

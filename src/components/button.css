@@ -4,6 +4,7 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   --internal-bg: var(--primary);
   --internal-fg: var(--on-primary);
   --internal-hover: color-mix(in oklch, var(--primary), var(--neutral-100) 15%);
+  --internal-padding: calc(0.5rem + var(--border-width)) 1rem;
 
   align-items: center;
   background-color: var(--internal-bg);
@@ -14,7 +15,7 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   font-weight: var(--font-weight-medium);
   gap: 0.75ch;
   justify-content: center;
-  padding: calc(0.5rem + var(--border-width)) 1rem;
+  padding: var(--internal-padding);
   text-align: center;
   text-decoration: none;
   transition: var(--transition);
@@ -71,5 +72,9 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
     --internal-bg: transparent;
     --internal-fg: var(--c-fg-variant);
     --internal-hover: var(--c-surface-variant-bg);
+  }
+
+  &[size="small"] {
+    --internal-padding: 0.375rem 0.75rem;
   }
 }
