@@ -40,8 +40,9 @@
   --backdrop-glass: blur(16px) saturate(1.5);
   --disabled-opacity: 0.4;
   --transition-duration: 0.2s;
-  --transition-timing-function: ease;
-  --transition: var(--transition-duration) var(--transition-timing-function);
+  --transition-duration-quick: 0.1s;
+  --transition-timing: ease;
+  --transition: var(--transition-duration) var(--transition-timing);
 
   /* Shadows */
   --shadow-elevation-low: 0 0.0625rem 0.125rem 0 var(--c-shadow);

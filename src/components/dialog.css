@@ -71,7 +71,7 @@ dialog {
   &,
   &::backdrop {
     opacity: 0;
-    transition: all 0.2s ease allow-discrete;
+    transition: all var(--transition-duration) var(--transition-timing) allow-discrete;
   }
 
   &[open],
