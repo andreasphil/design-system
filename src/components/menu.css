@@ -27,7 +27,7 @@ menu {
     --internal-fg: var(--c-fg);
     --internal-hover: var(--c-surface-variant-bg);
 
-    border-radius: calc(var(--border-radius) - 0.375rem);
+    border-radius: var(--border-radius-small);
     justify-content: flex-start;
     padding: 0.375rem 0.5rem;
     width: 100%;
