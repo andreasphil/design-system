@@ -37,7 +37,6 @@
   --outline-outset: var(--border-width-large);
 
   /* Transitions and other effects */
-  --backdrop-glass: blur(16px) saturate(1.5);
   --disabled-opacity: 0.4;
   --transition-duration: 0.2s;
   --transition-duration-quick: 0.1s;
@@ -92,5 +91,32 @@
   --c-surface-fg: light-dark(var(--neutral-950), var(--neutral-50));
   --c-surface-variant-bg: light-dark(var(--neutral-100), var(--neutral-800));
   --c-surface-variant-fg: light-dark(var(--neutral-950), var(--neutral-50));
-  --c-glass: oklch(from var(--c-surface-bg) l c h / 70%);
+
+  /* Glass */
+  --backdrop-glass: blur(16px) saturate(1.6);
+
+  --c-glass-bg: oklch(from var(--c-surface-bg) l c h / 70%);
+
+  --c-border-glass: light-dark(
+    oklch(from var(--neutral-950) l c h / 6%),
+    oklch(from var(--neutral-50) l c h / 8%)
+  );
+
+  --c-glass-shadow: light-dark(
+    oklch(from var(--neutral-950) l c h / 4%),
+    oklch(from var(--neutral-950) l c h / 40%)
+  );
+
+  --c-glass-shadow-specular: light-dark(
+    oklch(from var(--neutral-50) l c h / 80%),
+    oklch(from var(--neutral-50) l c h / 4%)
+  );
+
+  --shadow-glass-specular:
+    inset 0 1px 1px var(--c-glass-shadow-specular), inset 0 -1px 1px var(--c-glass-shadow-specular),
+    inset 0 12px 20px var(--c-glass-shadow);
+
+  --shadow-elevation-glass: 0 8px 16px var(--c-glass-shadow);
+
+  --shadow-glass: var(--shadow-glass-specular), var(--shadow-elevation-glass);
 }
