@@ -8,7 +8,7 @@
 
 - 🔥 Embraces semantic HTML to make native elements look great out of the box, without classes
 - 😎 Small set of utilities for additional states and convenience
-- 🐛 Tiny (~6kb min+gzip) footprint with no runtime dependencies or build step required
+- 🐛 Tiny footprint (~6 kB min+gzip) with no runtime dependencies and no build step required
 - 🌈 Automatic color system that reduces time spent fiddling with color palettes
 - 🪗 Fully responsive
 
@@ -48,17 +48,17 @@ First, import the CSS. I recommend using [layers](https://developer.mozilla.org/
 
 The CSS loosely follows [CUBE CSS](https://piccalil.li/blog/cube-css/):
 
-- **Global, high-level styles:** nost styling is global styling of plain HTML elements. There are a bunch of design tokens for colors, fonts, shared spacing, etc. in [`src/base/variables.css`](./src/base/variables.css) that you can use to customize the Design System or apply to your own components.
+- **Global, high-level styles:** Most of the styling is global styling of plain HTML elements. [`src/base/variables.css`](./src/base/variables.css) contains design tokens for colors, fonts, shared spacing, and more. You can use them to customize the Design System or apply them to your own components.
 
-- **Blocks:** The framework includes opinionated styling for almost all common HTML elements inside.
+- **Blocks:** The framework includes opinionated styling for almost all common HTML elements.
 
-- **Exceptions:** Some blocks, such as buttons, come with variants (also called exceptions). [According to CUBE CSS](https://cube.fyi/exception.html#why-data-attributes), variants are applied using attributes.
+- **Exceptions:** Some blocks, such as buttons, come with variants (also called exceptions). [According to CUBE CSS](https://cube.fyi/exception.html#why-data-attributes), you apply variants with attributes.
 
-- **Composition & utilites:** With the exception of a few utilities, these are outside the scope of the framework.
+- **Composition & utilities:** Apart from a few utilities, these are outside the scope of the framework.
 
 ## Development
 
-Design System is built with [Lightning CSS](https://lightningcss.dev). Packages are managed with [pnpm](https://pnpm.io). The following commands are available:
+Design System is built with [Lightning CSS](https://lightningcss.dev) and uses [pnpm](https://pnpm.io) for package management. The following commands are available:
 
 ```sh
 node --run dev    # Compile stylesheets in watch mode
@@ -69,6 +69,6 @@ For a demo, open [index.html](./index.html) in a browser.
 
 ## Credits
 
-This library uses a number of open source packages listed in [package.json](./package.json). Icons are from [Lucide](https://lucide.dev/). It was inspired by [Pico.css](https://picocss.com/).
+This framework uses several open-source packages listed in [package.json](./package.json). Icons are from [Lucide](https://lucide.dev/). The framework was inspired by [Pico.css](https://picocss.com/).
 
 Thanks 🙏
