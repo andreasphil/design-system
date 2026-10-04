@@ -18,6 +18,7 @@ input:is([type="button"], [type="submit"], [type="reset"]) {
   padding: var(--internal-padding);
   text-align: center;
   text-decoration: none;
+  touch-action: manipulation;
   transition: var(--transition);
   transition-property: background-color, color;
 
