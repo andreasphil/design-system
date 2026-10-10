@@ -20,9 +20,8 @@
   --font-weight-bold: 700;
 
   /* Spacing */
-  /* Calculated with https://andreasphil.github.io/clamp/ */
-  --body-padding-x: clamp(1rem, 1.495vw + 0.75rem, 2rem);
-  --body-padding-y: clamp(2rem, 8.972vw - 0.125rem, 5rem);
+  --body-padding-x: calc(1rem + 1rem * progress(100vw, 24rem, 90rem));
+  --body-padding-y: calc(2rem + 3rem * progress(100vw, 24rem, 90rem));
   --outer-spacing-y: 1.5rem;
   --body-width: 50rem;
 
