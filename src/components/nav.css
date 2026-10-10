@@ -27,7 +27,7 @@ nav {
   }
 
   /* Nav list - vertical by default */
-  ul {
+  :is(ul, section) {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -72,6 +72,10 @@ nav {
     }
   }
 
+  section > * {
+    padding: var(--internal-space);
+  }
+
   /* In a header element: nav list is horizontal */
   header > & {
     align-items: center;
@@ -79,16 +83,16 @@ nav {
     justify-content: space-between;
     white-space: nowrap;
 
-    ul {
+    :is(ul, section) {
       align-items: center;
       flex-direction: row;
+    }
 
-      li hr:only-child {
-        border-top-width: 0;
-        border-left-width: var(--border-width-large);
-        height: 1.5em;
-        margin: 0 var(--internal-space-y);
-      }
+    li hr:only-child {
+      border-top-width: 0;
+      border-left-width: var(--border-width-large);
+      height: 1.5em;
+      margin: 0 var(--internal-space-y);
     }
 
     &[align-left] {
@@ -102,7 +106,7 @@ nav {
       overflow: auto;
       padding: 0 max(var(--body-padding-x), 1rem);
 
-      ul {
+      :is(ul, section) {
         flex-wrap: nowrap;
         margin: 0;
       }
