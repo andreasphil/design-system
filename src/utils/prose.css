@@ -32,6 +32,10 @@
 
   :is(h1, h2, h3, h4) {
     margin-top: calc(var(--outer-spacing-y) * 2);
+
+    & + & {
+      margin-top: 0;
+    }
   }
 
   :is(ol, ul) {
