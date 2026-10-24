@@ -149,6 +149,10 @@
   }
 }
 
+.rounded-full {
+  border-radius: 999px;
+}
+
 .no-border {
   border: none;
 }
