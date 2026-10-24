@@ -47,6 +47,10 @@
   --shadow-elevation-medium: var(--shadow-elevation-low), 0 0.15rem 0.75rem -0.2rem var(--c-shadow);
   --shadow-elevation-high: var(--shadow-elevation-low), 0 0.3rem 1.5rem -0.3rem var(--c-shadow);
 
+  @media (prefers-color-scheme: dark) {
+    --shadow-elevation-low: 0 0 0 1px var(--c-border-variant);
+  }
+
   /* Theme */
   --tint: 165;
   --primary: oklch(71% 0.165 var(--tint));
@@ -62,10 +66,10 @@
   --neutral-400: oklch(from var(--primary) 70% 0.02 h);
   --neutral-500: oklch(from var(--primary) 55% 0.025 h);
   --neutral-600: oklch(from var(--primary) 45% 0.02 h);
-  --neutral-700: oklch(from var(--primary) 25% 0.018 h);
-  --neutral-800: oklch(from var(--primary) 22% 0.017 h);
-  --neutral-900: oklch(from var(--primary) 18% 0.012 h);
-  --neutral-950: oklch(from var(--primary) 13% 0.005 h);
+  --neutral-700: oklch(from var(--primary) 24% 0.018 h);
+  --neutral-800: oklch(from var(--primary) 21% 0.017 h);
+  --neutral-900: oklch(from var(--primary) 17% 0.012 h);
+  --neutral-950: oklch(from var(--primary) 15% 0.005 h);
 
   --on-primary: var(--white);
   --primary-50: color-mix(in oklch, var(--c-bg), var(--primary) 9%);
@@ -98,7 +102,7 @@
 
   --c-border-glass: light-dark(
     alpha(from var(--neutral-950) / 6%),
-    alpha(from var(--neutral-50) / 8%)
+    alpha(from var(--neutral-50) / 6%)
   );
 
   --c-glass-shadow: light-dark(
