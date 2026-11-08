@@ -118,9 +118,9 @@ nav {
   }
 
   header:has(&[fixed]) {
-    backdrop-filter: var(--backdrop-glass);
-    background: var(--c-glass-bg);
-    border-bottom: var(--border-width) solid var(--c-border-glass);
+    backdrop-filter: var(--glass-backdrop);
+    background: var(--glass-bg);
+    border-bottom: var(--border-width) solid var(--glass-border-surface);
     inset-inline: 0;
     position: fixed;
     top: 0;

@@ -24,6 +24,7 @@
 
 /* Utilities */
 @import "./utils/fallback.css";
+@import "./utils/glass.css";
 @import "./utils/prose.css";
 @import "./utils/spinner.css";
 @import "./utils/tooltip.css";
