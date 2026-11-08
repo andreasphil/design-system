@@ -26,7 +26,8 @@ nav {
   }
 
   /* Nav list - vertical by default */
-  :is(ul, section) {
+  ul,
+  section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -47,7 +48,8 @@ nav {
       margin: var(--internal-space);
     }
 
-    :is(button, [role="button"]) {
+    button,
+    [role="button"] {
       --internal-padding: var(--internal-space);
       flex: none;
     }
@@ -83,7 +85,8 @@ nav {
     justify-content: space-between;
     white-space: nowrap;
 
-    :is(ul, section) {
+    ul,
+    section {
       align-items: center;
       flex-direction: row;
     }
@@ -106,7 +109,8 @@ nav {
       overflow: auto;
       padding: 0 max(var(--body-padding-x), 1rem);
 
-      :is(ul, section) {
+      ul,
+      section {
         flex-wrap: nowrap;
         margin: 0;
       }

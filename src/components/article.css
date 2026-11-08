@@ -18,7 +18,7 @@ article {
   }
 
   /* Divider line takes full width of the element */
-  > :is(hr) {
+  > hr {
     margin: var(--internal-padding) calc(-1 * var(--internal-padding));
   }
 }

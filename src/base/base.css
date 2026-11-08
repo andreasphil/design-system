@@ -26,7 +26,10 @@ body {
   background: var(--primary-200);
 }
 
-:is(button, input, textarea, select) {
+button,
+input,
+textarea,
+select {
   appearance: none;
   color: inherit;
   font: inherit;
@@ -44,7 +47,12 @@ svg {
 
 /* Headings -------------------------------------------- */
 
-:is(h1, h2, h3, h4, h5, h6) {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   hyphens: auto;
   line-height: normal;
   margin: var(--outer-spacing-y) 0;
@@ -78,11 +86,17 @@ h6 {
 
 /* Block typography elements --------------------------- */
 
-:is(p, pre, hr, blockquote, figure) {
+p,
+pre,
+hr,
+blockquote,
+figure {
   margin: var(--outer-spacing-y) 0;
 }
 
-:is(code, kbd, pre) {
+code,
+kbd,
+pre {
   font-family: var(--font-family-mono);
   font-size: var(--font-size-mono);
 }
@@ -136,7 +150,9 @@ figure > blockquote {
 
 /* Lists ----------------------------------------------- */
 
-:is(ol, ul, dl) {
+ol,
+ul,
+dl {
   margin: var(--outer-spacing-y) 0;
 
   li & {
@@ -148,15 +164,15 @@ ul {
   list-style-type: disc;
 }
 
-li {
-  &::marker {
-    color: var(--c-fg-variant);
-  }
+li::marker {
+  color: var(--c-fg-variant);
 }
 
 /* Inline ---------------------------------------------- */
 
-:is(a, u, abbr) {
+a,
+u,
+abbr {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -166,7 +182,9 @@ abbr {
   text-decoration-style: dotted;
 }
 
-:is(code, kbd, mark) {
+code,
+kbd,
+mark {
   background: none;
   border-radius: var(--border-radius-small);
   padding: 0.125rem 0.25rem;
@@ -200,7 +218,8 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
-:is(sup, sub) {
+sup,
+sub {
   font-size: 0.75em;
 }
 

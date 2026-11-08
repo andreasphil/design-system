@@ -13,7 +13,7 @@ table {
     text-align: left;
   }
 
-  thead :is(th) {
+  thead th {
     border-bottom-width: var(--border-width-large);
     font-weight: var(--font-weight-medium);
   }

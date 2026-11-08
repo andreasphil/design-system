@@ -15,7 +15,7 @@
 
   /* If the last row is or has buttons, add some extra spacing to look better. */
   > :last-child:has(button),
-  > :last-child:is(button) {
+  > button:last-child {
     margin-top: 0.75rem;
   }
 }

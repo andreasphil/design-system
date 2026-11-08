@@ -30,7 +30,10 @@
     margin-bottom: calc(var(--outer-spacing-y) * 2);
   }
 
-  :is(h1, h2, h3, h4) {
+  h1,
+  h2,
+  h3,
+  h4 {
     margin-top: calc(var(--outer-spacing-y) * 2);
 
     & + & {
@@ -38,7 +41,8 @@
     }
   }
 
-  :is(ol, ul) {
+  ol,
+  ul {
     padding-left: 2rem;
   }
 
