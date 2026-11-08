@@ -36,7 +36,7 @@
   h4 {
     margin-top: calc(var(--outer-spacing-y) * 2);
 
-    & + & {
+    + & {
       margin-top: 0;
     }
   }
@@ -57,6 +57,7 @@
 
   dd {
     --outer-spacing-y: 0.375rem;
+
     margin: 0;
     padding-left: 1rem;
   }

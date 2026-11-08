@@ -17,7 +17,7 @@ ul[role="tablist"] {
 
   /* Add a separator between inactive sibling elements */
   li:not(:has([aria-selected="true"])) {
-    & + &::before {
+    + &::before {
       background: var(--c-border);
       content: "";
       display: block;
