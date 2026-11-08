@@ -1,7 +1,6 @@
 :root {
   --glass-backdrop: blur(16px) saturate(160%);
   --glass-bg: alpha(from var(--c-surface-bg) / 70%);
-  --glass-rim-mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
 
   --glass-border: light-dark(
     alpha(from var(--neutral-950) / 6%),
@@ -26,6 +25,9 @@
     transparent 70%,
     light-dark(alpha(from var(--white) / 50%), alpha(from var(--white) / 25%))
   );
+
+  --glass-rim-mask:
+    linear-gradient(var(--black) 0 0) content-box exclude, linear-gradient(var(--black) 0 0);
 }
 
 .glass-surface {
@@ -42,15 +44,15 @@
   background: var(--glass-bg);
   box-shadow: var(--glass-shadow);
   position: relative;
-}
 
-.glass::after {
-  background: var(--glass-rim);
-  border-radius: inherit;
-  content: "";
-  inset: 0;
-  mask: var(--glass-rim-mask);
-  padding: 1px;
-  pointer-events: none;
-  position: absolute;
+  &::after {
+    background: var(--glass-rim);
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    mask: var(--glass-rim-mask);
+    padding: 1px;
+    pointer-events: none;
+    position: absolute;
+  }
 }
