@@ -391,11 +391,11 @@ button, [role="button"], input:is([type="button"], [type="submit"], [type="reset
   }
 
   &[variant="haptic"] {
-    text-shadow: 1px 1px oklch(from var(--primary) calc(l - .075) c h);
-    box-shadow: 0 .0625rem .125rem 0 light-dark(var(--primary-300), var(--primary-200)),
-      0 .15rem .75rem -.2rem light-dark(var(--primary-300), var(--primary-200)),
-      oklch(from var(--primary) calc(l + .05) c h) 0 2px 2px inset,
-      oklch(from var(--primary) calc(l - .05) c h) 0 -2px 2px inset;
+    text-shadow: 0 1px 2px oklch(from var(--primary) calc(l - .075) c h);
+    box-shadow: 0 1px 2px 0 light-dark(var(--primary-300), var(--primary-200)),
+      0 4px 12px -4px light-dark(var(--primary-400), var(--primary-300)),
+      inset 0 2px 3px oklch(from var(--primary) calc(l + .075) c h),
+      inset 0 -2px 3px oklch(from var(--primary) calc(l - .066) c h);
   }
 
   &[variant="muted"] {
@@ -1195,7 +1195,6 @@ ul[role="tablist"] {
 :root {
   --glass-backdrop: blur(16px) saturate(160%);
   --glass-bg: alpha(from var(--c-surface-bg) / 70%);
-  --glass-rim-mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
   --glass-border: light-dark(alpha(from var(--neutral-950) / 6%), alpha(from var(--neutral-950) / 36%));
   --glass-border-surface: light-dark(alpha(from var(--neutral-950) / 6%), alpha(from var(--neutral-50) / 6%));
   --glass-shadow: 0 1px 2px 0 var(--c-shadow), 0 4px 12px -4px var(--c-shadow),
@@ -1207,6 +1206,7 @@ ul[role="tablist"] {
     transparent 30%,
     transparent 70%,
     light-dark(alpha(from var(--white) / 50%), alpha(from var(--white) / 25%)));
+  --glass-rim-mask: linear-gradient(var(--black) 0 0) content-box exclude, linear-gradient(var(--black) 0 0);
 }
 
 .glass-surface {
@@ -1223,17 +1223,17 @@ ul[role="tablist"] {
   background: var(--glass-bg);
   box-shadow: var(--glass-shadow);
   position: relative;
-}
 
-.glass:after {
-  background: var(--glass-rim);
-  border-radius: inherit;
-  content: "";
-  mask: var(--glass-rim-mask);
-  pointer-events: none;
-  padding: 1px;
-  position: absolute;
-  inset: 0;
+  &:after {
+    background: var(--glass-rim);
+    border-radius: inherit;
+    content: "";
+    mask: var(--glass-rim-mask);
+    pointer-events: none;
+    padding: 1px;
+    position: absolute;
+    inset: 0;
+  }
 }
 
 .prose {
