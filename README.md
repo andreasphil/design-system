@@ -1,10 +1,6 @@
-<h1 align="center">
-  Design System 🐥
-</h1>
+# Design System 🐥
 
-<p align="center">
-  <strong>A small, opinionated CSS framework to make sites look good with minimal effort</strong>
-</p>
+**A small, opinionated CSS framework to make sites look good with minimal effort**
 
 - 🔥 Embraces semantic HTML to make native elements look great out of the box, without classes
 - 😎 Small set of utilities for additional states and convenience
@@ -26,12 +22,12 @@ From a CDN:
 With a package manager:
 
 ```sh
-pnpm add github:andreasphil/design-system#<tag>
+pnpm install github:andreasphil/design-system#<tag>
 ```
 
 ## Usage
 
-Find the demo at <https://andreasphil.github.io/design-system/>.
+🔗 <https://andreasphil.github.io/design-system/>
 
 First, import the CSS. I recommend using [layers](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) to avoid conflicts and specificity chaos when customizing.
 
@@ -42,13 +38,13 @@ First, import the CSS. I recommend using [layers](https://developer.mozilla.org/
 @import "@andreasphil/design-system/utils.css" layer(utils);
 
 @layer base {
-  /* You can add customizations and override variables here. */
+  /* Add customizations and override variables here. */
 }
 ```
 
 The CSS loosely follows [CUBE CSS](https://piccalil.li/blog/cube-css/):
 
-- **Global, high-level styles:** Most of the styling is global styling of plain HTML elements. [`src/base/variables.css`](./src/base/variables.css) contains design tokens for colors, fonts, shared spacing, and more. You can use them to customize the Design System or apply them to your own components.
+- **Global, high-level styles:** Most styles apply globally to plain HTML elements. [`src/base/variables.css`](./src/base/variables.css) contains design tokens for colors, fonts, shared spacing, and more. You can use them to customize the Design System or apply them to your own components.
 
 - **Blocks:** The framework includes opinionated styling for almost all common HTML elements.
 
@@ -58,17 +54,19 @@ The CSS loosely follows [CUBE CSS](https://piccalil.li/blog/cube-css/):
 
 ## Development
 
-Design System is built with [Lightning CSS](https://lightningcss.dev) and uses [pnpm](https://pnpm.io) for package management. The following commands are available:
+Tools: [Node](https://nodejs.org/) ∙ [pnpm](https://pnpm.io/) ∙ [Lightning CSS](https://lightningcss.dev)
 
 ```sh
-node --run dev    # Compile stylesheets in watch mode
-node --run build  # Bundle for production
+node --run dev    # compile stylesheets in watch mode
+node --run build  # bundle for production
 ```
 
 For a demo, open [index.html](./index.html) in a browser.
 
 ## Credits
 
-This framework uses several open-source packages listed in [package.json](./package.json). Icons are from [Lucide](https://lucide.dev/). The framework was inspired by [Pico.css](https://picocss.com/).
+- Open source packages listed in [package.json](./package.json)
+- Icons by [Lucide](https://lucide.dev)
+- Inspired by [Pico.css](https://picocss.com/)
 
 Thanks 🙏
