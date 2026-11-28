@@ -12,22 +12,24 @@ nav {
   gap: 1.25rem;
   padding: 0;
 
-  a,
-  li > span,
-  strong:first-child {
+  > a,
+  > section > a,
+  > ul > li > a,
+  > ul > li > span,
+  > strong:first-child {
     align-items: center;
     display: flex;
     gap: 0.75ch;
   }
 
   /* Strong as the first item = add some layout to support logo + text */
-  strong:first-child {
+  > strong:first-child {
     gap: 0.75rem;
   }
 
   /* Nav list - vertical by default */
-  ul,
-  section {
+  > ul,
+  > section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -37,24 +39,24 @@ nav {
     padding: 0;
   }
 
-  li {
+  > ul > li {
     flex: none;
 
-    &:not(:has(a, hr, button)) {
+    &:not(:has(> a, > hr, > button)) {
       padding: var(--internal-space);
     }
 
-    hr:only-child {
+    > hr:only-child {
       margin: var(--internal-space);
     }
 
-    button,
-    [role="button"] {
+    > button,
+    > [role="button"] {
       --internal-padding: var(--internal-space);
       flex: none;
     }
 
-    a {
+    > a {
       border-radius: var(--border-radius);
       font-weight: var(--font-weight-medium);
       padding: var(--internal-space);
@@ -73,7 +75,7 @@ nav {
     }
   }
 
-  section > * {
+  > section > * {
     padding: var(--internal-space);
   }
 
@@ -85,13 +87,13 @@ nav {
     justify-content: space-between;
     white-space: nowrap;
 
-    ul,
-    section {
+    > ul,
+    > section {
       align-items: center;
       flex-direction: row;
     }
 
-    li hr:only-child {
+    > ul > li > hr:only-child {
       border-top-width: 0;
       border-left-width: var(--border-width-large);
       height: 1.5em;
@@ -109,8 +111,8 @@ nav {
       overflow: auto;
       padding: 0 max(var(--body-padding-x), 1rem);
 
-      ul,
-      section {
+      > ul,
+      > section {
         flex-wrap: nowrap;
         margin: 0;
       }
@@ -121,7 +123,7 @@ nav {
     }
   }
 
-  header:has(&[fixed]) {
+  header:has(> &[fixed]) {
     backdrop-filter: var(--glass-backdrop);
     background: var(--glass-bg);
     border-bottom: var(--border-width) solid var(--glass-border-surface);
@@ -132,7 +134,7 @@ nav {
   }
 
   /* Automatically increase body padding if it has a fixed nav */
-  body:has(&[fixed]) {
+  body:has(> header > &[fixed]) {
     padding-top: calc(var(--body-padding-y) + var(--internal-nav-height));
   }
 }
