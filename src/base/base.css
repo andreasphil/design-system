@@ -210,6 +210,11 @@ kbd {
   color: var(--c-bg);
 }
 
+mark {
+  background: gold;
+  color: contrastColor();
+}
+
 small {
   font-size: var(--font-size-small);
 }
